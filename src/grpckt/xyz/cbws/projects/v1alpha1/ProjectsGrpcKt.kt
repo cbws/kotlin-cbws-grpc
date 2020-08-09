@@ -48,6 +48,10 @@ object ProjectsServiceGrpcKt {
     @JvmStatic
     get() = ProjectsServiceGrpc.getGetProjectMethod()
 
+  val updateProjectMethod: MethodDescriptor<UpdateProjectRequest, Project>
+    @JvmStatic
+    get() = ProjectsServiceGrpc.getUpdateProjectMethod()
+
   val deleteProjectMethod: MethodDescriptor<DeleteProjectRequest, Operation>
     @JvmStatic
     get() = ProjectsServiceGrpc.getDeleteProjectMethod()
@@ -124,6 +128,23 @@ object ProjectsServiceGrpcKt {
     suspend fun getProject(request: GetProjectRequest): Project = unaryRpc(
       channel,
       ProjectsServiceGrpc.getGetProjectMethod(),
+      request,
+      callOptions,
+      Metadata()
+    )
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @return The single response from the server.
+     */
+    suspend fun updateProject(request: UpdateProjectRequest): Project = unaryRpc(
+      channel,
+      ProjectsServiceGrpc.getUpdateProjectMethod(),
       request,
       callOptions,
       Metadata()
@@ -250,6 +271,20 @@ object ProjectsServiceGrpcKt {
         StatusException(UNIMPLEMENTED.withDescription("Method cbws.projects.v1alpha1.ProjectsService.GetProject is unimplemented"))
 
     /**
+     * Returns the response to an RPC for cbws.projects.v1alpha1.ProjectsService.UpdateProject.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC
+     * will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    open suspend fun updateProject(request: UpdateProjectRequest): Project = throw
+        StatusException(UNIMPLEMENTED.withDescription("Method cbws.projects.v1alpha1.ProjectsService.UpdateProject is unimplemented"))
+
+    /**
      * Returns the response to an RPC for cbws.projects.v1alpha1.ProjectsService.DeleteProject.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
@@ -323,6 +358,11 @@ object ProjectsServiceGrpcKt {
       context = this.context,
       descriptor = ProjectsServiceGrpc.getGetProjectMethod(),
       implementation = ::getProject
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ProjectsServiceGrpc.getUpdateProjectMethod(),
+      implementation = ::updateProject
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,

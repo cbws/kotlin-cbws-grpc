@@ -120,6 +120,37 @@ public final class ProjectsServiceGrpc {
     return getGetProjectMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<xyz.cbws.projects.v1alpha1.UpdateProjectRequest,
+      xyz.cbws.projects.v1alpha1.Project> getUpdateProjectMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "UpdateProject",
+      requestType = xyz.cbws.projects.v1alpha1.UpdateProjectRequest.class,
+      responseType = xyz.cbws.projects.v1alpha1.Project.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<xyz.cbws.projects.v1alpha1.UpdateProjectRequest,
+      xyz.cbws.projects.v1alpha1.Project> getUpdateProjectMethod() {
+    io.grpc.MethodDescriptor<xyz.cbws.projects.v1alpha1.UpdateProjectRequest, xyz.cbws.projects.v1alpha1.Project> getUpdateProjectMethod;
+    if ((getUpdateProjectMethod = ProjectsServiceGrpc.getUpdateProjectMethod) == null) {
+      synchronized (ProjectsServiceGrpc.class) {
+        if ((getUpdateProjectMethod = ProjectsServiceGrpc.getUpdateProjectMethod) == null) {
+          ProjectsServiceGrpc.getUpdateProjectMethod = getUpdateProjectMethod =
+              io.grpc.MethodDescriptor.<xyz.cbws.projects.v1alpha1.UpdateProjectRequest, xyz.cbws.projects.v1alpha1.Project>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "UpdateProject"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  xyz.cbws.projects.v1alpha1.UpdateProjectRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  xyz.cbws.projects.v1alpha1.Project.getDefaultInstance()))
+              .setSchemaDescriptor(new ProjectsServiceMethodDescriptorSupplier("UpdateProject"))
+              .build();
+        }
+      }
+    }
+    return getUpdateProjectMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<xyz.cbws.projects.v1alpha1.DeleteProjectRequest,
       com.google.longrunning.Operation> getDeleteProjectMethod;
 
@@ -322,6 +353,17 @@ public final class ProjectsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update a project
+     * Permission: projects.cbws.xyz/Project/update
+     * </pre>
+     */
+    public void updateProject(xyz.cbws.projects.v1alpha1.UpdateProjectRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.projects.v1alpha1.Project> responseObserver) {
+      asyncUnimplementedUnaryCall(getUpdateProjectMethod(), responseObserver);
+    }
+
+    /**
      */
     public void deleteProject(xyz.cbws.projects.v1alpha1.DeleteProjectRequest request,
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
@@ -382,6 +424,13 @@ public final class ProjectsServiceGrpc {
                 xyz.cbws.projects.v1alpha1.GetProjectRequest,
                 xyz.cbws.projects.v1alpha1.Project>(
                   this, METHODID_GET_PROJECT)))
+          .addMethod(
+            getUpdateProjectMethod(),
+            asyncUnaryCall(
+              new MethodHandlers<
+                xyz.cbws.projects.v1alpha1.UpdateProjectRequest,
+                xyz.cbws.projects.v1alpha1.Project>(
+                  this, METHODID_UPDATE_PROJECT)))
           .addMethod(
             getDeleteProjectMethod(),
             asyncUnaryCall(
@@ -458,6 +507,18 @@ public final class ProjectsServiceGrpc {
         io.grpc.stub.StreamObserver<xyz.cbws.projects.v1alpha1.Project> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetProjectMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Update a project
+     * Permission: projects.cbws.xyz/Project/update
+     * </pre>
+     */
+    public void updateProject(xyz.cbws.projects.v1alpha1.UpdateProjectRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.projects.v1alpha1.Project> responseObserver) {
+      asyncUnaryCall(
+          getChannel().newCall(getUpdateProjectMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -547,6 +608,17 @@ public final class ProjectsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update a project
+     * Permission: projects.cbws.xyz/Project/update
+     * </pre>
+     */
+    public xyz.cbws.projects.v1alpha1.Project updateProject(xyz.cbws.projects.v1alpha1.UpdateProjectRequest request) {
+      return blockingUnaryCall(
+          getChannel(), getUpdateProjectMethod(), getCallOptions(), request);
+    }
+
+    /**
      */
     public com.google.longrunning.Operation deleteProject(xyz.cbws.projects.v1alpha1.DeleteProjectRequest request) {
       return blockingUnaryCall(
@@ -632,6 +704,18 @@ public final class ProjectsServiceGrpc {
     }
 
     /**
+     * <pre>
+     * Update a project
+     * Permission: projects.cbws.xyz/Project/update
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<xyz.cbws.projects.v1alpha1.Project> updateProject(
+        xyz.cbws.projects.v1alpha1.UpdateProjectRequest request) {
+      return futureUnaryCall(
+          getChannel().newCall(getUpdateProjectMethod(), getCallOptions()), request);
+    }
+
+    /**
      */
     public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> deleteProject(
         xyz.cbws.projects.v1alpha1.DeleteProjectRequest request) {
@@ -677,10 +761,11 @@ public final class ProjectsServiceGrpc {
   private static final int METHODID_CREATE_PROJECT = 0;
   private static final int METHODID_LIST_PROJECTS = 1;
   private static final int METHODID_GET_PROJECT = 2;
-  private static final int METHODID_DELETE_PROJECT = 3;
-  private static final int METHODID_GET_POLICY = 4;
-  private static final int METHODID_SET_POLICY = 5;
-  private static final int METHODID_TEST_PERMISSIONS = 6;
+  private static final int METHODID_UPDATE_PROJECT = 3;
+  private static final int METHODID_DELETE_PROJECT = 4;
+  private static final int METHODID_GET_POLICY = 5;
+  private static final int METHODID_SET_POLICY = 6;
+  private static final int METHODID_TEST_PERMISSIONS = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -709,6 +794,10 @@ public final class ProjectsServiceGrpc {
           break;
         case METHODID_GET_PROJECT:
           serviceImpl.getProject((xyz.cbws.projects.v1alpha1.GetProjectRequest) request,
+              (io.grpc.stub.StreamObserver<xyz.cbws.projects.v1alpha1.Project>) responseObserver);
+          break;
+        case METHODID_UPDATE_PROJECT:
+          serviceImpl.updateProject((xyz.cbws.projects.v1alpha1.UpdateProjectRequest) request,
               (io.grpc.stub.StreamObserver<xyz.cbws.projects.v1alpha1.Project>) responseObserver);
           break;
         case METHODID_DELETE_PROJECT:
@@ -791,6 +880,7 @@ public final class ProjectsServiceGrpc {
               .addMethod(getCreateProjectMethod())
               .addMethod(getListProjectsMethod())
               .addMethod(getGetProjectMethod())
+              .addMethod(getUpdateProjectMethod())
               .addMethod(getDeleteProjectMethod())
               .addMethod(getGetPolicyMethod())
               .addMethod(getSetPolicyMethod())

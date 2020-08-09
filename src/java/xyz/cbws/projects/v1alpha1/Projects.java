@@ -35,6 +35,11 @@ public final class Projects {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cbws_projects_v1alpha1_GetProjectRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_projects_v1alpha1_UpdateProjectRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cbws_projects_v1alpha1_UpdateProjectRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cbws_projects_v1alpha1_DeleteProjectRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -62,54 +67,62 @@ public final class Projects {
       "pi/annotations.proto\032\027google/api/client." +
       "proto\032\037google/api/field_behavior.proto\032\031" +
       "google/api/resource.proto\032#google/longru" +
-      "nning/operations.proto\"\234\001\n\024CreateProject" +
-      "Request\022?\n\006parent\030\001 \001(\tB/\340A\002\372A)\n\'organiz" +
-      "ations.cloudbear.nl/Organization\022\021\n\004name" +
-      "\030\002 \001(\tB\003\340A\002\0220\n\007project\030\003 \001(\0132\037.cbws.proj" +
-      "ects.v1alpha1.Project\"<\n\023ListProjectsReq" +
-      "uest\022\021\n\tpage_size\030\002 \001(\005\022\022\n\npage_token\030\003 " +
-      "\001(\t\"b\n\024ListProjectsResponse\0221\n\010projects\030" +
-      "\001 \003(\0132\037.cbws.projects.v1alpha1.Project\022\027" +
-      "\n\017next_page_token\030\002 \001(\t\"D\n\021GetProjectReq" +
-      "uest\022/\n\004name\030\001 \001(\tB!\340A\002\372A\033\n\031projects.cbw" +
-      "s.xyz/Project\"G\n\024DeleteProjectRequest\022/\n" +
-      "\004name\030\001 \001(\tB!\340A\002\372A\033\n\031projects.cbws.xyz/P" +
-      "roject\"\027\n\025DeleteProjectMetadata2\315\t\n\017Proj" +
-      "ectsService\022\222\001\n\rCreateProject\022,.cbws.pro" +
-      "jects.v1alpha1.CreateProjectRequest\032\037.cb" +
-      "ws.projects.v1alpha1.Project\"2\202\323\344\223\002\027\"\022/v" +
-      "1alpha1/projects:\001*\202\263\033\007Project\212\263\033\006create" +
-      "\022\214\001\n\014ListProjects\022+.cbws.projects.v1alph" +
-      "a1.ListProjectsRequest\032,.cbws.projects.v" +
-      "1alpha1.ListProjectsResponse\"!\202\323\344\223\002\024\022\022/v" +
-      "1alpha1/projects\332A\004name\022\226\001\n\nGetProject\022)" +
-      ".cbws.projects.v1alpha1.GetProjectReques" +
-      "t\032\037.cbws.projects.v1alpha1.Project\"<\202\323\344\223" +
-      "\002\035\022\033/v1alpha1/{name=projects/*}\332A\004name\202\263" +
-      "\033\007Project\212\263\033\003get\022\346\001\n\rDeleteProject\022,.cbw" +
-      "s.projects.v1alpha1.DeleteProjectRequest" +
-      "\032\035.google.longrunning.Operation\"\207\001\202\323\344\223\002\035" +
-      "*\033/v1alpha1/{name=projects/*}\332A\004name\312AE\n" +
-      "\025google.protobuf.Empty\022,cbws.projects.v1" +
-      "alpha1.DeleteProjectMetadata\202\263\033\007Project\212" +
-      "\263\033\006delete\022\214\001\n\tGetPolicy\022*.cbws.iam.polic" +
-      "y.v1alpha1.GetPolicyRequest\032 .cbws.iam.p" +
-      "olicy.v1alpha1.Policy\"1\202\323\344\223\002 \"\036/v1alpha1" +
-      "/{resource}:getPolicy\332A\010resource\022\226\001\n\tSet" +
-      "Policy\022*.cbws.iam.policy.v1alpha1.SetPol" +
-      "icyRequest\032 .cbws.iam.policy.v1alpha1.Po" +
-      "licy\";\202\323\344\223\002#\"\036/v1alpha1/{resource}:setPo" +
-      "licy:\001*\332A\017resource,policy\022\276\001\n\017TestPermis" +
-      "sions\0220.cbws.iam.policy.v1alpha1.TestPer" +
-      "missionsRequest\0321.cbws.iam.policy.v1alph" +
-      "a1.TestPermissionsResponse\"F\202\323\344\223\002)\"$/v1a" +
-      "lpha1/{resource}:testPermissions:\001*\332A\024re" +
-      "source,permissions\032+\312A\021projects.cbws.xyz" +
-      "\372\262\033\023\n\021projects.cbws.xyzB\230\001\n\032xyz.cbws.pro" +
-      "jects.v1alpha1P\001Z3github.com/cbws/go-cbw" +
-      "s-grpc/cbws/projects/v1alpha1\312\002\033Cbws\\Pro" +
-      "jects\\GRPC\\V1alpha1\342\002$Cbws\\Projects\\GRPC" +
-      "\\V1alpha1\\Metadatab\006proto3"
+      "nning/operations.proto\032 google/protobuf/" +
+      "field_mask.proto\"\234\001\n\024CreateProjectReques" +
+      "t\022?\n\006parent\030\001 \001(\tB/\340A\002\372A)\n\'organizations" +
+      ".cloudbear.nl/Organization\022\021\n\004name\030\002 \001(\t" +
+      "B\003\340A\002\0220\n\007project\030\003 \001(\0132\037.cbws.projects.v" +
+      "1alpha1.Project\"<\n\023ListProjectsRequest\022\021" +
+      "\n\tpage_size\030\002 \001(\005\022\022\n\npage_token\030\003 \001(\t\"b\n" +
+      "\024ListProjectsResponse\0221\n\010projects\030\001 \003(\0132" +
+      "\037.cbws.projects.v1alpha1.Project\022\027\n\017next" +
+      "_page_token\030\002 \001(\t\"D\n\021GetProjectRequest\022/" +
+      "\n\004name\030\001 \001(\tB!\340A\002\372A\033\n\031projects.cbws.xyz/" +
+      "Project\"~\n\024UpdateProjectRequest\0225\n\007proje" +
+      "ct\030\001 \001(\0132\037.cbws.projects.v1alpha1.Projec" +
+      "tB\003\340A\002\022/\n\013update_mask\030\002 \001(\0132\032.google.pro" +
+      "tobuf.FieldMask\"G\n\024DeleteProjectRequest\022" +
+      "/\n\004name\030\001 \001(\tB!\340A\002\372A\033\n\031projects.cbws.xyz" +
+      "/Project\"\027\n\025DeleteProjectMetadata2\342\n\n\017Pr" +
+      "ojectsService\022\222\001\n\rCreateProject\022,.cbws.p" +
+      "rojects.v1alpha1.CreateProjectRequest\032\037." +
+      "cbws.projects.v1alpha1.Project\"2\202\323\344\223\002\027\"\022" +
+      "/v1alpha1/projects:\001*\202\263\033\007Project\212\263\033\006crea" +
+      "te\022\214\001\n\014ListProjects\022+.cbws.projects.v1al" +
+      "pha1.ListProjectsRequest\032,.cbws.projects" +
+      ".v1alpha1.ListProjectsResponse\"!\202\323\344\223\002\024\022\022" +
+      "/v1alpha1/projects\332A\004name\022\226\001\n\nGetProject" +
+      "\022).cbws.projects.v1alpha1.GetProjectRequ" +
+      "est\032\037.cbws.projects.v1alpha1.Project\"<\202\323" +
+      "\344\223\002\035\022\033/v1alpha1/{name=projects/*}\332A\004name" +
+      "\202\263\033\007Project\212\263\033\003get\022\222\001\n\rUpdateProject\022,.c" +
+      "bws.projects.v1alpha1.UpdateProjectReque" +
+      "st\032\037.cbws.projects.v1alpha1.Project\"2\202\323\344" +
+      "\223\002\027\"\022/v1alpha1/projects:\001*\202\263\033\007Project\212\263\033" +
+      "\006update\022\346\001\n\rDeleteProject\022,.cbws.project" +
+      "s.v1alpha1.DeleteProjectRequest\032\035.google" +
+      ".longrunning.Operation\"\207\001\202\323\344\223\002\035*\033/v1alph" +
+      "a1/{name=projects/*}\332A\004name\312AE\n\025google.p" +
+      "rotobuf.Empty\022,cbws.projects.v1alpha1.De" +
+      "leteProjectMetadata\202\263\033\007Project\212\263\033\006delete" +
+      "\022\214\001\n\tGetPolicy\022*.cbws.iam.policy.v1alpha" +
+      "1.GetPolicyRequest\032 .cbws.iam.policy.v1a" +
+      "lpha1.Policy\"1\202\323\344\223\002 \"\036/v1alpha1/{resourc" +
+      "e}:getPolicy\332A\010resource\022\226\001\n\tSetPolicy\022*." +
+      "cbws.iam.policy.v1alpha1.SetPolicyReques" +
+      "t\032 .cbws.iam.policy.v1alpha1.Policy\";\202\323\344" +
+      "\223\002#\"\036/v1alpha1/{resource}:setPolicy:\001*\332A" +
+      "\017resource,policy\022\276\001\n\017TestPermissions\0220.c" +
+      "bws.iam.policy.v1alpha1.TestPermissionsR" +
+      "equest\0321.cbws.iam.policy.v1alpha1.TestPe" +
+      "rmissionsResponse\"F\202\323\344\223\002)\"$/v1alpha1/{re" +
+      "source}:testPermissions:\001*\332A\024resource,pe" +
+      "rmissions\032+\312A\021projects.cbws.xyz\372\262\033\023\n\021pro" +
+      "jects.cbws.xyzB\230\001\n\032xyz.cbws.projects.v1a" +
+      "lpha1P\001Z3github.com/cbws/go-cbws-grpc/cb" +
+      "ws/projects/v1alpha1\312\002\033Cbws\\Projects\\GRP" +
+      "C\\V1alpha1\342\002$Cbws\\Projects\\GRPC\\V1alpha1" +
+      "\\Metadatab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -123,6 +136,7 @@ public final class Projects {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
           com.google.longrunning.OperationsProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
     internal_static_cbws_projects_v1alpha1_CreateProjectRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -148,14 +162,20 @@ public final class Projects {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cbws_projects_v1alpha1_GetProjectRequest_descriptor,
         new java.lang.String[] { "Name", });
-    internal_static_cbws_projects_v1alpha1_DeleteProjectRequest_descriptor =
+    internal_static_cbws_projects_v1alpha1_UpdateProjectRequest_descriptor =
       getDescriptor().getMessageTypes().get(4);
+    internal_static_cbws_projects_v1alpha1_UpdateProjectRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cbws_projects_v1alpha1_UpdateProjectRequest_descriptor,
+        new java.lang.String[] { "Project", "UpdateMask", });
+    internal_static_cbws_projects_v1alpha1_DeleteProjectRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_cbws_projects_v1alpha1_DeleteProjectRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cbws_projects_v1alpha1_DeleteProjectRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_cbws_projects_v1alpha1_DeleteProjectMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_cbws_projects_v1alpha1_DeleteProjectMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cbws_projects_v1alpha1_DeleteProjectMetadata_descriptor,
@@ -182,6 +202,7 @@ public final class Projects {
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.longrunning.OperationsProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
