@@ -18,7 +18,7 @@ import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 /**
  */
 @javax.annotation.Generated(
-    value = "by gRPC proto compiler (version 1.30.2)",
+    value = "by gRPC proto compiler (version 1.32.1)",
     comments = "Source: cbws/domains/v1alpha1/domains.proto")
 public final class DomainsServiceGrpc {
 
