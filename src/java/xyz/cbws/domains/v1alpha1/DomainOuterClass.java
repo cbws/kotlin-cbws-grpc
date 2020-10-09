@@ -49,7 +49,7 @@ public final class DomainOuterClass {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          cbws.iam.options.v1alpha1.Options.getDescriptor(),
+          xyz.cbws.iam.options.v1alpha1.Options.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
@@ -69,7 +69,7 @@ public final class DomainOuterClass {
     registry.add(com.google.api.ResourceProto.resource);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    cbws.iam.options.v1alpha1.Options.getDescriptor();
+    xyz.cbws.iam.options.v1alpha1.Options.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

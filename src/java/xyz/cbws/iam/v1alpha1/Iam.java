@@ -212,7 +212,7 @@ public final class Iam {
           xyz.cbws.iam.v1alpha1.ServiceAccountOuterClass.getDescriptor(),
           xyz.cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor(),
           xyz.cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor(),
-          cbws.iam.options.v1alpha1.Options.getDescriptor(),
+          xyz.cbws.iam.options.v1alpha1.Options.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
@@ -301,9 +301,9 @@ public final class Iam {
         new java.lang.String[] { "AccessToken", "ExpireTime", });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(cbws.iam.options.v1alpha1.Options.action);
-    registry.add(cbws.iam.options.v1alpha1.Options.resourceType);
-    registry.add(cbws.iam.options.v1alpha1.Options.service);
+    registry.add(xyz.cbws.iam.options.v1alpha1.Options.action);
+    registry.add(xyz.cbws.iam.options.v1alpha1.Options.resourceType);
+    registry.add(xyz.cbws.iam.options.v1alpha1.Options.service);
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
@@ -314,7 +314,7 @@ public final class Iam {
     xyz.cbws.iam.v1alpha1.ServiceAccountOuterClass.getDescriptor();
     xyz.cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor();
     xyz.cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor();
-    cbws.iam.options.v1alpha1.Options.getDescriptor();
+    xyz.cbws.iam.options.v1alpha1.Options.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();

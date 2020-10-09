@@ -127,7 +127,7 @@ public final class Projects {
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          cbws.iam.options.v1alpha1.Options.getDescriptor(),
+          xyz.cbws.iam.options.v1alpha1.Options.getDescriptor(),
           xyz.cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor(),
           xyz.cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor(),
           xyz.cbws.projects.v1alpha1.ProjectOuterClass.getDescriptor(),
@@ -182,9 +182,9 @@ public final class Projects {
         new java.lang.String[] { });
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
-    registry.add(cbws.iam.options.v1alpha1.Options.action);
-    registry.add(cbws.iam.options.v1alpha1.Options.resourceType);
-    registry.add(cbws.iam.options.v1alpha1.Options.service);
+    registry.add(xyz.cbws.iam.options.v1alpha1.Options.action);
+    registry.add(xyz.cbws.iam.options.v1alpha1.Options.resourceType);
+    registry.add(xyz.cbws.iam.options.v1alpha1.Options.service);
     registry.add(com.google.api.ClientProto.defaultHost);
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.AnnotationsProto.http);
@@ -193,7 +193,7 @@ public final class Projects {
     registry.add(com.google.longrunning.OperationsProto.operationInfo);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    cbws.iam.options.v1alpha1.Options.getDescriptor();
+    xyz.cbws.iam.options.v1alpha1.Options.getDescriptor();
     xyz.cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor();
     xyz.cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor();
     xyz.cbws.projects.v1alpha1.ProjectOuterClass.getDescriptor();
