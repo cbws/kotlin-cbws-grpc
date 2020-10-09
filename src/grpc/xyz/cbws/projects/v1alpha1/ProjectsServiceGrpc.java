@@ -182,29 +182,29 @@ public final class ProjectsServiceGrpc {
     return getDeleteProjectMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest,
-      cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> getGetPolicyMethod;
+  private static volatile io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest,
+      xyz.cbws.iam.policy.v1alpha1.Policy> getGetPolicyMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "GetPolicy",
-      requestType = cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest.class,
-      responseType = cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy.class,
+      requestType = xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest.class,
+      responseType = xyz.cbws.iam.policy.v1alpha1.Policy.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest,
-      cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> getGetPolicyMethod() {
-    io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest, cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> getGetPolicyMethod;
+  public static io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest,
+      xyz.cbws.iam.policy.v1alpha1.Policy> getGetPolicyMethod() {
+    io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest, xyz.cbws.iam.policy.v1alpha1.Policy> getGetPolicyMethod;
     if ((getGetPolicyMethod = ProjectsServiceGrpc.getGetPolicyMethod) == null) {
       synchronized (ProjectsServiceGrpc.class) {
         if ((getGetPolicyMethod = ProjectsServiceGrpc.getGetPolicyMethod) == null) {
           ProjectsServiceGrpc.getGetPolicyMethod = getGetPolicyMethod =
-              io.grpc.MethodDescriptor.<cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest, cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy>newBuilder()
+              io.grpc.MethodDescriptor.<xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest, xyz.cbws.iam.policy.v1alpha1.Policy>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPolicy"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest.getDefaultInstance()))
+                  xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy.getDefaultInstance()))
+                  xyz.cbws.iam.policy.v1alpha1.Policy.getDefaultInstance()))
               .setSchemaDescriptor(new ProjectsServiceMethodDescriptorSupplier("GetPolicy"))
               .build();
         }
@@ -213,29 +213,29 @@ public final class ProjectsServiceGrpc {
     return getGetPolicyMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest,
-      cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> getSetPolicyMethod;
+  private static volatile io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest,
+      xyz.cbws.iam.policy.v1alpha1.Policy> getSetPolicyMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "SetPolicy",
-      requestType = cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest.class,
-      responseType = cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy.class,
+      requestType = xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest.class,
+      responseType = xyz.cbws.iam.policy.v1alpha1.Policy.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest,
-      cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> getSetPolicyMethod() {
-    io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest, cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> getSetPolicyMethod;
+  public static io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest,
+      xyz.cbws.iam.policy.v1alpha1.Policy> getSetPolicyMethod() {
+    io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest, xyz.cbws.iam.policy.v1alpha1.Policy> getSetPolicyMethod;
     if ((getSetPolicyMethod = ProjectsServiceGrpc.getSetPolicyMethod) == null) {
       synchronized (ProjectsServiceGrpc.class) {
         if ((getSetPolicyMethod = ProjectsServiceGrpc.getSetPolicyMethod) == null) {
           ProjectsServiceGrpc.getSetPolicyMethod = getSetPolicyMethod =
-              io.grpc.MethodDescriptor.<cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest, cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy>newBuilder()
+              io.grpc.MethodDescriptor.<xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest, xyz.cbws.iam.policy.v1alpha1.Policy>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPolicy"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest.getDefaultInstance()))
+                  xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy.getDefaultInstance()))
+                  xyz.cbws.iam.policy.v1alpha1.Policy.getDefaultInstance()))
               .setSchemaDescriptor(new ProjectsServiceMethodDescriptorSupplier("SetPolicy"))
               .build();
         }
@@ -244,29 +244,29 @@ public final class ProjectsServiceGrpc {
     return getSetPolicyMethod;
   }
 
-  private static volatile io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest,
-      cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse> getTestPermissionsMethod;
+  private static volatile io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest,
+      xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse> getTestPermissionsMethod;
 
   @io.grpc.stub.annotations.RpcMethod(
       fullMethodName = SERVICE_NAME + '/' + "TestPermissions",
-      requestType = cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest.class,
-      responseType = cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse.class,
+      requestType = xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest.class,
+      responseType = xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse.class,
       methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
-  public static io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest,
-      cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse> getTestPermissionsMethod() {
-    io.grpc.MethodDescriptor<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest, cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse> getTestPermissionsMethod;
+  public static io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest,
+      xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse> getTestPermissionsMethod() {
+    io.grpc.MethodDescriptor<xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest, xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse> getTestPermissionsMethod;
     if ((getTestPermissionsMethod = ProjectsServiceGrpc.getTestPermissionsMethod) == null) {
       synchronized (ProjectsServiceGrpc.class) {
         if ((getTestPermissionsMethod = ProjectsServiceGrpc.getTestPermissionsMethod) == null) {
           ProjectsServiceGrpc.getTestPermissionsMethod = getTestPermissionsMethod =
-              io.grpc.MethodDescriptor.<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest, cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse>newBuilder()
+              io.grpc.MethodDescriptor.<xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest, xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse>newBuilder()
               .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
               .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestPermissions"))
               .setSampledToLocalTracing(true)
               .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest.getDefaultInstance()))
+                  xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest.getDefaultInstance()))
               .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
-                  cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse.getDefaultInstance()))
+                  xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse.getDefaultInstance()))
               .setSchemaDescriptor(new ProjectsServiceMethodDescriptorSupplier("TestPermissions"))
               .build();
         }
@@ -375,8 +375,8 @@ public final class ProjectsServiceGrpc {
      * Returns the IAM access control policy for a Project.
      * </pre>
      */
-    public void getPolicy(cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest request,
-        io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> responseObserver) {
+    public void getPolicy(xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getGetPolicyMethod(), responseObserver);
     }
 
@@ -385,8 +385,8 @@ public final class ProjectsServiceGrpc {
      * Sets the IAM access control policy for a Project.
      * </pre>
      */
-    public void setPolicy(cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest request,
-        io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> responseObserver) {
+    public void setPolicy(xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.Policy> responseObserver) {
       asyncUnimplementedUnaryCall(getSetPolicyMethod(), responseObserver);
     }
 
@@ -396,8 +396,8 @@ public final class ProjectsServiceGrpc {
      * for a Project.
      * </pre>
      */
-    public void testPermissions(cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest request,
-        io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse> responseObserver) {
+    public void testPermissions(xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse> responseObserver) {
       asyncUnimplementedUnaryCall(getTestPermissionsMethod(), responseObserver);
     }
 
@@ -442,22 +442,22 @@ public final class ProjectsServiceGrpc {
             getGetPolicyMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest,
-                cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy>(
+                xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest,
+                xyz.cbws.iam.policy.v1alpha1.Policy>(
                   this, METHODID_GET_POLICY)))
           .addMethod(
             getSetPolicyMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest,
-                cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy>(
+                xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest,
+                xyz.cbws.iam.policy.v1alpha1.Policy>(
                   this, METHODID_SET_POLICY)))
           .addMethod(
             getTestPermissionsMethod(),
             asyncUnaryCall(
               new MethodHandlers<
-                cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest,
-                cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse>(
+                xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest,
+                xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse>(
                   this, METHODID_TEST_PERMISSIONS)))
           .build();
     }
@@ -534,8 +534,8 @@ public final class ProjectsServiceGrpc {
      * Returns the IAM access control policy for a Project.
      * </pre>
      */
-    public void getPolicy(cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest request,
-        io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> responseObserver) {
+    public void getPolicy(xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.Policy> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getGetPolicyMethod(), getCallOptions()), request, responseObserver);
     }
@@ -545,8 +545,8 @@ public final class ProjectsServiceGrpc {
      * Sets the IAM access control policy for a Project.
      * </pre>
      */
-    public void setPolicy(cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest request,
-        io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> responseObserver) {
+    public void setPolicy(xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.Policy> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getSetPolicyMethod(), getCallOptions()), request, responseObserver);
     }
@@ -557,8 +557,8 @@ public final class ProjectsServiceGrpc {
      * for a Project.
      * </pre>
      */
-    public void testPermissions(cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest request,
-        io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse> responseObserver) {
+    public void testPermissions(xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest request,
+        io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse> responseObserver) {
       asyncUnaryCall(
           getChannel().newCall(getTestPermissionsMethod(), getCallOptions()), request, responseObserver);
     }
@@ -630,7 +630,7 @@ public final class ProjectsServiceGrpc {
      * Returns the IAM access control policy for a Project.
      * </pre>
      */
-    public cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy getPolicy(cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest request) {
+    public xyz.cbws.iam.policy.v1alpha1.Policy getPolicy(xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getGetPolicyMethod(), getCallOptions(), request);
     }
@@ -640,7 +640,7 @@ public final class ProjectsServiceGrpc {
      * Sets the IAM access control policy for a Project.
      * </pre>
      */
-    public cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy setPolicy(cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest request) {
+    public xyz.cbws.iam.policy.v1alpha1.Policy setPolicy(xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest request) {
       return blockingUnaryCall(
           getChannel(), getSetPolicyMethod(), getCallOptions(), request);
     }
@@ -651,7 +651,7 @@ public final class ProjectsServiceGrpc {
      * for a Project.
      * </pre>
      */
-    public cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse testPermissions(cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest request) {
+    public xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse testPermissions(xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest request) {
       return blockingUnaryCall(
           getChannel(), getTestPermissionsMethod(), getCallOptions(), request);
     }
@@ -728,8 +728,8 @@ public final class ProjectsServiceGrpc {
      * Returns the IAM access control policy for a Project.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> getPolicy(
-        cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<xyz.cbws.iam.policy.v1alpha1.Policy> getPolicy(
+        xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getGetPolicyMethod(), getCallOptions()), request);
     }
@@ -739,8 +739,8 @@ public final class ProjectsServiceGrpc {
      * Sets the IAM access control policy for a Project.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy> setPolicy(
-        cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<xyz.cbws.iam.policy.v1alpha1.Policy> setPolicy(
+        xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getSetPolicyMethod(), getCallOptions()), request);
     }
@@ -751,8 +751,8 @@ public final class ProjectsServiceGrpc {
      * for a Project.
      * </pre>
      */
-    public com.google.common.util.concurrent.ListenableFuture<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse> testPermissions(
-        cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest request) {
+    public com.google.common.util.concurrent.ListenableFuture<xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse> testPermissions(
+        xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest request) {
       return futureUnaryCall(
           getChannel().newCall(getTestPermissionsMethod(), getCallOptions()), request);
     }
@@ -805,16 +805,16 @@ public final class ProjectsServiceGrpc {
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         case METHODID_GET_POLICY:
-          serviceImpl.getPolicy((cbws.iam.policy.v1alpha1.RequestResponse.GetPolicyRequest) request,
-              (io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy>) responseObserver);
+          serviceImpl.getPolicy((xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.Policy>) responseObserver);
           break;
         case METHODID_SET_POLICY:
-          serviceImpl.setPolicy((cbws.iam.policy.v1alpha1.RequestResponse.SetPolicyRequest) request,
-              (io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.PolicyOuterClass.Policy>) responseObserver);
+          serviceImpl.setPolicy((xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.Policy>) responseObserver);
           break;
         case METHODID_TEST_PERMISSIONS:
-          serviceImpl.testPermissions((cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsRequest) request,
-              (io.grpc.stub.StreamObserver<cbws.iam.policy.v1alpha1.RequestResponse.TestPermissionsResponse>) responseObserver);
+          serviceImpl.testPermissions((xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest) request,
+              (io.grpc.stub.StreamObserver<xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();

@@ -210,8 +210,8 @@ public final class Iam {
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           xyz.cbws.iam.v1alpha1.ServiceAccountOuterClass.getDescriptor(),
-          cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor(),
-          cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor(),
+          xyz.cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor(),
+          xyz.cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor(),
           cbws.iam.options.v1alpha1.Options.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
@@ -312,8 +312,8 @@ public final class Iam {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     xyz.cbws.iam.v1alpha1.ServiceAccountOuterClass.getDescriptor();
-    cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor();
-    cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor();
+    xyz.cbws.iam.policy.v1alpha1.PolicyOuterClass.getDescriptor();
+    xyz.cbws.iam.policy.v1alpha1.RequestResponse.getDescriptor();
     cbws.iam.options.v1alpha1.Options.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();

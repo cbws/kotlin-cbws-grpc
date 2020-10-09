@@ -1,7 +1,5 @@
 package xyz.cbws.projects.v1alpha1
 
-import cbws.iam.policy.v1alpha1.PolicyOuterClass
-import cbws.iam.policy.v1alpha1.RequestResponse
 import com.google.longrunning.Operation
 import io.grpc.CallOptions
 import io.grpc.CallOptions.DEFAULT
@@ -25,6 +23,11 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.jvm.JvmOverloads
 import kotlin.jvm.JvmStatic
+import xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest
+import xyz.cbws.iam.policy.v1alpha1.Policy
+import xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest
+import xyz.cbws.iam.policy.v1alpha1.TestPermissionsRequest
+import xyz.cbws.iam.policy.v1alpha1.TestPermissionsResponse
 import xyz.cbws.projects.v1alpha1.ProjectsServiceGrpc.getServiceDescriptor
 
 /**
@@ -56,16 +59,15 @@ object ProjectsServiceGrpcKt {
     @JvmStatic
     get() = ProjectsServiceGrpc.getDeleteProjectMethod()
 
-  val getPolicyMethod: MethodDescriptor<RequestResponse.GetPolicyRequest, PolicyOuterClass.Policy>
+  val getPolicyMethod: MethodDescriptor<GetPolicyRequest, Policy>
     @JvmStatic
     get() = ProjectsServiceGrpc.getGetPolicyMethod()
 
-  val setPolicyMethod: MethodDescriptor<RequestResponse.SetPolicyRequest, PolicyOuterClass.Policy>
+  val setPolicyMethod: MethodDescriptor<SetPolicyRequest, Policy>
     @JvmStatic
     get() = ProjectsServiceGrpc.getSetPolicyMethod()
 
-  val testPermissionsMethod: MethodDescriptor<RequestResponse.TestPermissionsRequest,
-      RequestResponse.TestPermissionsResponse>
+  val testPermissionsMethod: MethodDescriptor<TestPermissionsRequest, TestPermissionsResponse>
     @JvmStatic
     get() = ProjectsServiceGrpc.getTestPermissionsMethod()
 
@@ -176,8 +178,7 @@ object ProjectsServiceGrpcKt {
      *
      * @return The single response from the server.
      */
-    suspend fun getPolicy(request: RequestResponse.GetPolicyRequest): PolicyOuterClass.Policy =
-        unaryRpc(
+    suspend fun getPolicy(request: GetPolicyRequest): Policy = unaryRpc(
       channel,
       ProjectsServiceGrpc.getGetPolicyMethod(),
       request,
@@ -194,8 +195,7 @@ object ProjectsServiceGrpcKt {
      *
      * @return The single response from the server.
      */
-    suspend fun setPolicy(request: RequestResponse.SetPolicyRequest): PolicyOuterClass.Policy =
-        unaryRpc(
+    suspend fun setPolicy(request: SetPolicyRequest): Policy = unaryRpc(
       channel,
       ProjectsServiceGrpc.getSetPolicyMethod(),
       request,
@@ -212,8 +212,8 @@ object ProjectsServiceGrpcKt {
      *
      * @return The single response from the server.
      */
-    suspend fun testPermissions(request: RequestResponse.TestPermissionsRequest):
-        RequestResponse.TestPermissionsResponse = unaryRpc(
+    suspend fun testPermissions(request: TestPermissionsRequest): TestPermissionsResponse =
+        unaryRpc(
       channel,
       ProjectsServiceGrpc.getTestPermissionsMethod(),
       request,
@@ -309,8 +309,7 @@ object ProjectsServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    open suspend fun getPolicy(request: RequestResponse.GetPolicyRequest): PolicyOuterClass.Policy =
-        throw
+    open suspend fun getPolicy(request: GetPolicyRequest): Policy = throw
         StatusException(UNIMPLEMENTED.withDescription("Method cbws.projects.v1alpha1.ProjectsService.GetPolicy is unimplemented"))
 
     /**
@@ -324,8 +323,7 @@ object ProjectsServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    open suspend fun setPolicy(request: RequestResponse.SetPolicyRequest): PolicyOuterClass.Policy =
-        throw
+    open suspend fun setPolicy(request: SetPolicyRequest): Policy = throw
         StatusException(UNIMPLEMENTED.withDescription("Method cbws.projects.v1alpha1.ProjectsService.SetPolicy is unimplemented"))
 
     /**
@@ -339,8 +337,8 @@ object ProjectsServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    open suspend fun testPermissions(request: RequestResponse.TestPermissionsRequest):
-        RequestResponse.TestPermissionsResponse = throw
+    open suspend fun testPermissions(request: TestPermissionsRequest): TestPermissionsResponse =
+        throw
         StatusException(UNIMPLEMENTED.withDescription("Method cbws.projects.v1alpha1.ProjectsService.TestPermissions is unimplemented"))
 
     final override fun bindService(): ServerServiceDefinition = builder(getServiceDescriptor())

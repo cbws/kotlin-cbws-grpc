@@ -1,7 +1,5 @@
 package xyz.cbws.iam.v1alpha1
 
-import cbws.iam.policy.v1alpha1.PolicyOuterClass
-import cbws.iam.policy.v1alpha1.RequestResponse
 import com.google.protobuf.Empty
 import io.grpc.CallOptions
 import io.grpc.CallOptions.DEFAULT
@@ -25,6 +23,9 @@ import kotlin.coroutines.CoroutineContext
 import kotlin.coroutines.EmptyCoroutineContext
 import kotlin.jvm.JvmOverloads
 import kotlin.jvm.JvmStatic
+import xyz.cbws.iam.policy.v1alpha1.GetPolicyRequest
+import xyz.cbws.iam.policy.v1alpha1.Policy
+import xyz.cbws.iam.policy.v1alpha1.SetPolicyRequest
 import xyz.cbws.iam.v1alpha1.IAMServiceGrpc.getServiceDescriptor
 
 /**
@@ -79,11 +80,11 @@ object IAMServiceGrpcKt {
     @JvmStatic
     get() = IAMServiceGrpc.getDeleteServiceAccountKeyMethod()
 
-  val getPolicyMethod: MethodDescriptor<RequestResponse.GetPolicyRequest, PolicyOuterClass.Policy>
+  val getPolicyMethod: MethodDescriptor<GetPolicyRequest, Policy>
     @JvmStatic
     get() = IAMServiceGrpc.getGetPolicyMethod()
 
-  val setPolicyMethod: MethodDescriptor<RequestResponse.SetPolicyRequest, PolicyOuterClass.Policy>
+  val setPolicyMethod: MethodDescriptor<SetPolicyRequest, Policy>
     @JvmStatic
     get() = IAMServiceGrpc.getSetPolicyMethod()
 
@@ -285,8 +286,7 @@ object IAMServiceGrpcKt {
      *
      * @return The single response from the server.
      */
-    suspend fun getPolicy(request: RequestResponse.GetPolicyRequest): PolicyOuterClass.Policy =
-        unaryRpc(
+    suspend fun getPolicy(request: GetPolicyRequest): Policy = unaryRpc(
       channel,
       IAMServiceGrpc.getGetPolicyMethod(),
       request,
@@ -303,8 +303,7 @@ object IAMServiceGrpcKt {
      *
      * @return The single response from the server.
      */
-    suspend fun setPolicy(request: RequestResponse.SetPolicyRequest): PolicyOuterClass.Policy =
-        unaryRpc(
+    suspend fun setPolicy(request: SetPolicyRequest): Policy = unaryRpc(
       channel,
       IAMServiceGrpc.getSetPolicyMethod(),
       request,
@@ -476,8 +475,7 @@ object IAMServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    open suspend fun getPolicy(request: RequestResponse.GetPolicyRequest): PolicyOuterClass.Policy =
-        throw
+    open suspend fun getPolicy(request: GetPolicyRequest): Policy = throw
         StatusException(UNIMPLEMENTED.withDescription("Method cbws.iam.v1alpha1.IAMService.GetPolicy is unimplemented"))
 
     /**
@@ -491,8 +489,7 @@ object IAMServiceGrpcKt {
      *
      * @param request The request from the client.
      */
-    open suspend fun setPolicy(request: RequestResponse.SetPolicyRequest): PolicyOuterClass.Policy =
-        throw
+    open suspend fun setPolicy(request: SetPolicyRequest): Policy = throw
         StatusException(UNIMPLEMENTED.withDescription("Method cbws.iam.v1alpha1.IAMService.SetPolicy is unimplemented"))
 
     final override fun bindService(): ServerServiceDefinition = builder(getServiceDescriptor())
