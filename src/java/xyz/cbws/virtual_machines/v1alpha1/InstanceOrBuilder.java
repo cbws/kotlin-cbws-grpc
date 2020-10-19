@@ -82,6 +82,47 @@ public interface InstanceOrBuilder extends
       getAddressBytes();
 
   /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the additionalAddress.
+   */
+  java.util.List<java.lang.String>
+      getAdditionalAddressList();
+  /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of additionalAddress.
+   */
+  int getAdditionalAddressCount();
+  /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The additionalAddress at the given index.
+   */
+  java.lang.String getAdditionalAddress(int index);
+  /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the additionalAddress at the given index.
+   */
+  com.google.protobuf.ByteString
+      getAdditionalAddressBytes(int index);
+
+  /**
    * <code>repeated string ssh_keys = 9 [(.google.api.field_behavior) = OPTIONAL];</code>
    * @return A list containing the sshKeys.
    */
@@ -105,6 +146,101 @@ public interface InstanceOrBuilder extends
    */
   com.google.protobuf.ByteString
       getSshKeysBytes(int index);
+
+  /**
+   * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The ciUsername.
+   */
+  java.lang.String getCiUsername();
+  /**
+   * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for ciUsername.
+   */
+  com.google.protobuf.ByteString
+      getCiUsernameBytes();
+
+  /**
+   * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The ciPassword.
+   */
+  java.lang.String getCiPassword();
+  /**
+   * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The bytes for ciPassword.
+   */
+  com.google.protobuf.ByteString
+      getCiPasswordBytes();
+
+  /**
+   * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The ciUserdata.
+   */
+  java.lang.String getCiUserdata();
+  /**
+   * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The bytes for ciUserdata.
+   */
+  com.google.protobuf.ByteString
+      getCiUserdataBytes();
+
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+  int getOptionsCount();
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+  boolean containsOptions(
+      java.lang.String key);
+  /**
+   * Use {@link #getOptionsMap()} instead.
+   */
+  @java.lang.Deprecated
+  java.util.Map<java.lang.String, java.lang.String>
+  getOptions();
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+  java.util.Map<java.lang.String, java.lang.String>
+  getOptionsMap();
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+
+  java.lang.String getOptionsOrDefault(
+      java.lang.String key,
+      java.lang.String defaultValue);
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+
+  java.lang.String getOptionsOrThrow(
+      java.lang.String key);
 
   /**
    * <code>.cbws.virtual_machines.v1alpha1.Instance.State state = 8 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>

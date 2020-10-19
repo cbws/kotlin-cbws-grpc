@@ -20,6 +20,11 @@ public final class InstanceOuterClass {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_cbws_virtual_machines_v1alpha1_Instance_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_virtual_machines_v1alpha1_Instance_OptionsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_cbws_virtual_machines_v1alpha1_Instance_OptionsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cbws_virtual_machines_v1alpha1_Instance_LabelsEntry_descriptor;
   static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -37,30 +42,36 @@ public final class InstanceOuterClass {
       "e.proto\022\036cbws.virtual_machines.v1alpha1\032" +
       "6cbws/virtual_machines/affinity/v1alpha1" +
       "/affinity.proto\032\037google/api/field_behavi" +
-      "or.proto\032\031google/api/resource.proto\"\306\005\n\010" +
+      "or.proto\032\031google/api/resource.proto\"\262\007\n\010" +
       "Instance\022\021\n\004name\030\001 \001(\tB\003\340A\005\022\023\n\006parent\030\002 " +
       "\001(\tB\003\340A\005\022\025\n\010hostname\030\003 \001(\tB\003\340A\002\022\020\n\003cpu\030\004" +
       " \001(\003B\003\340A\002\022\023\n\006memory\030\005 \001(\003B\003\340A\002\022\026\n\troot_d" +
-      "isk\030\006 \001(\003B\003\340A\002\022\024\n\007address\030\007 \001(\tB\003\340A\003\022\025\n\010" +
-      "ssh_keys\030\t \003(\tB\003\340A\001\022B\n\005state\030\010 \001(\0162..cbw" +
-      "s.virtual_machines.v1alpha1.Instance.Sta" +
-      "teB\003\340A\003\022H\n\010affinity\030\n \001(\01321.cbws.virtual" +
-      "_machines.affinity.v1alpha1.AffinityB\003\340A" +
-      "\001\022I\n\006labels\030\013 \003(\01324.cbws.virtual_machine" +
-      "s.v1alpha1.Instance.LabelsEntryB\003\340A\001\032-\n\013" +
-      "LabelsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:" +
-      "\0028\001\"\306\001\n\005State\022\025\n\021STATE_UNSPECIFIED\020\000\022\026\n\022" +
-      "STATE_PROVISIONING\020\001\022\021\n\rSTATE_STAGING\020\002\022" +
-      "\021\n\rSTATE_RUNNING\020\003\022\022\n\016STATE_STOPPING\020\004\022\024" +
-      "\n\020STATE_SUSPENDING\020\005\022\023\n\017STATE_SUSPENDED\020" +
-      "\006\022\023\n\017STATE_REPAIRING\020\007\022\024\n\020STATE_TERMINAT" +
-      "ED\020\010:>\352A;\n\024vm.cbws.xyz/Instance\022#project" +
-      "s/{project}/instances/{name}B\266\001\n\"xyz.cbw" +
-      "s.virtual_machines.v1alpha1P\001Z;github.co" +
-      "m/cbws/go-cbws-grpc/cbws/virtual-machine" +
-      "s/v1alpha1\312\002\"Cbws\\VirtualMachines\\Grpc\\V" +
-      "1alpha1\342\002+Cbws\\VirtualMachines\\Grpc\\V1al" +
-      "pha1\\Metadatab\006proto3"
+      "isk\030\006 \001(\003B\003\340A\002\022\024\n\007address\030\007 \001(\tB\003\340A\003\022\037\n\022" +
+      "additional_address\030\014 \003(\tB\003\340A\003\022\025\n\010ssh_key" +
+      "s\030\t \003(\tB\003\340A\001\022\030\n\013ci_username\030\r \001(\tB\003\340A\001\022\030" +
+      "\n\013ci_password\030\016 \001(\tB\003\340A\004\022\030\n\013ci_userdata\030" +
+      "\020 \001(\tB\003\340A\004\022K\n\007options\030\021 \003(\01325.cbws.virtu" +
+      "al_machines.v1alpha1.Instance.OptionsEnt" +
+      "ryB\003\340A\004\022B\n\005state\030\010 \001(\0162..cbws.virtual_ma" +
+      "chines.v1alpha1.Instance.StateB\003\340A\003\022H\n\010a" +
+      "ffinity\030\n \001(\01321.cbws.virtual_machines.af" +
+      "finity.v1alpha1.AffinityB\003\340A\001\022I\n\006labels\030" +
+      "\013 \003(\01324.cbws.virtual_machines.v1alpha1.I" +
+      "nstance.LabelsEntryB\003\340A\001\032.\n\014OptionsEntry" +
+      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\032-\n\013Labe" +
+      "lsEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"" +
+      "\306\001\n\005State\022\025\n\021STATE_UNSPECIFIED\020\000\022\026\n\022STAT" +
+      "E_PROVISIONING\020\001\022\021\n\rSTATE_STAGING\020\002\022\021\n\rS" +
+      "TATE_RUNNING\020\003\022\022\n\016STATE_STOPPING\020\004\022\024\n\020ST" +
+      "ATE_SUSPENDING\020\005\022\023\n\017STATE_SUSPENDED\020\006\022\023\n" +
+      "\017STATE_REPAIRING\020\007\022\024\n\020STATE_TERMINATED\020\010" +
+      ":>\352A;\n\024vm.cbws.xyz/Instance\022#projects/{p" +
+      "roject}/instances/{name}B\266\001\n\"xyz.cbws.vi" +
+      "rtual_machines.v1alpha1P\001Z;github.com/cb" +
+      "ws/go-cbws-grpc/cbws/virtual-machines/v1" +
+      "alpha1\312\002\"Cbws\\VirtualMachines\\Grpc\\V1alp" +
+      "ha1\342\002+Cbws\\VirtualMachines\\Grpc\\V1alpha1" +
+      "\\Metadatab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -74,9 +85,15 @@ public final class InstanceOuterClass {
     internal_static_cbws_virtual_machines_v1alpha1_Instance_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cbws_virtual_machines_v1alpha1_Instance_descriptor,
-        new java.lang.String[] { "Name", "Parent", "Hostname", "Cpu", "Memory", "RootDisk", "Address", "SshKeys", "State", "Affinity", "Labels", });
-    internal_static_cbws_virtual_machines_v1alpha1_Instance_LabelsEntry_descriptor =
+        new java.lang.String[] { "Name", "Parent", "Hostname", "Cpu", "Memory", "RootDisk", "Address", "AdditionalAddress", "SshKeys", "CiUsername", "CiPassword", "CiUserdata", "Options", "State", "Affinity", "Labels", });
+    internal_static_cbws_virtual_machines_v1alpha1_Instance_OptionsEntry_descriptor =
       internal_static_cbws_virtual_machines_v1alpha1_Instance_descriptor.getNestedTypes().get(0);
+    internal_static_cbws_virtual_machines_v1alpha1_Instance_OptionsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_cbws_virtual_machines_v1alpha1_Instance_OptionsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_cbws_virtual_machines_v1alpha1_Instance_LabelsEntry_descriptor =
+      internal_static_cbws_virtual_machines_v1alpha1_Instance_descriptor.getNestedTypes().get(1);
     internal_static_cbws_virtual_machines_v1alpha1_Instance_LabelsEntry_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_cbws_virtual_machines_v1alpha1_Instance_LabelsEntry_descriptor,

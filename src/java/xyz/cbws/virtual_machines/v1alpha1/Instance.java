@@ -20,7 +20,11 @@ private static final long serialVersionUID = 0L;
     parent_ = "";
     hostname_ = "";
     address_ = "";
+    additionalAddress_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     sshKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    ciUsername_ = "";
+    ciPassword_ = "";
+    ciUserdata_ = "";
     state_ = 0;
   }
 
@@ -102,9 +106,9 @@ private static final long serialVersionUID = 0L;
           }
           case 74: {
             java.lang.String s = input.readStringRequireUtf8();
-            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
               sshKeys_ = new com.google.protobuf.LazyStringArrayList();
-              mutable_bitField0_ |= 0x00000001;
+              mutable_bitField0_ |= 0x00000002;
             }
             sshKeys_.add(s);
             break;
@@ -123,16 +127,56 @@ private static final long serialVersionUID = 0L;
             break;
           }
           case 90: {
-            if (!((mutable_bitField0_ & 0x00000002) != 0)) {
+            if (!((mutable_bitField0_ & 0x00000008) != 0)) {
               labels_ = com.google.protobuf.MapField.newMapField(
                   LabelsDefaultEntryHolder.defaultEntry);
-              mutable_bitField0_ |= 0x00000002;
+              mutable_bitField0_ |= 0x00000008;
             }
             com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
             labels__ = input.readMessage(
                 LabelsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
             labels_.getMutableMap().put(
                 labels__.getKey(), labels__.getValue());
+            break;
+          }
+          case 98: {
+            java.lang.String s = input.readStringRequireUtf8();
+            if (!((mutable_bitField0_ & 0x00000001) != 0)) {
+              additionalAddress_ = new com.google.protobuf.LazyStringArrayList();
+              mutable_bitField0_ |= 0x00000001;
+            }
+            additionalAddress_.add(s);
+            break;
+          }
+          case 106: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            ciUsername_ = s;
+            break;
+          }
+          case 114: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            ciPassword_ = s;
+            break;
+          }
+          case 130: {
+            java.lang.String s = input.readStringRequireUtf8();
+
+            ciUserdata_ = s;
+            break;
+          }
+          case 138: {
+            if (!((mutable_bitField0_ & 0x00000004) != 0)) {
+              options_ = com.google.protobuf.MapField.newMapField(
+                  OptionsDefaultEntryHolder.defaultEntry);
+              mutable_bitField0_ |= 0x00000004;
+            }
+            com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+            options__ = input.readMessage(
+                OptionsDefaultEntryHolder.defaultEntry.getParserForType(), extensionRegistry);
+            options_.getMutableMap().put(
+                options__.getKey(), options__.getValue());
             break;
           }
           default: {
@@ -150,8 +194,11 @@ private static final long serialVersionUID = 0L;
       throw new com.google.protobuf.InvalidProtocolBufferException(
           e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+      if (((mutable_bitField0_ & 0x00000002) != 0)) {
         sshKeys_ = sshKeys_.getUnmodifiableView();
+      }
+      if (((mutable_bitField0_ & 0x00000001) != 0)) {
+        additionalAddress_ = additionalAddress_.getUnmodifiableView();
       }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
@@ -167,6 +214,8 @@ private static final long serialVersionUID = 0L;
   protected com.google.protobuf.MapField internalGetMapField(
       int number) {
     switch (number) {
+      case 17:
+        return internalGetOptions();
       case 11:
         return internalGetLabels();
       default:
@@ -546,6 +595,57 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ADDITIONAL_ADDRESS_FIELD_NUMBER = 12;
+  private com.google.protobuf.LazyStringList additionalAddress_;
+  /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return A list containing the additionalAddress.
+   */
+  public com.google.protobuf.ProtocolStringList
+      getAdditionalAddressList() {
+    return additionalAddress_;
+  }
+  /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The count of additionalAddress.
+   */
+  public int getAdditionalAddressCount() {
+    return additionalAddress_.size();
+  }
+  /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the element to return.
+   * @return The additionalAddress at the given index.
+   */
+  public java.lang.String getAdditionalAddress(int index) {
+    return additionalAddress_.get(index);
+  }
+  /**
+   * <pre>
+   * Additional IPv6/IPv4 addresses
+   * </pre>
+   *
+   * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @param index The index of the value to return.
+   * @return The bytes of the additionalAddress at the given index.
+   */
+  public com.google.protobuf.ByteString
+      getAdditionalAddressBytes(int index) {
+    return additionalAddress_.getByteString(index);
+  }
+
   public static final int SSH_KEYS_FIELD_NUMBER = 9;
   private com.google.protobuf.LazyStringList sshKeys_;
   /**
@@ -579,6 +679,221 @@ private static final long serialVersionUID = 0L;
   public com.google.protobuf.ByteString
       getSshKeysBytes(int index) {
     return sshKeys_.getByteString(index);
+  }
+
+  public static final int CI_USERNAME_FIELD_NUMBER = 13;
+  private volatile java.lang.Object ciUsername_;
+  /**
+   * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The ciUsername.
+   */
+  @java.lang.Override
+  public java.lang.String getCiUsername() {
+    java.lang.Object ref = ciUsername_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ciUsername_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for ciUsername.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCiUsernameBytes() {
+    java.lang.Object ref = ciUsername_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ciUsername_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CI_PASSWORD_FIELD_NUMBER = 14;
+  private volatile java.lang.Object ciPassword_;
+  /**
+   * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The ciPassword.
+   */
+  @java.lang.Override
+  public java.lang.String getCiPassword() {
+    java.lang.Object ref = ciPassword_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ciPassword_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The bytes for ciPassword.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCiPasswordBytes() {
+    java.lang.Object ref = ciPassword_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ciPassword_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int CI_USERDATA_FIELD_NUMBER = 16;
+  private volatile java.lang.Object ciUserdata_;
+  /**
+   * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The ciUserdata.
+   */
+  @java.lang.Override
+  public java.lang.String getCiUserdata() {
+    java.lang.Object ref = ciUserdata_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ciUserdata_ = s;
+      return s;
+    }
+  }
+  /**
+   * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   * @return The bytes for ciUserdata.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getCiUserdataBytes() {
+    java.lang.Object ref = ciUserdata_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ciUserdata_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int OPTIONS_FIELD_NUMBER = 17;
+  private static final class OptionsDefaultEntryHolder {
+    static final com.google.protobuf.MapEntry<
+        java.lang.String, java.lang.String> defaultEntry =
+            com.google.protobuf.MapEntry
+            .<java.lang.String, java.lang.String>newDefaultInstance(
+                xyz.cbws.virtual_machines.v1alpha1.InstanceOuterClass.internal_static_cbws_virtual_machines_v1alpha1_Instance_OptionsEntry_descriptor, 
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "",
+                com.google.protobuf.WireFormat.FieldType.STRING,
+                "");
+  }
+  private com.google.protobuf.MapField<
+      java.lang.String, java.lang.String> options_;
+  private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+  internalGetOptions() {
+    if (options_ == null) {
+      return com.google.protobuf.MapField.emptyMapField(
+          OptionsDefaultEntryHolder.defaultEntry);
+    }
+    return options_;
+  }
+
+  public int getOptionsCount() {
+    return internalGetOptions().getMap().size();
+  }
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+
+  @java.lang.Override
+  public boolean containsOptions(
+      java.lang.String key) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
+    return internalGetOptions().getMap().containsKey(key);
+  }
+  /**
+   * Use {@link #getOptionsMap()} instead.
+   */
+  @java.lang.Override
+  @java.lang.Deprecated
+  public java.util.Map<java.lang.String, java.lang.String> getOptions() {
+    return getOptionsMap();
+  }
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+  @java.lang.Override
+
+  public java.util.Map<java.lang.String, java.lang.String> getOptionsMap() {
+    return internalGetOptions().getMap();
+  }
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+  @java.lang.Override
+
+  public java.lang.String getOptionsOrDefault(
+      java.lang.String key,
+      java.lang.String defaultValue) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetOptions().getMap();
+    return map.containsKey(key) ? map.get(key) : defaultValue;
+  }
+  /**
+   * <pre>
+   * Extra options for the virtual machine instance
+   * request_ipv4 - true/false
+   * </pre>
+   *
+   * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+   */
+  @java.lang.Override
+
+  public java.lang.String getOptionsOrThrow(
+      java.lang.String key) {
+    if (key == null) { throw new java.lang.NullPointerException(); }
+    java.util.Map<java.lang.String, java.lang.String> map =
+        internalGetOptions().getMap();
+    if (!map.containsKey(key)) {
+      throw new java.lang.IllegalArgumentException();
+    }
+    return map.get(key);
   }
 
   public static final int STATE_FIELD_NUMBER = 8;
@@ -785,6 +1100,24 @@ private static final long serialVersionUID = 0L;
         internalGetLabels(),
         LabelsDefaultEntryHolder.defaultEntry,
         11);
+    for (int i = 0; i < additionalAddress_.size(); i++) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 12, additionalAddress_.getRaw(i));
+    }
+    if (!getCiUsernameBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 13, ciUsername_);
+    }
+    if (!getCiPasswordBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 14, ciPassword_);
+    }
+    if (!getCiUserdataBytes().isEmpty()) {
+      com.google.protobuf.GeneratedMessageV3.writeString(output, 16, ciUserdata_);
+    }
+    com.google.protobuf.GeneratedMessageV3
+      .serializeStringMapTo(
+        output,
+        internalGetOptions(),
+        OptionsDefaultEntryHolder.defaultEntry,
+        17);
     unknownFields.writeTo(output);
   }
 
@@ -844,6 +1177,33 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(11, labels__);
     }
+    {
+      int dataSize = 0;
+      for (int i = 0; i < additionalAddress_.size(); i++) {
+        dataSize += computeStringSizeNoTag(additionalAddress_.getRaw(i));
+      }
+      size += dataSize;
+      size += 1 * getAdditionalAddressList().size();
+    }
+    if (!getCiUsernameBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(13, ciUsername_);
+    }
+    if (!getCiPasswordBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(14, ciPassword_);
+    }
+    if (!getCiUserdataBytes().isEmpty()) {
+      size += com.google.protobuf.GeneratedMessageV3.computeStringSize(16, ciUserdata_);
+    }
+    for (java.util.Map.Entry<java.lang.String, java.lang.String> entry
+         : internalGetOptions().getMap().entrySet()) {
+      com.google.protobuf.MapEntry<java.lang.String, java.lang.String>
+      options__ = OptionsDefaultEntryHolder.defaultEntry.newBuilderForType()
+          .setKey(entry.getKey())
+          .setValue(entry.getValue())
+          .build();
+      size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(17, options__);
+    }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
     return size;
@@ -873,8 +1233,18 @@ private static final long serialVersionUID = 0L;
         != other.getRootDisk()) return false;
     if (!getAddress()
         .equals(other.getAddress())) return false;
+    if (!getAdditionalAddressList()
+        .equals(other.getAdditionalAddressList())) return false;
     if (!getSshKeysList()
         .equals(other.getSshKeysList())) return false;
+    if (!getCiUsername()
+        .equals(other.getCiUsername())) return false;
+    if (!getCiPassword()
+        .equals(other.getCiPassword())) return false;
+    if (!getCiUserdata()
+        .equals(other.getCiUserdata())) return false;
+    if (!internalGetOptions().equals(
+        other.internalGetOptions())) return false;
     if (state_ != other.state_) return false;
     if (hasAffinity() != other.hasAffinity()) return false;
     if (hasAffinity()) {
@@ -911,9 +1281,23 @@ private static final long serialVersionUID = 0L;
         getRootDisk());
     hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getAddress().hashCode();
+    if (getAdditionalAddressCount() > 0) {
+      hash = (37 * hash) + ADDITIONAL_ADDRESS_FIELD_NUMBER;
+      hash = (53 * hash) + getAdditionalAddressList().hashCode();
+    }
     if (getSshKeysCount() > 0) {
       hash = (37 * hash) + SSH_KEYS_FIELD_NUMBER;
       hash = (53 * hash) + getSshKeysList().hashCode();
+    }
+    hash = (37 * hash) + CI_USERNAME_FIELD_NUMBER;
+    hash = (53 * hash) + getCiUsername().hashCode();
+    hash = (37 * hash) + CI_PASSWORD_FIELD_NUMBER;
+    hash = (53 * hash) + getCiPassword().hashCode();
+    hash = (37 * hash) + CI_USERDATA_FIELD_NUMBER;
+    hash = (53 * hash) + getCiUserdata().hashCode();
+    if (!internalGetOptions().getMap().isEmpty()) {
+      hash = (37 * hash) + OPTIONS_FIELD_NUMBER;
+      hash = (53 * hash) + internalGetOptions().hashCode();
     }
     hash = (37 * hash) + STATE_FIELD_NUMBER;
     hash = (53 * hash) + state_;
@@ -1036,6 +1420,8 @@ private static final long serialVersionUID = 0L;
     protected com.google.protobuf.MapField internalGetMapField(
         int number) {
       switch (number) {
+        case 17:
+          return internalGetOptions();
         case 11:
           return internalGetLabels();
         default:
@@ -1047,6 +1433,8 @@ private static final long serialVersionUID = 0L;
     protected com.google.protobuf.MapField internalGetMutableMapField(
         int number) {
       switch (number) {
+        case 17:
+          return internalGetMutableOptions();
         case 11:
           return internalGetMutableLabels();
         default:
@@ -1094,8 +1482,17 @@ private static final long serialVersionUID = 0L;
 
       address_ = "";
 
-      sshKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      additionalAddress_ = com.google.protobuf.LazyStringArrayList.EMPTY;
       bitField0_ = (bitField0_ & ~0x00000001);
+      sshKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000002);
+      ciUsername_ = "";
+
+      ciPassword_ = "";
+
+      ciUserdata_ = "";
+
+      internalGetMutableOptions().clear();
       state_ = 0;
 
       if (affinityBuilder_ == null) {
@@ -1140,10 +1537,20 @@ private static final long serialVersionUID = 0L;
       result.rootDisk_ = rootDisk_;
       result.address_ = address_;
       if (((bitField0_ & 0x00000001) != 0)) {
-        sshKeys_ = sshKeys_.getUnmodifiableView();
+        additionalAddress_ = additionalAddress_.getUnmodifiableView();
         bitField0_ = (bitField0_ & ~0x00000001);
       }
+      result.additionalAddress_ = additionalAddress_;
+      if (((bitField0_ & 0x00000002) != 0)) {
+        sshKeys_ = sshKeys_.getUnmodifiableView();
+        bitField0_ = (bitField0_ & ~0x00000002);
+      }
       result.sshKeys_ = sshKeys_;
+      result.ciUsername_ = ciUsername_;
+      result.ciPassword_ = ciPassword_;
+      result.ciUserdata_ = ciUserdata_;
+      result.options_ = internalGetOptions();
+      result.options_.makeImmutable();
       result.state_ = state_;
       if (affinityBuilder_ == null) {
         result.affinity_ = affinity_;
@@ -1225,16 +1632,40 @@ private static final long serialVersionUID = 0L;
         address_ = other.address_;
         onChanged();
       }
+      if (!other.additionalAddress_.isEmpty()) {
+        if (additionalAddress_.isEmpty()) {
+          additionalAddress_ = other.additionalAddress_;
+          bitField0_ = (bitField0_ & ~0x00000001);
+        } else {
+          ensureAdditionalAddressIsMutable();
+          additionalAddress_.addAll(other.additionalAddress_);
+        }
+        onChanged();
+      }
       if (!other.sshKeys_.isEmpty()) {
         if (sshKeys_.isEmpty()) {
           sshKeys_ = other.sshKeys_;
-          bitField0_ = (bitField0_ & ~0x00000001);
+          bitField0_ = (bitField0_ & ~0x00000002);
         } else {
           ensureSshKeysIsMutable();
           sshKeys_.addAll(other.sshKeys_);
         }
         onChanged();
       }
+      if (!other.getCiUsername().isEmpty()) {
+        ciUsername_ = other.ciUsername_;
+        onChanged();
+      }
+      if (!other.getCiPassword().isEmpty()) {
+        ciPassword_ = other.ciPassword_;
+        onChanged();
+      }
+      if (!other.getCiUserdata().isEmpty()) {
+        ciUserdata_ = other.ciUserdata_;
+        onChanged();
+      }
+      internalGetMutableOptions().mergeFrom(
+          other.internalGetOptions());
       if (other.state_ != 0) {
         setStateValue(other.getStateValue());
       }
@@ -1690,11 +2121,157 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private com.google.protobuf.LazyStringList additionalAddress_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+    private void ensureAdditionalAddressIsMutable() {
+      if (!((bitField0_ & 0x00000001) != 0)) {
+        additionalAddress_ = new com.google.protobuf.LazyStringArrayList(additionalAddress_);
+        bitField0_ |= 0x00000001;
+       }
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return A list containing the additionalAddress.
+     */
+    public com.google.protobuf.ProtocolStringList
+        getAdditionalAddressList() {
+      return additionalAddress_.getUnmodifiableView();
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The count of additionalAddress.
+     */
+    public int getAdditionalAddressCount() {
+      return additionalAddress_.size();
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the element to return.
+     * @return The additionalAddress at the given index.
+     */
+    public java.lang.String getAdditionalAddress(int index) {
+      return additionalAddress_.get(index);
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index of the value to return.
+     * @return The bytes of the additionalAddress at the given index.
+     */
+    public com.google.protobuf.ByteString
+        getAdditionalAddressBytes(int index) {
+      return additionalAddress_.getByteString(index);
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param index The index to set the value at.
+     * @param value The additionalAddress to set.
+     * @return This builder for chaining.
+     */
+    public Builder setAdditionalAddress(
+        int index, java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAdditionalAddressIsMutable();
+      additionalAddress_.set(index, value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The additionalAddress to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAdditionalAddress(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  ensureAdditionalAddressIsMutable();
+      additionalAddress_.add(value);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param values The additionalAddress to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAllAdditionalAddress(
+        java.lang.Iterable<java.lang.String> values) {
+      ensureAdditionalAddressIsMutable();
+      com.google.protobuf.AbstractMessageLite.Builder.addAll(
+          values, additionalAddress_);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearAdditionalAddress() {
+      additionalAddress_ = com.google.protobuf.LazyStringArrayList.EMPTY;
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Additional IPv6/IPv4 addresses
+     * </pre>
+     *
+     * <code>repeated string additional_address = 12 [(.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes of the additionalAddress to add.
+     * @return This builder for chaining.
+     */
+    public Builder addAdditionalAddressBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      ensureAdditionalAddressIsMutable();
+      additionalAddress_.add(value);
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.LazyStringList sshKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
     private void ensureSshKeysIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
+      if (!((bitField0_ & 0x00000002) != 0)) {
         sshKeys_ = new com.google.protobuf.LazyStringArrayList(sshKeys_);
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000002;
        }
     }
     /**
@@ -1779,7 +2356,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearSshKeys() {
       sshKeys_ = com.google.protobuf.LazyStringArrayList.EMPTY;
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000002);
       onChanged();
       return this;
     }
@@ -1797,6 +2374,397 @@ private static final long serialVersionUID = 0L;
       ensureSshKeysIsMutable();
       sshKeys_.add(value);
       onChanged();
+      return this;
+    }
+
+    private java.lang.Object ciUsername_ = "";
+    /**
+     * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The ciUsername.
+     */
+    public java.lang.String getCiUsername() {
+      java.lang.Object ref = ciUsername_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ciUsername_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The bytes for ciUsername.
+     */
+    public com.google.protobuf.ByteString
+        getCiUsernameBytes() {
+      java.lang.Object ref = ciUsername_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ciUsername_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The ciUsername to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCiUsername(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      ciUsername_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCiUsername() {
+      
+      ciUsername_ = getDefaultInstance().getCiUsername();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ci_username = 13 [(.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The bytes for ciUsername to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCiUsernameBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      ciUsername_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object ciPassword_ = "";
+    /**
+     * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return The ciPassword.
+     */
+    public java.lang.String getCiPassword() {
+      java.lang.Object ref = ciPassword_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ciPassword_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return The bytes for ciPassword.
+     */
+    public com.google.protobuf.ByteString
+        getCiPasswordBytes() {
+      java.lang.Object ref = ciPassword_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ciPassword_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @param value The ciPassword to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCiPassword(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      ciPassword_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCiPassword() {
+      
+      ciPassword_ = getDefaultInstance().getCiPassword();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ci_password = 14 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @param value The bytes for ciPassword to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCiPasswordBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      ciPassword_ = value;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object ciUserdata_ = "";
+    /**
+     * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return The ciUserdata.
+     */
+    public java.lang.String getCiUserdata() {
+      java.lang.Object ref = ciUserdata_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ciUserdata_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return The bytes for ciUserdata.
+     */
+    public com.google.protobuf.ByteString
+        getCiUserdataBytes() {
+      java.lang.Object ref = ciUserdata_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ciUserdata_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @param value The ciUserdata to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCiUserdata(
+        java.lang.String value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  
+      ciUserdata_ = value;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearCiUserdata() {
+      
+      ciUserdata_ = getDefaultInstance().getCiUserdata();
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>string ci_userdata = 16 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     * @param value The bytes for ciUserdata to set.
+     * @return This builder for chaining.
+     */
+    public Builder setCiUserdataBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+      
+      ciUserdata_ = value;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.MapField<
+        java.lang.String, java.lang.String> options_;
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetOptions() {
+      if (options_ == null) {
+        return com.google.protobuf.MapField.emptyMapField(
+            OptionsDefaultEntryHolder.defaultEntry);
+      }
+      return options_;
+    }
+    private com.google.protobuf.MapField<java.lang.String, java.lang.String>
+    internalGetMutableOptions() {
+      onChanged();;
+      if (options_ == null) {
+        options_ = com.google.protobuf.MapField.newMapField(
+            OptionsDefaultEntryHolder.defaultEntry);
+      }
+      if (!options_.isMutable()) {
+        options_ = options_.copy();
+      }
+      return options_;
+    }
+
+    public int getOptionsCount() {
+      return internalGetOptions().getMap().size();
+    }
+    /**
+     * <pre>
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+
+    @java.lang.Override
+    public boolean containsOptions(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      return internalGetOptions().getMap().containsKey(key);
+    }
+    /**
+     * Use {@link #getOptionsMap()} instead.
+     */
+    @java.lang.Override
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String> getOptions() {
+      return getOptionsMap();
+    }
+    /**
+     * <pre>
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    @java.lang.Override
+
+    public java.util.Map<java.lang.String, java.lang.String> getOptionsMap() {
+      return internalGetOptions().getMap();
+    }
+    /**
+     * <pre>
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getOptionsOrDefault(
+        java.lang.String key,
+        java.lang.String defaultValue) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetOptions().getMap();
+      return map.containsKey(key) ? map.get(key) : defaultValue;
+    }
+    /**
+     * <pre>
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    @java.lang.Override
+
+    public java.lang.String getOptionsOrThrow(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      java.util.Map<java.lang.String, java.lang.String> map =
+          internalGetOptions().getMap();
+      if (!map.containsKey(key)) {
+        throw new java.lang.IllegalArgumentException();
+      }
+      return map.get(key);
+    }
+
+    public Builder clearOptions() {
+      internalGetMutableOptions().getMutableMap()
+          .clear();
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+
+    public Builder removeOptions(
+        java.lang.String key) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      internalGetMutableOptions().getMutableMap()
+          .remove(key);
+      return this;
+    }
+    /**
+     * Use alternate mutation accessors instead.
+     */
+    @java.lang.Deprecated
+    public java.util.Map<java.lang.String, java.lang.String>
+    getMutableOptions() {
+      return internalGetMutableOptions().getMutableMap();
+    }
+    /**
+     * <pre>
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+    public Builder putOptions(
+        java.lang.String key,
+        java.lang.String value) {
+      if (key == null) { throw new java.lang.NullPointerException(); }
+      if (value == null) { throw new java.lang.NullPointerException(); }
+      internalGetMutableOptions().getMutableMap()
+          .put(key, value);
+      return this;
+    }
+    /**
+     * <pre>
+     * Extra options for the virtual machine instance
+     * request_ipv4 - true/false
+     * </pre>
+     *
+     * <code>map&lt;string, string&gt; options = 17 [(.google.api.field_behavior) = INPUT_ONLY];</code>
+     */
+
+    public Builder putAllOptions(
+        java.util.Map<java.lang.String, java.lang.String> values) {
+      internalGetMutableOptions().getMutableMap()
+          .putAll(values);
       return this;
     }
 
