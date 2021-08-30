@@ -35,54 +35,52 @@ public final class ServiceAccountOuterClass {
     java.lang.String[] descriptorData = {
       "\n\'cbws/iam/v1alpha1/service_account.prot" +
       "o\022\021cbws.iam.v1alpha1\032\031google/api/resourc" +
-      "e.proto\032\036google/protobuf/duration.proto\032" +
-      "\037google/protobuf/timestamp.proto\"\302\001\n\016Ser" +
-      "viceAccount\022\014\n\004name\030\001 \001(\t\022\022\n\nproject_id\030" +
-      "\002 \001(\t\022\021\n\tunique_id\030\004 \001(\t\022\r\n\005email\030\005 \001(\t\022" +
-      "\024\n\014display_name\030\006 \001(\t:V\352AS\n\033iam.cbws.xyz" +
-      "/ServiceAccount\0224projects/{project}/serv" +
-      "iceAccounts/{service_account}\"\364\003\n\021Servic" +
-      "eAccountKey\022\014\n\004name\030\001 \001(\t\022:\n\010key_type\030\002 " +
-      "\001(\0162(.cbws.iam.v1alpha1.ServiceAccountKe" +
-      "yType\022I\n\020private_key_type\030\003 \001(\0162/.cbws.i" +
-      "am.v1alpha1.ServiceAccountPrivateKeyType" +
-      "\022D\n\rkey_algorithm\030\004 \001(\0162-.cbws.iam.v1alp" +
-      "ha1.ServiceAccountKeyAlgorithm\022\030\n\020privat" +
-      "e_key_data\030\005 \001(\014\022\027\n\017public_key_data\030\006 \001(" +
-      "\014\0224\n\020valid_after_time\030\007 \001(\0132\032.google.pro" +
-      "tobuf.Timestamp\0225\n\021valid_before_time\030\010 \001" +
-      "(\0132\032.google.protobuf.Timestamp:d\352Aa\n\036iam" +
-      ".cbws.xyz/ServiceAccountKey\022?projects/{p" +
-      "roject}/serviceAccounts/{service_account" +
-      "}/keys/{key}*\231\001\n\025ServiceAccountKeyType\022(" +
-      "\n$SERVICE_ACCOUNT_KEY_TYPE_UNSPECIFIED\020\000" +
-      "\022)\n%SERVICE_ACCOUNT_KEY_TYPE_USER_MANAGE" +
-      "D\020\001\022+\n\'SERVICE_ACCOUNT_KEY_TYPE_SYSTEM_M" +
-      "ANAGED\020\002*\317\001\n\032ServiceAccountKeyAlgorithm\022" +
-      "-\n)SERVICE_ACCOUNT_KEY_ALGORITHM_UNSPECI" +
-      "FIED\020\000\022*\n&SERVICE_ACCOUNT_KEY_ALGORITHM_" +
-      "RSA_1024\020\001\022*\n&SERVICE_ACCOUNT_KEY_ALGORI" +
-      "THM_RSA_2048\020\002\022*\n&SERVICE_ACCOUNT_KEY_AL" +
-      "GORITHM_RSA_4096\020\003*\267\001\n\033ServiceAccountPub" +
-      "licKeyType\022/\n+SERVICE_ACCOUNT_PUBLIC_KEY" +
-      "_TYPE_UNSPECIFIED\020\000\0221\n-SERVICE_ACCOUNT_P" +
-      "UBLIC_KEY_TYPE_X509_PEM_FILE\020\001\0224\n0SERVIC" +
-      "E_ACCOUNT_PUBLIC_KEY_TYPE_PKCS8_PUBLIC_K" +
-      "EY\020\002*\271\001\n\034ServiceAccountPrivateKeyType\0220\n" +
-      ",SERVICE_ACCOUNT_PRIVATE_KEY_TYPE_UNSPEC" +
-      "IFIED\020\000\0220\n,SERVICE_ACCOUNT_PRIVATE_KEY_T" +
-      "YPE_PKCS12_FILE\020\001\0225\n1SERVICE_ACCOUNT_PRI" +
-      "VATE_KEY_TYPE_CREDENTIALS_FILE\020\002B\204\001\n\025xyz" +
-      ".cbws.iam.v1alpha1P\001Z.github.com/cbws/go" +
-      "-cbws-grpc/cbws/iam/v1alpha1\312\002\026Cbws\\IAM\\" +
-      "GRPC\\V1alpha1\342\002\037Cbws\\IAM\\GRPC\\V1alpha1\\M" +
-      "etadatab\006proto3"
+      "e.proto\032\037google/protobuf/timestamp.proto" +
+      "\"\302\001\n\016ServiceAccount\022\014\n\004name\030\001 \001(\t\022\022\n\npro" +
+      "ject_id\030\002 \001(\t\022\021\n\tunique_id\030\004 \001(\t\022\r\n\005emai" +
+      "l\030\005 \001(\t\022\024\n\014display_name\030\006 \001(\t:V\352AS\n\033iam." +
+      "cbws.xyz/ServiceAccount\0224projects/{proje" +
+      "ct}/serviceAccounts/{service_account}\"\364\003" +
+      "\n\021ServiceAccountKey\022\014\n\004name\030\001 \001(\t\022:\n\010key" +
+      "_type\030\002 \001(\0162(.cbws.iam.v1alpha1.ServiceA" +
+      "ccountKeyType\022I\n\020private_key_type\030\003 \001(\0162" +
+      "/.cbws.iam.v1alpha1.ServiceAccountPrivat" +
+      "eKeyType\022D\n\rkey_algorithm\030\004 \001(\0162-.cbws.i" +
+      "am.v1alpha1.ServiceAccountKeyAlgorithm\022\030" +
+      "\n\020private_key_data\030\005 \001(\014\022\027\n\017public_key_d" +
+      "ata\030\006 \001(\014\0224\n\020valid_after_time\030\007 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\0225\n\021valid_before_" +
+      "time\030\010 \001(\0132\032.google.protobuf.Timestamp:d" +
+      "\352Aa\n\036iam.cbws.xyz/ServiceAccountKey\022?pro" +
+      "jects/{project}/serviceAccounts/{service" +
+      "_account}/keys/{key}*\231\001\n\025ServiceAccountK" +
+      "eyType\022(\n$SERVICE_ACCOUNT_KEY_TYPE_UNSPE" +
+      "CIFIED\020\000\022)\n%SERVICE_ACCOUNT_KEY_TYPE_USE" +
+      "R_MANAGED\020\001\022+\n\'SERVICE_ACCOUNT_KEY_TYPE_" +
+      "SYSTEM_MANAGED\020\002*\317\001\n\032ServiceAccountKeyAl" +
+      "gorithm\022-\n)SERVICE_ACCOUNT_KEY_ALGORITHM" +
+      "_UNSPECIFIED\020\000\022*\n&SERVICE_ACCOUNT_KEY_AL" +
+      "GORITHM_RSA_1024\020\001\022*\n&SERVICE_ACCOUNT_KE" +
+      "Y_ALGORITHM_RSA_2048\020\002\022*\n&SERVICE_ACCOUN" +
+      "T_KEY_ALGORITHM_RSA_4096\020\003*\267\001\n\033ServiceAc" +
+      "countPublicKeyType\022/\n+SERVICE_ACCOUNT_PU" +
+      "BLIC_KEY_TYPE_UNSPECIFIED\020\000\0221\n-SERVICE_A" +
+      "CCOUNT_PUBLIC_KEY_TYPE_X509_PEM_FILE\020\001\0224" +
+      "\n0SERVICE_ACCOUNT_PUBLIC_KEY_TYPE_PKCS8_" +
+      "PUBLIC_KEY\020\002*\271\001\n\034ServiceAccountPrivateKe" +
+      "yType\0220\n,SERVICE_ACCOUNT_PRIVATE_KEY_TYP" +
+      "E_UNSPECIFIED\020\000\0220\n,SERVICE_ACCOUNT_PRIVA" +
+      "TE_KEY_TYPE_PKCS12_FILE\020\001\0225\n1SERVICE_ACC" +
+      "OUNT_PRIVATE_KEY_TYPE_CREDENTIALS_FILE\020\002" +
+      "B\204\001\n\025xyz.cbws.iam.v1alpha1P\001Z.github.com" +
+      "/cbws/go-cbws-grpc/cbws/iam/v1alpha1\312\002\026C" +
+      "bws\\IAM\\GRPC\\V1alpha1\342\002\037Cbws\\IAM\\GRPC\\V1" +
+      "alpha1\\Metadatab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.ResourceProto.getDescriptor(),
-          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_cbws_iam_v1alpha1_ServiceAccount_descriptor =
@@ -103,7 +101,6 @@ public final class ServiceAccountOuterClass {
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
     com.google.api.ResourceProto.getDescriptor();
-    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

@@ -29,33 +29,22 @@ public final class DomainOuterClass {
   static {
     java.lang.String[] descriptorData = {
       "\n\"cbws/domains/v1alpha1/domain.proto\022\025cb" +
-      "ws.domains.v1alpha1\032\'cbws/iam/options/v1" +
-      "alpha1/options.proto\032\034google/api/annotat" +
-      "ions.proto\032\027google/api/client.proto\032\037goo" +
-      "gle/api/field_behavior.proto\032\031google/api" +
-      "/resource.proto\032\033google/protobuf/empty.p" +
-      "roto\032\036google/protobuf/duration.proto\032\037go" +
-      "ogle/protobuf/timestamp.proto\"\306\001\n\006Domain" +
-      "\022\014\n\004name\030\001 \001(\t\022\016\n\006parent\030\002 \001(\t\022\021\n\tunique" +
-      "_id\030\004 \001(\t\022\016\n\006domain\030\005 \001(\t\022\013\n\003tld\030\006 \001(\t\022*" +
-      "\n\006expiry\030\007 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022\022\n\nauto_renew\030\010 \001(\010:.\352A+\n\027domains.cbw" +
-      "s.xyz/Domain\022\020domains/{domain}B\224\001\n\031xyz.c" +
-      "bws.domains.v1alpha1P\001Z2github.com/cbws/" +
-      "go-cbws-grpc/cbws/domains/v1alpha1\312\002\032Cbw" +
-      "s\\Domains\\GRPC\\V1alpha1\342\002#Cbws\\Domains\\G" +
-      "RPC\\V1alpha1\\Metadatab\006proto3"
+      "ws.domains.v1alpha1\032\031google/api/resource" +
+      ".proto\032\037google/protobuf/timestamp.proto\"" +
+      "\306\001\n\006Domain\022\014\n\004name\030\001 \001(\t\022\016\n\006parent\030\002 \001(\t" +
+      "\022\021\n\tunique_id\030\004 \001(\t\022\016\n\006domain\030\005 \001(\t\022\013\n\003t" +
+      "ld\030\006 \001(\t\022*\n\006expiry\030\007 \001(\0132\032.google.protob" +
+      "uf.Timestamp\022\022\n\nauto_renew\030\010 \001(\010:.\352A+\n\027d" +
+      "omains.cbws.xyz/Domain\022\020domains/{domain}" +
+      "B\224\001\n\031xyz.cbws.domains.v1alpha1P\001Z2github" +
+      ".com/cbws/go-cbws-grpc/cbws/domains/v1al" +
+      "pha1\312\002\032Cbws\\Domains\\GRPC\\V1alpha1\342\002#Cbws" +
+      "\\Domains\\GRPC\\V1alpha1\\Metadatab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
-          xyz.cbws.iam.options.v1alpha1.Options.getDescriptor(),
-          com.google.api.AnnotationsProto.getDescriptor(),
-          com.google.api.ClientProto.getDescriptor(),
-          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
-          com.google.protobuf.EmptyProto.getDescriptor(),
-          com.google.protobuf.DurationProto.getDescriptor(),
           com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_cbws_domains_v1alpha1_Domain_descriptor =
@@ -69,13 +58,7 @@ public final class DomainOuterClass {
     registry.add(com.google.api.ResourceProto.resource);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
-    xyz.cbws.iam.options.v1alpha1.Options.getDescriptor();
-    com.google.api.AnnotationsProto.getDescriptor();
-    com.google.api.ClientProto.getDescriptor();
-    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
-    com.google.protobuf.EmptyProto.getDescriptor();
-    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
   }
 

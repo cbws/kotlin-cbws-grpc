@@ -44,30 +44,27 @@ public final class Domains {
       "pha1/domain.proto\032\034google/api/annotation" +
       "s.proto\032\027google/api/client.proto\032\037google" +
       "/api/field_behavior.proto\032\031google/api/re" +
-      "source.proto\032\033google/protobuf/empty.prot" +
-      "o\032\036google/protobuf/duration.proto\032\037googl" +
-      "e/protobuf/timestamp.proto\"n\n\022ListDomain" +
-      "sRequest\0221\n\006parent\030\001 \001(\tB!\340A\002\372A\033\n\031projec" +
-      "ts.cbws.xyz/Project\022\021\n\tpage_size\030\002 \001(\005\022\022" +
-      "\n\npage_token\030\003 \001(\t\"^\n\023ListDomainsRespons" +
-      "e\022.\n\007domains\030\001 \003(\0132\035.cbws.domains.v1alph" +
-      "a1.Domain\022\027\n\017next_page_token\030\002 \001(\t\"A\n\020Ge" +
-      "tDomainRequest\022-\n\004name\030\001 \001(\tB\037\340A\002\372A\031\n\027do" +
-      "mains.cbws.xyz/Domain2\374\002\n\016DomainsService" +
-      "\022\254\001\n\013ListDomains\022).cbws.domains.v1alpha1" +
-      ".ListDomainsRequest\032*.cbws.domains.v1alp" +
-      "ha1.ListDomainsResponse\"F\202\323\344\223\002\'\022%/v1alph" +
-      "a1/{parent=projects/*}/domains\332A\004name\202\263\033" +
-      "\006Domain\212\263\033\004list\022\217\001\n\tGetDomain\022\'.cbws.dom" +
-      "ains.v1alpha1.GetDomainRequest\032\035.cbws.do" +
-      "mains.v1alpha1.Domain\":\202\323\344\223\002\034\022\032/v1alpha1" +
-      "/{name=domains/*}\332A\004name\202\263\033\006Domain\212\263\033\003ge" +
-      "t\032)\312A\020domains.cbws.xyz\372\262\033\022\n\020domains.cbws" +
-      ".xyzB\224\001\n\031xyz.cbws.domains.v1alpha1P\001Z2gi" +
-      "thub.com/cbws/go-cbws-grpc/cbws/domains/" +
-      "v1alpha1\312\002\032Cbws\\Domains\\GRPC\\V1alpha1\342\002#" +
-      "Cbws\\Domains\\GRPC\\V1alpha1\\Metadatab\006pro" +
-      "to3"
+      "source.proto\"n\n\022ListDomainsRequest\0221\n\006pa" +
+      "rent\030\001 \001(\tB!\340A\002\372A\033\n\031projects.cbws.xyz/Pr" +
+      "oject\022\021\n\tpage_size\030\002 \001(\005\022\022\n\npage_token\030\003" +
+      " \001(\t\"^\n\023ListDomainsResponse\022.\n\007domains\030\001" +
+      " \003(\0132\035.cbws.domains.v1alpha1.Domain\022\027\n\017n" +
+      "ext_page_token\030\002 \001(\t\"A\n\020GetDomainRequest" +
+      "\022-\n\004name\030\001 \001(\tB\037\340A\002\372A\031\n\027domains.cbws.xyz" +
+      "/Domain2\374\002\n\016DomainsService\022\254\001\n\013ListDomai" +
+      "ns\022).cbws.domains.v1alpha1.ListDomainsRe" +
+      "quest\032*.cbws.domains.v1alpha1.ListDomain" +
+      "sResponse\"F\202\323\344\223\002\'\022%/v1alpha1/{parent=pro" +
+      "jects/*}/domains\332A\004name\202\263\033\006Domain\212\263\033\004lis" +
+      "t\022\217\001\n\tGetDomain\022\'.cbws.domains.v1alpha1." +
+      "GetDomainRequest\032\035.cbws.domains.v1alpha1" +
+      ".Domain\":\202\323\344\223\002\034\022\032/v1alpha1/{name=domains" +
+      "/*}\332A\004name\202\263\033\006Domain\212\263\033\003get\032)\312A\020domains." +
+      "cbws.xyz\372\262\033\022\n\020domains.cbws.xyzB\224\001\n\031xyz.c" +
+      "bws.domains.v1alpha1P\001Z2github.com/cbws/" +
+      "go-cbws-grpc/cbws/domains/v1alpha1\312\002\032Cbw" +
+      "s\\Domains\\GRPC\\V1alpha1\342\002#Cbws\\Domains\\G" +
+      "RPC\\V1alpha1\\Metadatab\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -78,9 +75,6 @@ public final class Domains {
           com.google.api.ClientProto.getDescriptor(),
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
-          com.google.protobuf.EmptyProto.getDescriptor(),
-          com.google.protobuf.DurationProto.getDescriptor(),
-          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_cbws_domains_v1alpha1_ListDomainsRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -118,9 +112,6 @@ public final class Domains {
     com.google.api.ClientProto.getDescriptor();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
-    com.google.protobuf.EmptyProto.getDescriptor();
-    com.google.protobuf.DurationProto.getDescriptor();
-    com.google.protobuf.TimestampProto.getDescriptor();
   }
 
   // @@protoc_insertion_point(outer_class_scope)
