@@ -27,4 +27,31 @@ public interface CreateMachineMetadataOrBuilder extends
    * @return The state.
    */
   cloud.cbws.api.compute.v1alpha1.Machine.State getState();
+
+  /**
+   * <pre>
+   * The machine being created.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the machine field is set.
+   */
+  boolean hasMachine();
+  /**
+   * <pre>
+   * The machine being created.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The machine.
+   */
+  cloud.cbws.api.compute.v1alpha1.Machine getMachine();
+  /**
+   * <pre>
+   * The machine being created.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  cloud.cbws.api.compute.v1alpha1.MachineOrBuilder getMachineOrBuilder();
 }

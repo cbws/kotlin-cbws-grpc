@@ -143,62 +143,64 @@ public final class ComputeProto {
       "ojectR\006parent\022#\n\nmachine_id\030\002 \001(\tB\004\342A\001\002R" +
       "\tmachineId\022>\n\007machine\030\003 \001(\0132\036.cbws.compu" +
       "te.v1alpha1.MachineB\004\342A\001\002R\007machine\"\027\n\025Cr" +
-      "eateMachineResponse\"Y\n\025CreateMachineMeta" +
-      "data\022@\n\005state\030\004 \001(\0162$.cbws.compute.v1alp" +
-      "ha1.Machine.StateB\004\342A\001\003R\005state\"M\n\022StopMa" +
-      "chineRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032com" +
-      "pute.cbws.cloud/MachineR\004name\"\025\n\023StopMac" +
-      "hineResponse\"\025\n\023StopMachineMetadata\"N\n\023S" +
-      "tartMachineRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A" +
-      "\034\n\032compute.cbws.cloud/MachineR\004name\"\026\n\024S" +
-      "tartMachineResponse\"\026\n\024StartMachineMetad" +
-      "ata\"N\n\023ResetMachineRequest\0227\n\004name\030\001 \001(\t" +
-      "B#\342A\001\002\372A\034\n\032compute.cbws.cloud/MachineR\004n" +
-      "ame\"\026\n\024ResetMachineResponse\"\026\n\024ResetMach" +
-      "ineMetadata\"O\n\024DeleteMachineRequest\0227\n\004n" +
-      "ame\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws.cloud/M" +
-      "achineR\004name\"\027\n\025DeleteMachineMetadata2\240\013" +
-      "\n\016ComputeService\022\240\001\n\014ListMachines\022*.cbws" +
-      ".compute.v1alpha1.ListMachinesRequest\032+." +
-      "cbws.compute.v1alpha1.ListMachinesRespon" +
-      "se\"7\332A\006parent\202\323\344\223\002(\022&/v1alpha1/{parent=p" +
-      "rojects/*}/machines\022\215\001\n\nGetMachine\022(.cbw" +
-      "s.compute.v1alpha1.GetMachineRequest\032\036.c" +
-      "bws.compute.v1alpha1.Machine\"5\332A\004name\202\323\344" +
-      "\223\002(\022&/v1alpha1/{name=projects/*/machines" +
-      "/*}\022\344\001\n\rCreateMachine\022+.cbws.compute.v1a" +
-      "lpha1.CreateMachineRequest\032\035.google.long" +
-      "running.Operation\"\206\001\312A6\n\007Machine\022+cbws.c" +
-      "ompute.v1alpha1.CreateMachineMetadata\332A\031" +
-      "parent,machine,machine_id\202\323\344\223\002+\" /v1/{pa" +
-      "rent=projects/*}/machines:\007machine\022\322\001\n\013S" +
-      "topMachine\022).cbws.compute.v1alpha1.StopM" +
+      "eateMachineResponse\"\231\001\n\025CreateMachineMet" +
+      "adata\022@\n\005state\030\004 \001(\0162$.cbws.compute.v1al" +
+      "pha1.Machine.StateB\004\342A\001\003R\005state\022>\n\007machi" +
+      "ne\030\005 \001(\0132\036.cbws.compute.v1alpha1.Machine" +
+      "B\004\342A\001\003R\007machine\"M\n\022StopMachineRequest\0227\n" +
+      "\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws.cloud" +
+      "/MachineR\004name\"\025\n\023StopMachineResponse\"\025\n" +
+      "\023StopMachineMetadata\"N\n\023StartMachineRequ" +
+      "est\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws" +
+      ".cloud/MachineR\004name\"\026\n\024StartMachineResp" +
+      "onse\"\026\n\024StartMachineMetadata\"N\n\023ResetMac" +
+      "hineRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032comp" +
+      "ute.cbws.cloud/MachineR\004name\"\026\n\024ResetMac" +
+      "hineResponse\"\026\n\024ResetMachineMetadata\"O\n\024" +
+      "DeleteMachineRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002" +
+      "\372A\034\n\032compute.cbws.cloud/MachineR\004name\"\027\n" +
+      "\025DeleteMachineMetadata2\240\013\n\016ComputeServic" +
+      "e\022\240\001\n\014ListMachines\022*.cbws.compute.v1alph" +
+      "a1.ListMachinesRequest\032+.cbws.compute.v1" +
+      "alpha1.ListMachinesResponse\"7\332A\006parent\202\323" +
+      "\344\223\002(\022&/v1alpha1/{parent=projects/*}/mach" +
+      "ines\022\215\001\n\nGetMachine\022(.cbws.compute.v1alp" +
+      "ha1.GetMachineRequest\032\036.cbws.compute.v1a" +
+      "lpha1.Machine\"5\332A\004name\202\323\344\223\002(\022&/v1alpha1/" +
+      "{name=projects/*/machines/*}\022\344\001\n\rCreateM" +
+      "achine\022+.cbws.compute.v1alpha1.CreateMac" +
+      "hineRequest\032\035.google.longrunning.Operati" +
+      "on\"\206\001\312A6\n\007Machine\022+cbws.compute.v1alpha1" +
+      ".CreateMachineMetadata\332A\031parent,machine," +
+      "machine_id\202\323\344\223\002+\" /v1/{parent=projects/*" +
+      "}/machines:\007machine\022\322\001\n\013StopMachine\022).cb" +
+      "ws.compute.v1alpha1.StopMachineRequest\032\035" +
+      ".google.longrunning.Operation\"y\312A@\n\023Stop" +
+      "MachineResponse\022)cbws.compute.v1alpha1.S" +
+      "topMachineMetadata\202\323\344\223\0020\"%/v1/{name=proj" +
+      "ects/*/machines/*}:stop:\007machine\022\327\001\n\014Sta" +
+      "rtMachine\022*.cbws.compute.v1alpha1.StartM" +
       "achineRequest\032\035.google.longrunning.Opera" +
-      "tion\"y\312A@\n\023StopMachineResponse\022)cbws.com" +
-      "pute.v1alpha1.StopMachineMetadata\202\323\344\223\0020\"" +
-      "%/v1/{name=projects/*/machines/*}:stop:\007" +
-      "machine\022\327\001\n\014StartMachine\022*.cbws.compute." +
-      "v1alpha1.StartMachineRequest\032\035.google.lo" +
-      "ngrunning.Operation\"|\312AB\n\024StartMachineRe" +
-      "sponse\022*cbws.compute.v1alpha1.StartMachi" +
-      "neMetadata\202\323\344\223\0021\"&/v1/{name=projects/*/m" +
-      "achines/*}:start:\007machine\022\327\001\n\014ResetMachi" +
-      "ne\022*.cbws.compute.v1alpha1.ResetMachineR" +
-      "equest\032\035.google.longrunning.Operation\"|\312" +
-      "AB\n\024ResetMachineResponse\022*cbws.compute.v" +
-      "1alpha1.ResetMachineMetadata\202\323\344\223\0021\"&/v1/" +
-      "{name=projects/*/machines/*}:reset:\007mach" +
-      "ine\022\323\001\n\rDeleteMachine\022+.cbws.compute.v1a" +
-      "lpha1.DeleteMachineRequest\032\035.google.long" +
-      "running.Operation\"v\312AD\n\025google.protobuf." +
-      "Empty\022+cbws.compute.v1alpha1.DeleteMachi" +
-      "neMetadata\332A\004name\202\323\344\223\002\"* /v1/{name=proje" +
-      "cts/*/machines/*}\032\025\312A\022compute.cbws.cloud" +
-      "B\245\001\n\037cloud.cbws.api.compute.v1alpha1B\014Co" +
-      "mputeProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alph" +
-      "a1\312\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\Comput" +
-      "e\\V1alpha1\\GPBMetadata\352\002\027Cbws::Compute::" +
-      "V1alpha1b\006proto3"
+      "tion\"|\312AB\n\024StartMachineResponse\022*cbws.co" +
+      "mpute.v1alpha1.StartMachineMetadata\202\323\344\223\002" +
+      "1\"&/v1/{name=projects/*/machines/*}:star" +
+      "t:\007machine\022\327\001\n\014ResetMachine\022*.cbws.compu" +
+      "te.v1alpha1.ResetMachineRequest\032\035.google" +
+      ".longrunning.Operation\"|\312AB\n\024ResetMachin" +
+      "eResponse\022*cbws.compute.v1alpha1.ResetMa" +
+      "chineMetadata\202\323\344\223\0021\"&/v1/{name=projects/" +
+      "*/machines/*}:reset:\007machine\022\323\001\n\rDeleteM" +
+      "achine\022+.cbws.compute.v1alpha1.DeleteMac" +
+      "hineRequest\032\035.google.longrunning.Operati" +
+      "on\"v\312AD\n\025google.protobuf.Empty\022+cbws.com" +
+      "pute.v1alpha1.DeleteMachineMetadata\332A\004na" +
+      "me\202\323\344\223\002\"* /v1/{name=projects/*/machines/" +
+      "*}\032\025\312A\022compute.cbws.cloudB\245\001\n\037cloud.cbws" +
+      ".api.compute.v1alpha1B\014ComputeProtoP\001\242\002\003" +
+      "CCX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws\\Compu" +
+      "te\\V1alpha1\342\002!Cbws\\Compute\\V1alpha1\\GPBM" +
+      "etadata\352\002\027Cbws::Compute::V1alpha1b\006proto" +
+      "3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -246,7 +248,7 @@ public final class ComputeProto {
     internal_static_cbws_compute_v1alpha1_CreateMachineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_CreateMachineMetadata_descriptor,
-        new java.lang.String[] { "State", });
+        new java.lang.String[] { "State", "Machine", });
     internal_static_cbws_compute_v1alpha1_StopMachineRequest_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_cbws_compute_v1alpha1_StopMachineRequest_fieldAccessorTable = new

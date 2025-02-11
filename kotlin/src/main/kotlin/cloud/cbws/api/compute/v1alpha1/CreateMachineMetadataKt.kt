@@ -64,9 +64,53 @@ public object CreateMachineMetadataKt {
     public fun clearState() {
       _builder.clearState()
     }
+
+    /**
+     * ```
+     * The machine being created.
+     * ```
+     *
+     * `.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var machine: cloud.cbws.api.compute.v1alpha1.Machine
+      @kotlin.jvm.JvmName("getMachine")
+        get() = _builder.machine
+      @kotlin.jvm.JvmName("setMachine")
+        set(value) {
+        _builder.machine = value
+      }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearMachine() {
+      _builder.clearMachine()
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the machine field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasMachine(): kotlin.Boolean {
+      return _builder.hasMachine()
+    }
+
+    public val CreateMachineMetadataKt.Dsl.machineOrNull: cloud.cbws.api.compute.v1alpha1.Machine?
+      get() = _builder.machineOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata.copy(block: `cloud.cbws.api.compute.v1alpha1`.CreateMachineMetadataKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata =
   `cloud.cbws.api.compute.v1alpha1`.CreateMachineMetadataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val cloud.cbws.api.compute.v1alpha1.CreateMachineMetadataOrBuilder.machineOrNull: cloud.cbws.api.compute.v1alpha1.Machine?
+  get() = if (hasMachine()) getMachine() else null
 

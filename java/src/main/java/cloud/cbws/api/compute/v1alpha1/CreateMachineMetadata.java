@@ -47,6 +47,7 @@ private static final long serialVersionUID = 0L;
             cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata.class, cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata.Builder.class);
   }
 
+  private int bitField0_;
   public static final int STATE_FIELD_NUMBER = 4;
   private int state_ = 0;
   /**
@@ -73,6 +74,44 @@ private static final long serialVersionUID = 0L;
     return result == null ? cloud.cbws.api.compute.v1alpha1.Machine.State.UNRECOGNIZED : result;
   }
 
+  public static final int MACHINE_FIELD_NUMBER = 5;
+  private cloud.cbws.api.compute.v1alpha1.Machine machine_;
+  /**
+   * <pre>
+   * The machine being created.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the machine field is set.
+   */
+  @java.lang.Override
+  public boolean hasMachine() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * The machine being created.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The machine.
+   */
+  @java.lang.Override
+  public cloud.cbws.api.compute.v1alpha1.Machine getMachine() {
+    return machine_ == null ? cloud.cbws.api.compute.v1alpha1.Machine.getDefaultInstance() : machine_;
+  }
+  /**
+   * <pre>
+   * The machine being created.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public cloud.cbws.api.compute.v1alpha1.MachineOrBuilder getMachineOrBuilder() {
+    return machine_ == null ? cloud.cbws.api.compute.v1alpha1.Machine.getDefaultInstance() : machine_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -90,6 +129,9 @@ private static final long serialVersionUID = 0L;
     if (state_ != cloud.cbws.api.compute.v1alpha1.Machine.State.STATE_UNSPECIFIED.getNumber()) {
       output.writeEnum(4, state_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(5, getMachine());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -102,6 +144,10 @@ private static final long serialVersionUID = 0L;
     if (state_ != cloud.cbws.api.compute.v1alpha1.Machine.State.STATE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(4, state_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getMachine());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -119,6 +165,11 @@ private static final long serialVersionUID = 0L;
     cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata other = (cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata) obj;
 
     if (state_ != other.state_) return false;
+    if (hasMachine() != other.hasMachine()) return false;
+    if (hasMachine()) {
+      if (!getMachine()
+          .equals(other.getMachine())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -132,6 +183,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + STATE_FIELD_NUMBER;
     hash = (53 * hash) + state_;
+    if (hasMachine()) {
+      hash = (37 * hash) + MACHINE_FIELD_NUMBER;
+      hash = (53 * hash) + getMachine().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -255,19 +310,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetMachineFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
       state_ = 0;
+      machine_ = null;
+      if (machineBuilder_ != null) {
+        machineBuilder_.dispose();
+        machineBuilder_ = null;
+      }
       return this;
     }
 
@@ -304,6 +370,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.state_ = state_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.machine_ = machineBuilder_ == null
+            ? machine_
+            : machineBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -320,6 +394,9 @@ private static final long serialVersionUID = 0L;
       if (other == cloud.cbws.api.compute.v1alpha1.CreateMachineMetadata.getDefaultInstance()) return this;
       if (other.state_ != 0) {
         setStateValue(other.getStateValue());
+      }
+      if (other.hasMachine()) {
+        mergeMachine(other.getMachine());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -352,6 +429,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 32
+            case 42: {
+              input.readMessage(
+                  internalGetMachineFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 42
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -440,6 +524,163 @@ private static final long serialVersionUID = 0L;
       state_ = 0;
       onChanged();
       return this;
+    }
+
+    private cloud.cbws.api.compute.v1alpha1.Machine machine_;
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.compute.v1alpha1.Machine, cloud.cbws.api.compute.v1alpha1.Machine.Builder, cloud.cbws.api.compute.v1alpha1.MachineOrBuilder> machineBuilder_;
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the machine field is set.
+     */
+    public boolean hasMachine() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The machine.
+     */
+    public cloud.cbws.api.compute.v1alpha1.Machine getMachine() {
+      if (machineBuilder_ == null) {
+        return machine_ == null ? cloud.cbws.api.compute.v1alpha1.Machine.getDefaultInstance() : machine_;
+      } else {
+        return machineBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setMachine(cloud.cbws.api.compute.v1alpha1.Machine value) {
+      if (machineBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        machine_ = value;
+      } else {
+        machineBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setMachine(
+        cloud.cbws.api.compute.v1alpha1.Machine.Builder builderForValue) {
+      if (machineBuilder_ == null) {
+        machine_ = builderForValue.build();
+      } else {
+        machineBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeMachine(cloud.cbws.api.compute.v1alpha1.Machine value) {
+      if (machineBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          machine_ != null &&
+          machine_ != cloud.cbws.api.compute.v1alpha1.Machine.getDefaultInstance()) {
+          getMachineBuilder().mergeFrom(value);
+        } else {
+          machine_ = value;
+        }
+      } else {
+        machineBuilder_.mergeFrom(value);
+      }
+      if (machine_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearMachine() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      machine_ = null;
+      if (machineBuilder_ != null) {
+        machineBuilder_.dispose();
+        machineBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public cloud.cbws.api.compute.v1alpha1.Machine.Builder getMachineBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return internalGetMachineFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public cloud.cbws.api.compute.v1alpha1.MachineOrBuilder getMachineOrBuilder() {
+      if (machineBuilder_ != null) {
+        return machineBuilder_.getMessageOrBuilder();
+      } else {
+        return machine_ == null ?
+            cloud.cbws.api.compute.v1alpha1.Machine.getDefaultInstance() : machine_;
+      }
+    }
+    /**
+     * <pre>
+     * The machine being created.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Machine machine = 5 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.compute.v1alpha1.Machine, cloud.cbws.api.compute.v1alpha1.Machine.Builder, cloud.cbws.api.compute.v1alpha1.MachineOrBuilder> 
+        internalGetMachineFieldBuilder() {
+      if (machineBuilder_ == null) {
+        machineBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            cloud.cbws.api.compute.v1alpha1.Machine, cloud.cbws.api.compute.v1alpha1.Machine.Builder, cloud.cbws.api.compute.v1alpha1.MachineOrBuilder>(
+                getMachine(),
+                getParentForChildren(),
+                isClean());
+        machine_ = null;
+      }
+      return machineBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:cbws.compute.v1alpha1.CreateMachineMetadata)
