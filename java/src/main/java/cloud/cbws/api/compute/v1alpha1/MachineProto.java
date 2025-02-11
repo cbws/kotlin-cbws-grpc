@@ -42,7 +42,7 @@ public final class MachineProto {
       "\n#cbws/compute/v1alpha1/machine.proto\022\025c" +
       "bws.compute.v1alpha1\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\256\004\n\007Machine\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034" +
+      "\"\260\004\n\007Machine\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034" +
       "\n\006parent\030\002 \001(\tB\004\342A\001\005R\006parent\022\030\n\004type\030\003 \001" +
       "(\tB\004\342A\001\005R\004type\022 \n\010hostname\030\004 \001(\tB\004\342A\001\002R\010" +
       "hostname\022\036\n\007address\030\007 \001(\tB\004\342A\001\003R\007address" +
@@ -54,13 +54,13 @@ public final class MachineProto {
       "STAGING\020\002\022\021\n\rSTATE_RUNNING\020\003\022\022\n\016STATE_ST" +
       "OPPING\020\004\022\024\n\020STATE_SUSPENDING\020\005\022\023\n\017STATE_" +
       "SUSPENDED\020\006\022\023\n\017STATE_REPAIRING\020\007\022\024\n\020STAT" +
-      "E_TERMINATED\020\010:A\352A>\n\030compute.cbws.xyz/Ma" +
-      "chine\022\"projects/{project}/machines/{name" +
-      "}B\245\001\n\037cloud.cbws.api.compute.v1alpha1B\014M" +
-      "achineProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alp" +
-      "ha1\312\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\Compu" +
-      "te\\V1alpha1\\GPBMetadata\352\002\027Cbws::Compute:" +
-      ":V1alpha1b\006proto3"
+      "E_TERMINATED\020\010:C\352A@\n\032compute.cbws.cloud/" +
+      "Machine\022\"projects/{project}/machines/{na" +
+      "me}B\245\001\n\037cloud.cbws.api.compute.v1alpha1B" +
+      "\014MachineProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1a" +
+      "lpha1\312\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\Com" +
+      "pute\\V1alpha1\\GPBMetadata\352\002\027Cbws::Comput" +
+      "e::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
