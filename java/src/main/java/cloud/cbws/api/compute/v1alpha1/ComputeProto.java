@@ -41,6 +41,16 @@ public final class ComputeProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_compute_v1alpha1_GetMachineRequest_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_compute_v1alpha1_RequestMachineConsoleRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_compute_v1alpha1_RequestMachineConsoleRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_compute_v1alpha1_RequestMachineConsoleResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_compute_v1alpha1_RequestMachineConsoleResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cbws_compute_v1alpha1_CreateMachineRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -138,69 +148,78 @@ public final class ComputeProto {
       "eRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute" +
       ".cbws.cloud/MachineR\004name\022=\n\tread_mask\030\002" +
       " \001(\0132\032.google.protobuf.FieldMaskB\004\342A\001\001R\010" +
-      "readMask\"\267\001\n\024CreateMachineRequest\022:\n\006par" +
-      "ent\030\001 \001(\tB\"\342A\001\002\372A\033\n\031projects.cbws.xyz/Pr" +
-      "ojectR\006parent\022#\n\nmachine_id\030\002 \001(\tB\004\342A\001\002R" +
-      "\tmachineId\022>\n\007machine\030\003 \001(\0132\036.cbws.compu" +
-      "te.v1alpha1.MachineB\004\342A\001\002R\007machine\"\027\n\025Cr" +
-      "eateMachineResponse\"\231\001\n\025CreateMachineMet" +
-      "adata\022@\n\005state\030\004 \001(\0162$.cbws.compute.v1al" +
-      "pha1.Machine.StateB\004\342A\001\003R\005state\022>\n\007machi" +
-      "ne\030\005 \001(\0132\036.cbws.compute.v1alpha1.Machine" +
-      "B\004\342A\001\003R\007machine\"M\n\022StopMachineRequest\0227\n" +
-      "\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws.cloud" +
-      "/MachineR\004name\"\025\n\023StopMachineResponse\"\025\n" +
-      "\023StopMachineMetadata\"N\n\023StartMachineRequ" +
-      "est\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws" +
-      ".cloud/MachineR\004name\"\026\n\024StartMachineResp" +
-      "onse\"\026\n\024StartMachineMetadata\"N\n\023ResetMac" +
-      "hineRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032comp" +
-      "ute.cbws.cloud/MachineR\004name\"\026\n\024ResetMac" +
-      "hineResponse\"\026\n\024ResetMachineMetadata\"O\n\024" +
-      "DeleteMachineRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002" +
-      "\372A\034\n\032compute.cbws.cloud/MachineR\004name\"\027\n" +
-      "\025DeleteMachineMetadata2\240\013\n\016ComputeServic" +
-      "e\022\240\001\n\014ListMachines\022*.cbws.compute.v1alph" +
-      "a1.ListMachinesRequest\032+.cbws.compute.v1" +
-      "alpha1.ListMachinesResponse\"7\332A\006parent\202\323" +
-      "\344\223\002(\022&/v1alpha1/{parent=projects/*}/mach" +
-      "ines\022\215\001\n\nGetMachine\022(.cbws.compute.v1alp" +
-      "ha1.GetMachineRequest\032\036.cbws.compute.v1a" +
-      "lpha1.Machine\"5\332A\004name\202\323\344\223\002(\022&/v1alpha1/" +
-      "{name=projects/*/machines/*}\022\344\001\n\rCreateM" +
-      "achine\022+.cbws.compute.v1alpha1.CreateMac" +
-      "hineRequest\032\035.google.longrunning.Operati" +
-      "on\"\206\001\312A6\n\007Machine\022+cbws.compute.v1alpha1" +
-      ".CreateMachineMetadata\332A\031parent,machine," +
-      "machine_id\202\323\344\223\002+\" /v1/{parent=projects/*" +
-      "}/machines:\007machine\022\322\001\n\013StopMachine\022).cb" +
-      "ws.compute.v1alpha1.StopMachineRequest\032\035" +
-      ".google.longrunning.Operation\"y\312A@\n\023Stop" +
-      "MachineResponse\022)cbws.compute.v1alpha1.S" +
-      "topMachineMetadata\202\323\344\223\0020\"%/v1/{name=proj" +
-      "ects/*/machines/*}:stop:\007machine\022\327\001\n\014Sta" +
-      "rtMachine\022*.cbws.compute.v1alpha1.StartM" +
-      "achineRequest\032\035.google.longrunning.Opera" +
-      "tion\"|\312AB\n\024StartMachineResponse\022*cbws.co" +
-      "mpute.v1alpha1.StartMachineMetadata\202\323\344\223\002" +
-      "1\"&/v1/{name=projects/*/machines/*}:star" +
-      "t:\007machine\022\327\001\n\014ResetMachine\022*.cbws.compu" +
-      "te.v1alpha1.ResetMachineRequest\032\035.google" +
-      ".longrunning.Operation\"|\312AB\n\024ResetMachin" +
-      "eResponse\022*cbws.compute.v1alpha1.ResetMa" +
-      "chineMetadata\202\323\344\223\0021\"&/v1/{name=projects/" +
-      "*/machines/*}:reset:\007machine\022\323\001\n\rDeleteM" +
-      "achine\022+.cbws.compute.v1alpha1.DeleteMac" +
-      "hineRequest\032\035.google.longrunning.Operati" +
-      "on\"v\312AD\n\025google.protobuf.Empty\022+cbws.com" +
-      "pute.v1alpha1.DeleteMachineMetadata\332A\004na" +
-      "me\202\323\344\223\002\"* /v1/{name=projects/*/machines/" +
-      "*}\032\025\312A\022compute.cbws.cloudB\245\001\n\037cloud.cbws" +
-      ".api.compute.v1alpha1B\014ComputeProtoP\001\242\002\003" +
-      "CCX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws\\Compu" +
-      "te\\V1alpha1\342\002!Cbws\\Compute\\V1alpha1\\GPBM" +
-      "etadata\352\002\027Cbws::Compute::V1alpha1b\006proto" +
-      "3"
+      "readMask\"W\n\034RequestMachineConsoleRequest" +
+      "\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws.cl" +
+      "oud/MachineR\004name\"a\n\035RequestMachineConso" +
+      "leResponse\022\032\n\010protocol\030\001 \001(\tR\010protocol\022\022" +
+      "\n\004type\030\002 \001(\tR\004type\022\020\n\003url\030\003 \001(\tR\003url\"\267\001\n" +
+      "\024CreateMachineRequest\022:\n\006parent\030\001 \001(\tB\"\342" +
+      "A\001\002\372A\033\n\031projects.cbws.xyz/ProjectR\006paren" +
+      "t\022#\n\nmachine_id\030\002 \001(\tB\004\342A\001\002R\tmachineId\022>" +
+      "\n\007machine\030\003 \001(\0132\036.cbws.compute.v1alpha1." +
+      "MachineB\004\342A\001\002R\007machine\"\027\n\025CreateMachineR" +
+      "esponse\"\231\001\n\025CreateMachineMetadata\022@\n\005sta" +
+      "te\030\004 \001(\0162$.cbws.compute.v1alpha1.Machine" +
+      ".StateB\004\342A\001\003R\005state\022>\n\007machine\030\005 \001(\0132\036.c" +
+      "bws.compute.v1alpha1.MachineB\004\342A\001\003R\007mach" +
+      "ine\"M\n\022StopMachineRequest\0227\n\004name\030\001 \001(\tB" +
+      "#\342A\001\002\372A\034\n\032compute.cbws.cloud/MachineR\004na" +
+      "me\"\025\n\023StopMachineResponse\"\025\n\023StopMachine" +
+      "Metadata\"N\n\023StartMachineRequest\0227\n\004name\030" +
+      "\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws.cloud/Machi" +
+      "neR\004name\"\026\n\024StartMachineResponse\"\026\n\024Star" +
+      "tMachineMetadata\"N\n\023ResetMachineRequest\022" +
+      "7\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute.cbws.clo" +
+      "ud/MachineR\004name\"\026\n\024ResetMachineResponse" +
+      "\"\026\n\024ResetMachineMetadata\"O\n\024DeleteMachin" +
+      "eRequest\0227\n\004name\030\001 \001(\tB#\342A\001\002\372A\034\n\032compute" +
+      ".cbws.cloud/MachineR\004name\"\027\n\025DeleteMachi" +
+      "neMetadata2\334\014\n\016ComputeService\022\240\001\n\014ListMa" +
+      "chines\022*.cbws.compute.v1alpha1.ListMachi" +
+      "nesRequest\032+.cbws.compute.v1alpha1.ListM" +
+      "achinesResponse\"7\332A\006parent\202\323\344\223\002(\022&/v1alp" +
+      "ha1/{parent=projects/*}/machines\022\215\001\n\nGet" +
+      "Machine\022(.cbws.compute.v1alpha1.GetMachi" +
+      "neRequest\032\036.cbws.compute.v1alpha1.Machin" +
+      "e\"5\332A\004name\202\323\344\223\002(\022&/v1alpha1/{name=projec" +
+      "ts/*/machines/*}\022\271\001\n\025RequestMachineConso" +
+      "le\0223.cbws.compute.v1alpha1.RequestMachin" +
+      "eConsoleRequest\0324.cbws.compute.v1alpha1." +
+      "RequestMachineConsoleResponse\"5\332A\004name\202\323" +
+      "\344\223\002(\022&/v1alpha1/{name=projects/*/machine" +
+      "s/*}\022\344\001\n\rCreateMachine\022+.cbws.compute.v1" +
+      "alpha1.CreateMachineRequest\032\035.google.lon" +
+      "grunning.Operation\"\206\001\312A6\n\007Machine\022+cbws." +
+      "compute.v1alpha1.CreateMachineMetadata\332A" +
+      "\031parent,machine,machine_id\202\323\344\223\002+\" /v1/{p" +
+      "arent=projects/*}/machines:\007machine\022\322\001\n\013" +
+      "StopMachine\022).cbws.compute.v1alpha1.Stop" +
+      "MachineRequest\032\035.google.longrunning.Oper" +
+      "ation\"y\312A@\n\023StopMachineResponse\022)cbws.co" +
+      "mpute.v1alpha1.StopMachineMetadata\202\323\344\223\0020" +
+      "\"%/v1/{name=projects/*/machines/*}:stop:" +
+      "\007machine\022\327\001\n\014StartMachine\022*.cbws.compute" +
+      ".v1alpha1.StartMachineRequest\032\035.google.l" +
+      "ongrunning.Operation\"|\312AB\n\024StartMachineR" +
+      "esponse\022*cbws.compute.v1alpha1.StartMach" +
+      "ineMetadata\202\323\344\223\0021\"&/v1/{name=projects/*/" +
+      "machines/*}:start:\007machine\022\327\001\n\014ResetMach" +
+      "ine\022*.cbws.compute.v1alpha1.ResetMachine" +
+      "Request\032\035.google.longrunning.Operation\"|" +
+      "\312AB\n\024ResetMachineResponse\022*cbws.compute." +
+      "v1alpha1.ResetMachineMetadata\202\323\344\223\0021\"&/v1" +
+      "/{name=projects/*/machines/*}:reset:\007mac" +
+      "hine\022\323\001\n\rDeleteMachine\022+.cbws.compute.v1" +
+      "alpha1.DeleteMachineRequest\032\035.google.lon" +
+      "grunning.Operation\"v\312AD\n\025google.protobuf" +
+      ".Empty\022+cbws.compute.v1alpha1.DeleteMach" +
+      "ineMetadata\332A\004name\202\323\344\223\002\"* /v1/{name=proj" +
+      "ects/*/machines/*}\032\025\312A\022compute.cbws.clou" +
+      "dB\245\001\n\037cloud.cbws.api.compute.v1alpha1B\014C" +
+      "omputeProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alp" +
+      "ha1\312\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\Compu" +
+      "te\\V1alpha1\\GPBMetadata\352\002\027Cbws::Compute:" +
+      ":V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -231,86 +250,98 @@ public final class ComputeProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_GetMachineRequest_descriptor,
         new java.lang.String[] { "Name", "ReadMask", });
-    internal_static_cbws_compute_v1alpha1_CreateMachineRequest_descriptor =
+    internal_static_cbws_compute_v1alpha1_RequestMachineConsoleRequest_descriptor =
       getDescriptor().getMessageTypes().get(3);
+    internal_static_cbws_compute_v1alpha1_RequestMachineConsoleRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_compute_v1alpha1_RequestMachineConsoleRequest_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_cbws_compute_v1alpha1_RequestMachineConsoleResponse_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_cbws_compute_v1alpha1_RequestMachineConsoleResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_compute_v1alpha1_RequestMachineConsoleResponse_descriptor,
+        new java.lang.String[] { "Protocol", "Type", "Url", });
+    internal_static_cbws_compute_v1alpha1_CreateMachineRequest_descriptor =
+      getDescriptor().getMessageTypes().get(5);
     internal_static_cbws_compute_v1alpha1_CreateMachineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_CreateMachineRequest_descriptor,
         new java.lang.String[] { "Parent", "MachineId", "Machine", });
     internal_static_cbws_compute_v1alpha1_CreateMachineResponse_descriptor =
-      getDescriptor().getMessageTypes().get(4);
+      getDescriptor().getMessageTypes().get(6);
     internal_static_cbws_compute_v1alpha1_CreateMachineResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_CreateMachineResponse_descriptor,
         new java.lang.String[] { });
     internal_static_cbws_compute_v1alpha1_CreateMachineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(5);
+      getDescriptor().getMessageTypes().get(7);
     internal_static_cbws_compute_v1alpha1_CreateMachineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_CreateMachineMetadata_descriptor,
         new java.lang.String[] { "State", "Machine", });
     internal_static_cbws_compute_v1alpha1_StopMachineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(6);
+      getDescriptor().getMessageTypes().get(8);
     internal_static_cbws_compute_v1alpha1_StopMachineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_StopMachineRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_cbws_compute_v1alpha1_StopMachineResponse_descriptor =
-      getDescriptor().getMessageTypes().get(7);
+      getDescriptor().getMessageTypes().get(9);
     internal_static_cbws_compute_v1alpha1_StopMachineResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_StopMachineResponse_descriptor,
         new java.lang.String[] { });
     internal_static_cbws_compute_v1alpha1_StopMachineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(8);
+      getDescriptor().getMessageTypes().get(10);
     internal_static_cbws_compute_v1alpha1_StopMachineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_StopMachineMetadata_descriptor,
         new java.lang.String[] { });
     internal_static_cbws_compute_v1alpha1_StartMachineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(9);
+      getDescriptor().getMessageTypes().get(11);
     internal_static_cbws_compute_v1alpha1_StartMachineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_StartMachineRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_cbws_compute_v1alpha1_StartMachineResponse_descriptor =
-      getDescriptor().getMessageTypes().get(10);
+      getDescriptor().getMessageTypes().get(12);
     internal_static_cbws_compute_v1alpha1_StartMachineResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_StartMachineResponse_descriptor,
         new java.lang.String[] { });
     internal_static_cbws_compute_v1alpha1_StartMachineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(11);
+      getDescriptor().getMessageTypes().get(13);
     internal_static_cbws_compute_v1alpha1_StartMachineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_StartMachineMetadata_descriptor,
         new java.lang.String[] { });
     internal_static_cbws_compute_v1alpha1_ResetMachineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(12);
+      getDescriptor().getMessageTypes().get(14);
     internal_static_cbws_compute_v1alpha1_ResetMachineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_ResetMachineRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_cbws_compute_v1alpha1_ResetMachineResponse_descriptor =
-      getDescriptor().getMessageTypes().get(13);
+      getDescriptor().getMessageTypes().get(15);
     internal_static_cbws_compute_v1alpha1_ResetMachineResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_ResetMachineResponse_descriptor,
         new java.lang.String[] { });
     internal_static_cbws_compute_v1alpha1_ResetMachineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(14);
+      getDescriptor().getMessageTypes().get(16);
     internal_static_cbws_compute_v1alpha1_ResetMachineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_ResetMachineMetadata_descriptor,
         new java.lang.String[] { });
     internal_static_cbws_compute_v1alpha1_DeleteMachineRequest_descriptor =
-      getDescriptor().getMessageTypes().get(15);
+      getDescriptor().getMessageTypes().get(17);
     internal_static_cbws_compute_v1alpha1_DeleteMachineRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_DeleteMachineRequest_descriptor,
         new java.lang.String[] { "Name", });
     internal_static_cbws_compute_v1alpha1_DeleteMachineMetadata_descriptor =
-      getDescriptor().getMessageTypes().get(16);
+      getDescriptor().getMessageTypes().get(18);
     internal_static_cbws_compute_v1alpha1_DeleteMachineMetadata_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_DeleteMachineMetadata_descriptor,

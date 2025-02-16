@@ -78,6 +78,37 @@ public final class ComputeServiceGrpc {
     return getGetMachineMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest,
+      cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse> getRequestMachineConsoleMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "RequestMachineConsole",
+      requestType = cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest.class,
+      responseType = cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest,
+      cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse> getRequestMachineConsoleMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest, cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse> getRequestMachineConsoleMethod;
+    if ((getRequestMachineConsoleMethod = ComputeServiceGrpc.getRequestMachineConsoleMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getRequestMachineConsoleMethod = ComputeServiceGrpc.getRequestMachineConsoleMethod) == null) {
+          ComputeServiceGrpc.getRequestMachineConsoleMethod = getRequestMachineConsoleMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest, cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "RequestMachineConsole"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("RequestMachineConsole"))
+              .build();
+        }
+      }
+    }
+    return getRequestMachineConsoleMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.CreateMachineRequest,
       com.google.longrunning.Operation> getCreateMachineMethod;
 
@@ -322,6 +353,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Returns a URL that opens the console of a running machine in a browser.
+     * A stopped machine has no console.
+     * </pre>
+     */
+    default void requestMachineConsole(cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getRequestMachineConsoleMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a machine and starts it.
      * </pre>
      */
@@ -431,6 +473,18 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Returns a URL that opens the console of a running machine in a browser.
+     * A stopped machine has no console.
+     * </pre>
+     */
+    public void requestMachineConsole(cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getRequestMachineConsoleMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Creates a machine and starts it.
      * </pre>
      */
@@ -528,6 +582,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Returns a URL that opens the console of a running machine in a browser.
+     * A stopped machine has no console.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse requestMachineConsole(cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getRequestMachineConsoleMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Creates a machine and starts it.
      * </pre>
      */
@@ -616,6 +681,17 @@ public final class ComputeServiceGrpc {
     public cloud.cbws.api.compute.v1alpha1.Machine getMachine(cloud.cbws.api.compute.v1alpha1.GetMachineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns a URL that opens the console of a running machine in a browser.
+     * A stopped machine has no console.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse requestMachineConsole(cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getRequestMachineConsoleMethod(), getCallOptions(), request);
     }
 
     /**
@@ -714,6 +790,18 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Returns a URL that opens the console of a running machine in a browser.
+     * A stopped machine has no console.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse> requestMachineConsole(
+        cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getRequestMachineConsoleMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Creates a machine and starts it.
      * </pre>
      */
@@ -771,11 +859,12 @@ public final class ComputeServiceGrpc {
 
   private static final int METHODID_LIST_MACHINES = 0;
   private static final int METHODID_GET_MACHINE = 1;
-  private static final int METHODID_CREATE_MACHINE = 2;
-  private static final int METHODID_STOP_MACHINE = 3;
-  private static final int METHODID_START_MACHINE = 4;
-  private static final int METHODID_RESET_MACHINE = 5;
-  private static final int METHODID_DELETE_MACHINE = 6;
+  private static final int METHODID_REQUEST_MACHINE_CONSOLE = 2;
+  private static final int METHODID_CREATE_MACHINE = 3;
+  private static final int METHODID_STOP_MACHINE = 4;
+  private static final int METHODID_START_MACHINE = 5;
+  private static final int METHODID_RESET_MACHINE = 6;
+  private static final int METHODID_DELETE_MACHINE = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -801,6 +890,10 @@ public final class ComputeServiceGrpc {
         case METHODID_GET_MACHINE:
           serviceImpl.getMachine((cloud.cbws.api.compute.v1alpha1.GetMachineRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Machine>) responseObserver);
+          break;
+        case METHODID_REQUEST_MACHINE_CONSOLE:
+          serviceImpl.requestMachineConsole((cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse>) responseObserver);
           break;
         case METHODID_CREATE_MACHINE:
           serviceImpl.createMachine((cloud.cbws.api.compute.v1alpha1.CreateMachineRequest) request,
@@ -854,6 +947,13 @@ public final class ComputeServiceGrpc {
               cloud.cbws.api.compute.v1alpha1.GetMachineRequest,
               cloud.cbws.api.compute.v1alpha1.Machine>(
                 service, METHODID_GET_MACHINE)))
+        .addMethod(
+          getRequestMachineConsoleMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleRequest,
+              cloud.cbws.api.compute.v1alpha1.RequestMachineConsoleResponse>(
+                service, METHODID_REQUEST_MACHINE_CONSOLE)))
         .addMethod(
           getCreateMachineMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -939,6 +1039,7 @@ public final class ComputeServiceGrpc {
               .setSchemaDescriptor(new ComputeServiceFileDescriptorSupplier())
               .addMethod(getListMachinesMethod())
               .addMethod(getGetMachineMethod())
+              .addMethod(getRequestMachineConsoleMethod())
               .addMethod(getCreateMachineMethod())
               .addMethod(getStopMachineMethod())
               .addMethod(getStartMachineMethod())

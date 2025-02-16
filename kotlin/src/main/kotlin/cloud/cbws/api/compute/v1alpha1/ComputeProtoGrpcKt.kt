@@ -41,6 +41,11 @@ public object ComputeServiceGrpcKt {
     @JvmStatic
     get() = ComputeServiceGrpc.getGetMachineMethod()
 
+  public val requestMachineConsoleMethod:
+      MethodDescriptor<RequestMachineConsoleRequest, RequestMachineConsoleResponse>
+    @JvmStatic
+    get() = ComputeServiceGrpc.getRequestMachineConsoleMethod()
+
   public val createMachineMethod: MethodDescriptor<CreateMachineRequest, Operation>
     @JvmStatic
     get() = ComputeServiceGrpc.getCreateMachineMethod()
@@ -106,6 +111,26 @@ public object ComputeServiceGrpcKt {
     public suspend fun getMachine(request: GetMachineRequest, headers: Metadata = Metadata()): Machine = unaryRpc(
       channel,
       ComputeServiceGrpc.getGetMachineMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun requestMachineConsole(request: RequestMachineConsoleRequest, headers: Metadata = Metadata()): RequestMachineConsoleResponse = unaryRpc(
+      channel,
+      ComputeServiceGrpc.getRequestMachineConsoleMethod(),
       request,
       callOptions,
       headers
@@ -243,6 +268,18 @@ public object ComputeServiceGrpcKt {
     public open suspend fun getMachine(request: GetMachineRequest): Machine = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.GetMachine is unimplemented"))
 
     /**
+     * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.RequestMachineConsole.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun requestMachineConsole(request: RequestMachineConsoleRequest): RequestMachineConsoleResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.RequestMachineConsole is unimplemented"))
+
+    /**
      * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.CreateMachine.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
@@ -312,6 +349,11 @@ public object ComputeServiceGrpcKt {
       context = this.context,
       descriptor = ComputeServiceGrpc.getGetMachineMethod(),
       implementation = ::getMachine
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ComputeServiceGrpc.getRequestMachineConsoleMethod(),
+      implementation = ::requestMachineConsole
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
