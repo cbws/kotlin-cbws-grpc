@@ -62,6 +62,10 @@ public object ComputeServiceGrpcKt {
     @JvmStatic
     get() = ComputeServiceGrpc.getResetMachineMethod()
 
+  public val reinstallMachineMethod: MethodDescriptor<ReinstallMachineRequest, Operation>
+    @JvmStatic
+    get() = ComputeServiceGrpc.getReinstallMachineMethod()
+
   public val deleteMachineMethod: MethodDescriptor<DeleteMachineRequest, Operation>
     @JvmStatic
     get() = ComputeServiceGrpc.getDeleteMachineMethod()
@@ -228,6 +232,26 @@ public object ComputeServiceGrpcKt {
      *
      * @return The single response from the server.
      */
+    public suspend fun reinstallMachine(request: ReinstallMachineRequest, headers: Metadata = Metadata()): Operation = unaryRpc(
+      channel,
+      ComputeServiceGrpc.getReinstallMachineMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
     public suspend fun deleteMachine(request: DeleteMachineRequest, headers: Metadata = Metadata()): Operation = unaryRpc(
       channel,
       ComputeServiceGrpc.getDeleteMachineMethod(),
@@ -328,6 +352,18 @@ public object ComputeServiceGrpcKt {
     public open suspend fun resetMachine(request: ResetMachineRequest): Operation = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.ResetMachine is unimplemented"))
 
     /**
+     * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.ReinstallMachine.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun reinstallMachine(request: ReinstallMachineRequest): Operation = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.ReinstallMachine is unimplemented"))
+
+    /**
      * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.DeleteMachine.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
@@ -374,6 +410,11 @@ public object ComputeServiceGrpcKt {
       context = this.context,
       descriptor = ComputeServiceGrpc.getResetMachineMethod(),
       implementation = ::resetMachine
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ComputeServiceGrpc.getReinstallMachineMethod(),
+      implementation = ::reinstallMachine
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,

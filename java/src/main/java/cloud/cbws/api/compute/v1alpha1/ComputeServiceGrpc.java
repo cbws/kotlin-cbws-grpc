@@ -233,6 +233,37 @@ public final class ComputeServiceGrpc {
     return getResetMachineMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest,
+      com.google.longrunning.Operation> getReinstallMachineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ReinstallMachine",
+      requestType = cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest,
+      com.google.longrunning.Operation> getReinstallMachineMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest, com.google.longrunning.Operation> getReinstallMachineMethod;
+    if ((getReinstallMachineMethod = ComputeServiceGrpc.getReinstallMachineMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getReinstallMachineMethod = ComputeServiceGrpc.getReinstallMachineMethod) == null) {
+          ComputeServiceGrpc.getReinstallMachineMethod = getReinstallMachineMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ReinstallMachine"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("ReinstallMachine"))
+              .build();
+        }
+      }
+    }
+    return getReinstallMachineMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.DeleteMachineRequest,
       com.google.longrunning.Operation> getDeleteMachineMethod;
 
@@ -405,6 +436,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Replaces the operating system on a machine with a new image. The data on
+     * the machine's disk is lost.
+     * </pre>
+     */
+    default void reinstallMachine(cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getReinstallMachineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -530,6 +572,18 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Replaces the operating system on a machine with a new image. The data on
+     * the machine's disk is lost.
+     * </pre>
+     */
+    public void reinstallMachine(cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getReinstallMachineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -634,6 +688,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Replaces the operating system on a machine with a new image. The data on
+     * the machine's disk is lost.
+     * </pre>
+     */
+    public com.google.longrunning.Operation reinstallMachine(cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getReinstallMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -733,6 +798,17 @@ public final class ComputeServiceGrpc {
     public com.google.longrunning.Operation resetMachine(cloud.cbws.api.compute.v1alpha1.ResetMachineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getResetMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces the operating system on a machine with a new image. The data on
+     * the machine's disk is lost.
+     * </pre>
+     */
+    public com.google.longrunning.Operation reinstallMachine(cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getReinstallMachineMethod(), getCallOptions(), request);
     }
 
     /**
@@ -847,6 +923,18 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Replaces the operating system on a machine with a new image. The data on
+     * the machine's disk is lost.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> reinstallMachine(
+        cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getReinstallMachineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -864,7 +952,8 @@ public final class ComputeServiceGrpc {
   private static final int METHODID_STOP_MACHINE = 4;
   private static final int METHODID_START_MACHINE = 5;
   private static final int METHODID_RESET_MACHINE = 6;
-  private static final int METHODID_DELETE_MACHINE = 7;
+  private static final int METHODID_REINSTALL_MACHINE = 7;
+  private static final int METHODID_DELETE_MACHINE = 8;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -909,6 +998,10 @@ public final class ComputeServiceGrpc {
           break;
         case METHODID_RESET_MACHINE:
           serviceImpl.resetMachine((cloud.cbws.api.compute.v1alpha1.ResetMachineRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_REINSTALL_MACHINE:
+          serviceImpl.reinstallMachine((cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         case METHODID_DELETE_MACHINE:
@@ -983,6 +1076,13 @@ public final class ComputeServiceGrpc {
               com.google.longrunning.Operation>(
                 service, METHODID_RESET_MACHINE)))
         .addMethod(
+          getReinstallMachineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_REINSTALL_MACHINE)))
+        .addMethod(
           getDeleteMachineMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1044,6 +1144,7 @@ public final class ComputeServiceGrpc {
               .addMethod(getStopMachineMethod())
               .addMethod(getStartMachineMethod())
               .addMethod(getResetMachineMethod())
+              .addMethod(getReinstallMachineMethod())
               .addMethod(getDeleteMachineMethod())
               .build();
         }
