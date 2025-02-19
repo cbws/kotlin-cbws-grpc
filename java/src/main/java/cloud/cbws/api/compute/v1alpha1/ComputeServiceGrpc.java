@@ -264,6 +264,37 @@ public final class ComputeServiceGrpc {
     return getReinstallMachineMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest,
+      com.google.longrunning.Operation> getResizeMachineMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ResizeMachine",
+      requestType = cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest,
+      com.google.longrunning.Operation> getResizeMachineMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest, com.google.longrunning.Operation> getResizeMachineMethod;
+    if ((getResizeMachineMethod = ComputeServiceGrpc.getResizeMachineMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getResizeMachineMethod = ComputeServiceGrpc.getResizeMachineMethod) == null) {
+          ComputeServiceGrpc.getResizeMachineMethod = getResizeMachineMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ResizeMachine"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("ResizeMachine"))
+              .build();
+        }
+      }
+    }
+    return getResizeMachineMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.DeleteMachineRequest,
       com.google.longrunning.Operation> getDeleteMachineMethod;
 
@@ -447,6 +478,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Changes a machine to another machine type in the same zone. The machine
+     * is turned off and on again.
+     * </pre>
+     */
+    default void resizeMachine(cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getResizeMachineMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -584,6 +626,18 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Changes a machine to another machine type in the same zone. The machine
+     * is turned off and on again.
+     * </pre>
+     */
+    public void resizeMachine(cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getResizeMachineMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -699,6 +753,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Changes a machine to another machine type in the same zone. The machine
+     * is turned off and on again.
+     * </pre>
+     */
+    public com.google.longrunning.Operation resizeMachine(cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getResizeMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -809,6 +874,17 @@ public final class ComputeServiceGrpc {
     public com.google.longrunning.Operation reinstallMachine(cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReinstallMachineMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Changes a machine to another machine type in the same zone. The machine
+     * is turned off and on again.
+     * </pre>
+     */
+    public com.google.longrunning.Operation resizeMachine(cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getResizeMachineMethod(), getCallOptions(), request);
     }
 
     /**
@@ -935,6 +1011,18 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Changes a machine to another machine type in the same zone. The machine
+     * is turned off and on again.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> resizeMachine(
+        cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getResizeMachineMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Deletes a machine and its disk.
      * </pre>
      */
@@ -953,7 +1041,8 @@ public final class ComputeServiceGrpc {
   private static final int METHODID_START_MACHINE = 5;
   private static final int METHODID_RESET_MACHINE = 6;
   private static final int METHODID_REINSTALL_MACHINE = 7;
-  private static final int METHODID_DELETE_MACHINE = 8;
+  private static final int METHODID_RESIZE_MACHINE = 8;
+  private static final int METHODID_DELETE_MACHINE = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1002,6 +1091,10 @@ public final class ComputeServiceGrpc {
           break;
         case METHODID_REINSTALL_MACHINE:
           serviceImpl.reinstallMachine((cloud.cbws.api.compute.v1alpha1.ReinstallMachineRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_RESIZE_MACHINE:
+          serviceImpl.resizeMachine((cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         case METHODID_DELETE_MACHINE:
@@ -1083,6 +1176,13 @@ public final class ComputeServiceGrpc {
               com.google.longrunning.Operation>(
                 service, METHODID_REINSTALL_MACHINE)))
         .addMethod(
+          getResizeMachineMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.ResizeMachineRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_RESIZE_MACHINE)))
+        .addMethod(
           getDeleteMachineMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1145,6 +1245,7 @@ public final class ComputeServiceGrpc {
               .addMethod(getStartMachineMethod())
               .addMethod(getResetMachineMethod())
               .addMethod(getReinstallMachineMethod())
+              .addMethod(getResizeMachineMethod())
               .addMethod(getDeleteMachineMethod())
               .build();
         }
