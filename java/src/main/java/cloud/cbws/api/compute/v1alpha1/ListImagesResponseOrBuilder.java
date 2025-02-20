@@ -11,46 +11,46 @@ public interface ListImagesResponseOrBuilder extends
 
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
-  java.util.List<cloud.cbws.api.compute.v1alpha1.MachineType> 
-      getMachineTypesList();
+  java.util.List<cloud.cbws.api.compute.v1alpha1.Image> 
+      getImagesList();
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
-  cloud.cbws.api.compute.v1alpha1.MachineType getMachineTypes(int index);
+  cloud.cbws.api.compute.v1alpha1.Image getImages(int index);
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
-  int getMachineTypesCount();
+  int getImagesCount();
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
-  java.util.List<? extends cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder> 
-      getMachineTypesOrBuilderList();
+  java.util.List<? extends cloud.cbws.api.compute.v1alpha1.ImageOrBuilder> 
+      getImagesOrBuilderList();
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
-  cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder getMachineTypesOrBuilder(
+  cloud.cbws.api.compute.v1alpha1.ImageOrBuilder getImagesOrBuilder(
       int index);
 
   /**

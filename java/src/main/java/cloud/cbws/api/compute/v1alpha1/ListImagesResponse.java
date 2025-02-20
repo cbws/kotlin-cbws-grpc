@@ -31,7 +31,7 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ListImagesResponse() {
-    machineTypes_ = java.util.Collections.emptyList();
+    images_ = java.util.Collections.emptyList();
     nextPageToken_ = "";
   }
 
@@ -48,65 +48,65 @@ private static final long serialVersionUID = 0L;
             cloud.cbws.api.compute.v1alpha1.ListImagesResponse.class, cloud.cbws.api.compute.v1alpha1.ListImagesResponse.Builder.class);
   }
 
-  public static final int MACHINE_TYPES_FIELD_NUMBER = 1;
+  public static final int IMAGES_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
-  private java.util.List<cloud.cbws.api.compute.v1alpha1.MachineType> machineTypes_;
+  private java.util.List<cloud.cbws.api.compute.v1alpha1.Image> images_;
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
   @java.lang.Override
-  public java.util.List<cloud.cbws.api.compute.v1alpha1.MachineType> getMachineTypesList() {
-    return machineTypes_;
+  public java.util.List<cloud.cbws.api.compute.v1alpha1.Image> getImagesList() {
+    return images_;
   }
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
   @java.lang.Override
-  public java.util.List<? extends cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder> 
-      getMachineTypesOrBuilderList() {
-    return machineTypes_;
+  public java.util.List<? extends cloud.cbws.api.compute.v1alpha1.ImageOrBuilder> 
+      getImagesOrBuilderList() {
+    return images_;
   }
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
   @java.lang.Override
-  public int getMachineTypesCount() {
-    return machineTypes_.size();
+  public int getImagesCount() {
+    return images_.size();
   }
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
   @java.lang.Override
-  public cloud.cbws.api.compute.v1alpha1.MachineType getMachineTypes(int index) {
-    return machineTypes_.get(index);
+  public cloud.cbws.api.compute.v1alpha1.Image getImages(int index) {
+    return images_.get(index);
   }
   /**
    * <pre>
-   * The list of matching machines.
+   * The images in the project.
    * </pre>
    *
-   * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+   * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
    */
   @java.lang.Override
-  public cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder getMachineTypesOrBuilder(
+  public cloud.cbws.api.compute.v1alpha1.ImageOrBuilder getImagesOrBuilder(
       int index) {
-    return machineTypes_.get(index);
+    return images_.get(index);
   }
 
   public static final int NEXT_PAGE_TOKEN_FIELD_NUMBER = 2;
@@ -174,8 +174,8 @@ private static final long serialVersionUID = 0L;
   @java.lang.Override
   public void writeTo(com.google.protobuf.CodedOutputStream output)
                       throws java.io.IOException {
-    for (int i = 0; i < machineTypes_.size(); i++) {
-      output.writeMessage(1, machineTypes_.get(i));
+    for (int i = 0; i < images_.size(); i++) {
+      output.writeMessage(1, images_.get(i));
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(nextPageToken_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, nextPageToken_);
@@ -189,9 +189,9 @@ private static final long serialVersionUID = 0L;
     if (size != -1) return size;
 
     size = 0;
-    for (int i = 0; i < machineTypes_.size(); i++) {
+    for (int i = 0; i < images_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream
-        .computeMessageSize(1, machineTypes_.get(i));
+        .computeMessageSize(1, images_.get(i));
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(nextPageToken_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, nextPageToken_);
@@ -211,8 +211,8 @@ private static final long serialVersionUID = 0L;
     }
     cloud.cbws.api.compute.v1alpha1.ListImagesResponse other = (cloud.cbws.api.compute.v1alpha1.ListImagesResponse) obj;
 
-    if (!getMachineTypesList()
-        .equals(other.getMachineTypesList())) return false;
+    if (!getImagesList()
+        .equals(other.getImagesList())) return false;
     if (!getNextPageToken()
         .equals(other.getNextPageToken())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
@@ -226,9 +226,9 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
-    if (getMachineTypesCount() > 0) {
-      hash = (37 * hash) + MACHINE_TYPES_FIELD_NUMBER;
-      hash = (53 * hash) + getMachineTypesList().hashCode();
+    if (getImagesCount() > 0) {
+      hash = (37 * hash) + IMAGES_FIELD_NUMBER;
+      hash = (53 * hash) + getImagesList().hashCode();
     }
     hash = (37 * hash) + NEXT_PAGE_TOKEN_FIELD_NUMBER;
     hash = (53 * hash) + getNextPageToken().hashCode();
@@ -367,11 +367,11 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
-      if (machineTypesBuilder_ == null) {
-        machineTypes_ = java.util.Collections.emptyList();
+      if (imagesBuilder_ == null) {
+        images_ = java.util.Collections.emptyList();
       } else {
-        machineTypes_ = null;
-        machineTypesBuilder_.clear();
+        images_ = null;
+        imagesBuilder_.clear();
       }
       bitField0_ = (bitField0_ & ~0x00000001);
       nextPageToken_ = "";
@@ -408,14 +408,14 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(cloud.cbws.api.compute.v1alpha1.ListImagesResponse result) {
-      if (machineTypesBuilder_ == null) {
+      if (imagesBuilder_ == null) {
         if (((bitField0_ & 0x00000001) != 0)) {
-          machineTypes_ = java.util.Collections.unmodifiableList(machineTypes_);
+          images_ = java.util.Collections.unmodifiableList(images_);
           bitField0_ = (bitField0_ & ~0x00000001);
         }
-        result.machineTypes_ = machineTypes_;
+        result.images_ = images_;
       } else {
-        result.machineTypes_ = machineTypesBuilder_.build();
+        result.images_ = imagesBuilder_.build();
       }
     }
 
@@ -438,29 +438,29 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(cloud.cbws.api.compute.v1alpha1.ListImagesResponse other) {
       if (other == cloud.cbws.api.compute.v1alpha1.ListImagesResponse.getDefaultInstance()) return this;
-      if (machineTypesBuilder_ == null) {
-        if (!other.machineTypes_.isEmpty()) {
-          if (machineTypes_.isEmpty()) {
-            machineTypes_ = other.machineTypes_;
+      if (imagesBuilder_ == null) {
+        if (!other.images_.isEmpty()) {
+          if (images_.isEmpty()) {
+            images_ = other.images_;
             bitField0_ = (bitField0_ & ~0x00000001);
           } else {
-            ensureMachineTypesIsMutable();
-            machineTypes_.addAll(other.machineTypes_);
+            ensureImagesIsMutable();
+            images_.addAll(other.images_);
           }
           onChanged();
         }
       } else {
-        if (!other.machineTypes_.isEmpty()) {
-          if (machineTypesBuilder_.isEmpty()) {
-            machineTypesBuilder_.dispose();
-            machineTypesBuilder_ = null;
-            machineTypes_ = other.machineTypes_;
+        if (!other.images_.isEmpty()) {
+          if (imagesBuilder_.isEmpty()) {
+            imagesBuilder_.dispose();
+            imagesBuilder_ = null;
+            images_ = other.images_;
             bitField0_ = (bitField0_ & ~0x00000001);
-            machineTypesBuilder_ = 
+            imagesBuilder_ = 
               com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
-                 internalGetMachineTypesFieldBuilder() : null;
+                 internalGetImagesFieldBuilder() : null;
           } else {
-            machineTypesBuilder_.addAllMessages(other.machineTypes_);
+            imagesBuilder_.addAllMessages(other.images_);
           }
         }
       }
@@ -496,15 +496,15 @@ private static final long serialVersionUID = 0L;
               done = true;
               break;
             case 10: {
-              cloud.cbws.api.compute.v1alpha1.MachineType m =
+              cloud.cbws.api.compute.v1alpha1.Image m =
                   input.readMessage(
-                      cloud.cbws.api.compute.v1alpha1.MachineType.parser(),
+                      cloud.cbws.api.compute.v1alpha1.Image.parser(),
                       extensionRegistry);
-              if (machineTypesBuilder_ == null) {
-                ensureMachineTypesIsMutable();
-                machineTypes_.add(m);
+              if (imagesBuilder_ == null) {
+                ensureImagesIsMutable();
+                images_.add(m);
               } else {
-                machineTypesBuilder_.addMessage(m);
+                imagesBuilder_.addMessage(m);
               }
               break;
             } // case 10
@@ -530,316 +530,316 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
-    private java.util.List<cloud.cbws.api.compute.v1alpha1.MachineType> machineTypes_ =
+    private java.util.List<cloud.cbws.api.compute.v1alpha1.Image> images_ =
       java.util.Collections.emptyList();
-    private void ensureMachineTypesIsMutable() {
+    private void ensureImagesIsMutable() {
       if (!((bitField0_ & 0x00000001) != 0)) {
-        machineTypes_ = new java.util.ArrayList<cloud.cbws.api.compute.v1alpha1.MachineType>(machineTypes_);
+        images_ = new java.util.ArrayList<cloud.cbws.api.compute.v1alpha1.Image>(images_);
         bitField0_ |= 0x00000001;
        }
     }
 
     private com.google.protobuf.RepeatedFieldBuilder<
-        cloud.cbws.api.compute.v1alpha1.MachineType, cloud.cbws.api.compute.v1alpha1.MachineType.Builder, cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder> machineTypesBuilder_;
+        cloud.cbws.api.compute.v1alpha1.Image, cloud.cbws.api.compute.v1alpha1.Image.Builder, cloud.cbws.api.compute.v1alpha1.ImageOrBuilder> imagesBuilder_;
 
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public java.util.List<cloud.cbws.api.compute.v1alpha1.MachineType> getMachineTypesList() {
-      if (machineTypesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(machineTypes_);
+    public java.util.List<cloud.cbws.api.compute.v1alpha1.Image> getImagesList() {
+      if (imagesBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(images_);
       } else {
-        return machineTypesBuilder_.getMessageList();
+        return imagesBuilder_.getMessageList();
       }
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public int getMachineTypesCount() {
-      if (machineTypesBuilder_ == null) {
-        return machineTypes_.size();
+    public int getImagesCount() {
+      if (imagesBuilder_ == null) {
+        return images_.size();
       } else {
-        return machineTypesBuilder_.getCount();
+        return imagesBuilder_.getCount();
       }
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public cloud.cbws.api.compute.v1alpha1.MachineType getMachineTypes(int index) {
-      if (machineTypesBuilder_ == null) {
-        return machineTypes_.get(index);
+    public cloud.cbws.api.compute.v1alpha1.Image getImages(int index) {
+      if (imagesBuilder_ == null) {
+        return images_.get(index);
       } else {
-        return machineTypesBuilder_.getMessage(index);
+        return imagesBuilder_.getMessage(index);
       }
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder setMachineTypes(
-        int index, cloud.cbws.api.compute.v1alpha1.MachineType value) {
-      if (machineTypesBuilder_ == null) {
+    public Builder setImages(
+        int index, cloud.cbws.api.compute.v1alpha1.Image value) {
+      if (imagesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMachineTypesIsMutable();
-        machineTypes_.set(index, value);
+        ensureImagesIsMutable();
+        images_.set(index, value);
         onChanged();
       } else {
-        machineTypesBuilder_.setMessage(index, value);
+        imagesBuilder_.setMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder setMachineTypes(
-        int index, cloud.cbws.api.compute.v1alpha1.MachineType.Builder builderForValue) {
-      if (machineTypesBuilder_ == null) {
-        ensureMachineTypesIsMutable();
-        machineTypes_.set(index, builderForValue.build());
+    public Builder setImages(
+        int index, cloud.cbws.api.compute.v1alpha1.Image.Builder builderForValue) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.set(index, builderForValue.build());
         onChanged();
       } else {
-        machineTypesBuilder_.setMessage(index, builderForValue.build());
+        imagesBuilder_.setMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder addMachineTypes(cloud.cbws.api.compute.v1alpha1.MachineType value) {
-      if (machineTypesBuilder_ == null) {
+    public Builder addImages(cloud.cbws.api.compute.v1alpha1.Image value) {
+      if (imagesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMachineTypesIsMutable();
-        machineTypes_.add(value);
+        ensureImagesIsMutable();
+        images_.add(value);
         onChanged();
       } else {
-        machineTypesBuilder_.addMessage(value);
+        imagesBuilder_.addMessage(value);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder addMachineTypes(
-        int index, cloud.cbws.api.compute.v1alpha1.MachineType value) {
-      if (machineTypesBuilder_ == null) {
+    public Builder addImages(
+        int index, cloud.cbws.api.compute.v1alpha1.Image value) {
+      if (imagesBuilder_ == null) {
         if (value == null) {
           throw new NullPointerException();
         }
-        ensureMachineTypesIsMutable();
-        machineTypes_.add(index, value);
+        ensureImagesIsMutable();
+        images_.add(index, value);
         onChanged();
       } else {
-        machineTypesBuilder_.addMessage(index, value);
+        imagesBuilder_.addMessage(index, value);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder addMachineTypes(
-        cloud.cbws.api.compute.v1alpha1.MachineType.Builder builderForValue) {
-      if (machineTypesBuilder_ == null) {
-        ensureMachineTypesIsMutable();
-        machineTypes_.add(builderForValue.build());
+    public Builder addImages(
+        cloud.cbws.api.compute.v1alpha1.Image.Builder builderForValue) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.add(builderForValue.build());
         onChanged();
       } else {
-        machineTypesBuilder_.addMessage(builderForValue.build());
+        imagesBuilder_.addMessage(builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder addMachineTypes(
-        int index, cloud.cbws.api.compute.v1alpha1.MachineType.Builder builderForValue) {
-      if (machineTypesBuilder_ == null) {
-        ensureMachineTypesIsMutable();
-        machineTypes_.add(index, builderForValue.build());
+    public Builder addImages(
+        int index, cloud.cbws.api.compute.v1alpha1.Image.Builder builderForValue) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.add(index, builderForValue.build());
         onChanged();
       } else {
-        machineTypesBuilder_.addMessage(index, builderForValue.build());
+        imagesBuilder_.addMessage(index, builderForValue.build());
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder addAllMachineTypes(
-        java.lang.Iterable<? extends cloud.cbws.api.compute.v1alpha1.MachineType> values) {
-      if (machineTypesBuilder_ == null) {
-        ensureMachineTypesIsMutable();
+    public Builder addAllImages(
+        java.lang.Iterable<? extends cloud.cbws.api.compute.v1alpha1.Image> values) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
         com.google.protobuf.AbstractMessageLite.Builder.addAll(
-            values, machineTypes_);
+            values, images_);
         onChanged();
       } else {
-        machineTypesBuilder_.addAllMessages(values);
+        imagesBuilder_.addAllMessages(values);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder clearMachineTypes() {
-      if (machineTypesBuilder_ == null) {
-        machineTypes_ = java.util.Collections.emptyList();
+    public Builder clearImages() {
+      if (imagesBuilder_ == null) {
+        images_ = java.util.Collections.emptyList();
         bitField0_ = (bitField0_ & ~0x00000001);
         onChanged();
       } else {
-        machineTypesBuilder_.clear();
+        imagesBuilder_.clear();
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public Builder removeMachineTypes(int index) {
-      if (machineTypesBuilder_ == null) {
-        ensureMachineTypesIsMutable();
-        machineTypes_.remove(index);
+    public Builder removeImages(int index) {
+      if (imagesBuilder_ == null) {
+        ensureImagesIsMutable();
+        images_.remove(index);
         onChanged();
       } else {
-        machineTypesBuilder_.remove(index);
+        imagesBuilder_.remove(index);
       }
       return this;
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public cloud.cbws.api.compute.v1alpha1.MachineType.Builder getMachineTypesBuilder(
+    public cloud.cbws.api.compute.v1alpha1.Image.Builder getImagesBuilder(
         int index) {
-      return internalGetMachineTypesFieldBuilder().getBuilder(index);
+      return internalGetImagesFieldBuilder().getBuilder(index);
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder getMachineTypesOrBuilder(
+    public cloud.cbws.api.compute.v1alpha1.ImageOrBuilder getImagesOrBuilder(
         int index) {
-      if (machineTypesBuilder_ == null) {
-        return machineTypes_.get(index);  } else {
-        return machineTypesBuilder_.getMessageOrBuilder(index);
+      if (imagesBuilder_ == null) {
+        return images_.get(index);  } else {
+        return imagesBuilder_.getMessageOrBuilder(index);
       }
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public java.util.List<? extends cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder> 
-         getMachineTypesOrBuilderList() {
-      if (machineTypesBuilder_ != null) {
-        return machineTypesBuilder_.getMessageOrBuilderList();
+    public java.util.List<? extends cloud.cbws.api.compute.v1alpha1.ImageOrBuilder> 
+         getImagesOrBuilderList() {
+      if (imagesBuilder_ != null) {
+        return imagesBuilder_.getMessageOrBuilderList();
       } else {
-        return java.util.Collections.unmodifiableList(machineTypes_);
+        return java.util.Collections.unmodifiableList(images_);
       }
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public cloud.cbws.api.compute.v1alpha1.MachineType.Builder addMachineTypesBuilder() {
-      return internalGetMachineTypesFieldBuilder().addBuilder(
-          cloud.cbws.api.compute.v1alpha1.MachineType.getDefaultInstance());
+    public cloud.cbws.api.compute.v1alpha1.Image.Builder addImagesBuilder() {
+      return internalGetImagesFieldBuilder().addBuilder(
+          cloud.cbws.api.compute.v1alpha1.Image.getDefaultInstance());
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public cloud.cbws.api.compute.v1alpha1.MachineType.Builder addMachineTypesBuilder(
+    public cloud.cbws.api.compute.v1alpha1.Image.Builder addImagesBuilder(
         int index) {
-      return internalGetMachineTypesFieldBuilder().addBuilder(
-          index, cloud.cbws.api.compute.v1alpha1.MachineType.getDefaultInstance());
+      return internalGetImagesFieldBuilder().addBuilder(
+          index, cloud.cbws.api.compute.v1alpha1.Image.getDefaultInstance());
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      */
-    public java.util.List<cloud.cbws.api.compute.v1alpha1.MachineType.Builder> 
-         getMachineTypesBuilderList() {
-      return internalGetMachineTypesFieldBuilder().getBuilderList();
+    public java.util.List<cloud.cbws.api.compute.v1alpha1.Image.Builder> 
+         getImagesBuilderList() {
+      return internalGetImagesFieldBuilder().getBuilderList();
     }
     private com.google.protobuf.RepeatedFieldBuilder<
-        cloud.cbws.api.compute.v1alpha1.MachineType, cloud.cbws.api.compute.v1alpha1.MachineType.Builder, cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder> 
-        internalGetMachineTypesFieldBuilder() {
-      if (machineTypesBuilder_ == null) {
-        machineTypesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
-            cloud.cbws.api.compute.v1alpha1.MachineType, cloud.cbws.api.compute.v1alpha1.MachineType.Builder, cloud.cbws.api.compute.v1alpha1.MachineTypeOrBuilder>(
-                machineTypes_,
+        cloud.cbws.api.compute.v1alpha1.Image, cloud.cbws.api.compute.v1alpha1.Image.Builder, cloud.cbws.api.compute.v1alpha1.ImageOrBuilder> 
+        internalGetImagesFieldBuilder() {
+      if (imagesBuilder_ == null) {
+        imagesBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            cloud.cbws.api.compute.v1alpha1.Image, cloud.cbws.api.compute.v1alpha1.Image.Builder, cloud.cbws.api.compute.v1alpha1.ImageOrBuilder>(
+                images_,
                 ((bitField0_ & 0x00000001) != 0),
                 getParentForChildren(),
                 isClean());
-        machineTypes_ = null;
+        images_ = null;
       }
-      return machineTypesBuilder_;
+      return imagesBuilder_;
     }
 
     private java.lang.Object nextPageToken_ = "";

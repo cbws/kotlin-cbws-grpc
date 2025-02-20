@@ -37,104 +37,104 @@ public object ListImagesResponseKt {
      * generics.
      */
     @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
-    public class MachineTypesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    public class ImagesProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
     /**
      * ```
-     * The list of matching machines.
+     * The images in the project.
      * ```
      *
-     * `repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];`
+     * `repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];`
      */
-     public val machineTypes: com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.MachineType, MachineTypesProxy>
+     public val images: com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.Image, ImagesProxy>
       @kotlin.jvm.JvmSynthetic
   get() = com.google.protobuf.kotlin.DslList(
-        _builder.machineTypesList
+        _builder.imagesList
       )
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
-     * @param value The machineTypes to add.
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
+     * @param value The images to add.
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("addMachineTypes")
-    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.MachineType, MachineTypesProxy>.add(value: cloud.cbws.api.compute.v1alpha1.MachineType) {
-      _builder.addMachineTypes(value)
+@kotlin.jvm.JvmName("addImages")
+    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.Image, ImagesProxy>.add(value: cloud.cbws.api.compute.v1alpha1.Image) {
+      _builder.addImages(value)
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
-     * @param value The machineTypes to add.
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
+     * @param value The images to add.
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("plusAssignMachineTypes")
+@kotlin.jvm.JvmName("plusAssignImages")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.MachineType, MachineTypesProxy>.plusAssign(value: cloud.cbws.api.compute.v1alpha1.MachineType) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.Image, ImagesProxy>.plusAssign(value: cloud.cbws.api.compute.v1alpha1.Image) {
       add(value)
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
-     * @param values The machineTypes to add.
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
+     * @param values The images to add.
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("addAllMachineTypes")
-    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.MachineType, MachineTypesProxy>.addAll(values: kotlin.collections.Iterable<cloud.cbws.api.compute.v1alpha1.MachineType>) {
-      _builder.addAllMachineTypes(values)
+@kotlin.jvm.JvmName("addAllImages")
+    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.Image, ImagesProxy>.addAll(values: kotlin.collections.Iterable<cloud.cbws.api.compute.v1alpha1.Image>) {
+      _builder.addAllImages(values)
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
-     * @param values The machineTypes to add.
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
+     * @param values The images to add.
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("plusAssignAllMachineTypes")
+@kotlin.jvm.JvmName("plusAssignAllImages")
     @Suppress("NOTHING_TO_INLINE")
-    public inline operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.MachineType, MachineTypesProxy>.plusAssign(values: kotlin.collections.Iterable<cloud.cbws.api.compute.v1alpha1.MachineType>) {
+    public inline operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.Image, ImagesProxy>.plusAssign(values: kotlin.collections.Iterable<cloud.cbws.api.compute.v1alpha1.Image>) {
       addAll(values)
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      * @param index The index to set the value at.
-     * @param value The machineTypes to set.
+     * @param value The images to set.
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("setMachineTypes")
-    public operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.MachineType, MachineTypesProxy>.set(index: kotlin.Int, value: cloud.cbws.api.compute.v1alpha1.MachineType) {
-      _builder.setMachineTypes(index, value)
+@kotlin.jvm.JvmName("setImages")
+    public operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.Image, ImagesProxy>.set(index: kotlin.Int, value: cloud.cbws.api.compute.v1alpha1.Image) {
+      _builder.setImages(index, value)
     }
     /**
      * <pre>
-     * The list of matching machines.
+     * The images in the project.
      * </pre>
      *
-     * <code>repeated .cbws.compute.v1alpha1.MachineType machine_types = 1 [json_name = "machineTypes"];</code>
+     * <code>repeated .cbws.compute.v1alpha1.Image images = 1 [json_name = "images"];</code>
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
-@kotlin.jvm.JvmName("clearMachineTypes")
-    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.MachineType, MachineTypesProxy>.clear() {
-      _builder.clearMachineTypes()
+@kotlin.jvm.JvmName("clearImages")
+    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.compute.v1alpha1.Image, ImagesProxy>.clear() {
+      _builder.clearImages()
     }
 
     /**
