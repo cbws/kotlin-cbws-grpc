@@ -79,9 +79,17 @@ public object ComputeServiceGrpcKt {
     @JvmStatic
     get() = ComputeServiceGrpc.getListMachineTypesMethod()
 
+  public val getMachineTypeMethod: MethodDescriptor<GetMachineTypeRequest, MachineType>
+    @JvmStatic
+    get() = ComputeServiceGrpc.getGetMachineTypeMethod()
+
   public val listImagesMethod: MethodDescriptor<ListImagesRequest, ListImagesResponse>
     @JvmStatic
     get() = ComputeServiceGrpc.getListImagesMethod()
+
+  public val getImageMethod: MethodDescriptor<GetImageRequest, Image>
+    @JvmStatic
+    get() = ComputeServiceGrpc.getGetImageMethod()
 
   /**
    * A stub for issuing RPCs to a(n) cbws.compute.v1alpha1.ComputeService service as suspending coroutines.
@@ -325,9 +333,49 @@ public object ComputeServiceGrpcKt {
      *
      * @return The single response from the server.
      */
+    public suspend fun getMachineType(request: GetMachineTypeRequest, headers: Metadata = Metadata()): MachineType = unaryRpc(
+      channel,
+      ComputeServiceGrpc.getGetMachineTypeMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
     public suspend fun listImages(request: ListImagesRequest, headers: Metadata = Metadata()): ListImagesResponse = unaryRpc(
       channel,
       ComputeServiceGrpc.getListImagesMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun getImage(request: GetImageRequest, headers: Metadata = Metadata()): Image = unaryRpc(
+      channel,
+      ComputeServiceGrpc.getGetImageMethod(),
       request,
       callOptions,
       headers
@@ -473,6 +521,18 @@ public object ComputeServiceGrpcKt {
     public open suspend fun listMachineTypes(request: ListMachineTypesRequest): ListMachineTypesResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.ListMachineTypes is unimplemented"))
 
     /**
+     * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.GetMachineType.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun getMachineType(request: GetMachineTypeRequest): MachineType = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.GetMachineType is unimplemented"))
+
+    /**
      * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.ListImages.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
@@ -483,6 +543,18 @@ public object ComputeServiceGrpcKt {
      * @param request The request from the client.
      */
     public open suspend fun listImages(request: ListImagesRequest): ListImagesResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.ListImages is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.GetImage.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun getImage(request: GetImageRequest): Image = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.GetImage is unimplemented"))
 
     final override fun bindService(): ServerServiceDefinition = builder(getServiceDescriptor())
       .addMethod(unaryServerMethodDefinition(
@@ -542,8 +614,18 @@ public object ComputeServiceGrpcKt {
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
+      descriptor = ComputeServiceGrpc.getGetMachineTypeMethod(),
+      implementation = ::getMachineType
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
       descriptor = ComputeServiceGrpc.getListImagesMethod(),
       implementation = ::listImages
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ComputeServiceGrpc.getGetImageMethod(),
+      implementation = ::getImage
     )).build()
   }
 }

@@ -161,6 +161,11 @@ public final class ComputeProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_compute_v1alpha1_ListMachineTypesResponse_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_compute_v1alpha1_GetMachineTypeRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_compute_v1alpha1_GetMachineTypeRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cbws_compute_v1alpha1_ListImagesRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -170,6 +175,11 @@ public final class ComputeProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_compute_v1alpha1_ListImagesResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_compute_v1alpha1_GetImageRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_compute_v1alpha1_GetImageRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -242,80 +252,95 @@ public final class ComputeProto {
       "dMask\"\213\001\n\030ListMachineTypesResponse\022G\n\rma" +
       "chine_types\030\001 \003(\0132\".cbws.compute.v1alpha" +
       "1.MachineTypeR\014machineTypes\022&\n\017next_page" +
-      "_token\030\002 \001(\tR\rnextPageToken\"\326\001\n\021ListImag" +
-      "esRequest\022:\n\006parent\030\001 \001(\tB\"\342A\001\002\372A\033\n\031proj" +
-      "ects.cbws.xyz/ProjectR\006parent\022!\n\tpage_si" +
-      "ze\030\002 \001(\005B\004\342A\001\001R\010pageSize\022#\n\npage_token\030\003" +
-      " \001(\tB\004\342A\001\001R\tpageToken\022=\n\tread_mask\030\004 \001(\013" +
-      "2\032.google.protobuf.FieldMaskB\004\342A\001\001R\010read" +
-      "Mask\"r\n\022ListImagesResponse\0224\n\006images\030\001 \003" +
-      "(\0132\034.cbws.compute.v1alpha1.ImageR\006images" +
-      "\022&\n\017next_page_token\030\002 \001(\tR\rnextPageToken" +
-      "2\356\022\n\016ComputeService\022\240\001\n\014ListMachines\022*.c" +
-      "bws.compute.v1alpha1.ListMachinesRequest" +
-      "\032+.cbws.compute.v1alpha1.ListMachinesRes" +
-      "ponse\"7\332A\006parent\202\323\344\223\002(\022&/v1alpha1/{paren" +
-      "t=projects/*}/machines\022\215\001\n\nGetMachine\022(." +
-      "cbws.compute.v1alpha1.GetMachineRequest\032" +
-      "\036.cbws.compute.v1alpha1.Machine\"5\332A\004name" +
-      "\202\323\344\223\002(\022&/v1alpha1/{name=projects/*/machi" +
-      "nes/*}\022\271\001\n\025RequestMachineConsole\0223.cbws." +
-      "compute.v1alpha1.RequestMachineConsoleRe" +
-      "quest\0324.cbws.compute.v1alpha1.RequestMac" +
-      "hineConsoleResponse\"5\332A\004name\202\323\344\223\002(\022&/v1a" +
-      "lpha1/{name=projects/*/machines/*}\022\344\001\n\rC" +
-      "reateMachine\022+.cbws.compute.v1alpha1.Cre" +
-      "ateMachineRequest\032\035.google.longrunning.O" +
-      "peration\"\206\001\312A6\n\007Machine\022+cbws.compute.v1" +
-      "alpha1.CreateMachineMetadata\332A\031parent,ma" +
-      "chine,machine_id\202\323\344\223\002+\" /v1/{parent=proj" +
-      "ects/*}/machines:\007machine\022\322\001\n\013StopMachin" +
-      "e\022).cbws.compute.v1alpha1.StopMachineReq" +
-      "uest\032\035.google.longrunning.Operation\"y\312A@" +
-      "\n\023StopMachineResponse\022)cbws.compute.v1al" +
-      "pha1.StopMachineMetadata\202\323\344\223\0020\"%/v1/{nam" +
-      "e=projects/*/machines/*}:stop:\007machine\022\327" +
-      "\001\n\014StartMachine\022*.cbws.compute.v1alpha1." +
-      "StartMachineRequest\032\035.google.longrunning" +
-      ".Operation\"|\312AB\n\024StartMachineResponse\022*c" +
-      "bws.compute.v1alpha1.StartMachineMetadat" +
-      "a\202\323\344\223\0021\"&/v1/{name=projects/*/machines/*" +
-      "}:start:\007machine\022\327\001\n\014ResetMachine\022*.cbws" +
-      ".compute.v1alpha1.ResetMachineRequest\032\035." +
-      "google.longrunning.Operation\"|\312AB\n\024Reset" +
-      "MachineResponse\022*cbws.compute.v1alpha1.R" +
-      "esetMachineMetadata\202\323\344\223\0021\"&/v1/{name=pro" +
-      "jects/*/machines/*}:reset:\007machine\022\354\001\n\020R" +
-      "einstallMachine\022..cbws.compute.v1alpha1." +
-      "ReinstallMachineRequest\032\035.google.longrun" +
-      "ning.Operation\"\210\001\312AJ\n\030ReinstallMachineRe" +
-      "sponse\022.cbws.compute.v1alpha1.ReinstallM" +
-      "achineMetadata\202\323\344\223\0025\"*/v1/{name=projects" +
-      "/*/machines/*}:reinstall:\007machine\022\334\001\n\rRe" +
-      "sizeMachine\022+.cbws.compute.v1alpha1.Resi" +
-      "zeMachineRequest\032\035.google.longrunning.Op" +
-      "eration\"\177\312AD\n\025ResizeMachineResponse\022+cbw" +
-      "s.compute.v1alpha1.ResizeMachineMetadata" +
-      "\202\323\344\223\0022\"\'/v1/{name=projects/*/machines/*}" +
-      ":resize:\007machine\022\323\001\n\rDeleteMachine\022+.cbw" +
-      "s.compute.v1alpha1.DeleteMachineRequest\032" +
-      "\035.google.longrunning.Operation\"v\312AD\n\025goo" +
-      "gle.protobuf.Empty\022+cbws.compute.v1alpha" +
-      "1.DeleteMachineMetadata\332A\004name\202\323\344\223\002\"* /v" +
-      "1/{name=projects/*/machines/*}\022\246\001\n\020ListM" +
-      "achineTypes\022..cbws.compute.v1alpha1.List" +
-      "MachineTypesRequest\032/.cbws.compute.v1alp" +
-      "ha1.ListMachineTypesResponse\"1\332A\006parent\202" +
-      "\323\344\223\002\"\022 /v1alpha1/{parent=zones/*}/types\022" +
-      "\230\001\n\nListImages\022(.cbws.compute.v1alpha1.L" +
-      "istImagesRequest\032).cbws.compute.v1alpha1" +
-      ".ListImagesResponse\"5\332A\006parent\202\323\344\223\002&\022$/v" +
-      "1alpha1/{parent=projects/*}/images\032\025\312A\022c" +
-      "ompute.cbws.cloudB\245\001\n\037cloud.cbws.api.com" +
-      "pute.v1alpha1B\014ComputeProtoP\001\242\002\003CCX\252\002\025Cb" +
-      "ws.Compute.V1alpha1\312\002\025Cbws\\Compute\\V1alp" +
-      "ha1\342\002!Cbws\\Compute\\V1alpha1\\GPBMetadata\352" +
-      "\002\027Cbws::Compute::V1alpha1b\006proto3"
+      "_token\030\002 \001(\tR\rnextPageToken\"\223\001\n\025GetMachi" +
+      "neTypeRequest\022;\n\004name\030\001 \001(\tB\'\342A\001\002\372A \n\036co" +
+      "mpute.cbws.cloud/MachineTypeR\004name\022=\n\tre" +
+      "ad_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "kB\004\342A\001\001R\010readMask\"\326\001\n\021ListImagesRequest\022" +
+      ":\n\006parent\030\001 \001(\tB\"\342A\001\002\372A\033\n\031projects.cbws." +
+      "xyz/ProjectR\006parent\022!\n\tpage_size\030\002 \001(\005B\004" +
+      "\342A\001\001R\010pageSize\022#\n\npage_token\030\003 \001(\tB\004\342A\001\001" +
+      "R\tpageToken\022=\n\tread_mask\030\004 \001(\0132\032.google." +
+      "protobuf.FieldMaskB\004\342A\001\001R\010readMask\"r\n\022Li" +
+      "stImagesResponse\0224\n\006images\030\001 \003(\0132\034.cbws." +
+      "compute.v1alpha1.ImageR\006images\022&\n\017next_p" +
+      "age_token\030\002 \001(\tR\rnextPageToken\"\207\001\n\017GetIm" +
+      "ageRequest\0225\n\004name\030\001 \001(\tB!\342A\001\002\372A\032\n\030compu" +
+      "te.cbws.cloud/ImageR\004name\022=\n\tread_mask\030\002" +
+      " \001(\0132\032.google.protobuf.FieldMaskB\004\342A\001\001R\010" +
+      "readMask2\214\025\n\016ComputeService\022\240\001\n\014ListMach" +
+      "ines\022*.cbws.compute.v1alpha1.ListMachine" +
+      "sRequest\032+.cbws.compute.v1alpha1.ListMac" +
+      "hinesResponse\"7\332A\006parent\202\323\344\223\002(\022&/v1alpha" +
+      "1/{parent=projects/*}/machines\022\215\001\n\nGetMa" +
+      "chine\022(.cbws.compute.v1alpha1.GetMachine" +
+      "Request\032\036.cbws.compute.v1alpha1.Machine\"" +
+      "5\332A\004name\202\323\344\223\002(\022&/v1alpha1/{name=projects" +
+      "/*/machines/*}\022\271\001\n\025RequestMachineConsole" +
+      "\0223.cbws.compute.v1alpha1.RequestMachineC" +
+      "onsoleRequest\0324.cbws.compute.v1alpha1.Re" +
+      "questMachineConsoleResponse\"5\332A\004name\202\323\344\223" +
+      "\002(\022&/v1alpha1/{name=projects/*/machines/" +
+      "*}\022\344\001\n\rCreateMachine\022+.cbws.compute.v1al" +
+      "pha1.CreateMachineRequest\032\035.google.longr" +
+      "unning.Operation\"\206\001\312A6\n\007Machine\022+cbws.co" +
+      "mpute.v1alpha1.CreateMachineMetadata\332A\031p" +
+      "arent,machine,machine_id\202\323\344\223\002+\" /v1/{par" +
+      "ent=projects/*}/machines:\007machine\022\322\001\n\013St" +
+      "opMachine\022).cbws.compute.v1alpha1.StopMa" +
+      "chineRequest\032\035.google.longrunning.Operat" +
+      "ion\"y\312A@\n\023StopMachineResponse\022)cbws.comp" +
+      "ute.v1alpha1.StopMachineMetadata\202\323\344\223\0020\"%" +
+      "/v1/{name=projects/*/machines/*}:stop:\007m" +
+      "achine\022\327\001\n\014StartMachine\022*.cbws.compute.v" +
+      "1alpha1.StartMachineRequest\032\035.google.lon" +
+      "grunning.Operation\"|\312AB\n\024StartMachineRes" +
+      "ponse\022*cbws.compute.v1alpha1.StartMachin" +
+      "eMetadata\202\323\344\223\0021\"&/v1/{name=projects/*/ma" +
+      "chines/*}:start:\007machine\022\327\001\n\014ResetMachin" +
+      "e\022*.cbws.compute.v1alpha1.ResetMachineRe" +
+      "quest\032\035.google.longrunning.Operation\"|\312A" +
+      "B\n\024ResetMachineResponse\022*cbws.compute.v1" +
+      "alpha1.ResetMachineMetadata\202\323\344\223\0021\"&/v1/{" +
+      "name=projects/*/machines/*}:reset:\007machi" +
+      "ne\022\354\001\n\020ReinstallMachine\022..cbws.compute.v" +
+      "1alpha1.ReinstallMachineRequest\032\035.google" +
+      ".longrunning.Operation\"\210\001\312AJ\n\030ReinstallM" +
+      "achineResponse\022.cbws.compute.v1alpha1.Re" +
+      "installMachineMetadata\202\323\344\223\0025\"*/v1/{name=" +
+      "projects/*/machines/*}:reinstall:\007machin" +
+      "e\022\334\001\n\rResizeMachine\022+.cbws.compute.v1alp" +
+      "ha1.ResizeMachineRequest\032\035.google.longru" +
+      "nning.Operation\"\177\312AD\n\025ResizeMachineRespo" +
+      "nse\022+cbws.compute.v1alpha1.ResizeMachine" +
+      "Metadata\202\323\344\223\0022\"\'/v1/{name=projects/*/mac" +
+      "hines/*}:resize:\007machine\022\323\001\n\rDeleteMachi" +
+      "ne\022+.cbws.compute.v1alpha1.DeleteMachine" +
+      "Request\032\035.google.longrunning.Operation\"v" +
+      "\312AD\n\025google.protobuf.Empty\022+cbws.compute" +
+      ".v1alpha1.DeleteMachineMetadata\332A\004name\202\323" +
+      "\344\223\002\"* /v1/{name=projects/*/machines/*}\022\246" +
+      "\001\n\020ListMachineTypes\022..cbws.compute.v1alp" +
+      "ha1.ListMachineTypesRequest\032/.cbws.compu" +
+      "te.v1alpha1.ListMachineTypesResponse\"1\332A" +
+      "\006parent\202\323\344\223\002\"\022 /v1alpha1/{parent=zones/*" +
+      "}/types\022\223\001\n\016GetMachineType\022,.cbws.comput" +
+      "e.v1alpha1.GetMachineTypeRequest\032\".cbws." +
+      "compute.v1alpha1.MachineType\"/\332A\004name\202\323\344" +
+      "\223\002\"\022 /v1alpha1/{name=zones/*/types/*}\022\230\001" +
+      "\n\nListImages\022(.cbws.compute.v1alpha1.Lis" +
+      "tImagesRequest\032).cbws.compute.v1alpha1.L" +
+      "istImagesResponse\"5\332A\006parent\202\323\344\223\002&\022$/v1a" +
+      "lpha1/{parent=projects/*}/images\022\205\001\n\010Get" +
+      "Image\022&.cbws.compute.v1alpha1.GetImageRe" +
+      "quest\032\034.cbws.compute.v1alpha1.Image\"3\332A\004" +
+      "name\202\323\344\223\002&\022$/v1alpha1/{name=projects/*/i" +
+      "mages/*}\032\025\312A\022compute.cbws.cloudB\245\001\n\037clou" +
+      "d.cbws.api.compute.v1alpha1B\014ComputeProt" +
+      "oP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws" +
+      "\\Compute\\V1alpha1\342\002!Cbws\\Compute\\V1alpha" +
+      "1\\GPBMetadata\352\002\027Cbws::Compute::V1alpha1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -492,18 +517,30 @@ public final class ComputeProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_ListMachineTypesResponse_descriptor,
         new java.lang.String[] { "MachineTypes", "NextPageToken", });
-    internal_static_cbws_compute_v1alpha1_ListImagesRequest_descriptor =
+    internal_static_cbws_compute_v1alpha1_GetMachineTypeRequest_descriptor =
       getDescriptor().getMessageTypes().get(27);
+    internal_static_cbws_compute_v1alpha1_GetMachineTypeRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_compute_v1alpha1_GetMachineTypeRequest_descriptor,
+        new java.lang.String[] { "Name", "ReadMask", });
+    internal_static_cbws_compute_v1alpha1_ListImagesRequest_descriptor =
+      getDescriptor().getMessageTypes().get(28);
     internal_static_cbws_compute_v1alpha1_ListImagesRequest_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_ListImagesRequest_descriptor,
         new java.lang.String[] { "Parent", "PageSize", "PageToken", "ReadMask", });
     internal_static_cbws_compute_v1alpha1_ListImagesResponse_descriptor =
-      getDescriptor().getMessageTypes().get(28);
+      getDescriptor().getMessageTypes().get(29);
     internal_static_cbws_compute_v1alpha1_ListImagesResponse_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_ListImagesResponse_descriptor,
         new java.lang.String[] { "Images", "NextPageToken", });
+    internal_static_cbws_compute_v1alpha1_GetImageRequest_descriptor =
+      getDescriptor().getMessageTypes().get(30);
+    internal_static_cbws_compute_v1alpha1_GetImageRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_compute_v1alpha1_GetImageRequest_descriptor,
+        new java.lang.String[] { "Name", "ReadMask", });
     descriptor.resolveAllFeaturesImmutable();
     cloud.cbws.api.compute.v1alpha1.ImageProto.getDescriptor();
     cloud.cbws.api.compute.v1alpha1.MachineProto.getDescriptor();

@@ -357,6 +357,37 @@ public final class ComputeServiceGrpc {
     return getListMachineTypesMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest,
+      cloud.cbws.api.compute.v1alpha1.MachineType> getGetMachineTypeMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetMachineType",
+      requestType = cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest.class,
+      responseType = cloud.cbws.api.compute.v1alpha1.MachineType.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest,
+      cloud.cbws.api.compute.v1alpha1.MachineType> getGetMachineTypeMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest, cloud.cbws.api.compute.v1alpha1.MachineType> getGetMachineTypeMethod;
+    if ((getGetMachineTypeMethod = ComputeServiceGrpc.getGetMachineTypeMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getGetMachineTypeMethod = ComputeServiceGrpc.getGetMachineTypeMethod) == null) {
+          ComputeServiceGrpc.getGetMachineTypeMethod = getGetMachineTypeMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest, cloud.cbws.api.compute.v1alpha1.MachineType>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetMachineType"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.MachineType.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("GetMachineType"))
+              .build();
+        }
+      }
+    }
+    return getGetMachineTypeMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ListImagesRequest,
       cloud.cbws.api.compute.v1alpha1.ListImagesResponse> getListImagesMethod;
 
@@ -386,6 +417,37 @@ public final class ComputeServiceGrpc {
       }
     }
     return getListImagesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageRequest,
+      cloud.cbws.api.compute.v1alpha1.Image> getGetImageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetImage",
+      requestType = cloud.cbws.api.compute.v1alpha1.GetImageRequest.class,
+      responseType = cloud.cbws.api.compute.v1alpha1.Image.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageRequest,
+      cloud.cbws.api.compute.v1alpha1.Image> getGetImageMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageRequest, cloud.cbws.api.compute.v1alpha1.Image> getGetImageMethod;
+    if ((getGetImageMethod = ComputeServiceGrpc.getGetImageMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getGetImageMethod = ComputeServiceGrpc.getGetImageMethod) == null) {
+          ComputeServiceGrpc.getGetImageMethod = getGetImageMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.GetImageRequest, cloud.cbws.api.compute.v1alpha1.Image>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetImage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.GetImageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.Image.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("GetImage"))
+              .build();
+        }
+      }
+    }
+    return getGetImageMethod;
   }
 
   /**
@@ -571,12 +633,32 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Gets a machine type.
+     * </pre>
+     */
+    default void getMachineType(cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.MachineType> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetMachineTypeMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the images in a project.
      * </pre>
      */
     default void listImages(cloud.cbws.api.compute.v1alpha1.ListImagesRequest request,
         io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ListImagesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListImagesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets an image.
+     * </pre>
+     */
+    default void getImage(cloud.cbws.api.compute.v1alpha1.GetImageRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetImageMethod(), responseObserver);
     }
   }
 
@@ -742,6 +824,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Gets a machine type.
+     * </pre>
+     */
+    public void getMachineType(cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.MachineType> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetMachineTypeMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the images in a project.
      * </pre>
      */
@@ -749,6 +842,17 @@ public final class ComputeServiceGrpc {
         io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ListImagesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListImagesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets an image.
+     * </pre>
+     */
+    public void getImage(cloud.cbws.api.compute.v1alpha1.GetImageRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetImageMethod(), getCallOptions()), request, responseObserver);
     }
   }
 
@@ -888,12 +992,32 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Gets a machine type.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.MachineType getMachineType(cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetMachineTypeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists the images in a project.
      * </pre>
      */
     public cloud.cbws.api.compute.v1alpha1.ListImagesResponse listImages(cloud.cbws.api.compute.v1alpha1.ListImagesRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListImagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets an image.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.Image getImage(cloud.cbws.api.compute.v1alpha1.GetImageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetImageMethod(), getCallOptions(), request);
     }
   }
 
@@ -1033,12 +1157,32 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Gets a machine type.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.MachineType getMachineType(cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetMachineTypeMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists the images in a project.
      * </pre>
      */
     public cloud.cbws.api.compute.v1alpha1.ListImagesResponse listImages(cloud.cbws.api.compute.v1alpha1.ListImagesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListImagesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets an image.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.Image getImage(cloud.cbws.api.compute.v1alpha1.GetImageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetImageMethod(), getCallOptions(), request);
     }
   }
 
@@ -1189,6 +1333,17 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Gets a machine type.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.compute.v1alpha1.MachineType> getMachineType(
+        cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetMachineTypeMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists the images in a project.
      * </pre>
      */
@@ -1196,6 +1351,17 @@ public final class ComputeServiceGrpc {
         cloud.cbws.api.compute.v1alpha1.ListImagesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListImagesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets an image.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.compute.v1alpha1.Image> getImage(
+        cloud.cbws.api.compute.v1alpha1.GetImageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetImageMethod(), getCallOptions()), request);
     }
   }
 
@@ -1210,7 +1376,9 @@ public final class ComputeServiceGrpc {
   private static final int METHODID_RESIZE_MACHINE = 8;
   private static final int METHODID_DELETE_MACHINE = 9;
   private static final int METHODID_LIST_MACHINE_TYPES = 10;
-  private static final int METHODID_LIST_IMAGES = 11;
+  private static final int METHODID_GET_MACHINE_TYPE = 11;
+  private static final int METHODID_LIST_IMAGES = 12;
+  private static final int METHODID_GET_IMAGE = 13;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1273,9 +1441,17 @@ public final class ComputeServiceGrpc {
           serviceImpl.listMachineTypes((cloud.cbws.api.compute.v1alpha1.ListMachineTypesRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ListMachineTypesResponse>) responseObserver);
           break;
+        case METHODID_GET_MACHINE_TYPE:
+          serviceImpl.getMachineType((cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.MachineType>) responseObserver);
+          break;
         case METHODID_LIST_IMAGES:
           serviceImpl.listImages((cloud.cbws.api.compute.v1alpha1.ListImagesRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ListImagesResponse>) responseObserver);
+          break;
+        case METHODID_GET_IMAGE:
+          serviceImpl.getImage((cloud.cbws.api.compute.v1alpha1.GetImageRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1373,12 +1549,26 @@ public final class ComputeServiceGrpc {
               cloud.cbws.api.compute.v1alpha1.ListMachineTypesResponse>(
                 service, METHODID_LIST_MACHINE_TYPES)))
         .addMethod(
+          getGetMachineTypeMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.GetMachineTypeRequest,
+              cloud.cbws.api.compute.v1alpha1.MachineType>(
+                service, METHODID_GET_MACHINE_TYPE)))
+        .addMethod(
           getListImagesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
               cloud.cbws.api.compute.v1alpha1.ListImagesRequest,
               cloud.cbws.api.compute.v1alpha1.ListImagesResponse>(
                 service, METHODID_LIST_IMAGES)))
+        .addMethod(
+          getGetImageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.GetImageRequest,
+              cloud.cbws.api.compute.v1alpha1.Image>(
+                service, METHODID_GET_IMAGE)))
         .build();
   }
 
@@ -1438,7 +1628,9 @@ public final class ComputeServiceGrpc {
               .addMethod(getResizeMachineMethod())
               .addMethod(getDeleteMachineMethod())
               .addMethod(getListMachineTypesMethod())
+              .addMethod(getGetMachineTypeMethod())
               .addMethod(getListImagesMethod())
+              .addMethod(getGetImageMethod())
               .build();
         }
       }
