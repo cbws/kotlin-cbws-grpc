@@ -42,25 +42,26 @@ public final class MachineProto {
       "\n#cbws/compute/v1alpha1/machine.proto\022\025c" +
       "bws.compute.v1alpha1\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\"\260\004\n\007Machine\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034" +
+      "\"\314\004\n\007Machine\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034" +
       "\n\006parent\030\002 \001(\tB\004\342A\001\005R\006parent\022\030\n\004type\030\003 \001" +
-      "(\tB\004\342A\001\005R\004type\022 \n\010hostname\030\004 \001(\tB\004\342A\001\002R\010" +
-      "hostname\022\036\n\007address\030\007 \001(\tB\004\342A\001\003R\007address" +
-      "\022\037\n\010ssh_keys\030\t \003(\tB\004\342A\001\005R\007sshKeys\022 \n\010use" +
-      "rdata\030\020 \001(\tB\004\342A\001\005R\010userdata\022@\n\005state\030\010 \001" +
-      "(\0162$.cbws.compute.v1alpha1.Machine.State" +
-      "B\004\342A\001\003R\005state\"\306\001\n\005State\022\025\n\021STATE_UNSPECI" +
-      "FIED\020\000\022\026\n\022STATE_PROVISIONING\020\001\022\021\n\rSTATE_" +
-      "STAGING\020\002\022\021\n\rSTATE_RUNNING\020\003\022\022\n\016STATE_ST" +
-      "OPPING\020\004\022\024\n\020STATE_SUSPENDING\020\005\022\023\n\017STATE_" +
-      "SUSPENDED\020\006\022\023\n\017STATE_REPAIRING\020\007\022\024\n\020STAT" +
-      "E_TERMINATED\020\010:C\352A@\n\032compute.cbws.cloud/" +
-      "Machine\022\"projects/{project}/machines/{na" +
-      "me}B\245\001\n\037cloud.cbws.api.compute.v1alpha1B" +
-      "\014MachineProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1a" +
-      "lpha1\312\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\Com" +
-      "pute\\V1alpha1\\GPBMetadata\352\002\027Cbws::Comput" +
-      "e::V1alpha1b\006proto3"
+      "(\tB\004\342A\001\005R\004type\022\032\n\005image\030\n \001(\tB\004\342A\001\002R\005ima" +
+      "ge\022 \n\010hostname\030\004 \001(\tB\004\342A\001\002R\010hostname\022\036\n\007" +
+      "address\030\007 \001(\tB\004\342A\001\003R\007address\022\037\n\010ssh_keys" +
+      "\030\t \003(\tB\004\342A\001\005R\007sshKeys\022 \n\010userdata\030\020 \001(\tB" +
+      "\004\342A\001\005R\010userdata\022@\n\005state\030\010 \001(\0162$.cbws.co" +
+      "mpute.v1alpha1.Machine.StateB\004\342A\001\003R\005stat" +
+      "e\"\306\001\n\005State\022\025\n\021STATE_UNSPECIFIED\020\000\022\026\n\022ST" +
+      "ATE_PROVISIONING\020\001\022\021\n\rSTATE_STAGING\020\002\022\021\n" +
+      "\rSTATE_RUNNING\020\003\022\022\n\016STATE_STOPPING\020\004\022\024\n\020" +
+      "STATE_SUSPENDING\020\005\022\023\n\017STATE_SUSPENDED\020\006\022" +
+      "\023\n\017STATE_REPAIRING\020\007\022\024\n\020STATE_TERMINATED" +
+      "\020\010:C\352A@\n\032compute.cbws.cloud/Machine\022\"pro" +
+      "jects/{project}/machines/{name}B\245\001\n\037clou" +
+      "d.cbws.api.compute.v1alpha1B\014MachineProt" +
+      "oP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws" +
+      "\\Compute\\V1alpha1\342\002!Cbws\\Compute\\V1alpha" +
+      "1\\GPBMetadata\352\002\027Cbws::Compute::V1alpha1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -73,7 +74,7 @@ public final class MachineProto {
     internal_static_cbws_compute_v1alpha1_Machine_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_Machine_descriptor,
-        new java.lang.String[] { "Name", "Parent", "Type", "Hostname", "Address", "SshKeys", "Userdata", "State", });
+        new java.lang.String[] { "Name", "Parent", "Type", "Image", "Hostname", "Address", "SshKeys", "Userdata", "State", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();

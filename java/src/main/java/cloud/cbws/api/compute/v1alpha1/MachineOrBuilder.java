@@ -79,6 +79,32 @@ public interface MachineOrBuilder extends
 
   /**
    * <pre>
+   * The image the machine is installed from. On create, give an image
+   * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+   * install the family's current image for the machine type, or a single
+   * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The image.
+   */
+  java.lang.String getImage();
+  /**
+   * <pre>
+   * The image the machine is installed from. On create, give an image
+   * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+   * install the family's current image for the machine type, or a single
+   * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for image.
+   */
+  com.google.protobuf.ByteString
+      getImageBytes();
+
+  /**
+   * <pre>
    * The hostname the machine boots with. Defaults to the machine id.
    * </pre>
    *

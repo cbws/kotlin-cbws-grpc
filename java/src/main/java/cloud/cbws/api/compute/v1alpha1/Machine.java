@@ -34,6 +34,7 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     parent_ = "";
     type_ = "";
+    image_ = "";
     hostname_ = "";
     address_ = "";
     sshKeys_ =
@@ -466,6 +467,59 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IMAGE_FIELD_NUMBER = 10;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object image_ = "";
+  /**
+   * <pre>
+   * The image the machine is installed from. On create, give an image
+   * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+   * install the family's current image for the machine type, or a single
+   * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The image.
+   */
+  @java.lang.Override
+  public java.lang.String getImage() {
+    java.lang.Object ref = image_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      image_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The image the machine is installed from. On create, give an image
+   * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+   * install the family's current image for the machine type, or a single
+   * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for image.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getImageBytes() {
+    java.lang.Object ref = image_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      image_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int HOSTNAME_FIELD_NUMBER = 4;
   @SuppressWarnings("serial")
   private volatile java.lang.Object hostname_ = "";
@@ -743,6 +797,9 @@ private static final long serialVersionUID = 0L;
     for (int i = 0; i < sshKeys_.size(); i++) {
       com.google.protobuf.GeneratedMessage.writeString(output, 9, sshKeys_.getRaw(i));
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(image_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 10, image_);
+    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userdata_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 16, userdata_);
     }
@@ -782,6 +839,9 @@ private static final long serialVersionUID = 0L;
       size += dataSize;
       size += 1 * getSshKeysList().size();
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(image_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(10, image_);
+    }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userdata_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(16, userdata_);
     }
@@ -806,6 +866,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getParent())) return false;
     if (!getType()
         .equals(other.getType())) return false;
+    if (!getImage()
+        .equals(other.getImage())) return false;
     if (!getHostname()
         .equals(other.getHostname())) return false;
     if (!getAddress()
@@ -832,6 +894,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getParent().hashCode();
     hash = (37 * hash) + TYPE_FIELD_NUMBER;
     hash = (53 * hash) + getType().hashCode();
+    hash = (37 * hash) + IMAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getImage().hashCode();
     hash = (37 * hash) + HOSTNAME_FIELD_NUMBER;
     hash = (53 * hash) + getHostname().hashCode();
     hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
@@ -982,6 +1046,7 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       parent_ = "";
       type_ = "";
+      image_ = "";
       hostname_ = "";
       address_ = "";
       sshKeys_ =
@@ -1031,19 +1096,22 @@ private static final long serialVersionUID = 0L;
         result.type_ = type_;
       }
       if (((from_bitField0_ & 0x00000008) != 0)) {
-        result.hostname_ = hostname_;
+        result.image_ = image_;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
-        result.address_ = address_;
+        result.hostname_ = hostname_;
       }
       if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.address_ = address_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         sshKeys_.makeImmutable();
         result.sshKeys_ = sshKeys_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.userdata_ = userdata_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.state_ = state_;
       }
     }
@@ -1075,20 +1143,25 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000004;
         onChanged();
       }
+      if (!other.getImage().isEmpty()) {
+        image_ = other.image_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       if (!other.getHostname().isEmpty()) {
         hostname_ = other.hostname_;
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       if (!other.getAddress().isEmpty()) {
         address_ = other.address_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.sshKeys_.isEmpty()) {
         if (sshKeys_.isEmpty()) {
           sshKeys_ = other.sshKeys_;
-          bitField0_ |= 0x00000020;
+          bitField0_ |= 0x00000040;
         } else {
           ensureSshKeysIsMutable();
           sshKeys_.addAll(other.sshKeys_);
@@ -1097,7 +1170,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUserdata().isEmpty()) {
         userdata_ = other.userdata_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.state_ != 0) {
@@ -1146,17 +1219,17 @@ private static final long serialVersionUID = 0L;
             } // case 26
             case 34: {
               hostname_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000008;
+              bitField0_ |= 0x00000010;
               break;
             } // case 34
             case 58: {
               address_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 58
             case 64: {
               state_ = input.readEnum();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 64
             case 74: {
@@ -1165,9 +1238,14 @@ private static final long serialVersionUID = 0L;
               sshKeys_.add(s);
               break;
             } // case 74
+            case 82: {
+              image_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 82
             case 130: {
               userdata_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 130
             default: {
@@ -1483,6 +1561,113 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object image_ = "";
+    /**
+     * <pre>
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The image.
+     */
+    public java.lang.String getImage() {
+      java.lang.Object ref = image_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        image_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for image.
+     */
+    public com.google.protobuf.ByteString
+        getImageBytes() {
+      java.lang.Object ref = image_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        image_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The image to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImage(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      image_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImage() {
+      image_ = getDefaultInstance().getImage();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The image the machine is installed from. On create, give an image
+     * family, such as `projects/my-project-123/families/ubuntu-2404-lts`, to
+     * install the family's current image for the machine type, or a single
+     * image, such as `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 10 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for image to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      image_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object hostname_ = "";
     /**
      * <pre>
@@ -1538,7 +1723,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       hostname_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1552,7 +1737,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearHostname() {
       hostname_ = getDefaultInstance().getHostname();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1570,7 +1755,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       hostname_ = value;
-      bitField0_ |= 0x00000008;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -1630,7 +1815,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       address_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1644,7 +1829,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearAddress() {
       address_ = getDefaultInstance().getAddress();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1662,7 +1847,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       address_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1673,7 +1858,7 @@ private static final long serialVersionUID = 0L;
       if (!sshKeys_.isModifiable()) {
         sshKeys_ = new com.google.protobuf.LazyStringArrayList(sshKeys_);
       }
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
     }
     /**
      * <pre>
@@ -1754,7 +1939,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSshKeysIsMutable();
       sshKeys_.set(index, value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1775,7 +1960,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSshKeysIsMutable();
       sshKeys_.add(value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1796,7 +1981,7 @@ private static final long serialVersionUID = 0L;
       ensureSshKeysIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, sshKeys_);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1814,7 +1999,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSshKeys() {
       sshKeys_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000020);;
+      bitField0_ = (bitField0_ & ~0x00000040);;
       onChanged();
       return this;
     }
@@ -1836,7 +2021,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSshKeysIsMutable();
       sshKeys_.add(value);
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1908,7 +2093,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       userdata_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1926,7 +2111,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearUserdata() {
       userdata_ = getDefaultInstance().getUserdata();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -1948,7 +2133,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       userdata_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1978,7 +2163,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStateValue(int value) {
       state_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2010,7 +2195,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       state_ = value.getNumber();
       onChanged();
       return this;
@@ -2025,7 +2210,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       state_ = 0;
       onChanged();
       return this;
