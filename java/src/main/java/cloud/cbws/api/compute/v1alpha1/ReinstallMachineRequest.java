@@ -32,6 +32,7 @@ private static final long serialVersionUID = 0L;
   }
   private ReinstallMachineRequest() {
     name_ = "";
+    image_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -96,6 +97,59 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IMAGE_FIELD_NUMBER = 2;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object image_ = "";
+  /**
+   * <pre>
+   * Required. The image to install: an image family, such as
+   * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+   * family's current image for the machine's type, or a single image, such as
+   * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The image.
+   */
+  @java.lang.Override
+  public java.lang.String getImage() {
+    java.lang.Object ref = image_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      image_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Required. The image to install: an image family, such as
+   * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+   * family's current image for the machine's type, or a single image, such as
+   * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for image.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getImageBytes() {
+    java.lang.Object ref = image_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      image_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +167,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(image_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 2, image_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -124,6 +181,9 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(image_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(2, image_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -142,6 +202,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getName()
         .equals(other.getName())) return false;
+    if (!getImage()
+        .equals(other.getImage())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -155,6 +217,8 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + IMAGE_FIELD_NUMBER;
+    hash = (53 * hash) + getImage().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -291,6 +355,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       name_ = "";
+      image_ = "";
       return this;
     }
 
@@ -327,6 +392,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.name_ = name_;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.image_ = image_;
+      }
     }
 
     @java.lang.Override
@@ -344,6 +412,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getName().isEmpty()) {
         name_ = other.name_;
         bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getImage().isEmpty()) {
+        image_ = other.image_;
+        bitField0_ |= 0x00000002;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -377,6 +450,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              image_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -487,6 +565,113 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       name_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object image_ = "";
+    /**
+     * <pre>
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The image.
+     */
+    public java.lang.String getImage() {
+      java.lang.Object ref = image_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        image_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return The bytes for image.
+     */
+    public com.google.protobuf.ByteString
+        getImageBytes() {
+      java.lang.Object ref = image_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        image_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The image to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImage(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      image_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearImage() {
+      image_ = getDefaultInstance().getImage();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @param value The bytes for image to set.
+     * @return This builder for chaining.
+     */
+    public Builder setImageBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      image_ = value;
+      bitField0_ |= 0x00000002;
       onChanged();
       return this;
     }

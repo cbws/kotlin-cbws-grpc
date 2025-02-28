@@ -59,6 +59,38 @@ public object ReinstallMachineRequestKt {
     public fun clearName() {
       _builder.clearName()
     }
+
+    /**
+     * ```
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * ```
+     *
+     * `string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];`
+     */
+    public var image: kotlin.String
+      @kotlin.jvm.JvmName("getImage")
+        get() = _builder.image
+      @kotlin.jvm.JvmName("setImage")
+        set(value) {
+        _builder.image = value
+      }
+    /**
+     * <pre>
+     * Required. The image to install: an image family, such as
+     * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+     * family's current image for the machine's type, or a single image, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+     * </pre>
+     *
+     * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearImage() {
+      _builder.clearImage()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

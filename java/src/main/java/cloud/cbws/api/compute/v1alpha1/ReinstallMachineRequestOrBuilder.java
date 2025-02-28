@@ -30,4 +30,30 @@ public interface ReinstallMachineRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
+
+  /**
+   * <pre>
+   * Required. The image to install: an image family, such as
+   * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+   * family's current image for the machine's type, or a single image, such as
+   * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The image.
+   */
+  java.lang.String getImage();
+  /**
+   * <pre>
+   * Required. The image to install: an image family, such as
+   * `projects/my-project-123/families/ubuntu-2404-lts`, which installs the
+   * family's current image for the machine's type, or a single image, such as
+   * `projects/my-project-123/images/ubuntu-2404-lts-20260901`.
+   * </pre>
+   *
+   * <code>string image = 2 [json_name = "image", (.google.api.field_behavior) = REQUIRED];</code>
+   * @return The bytes for image.
+   */
+  com.google.protobuf.ByteString
+      getImageBytes();
 }
