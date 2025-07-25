@@ -97,7 +97,7 @@ public final class ProjectsProto {
       "oogle.protobuf.FieldMaskR\nupdateMask\"N\n\024" +
       "DeleteProjectRequest\0226\n\004name\030\001 \001(\tB\"\342A\001\002" +
       "\372A\033\n\031projects.cbws.xyz/ProjectR\004name\"\027\n\025" +
-      "DeleteProjectMetadata2\342\n\n\017ProjectsServic" +
+      "DeleteProjectMetadata2\363\n\n\017ProjectsServic" +
       "e\022\222\001\n\rCreateProject\022,.cbws.projects.v1al" +
       "pha1.CreateProjectRequest\032\037.cbws.project" +
       "s.v1alpha1.Project\"2\202\263\033\007Project\212\263\033\006creat" +
@@ -109,35 +109,36 @@ public final class ProjectsProto {
       "ects.v1alpha1.GetProjectRequest\032\037.cbws.p" +
       "rojects.v1alpha1.Project\"<\332A\004name\202\263\033\007Pro" +
       "ject\212\263\033\003get\202\323\344\223\002\035\022\033/v1alpha1/{name=proje" +
-      "cts/*}\022\222\001\n\rUpdateProject\022,.cbws.projects" +
+      "cts/*}\022\243\001\n\rUpdateProject\022,.cbws.projects" +
       ".v1alpha1.UpdateProjectRequest\032\037.cbws.pr" +
-      "ojects.v1alpha1.Project\"2\202\263\033\007Project\212\263\033\006" +
-      "update\202\323\344\223\002\027\"\022/v1alpha1/projects:\001*\022\346\001\n\r" +
-      "DeleteProject\022,.cbws.projects.v1alpha1.D" +
-      "eleteProjectRequest\032\035.google.longrunning" +
-      ".Operation\"\207\001\312AE\n\025google.protobuf.Empty\022" +
-      ",cbws.projects.v1alpha1.DeleteProjectMet" +
-      "adata\332A\004name\202\263\033\007Project\212\263\033\006delete\202\323\344\223\002\035*" +
-      "\033/v1alpha1/{name=projects/*}\022\214\001\n\tGetPoli" +
-      "cy\022*.cbws.iam.policy.v1alpha1.GetPolicyR" +
+      "ojects.v1alpha1.Project\"C\202\263\033\007Project\212\263\033\006" +
+      "update\202\323\344\223\002(\"#/v1alpha1/{project.name=pr" +
+      "ojects/*}:\001*\022\346\001\n\rDeleteProject\022,.cbws.pr" +
+      "ojects.v1alpha1.DeleteProjectRequest\032\035.g" +
+      "oogle.longrunning.Operation\"\207\001\312AE\n\025googl" +
+      "e.protobuf.Empty\022,cbws.projects.v1alpha1" +
+      ".DeleteProjectMetadata\332A\004name\202\263\033\007Project" +
+      "\212\263\033\006delete\202\323\344\223\002\035*\033/v1alpha1/{name=projec" +
+      "ts/*}\022\214\001\n\tGetPolicy\022*.cbws.iam.policy.v1" +
+      "alpha1.GetPolicyRequest\032 .cbws.iam.polic" +
+      "y.v1alpha1.Policy\"1\332A\010resource\202\323\344\223\002 \"\036/v" +
+      "1alpha1/{resource}:getPolicy\022\226\001\n\tSetPoli" +
+      "cy\022*.cbws.iam.policy.v1alpha1.SetPolicyR" +
       "equest\032 .cbws.iam.policy.v1alpha1.Policy" +
-      "\"1\332A\010resource\202\323\344\223\002 \"\036/v1alpha1/{resource" +
-      "}:getPolicy\022\226\001\n\tSetPolicy\022*.cbws.iam.pol" +
-      "icy.v1alpha1.SetPolicyRequest\032 .cbws.iam" +
-      ".policy.v1alpha1.Policy\";\332A\017resource,pol" +
-      "icy\202\323\344\223\002#\"\036/v1alpha1/{resource}:setPolic" +
-      "y:\001*\022\276\001\n\017TestPermissions\0220.cbws.iam.poli" +
-      "cy.v1alpha1.TestPermissionsRequest\0321.cbw" +
-      "s.iam.policy.v1alpha1.TestPermissionsRes" +
-      "ponse\"F\332A\024resource,permissions\202\323\344\223\002)\"$/v" +
-      "1alpha1/{resource}:testPermissions:\001*\032+\312" +
-      "A\021projects.cbws.xyz\372\262\033\023\n\021projects.cbws.x" +
-      "yzB\340\001\n cloud.cbws.api.projects.v1alpha1B" +
-      "\rProjectsProtoP\001Z3github.com/cbws/go-cbw" +
-      "s-grpc/cbws/projects/v1alpha1\242\002\003CPX\252\002\026Cb" +
-      "ws.Projects.V1alpha1\312\002\026Cbws\\Projects\\V1a" +
-      "lpha1\342\002\"Cbws\\Projects\\V1alpha1\\GPBMetada" +
-      "ta\352\002\030Cbws::Projects::V1alpha1b\006proto3"
+      "\";\332A\017resource,policy\202\323\344\223\002#\"\036/v1alpha1/{r" +
+      "esource}:setPolicy:\001*\022\276\001\n\017TestPermission" +
+      "s\0220.cbws.iam.policy.v1alpha1.TestPermiss" +
+      "ionsRequest\0321.cbws.iam.policy.v1alpha1.T" +
+      "estPermissionsResponse\"F\332A\024resource,perm" +
+      "issions\202\323\344\223\002)\"$/v1alpha1/{resource}:test" +
+      "Permissions:\001*\032+\312A\021projects.cbws.xyz\372\262\033\023" +
+      "\n\021projects.cbws.xyzB\340\001\n cloud.cbws.api.p" +
+      "rojects.v1alpha1B\rProjectsProtoP\001Z3githu" +
+      "b.com/cbws/go-cbws-grpc/cbws/projects/v1" +
+      "alpha1\242\002\003CPX\252\002\026Cbws.Projects.V1alpha1\312\002\026" +
+      "Cbws\\Projects\\V1alpha1\342\002\"Cbws\\Projects\\V" +
+      "1alpha1\\GPBMetadata\352\002\030Cbws::Projects::V1" +
+      "alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

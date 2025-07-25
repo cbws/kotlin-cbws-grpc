@@ -165,6 +165,41 @@ public object MachineTypeKt {
     public fun clearEphemeralDiskGb() {
       _builder.clearEphemeralDiskGb()
     }
+
+    /**
+     * ```
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     * ```
+     *
+     * `.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];`
+     */
+    public var stockStatus: cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus
+      @kotlin.jvm.JvmName("getStockStatus")
+        get() = _builder.stockStatus
+      @kotlin.jvm.JvmName("setStockStatus")
+        set(value) {
+        _builder.stockStatus = value
+      }
+    public var stockStatusValue: kotlin.Int
+      @kotlin.jvm.JvmName("getStockStatusValue")
+        get() = _builder.stockStatusValue
+      @kotlin.jvm.JvmName("setStockStatusValue")
+        set(value) {
+        _builder.stockStatusValue = value
+      }
+    /**
+     * <pre>
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearStockStatus() {
+      _builder.clearStockStatus()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

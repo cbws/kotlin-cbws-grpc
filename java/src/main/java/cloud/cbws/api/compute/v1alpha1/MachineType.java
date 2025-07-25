@@ -33,6 +33,7 @@ private static final long serialVersionUID = 0L;
   private MachineType() {
     name_ = "";
     zone_ = "";
+    stockStatus_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -46,6 +47,179 @@ private static final long serialVersionUID = 0L;
     return cloud.cbws.api.compute.v1alpha1.MachineTypeProto.internal_static_cbws_compute_v1alpha1_MachineType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             cloud.cbws.api.compute.v1alpha1.MachineType.class, cloud.cbws.api.compute.v1alpha1.MachineType.Builder.class);
+  }
+
+  /**
+   * <pre>
+   * How many machines of a type can still be created.
+   * </pre>
+   *
+   * Protobuf enum {@code cbws.compute.v1alpha1.MachineType.StockStatus}
+   */
+  public enum StockStatus
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <pre>
+     * The stock was not read or is not known.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_UNSPECIFIED = 0;</code>
+     */
+    STOCK_STATUS_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * Machines of this type are available.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_IN_STOCK = 1;</code>
+     */
+    STOCK_STATUS_IN_STOCK(1),
+    /**
+     * <pre>
+     * Few machines of this type are available.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_LOW_STOCK = 2;</code>
+     */
+    STOCK_STATUS_LOW_STOCK(2),
+    /**
+     * <pre>
+     * No machines of this type are available, so a create or a resize to
+     * this type can fail.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_OUT_OF_STOCK = 3;</code>
+     */
+    STOCK_STATUS_OUT_OF_STOCK(3),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        StockStatus.class.getName());
+    }
+    /**
+     * <pre>
+     * The stock was not read or is not known.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_UNSPECIFIED = 0;</code>
+     */
+    public static final int STOCK_STATUS_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * Machines of this type are available.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_IN_STOCK = 1;</code>
+     */
+    public static final int STOCK_STATUS_IN_STOCK_VALUE = 1;
+    /**
+     * <pre>
+     * Few machines of this type are available.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_LOW_STOCK = 2;</code>
+     */
+    public static final int STOCK_STATUS_LOW_STOCK_VALUE = 2;
+    /**
+     * <pre>
+     * No machines of this type are available, so a create or a resize to
+     * this type can fail.
+     * </pre>
+     *
+     * <code>STOCK_STATUS_OUT_OF_STOCK = 3;</code>
+     */
+    public static final int STOCK_STATUS_OUT_OF_STOCK_VALUE = 3;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static StockStatus valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static StockStatus forNumber(int value) {
+      switch (value) {
+        case 0: return STOCK_STATUS_UNSPECIFIED;
+        case 1: return STOCK_STATUS_IN_STOCK;
+        case 2: return STOCK_STATUS_LOW_STOCK;
+        case 3: return STOCK_STATUS_OUT_OF_STOCK;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<StockStatus>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        StockStatus> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<StockStatus>() {
+            public StockStatus findValueByNumber(int number) {
+              return StockStatus.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return cloud.cbws.api.compute.v1alpha1.MachineType.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final StockStatus[] VALUES = values();
+
+    public static StockStatus valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private StockStatus(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:cbws.compute.v1alpha1.MachineType.StockStatus)
   }
 
   public static final int NAME_FIELD_NUMBER = 1;
@@ -190,6 +364,34 @@ private static final long serialVersionUID = 0L;
     return ephemeralDiskGb_;
   }
 
+  public static final int STOCK_STATUS_FIELD_NUMBER = 7;
+  private int stockStatus_ = 0;
+  /**
+   * <pre>
+   * How many machines of this type can still be created. Unset when the
+   * request's read mask leaves out `stock_status`.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * @return The enum numeric value on the wire for stockStatus.
+   */
+  @java.lang.Override public int getStockStatusValue() {
+    return stockStatus_;
+  }
+  /**
+   * <pre>
+   * How many machines of this type can still be created. Unset when the
+   * request's read mask leaves out `stock_status`.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * @return The stockStatus.
+   */
+  @java.lang.Override public cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus getStockStatus() {
+    cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus result = cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus.forNumber(stockStatus_);
+    return result == null ? cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -219,6 +421,9 @@ private static final long serialVersionUID = 0L;
     if (ephemeralDiskGb_ != 0) {
       output.writeInt32(6, ephemeralDiskGb_);
     }
+    if (stockStatus_ != cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus.STOCK_STATUS_UNSPECIFIED.getNumber()) {
+      output.writeEnum(7, stockStatus_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -246,6 +451,10 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeInt32Size(6, ephemeralDiskGb_);
     }
+    if (stockStatus_ != cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus.STOCK_STATUS_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(7, stockStatus_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -271,6 +480,7 @@ private static final long serialVersionUID = 0L;
         != other.getMemoryMb()) return false;
     if (getEphemeralDiskGb()
         != other.getEphemeralDiskGb()) return false;
+    if (stockStatus_ != other.stockStatus_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -292,6 +502,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getMemoryMb();
     hash = (37 * hash) + EPHEMERAL_DISK_GB_FIELD_NUMBER;
     hash = (53 * hash) + getEphemeralDiskGb();
+    hash = (37 * hash) + STOCK_STATUS_FIELD_NUMBER;
+    hash = (53 * hash) + stockStatus_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -432,6 +644,7 @@ private static final long serialVersionUID = 0L;
       cpu_ = 0;
       memoryMb_ = 0;
       ephemeralDiskGb_ = 0;
+      stockStatus_ = 0;
       return this;
     }
 
@@ -480,6 +693,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.ephemeralDiskGb_ = ephemeralDiskGb_;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.stockStatus_ = stockStatus_;
+      }
     }
 
     @java.lang.Override
@@ -512,6 +728,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.getEphemeralDiskGb() != 0) {
         setEphemeralDiskGb(other.getEphemeralDiskGb());
+      }
+      if (other.stockStatus_ != 0) {
+        setStockStatusValue(other.getStockStatusValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -564,6 +783,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 48
+            case 56: {
+              stockStatus_ = input.readEnum();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 56
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -901,6 +1125,84 @@ private static final long serialVersionUID = 0L;
     public Builder clearEphemeralDiskGb() {
       bitField0_ = (bitField0_ & ~0x00000010);
       ephemeralDiskGb_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private int stockStatus_ = 0;
+    /**
+     * <pre>
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @return The enum numeric value on the wire for stockStatus.
+     */
+    @java.lang.Override public int getStockStatusValue() {
+      return stockStatus_;
+    }
+    /**
+     * <pre>
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @param value The enum numeric value on the wire for stockStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStockStatusValue(int value) {
+      stockStatus_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @return The stockStatus.
+     */
+    @java.lang.Override
+    public cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus getStockStatus() {
+      cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus result = cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus.forNumber(stockStatus_);
+      return result == null ? cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @param value The stockStatus to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStockStatus(cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000020;
+      stockStatus_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * How many machines of this type can still be created. Unset when the
+     * request's read mask leaves out `stock_status`.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearStockStatus() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      stockStatus_ = 0;
       onChanged();
       return this;
     }

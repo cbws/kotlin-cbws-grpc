@@ -81,4 +81,25 @@ public interface MachineTypeOrBuilder extends
    * @return The ephemeralDiskGb.
    */
   int getEphemeralDiskGb();
+
+  /**
+   * <pre>
+   * How many machines of this type can still be created. Unset when the
+   * request's read mask leaves out `stock_status`.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * @return The enum numeric value on the wire for stockStatus.
+   */
+  int getStockStatusValue();
+  /**
+   * <pre>
+   * How many machines of this type can still be created. Unset when the
+   * request's read mask leaves out `stock_status`.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * @return The stockStatus.
+   */
+  cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus getStockStatus();
 }

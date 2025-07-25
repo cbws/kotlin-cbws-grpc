@@ -144,7 +144,7 @@ public final class IamProto {
       "e\"}\n\033GenerateAccessTokenResponse\022!\n\014acce" +
       "ss_token\030\001 \001(\tR\013accessToken\022;\n\013expire_ti" +
       "me\030\003 \001(\0132\032.google.protobuf.TimestampR\nex" +
-      "pireTime2\325\021\n\nIAMService\022\314\001\n\023ListServiceA" +
+      "pireTime2\327\021\n\nIAMService\022\314\001\n\023ListServiceA" +
       "ccounts\022-.cbws.iam.v1alpha1.ListServiceA" +
       "ccountsRequest\032..cbws.iam.v1alpha1.ListS" +
       "erviceAccountsResponse\"V\332A\004name\202\263\033\016Servi" +
@@ -181,31 +181,31 @@ public final class IamProto {
       "bws.iam.v1alpha1.ServiceAccountKey\"i\332A\024n" +
       "ame,public_key_type\202\263\033\021ServiceAccountKey" +
       "\212\263\033\003get\202\323\344\223\0020\022./v1/{name=projects/*/serv" +
-      "iceAccounts/*/keys/*}\022\360\001\n\027CreateServiceA" +
+      "iceAccounts/*/keys/*}\022\362\001\n\027CreateServiceA" +
       "ccountKey\0221.cbws.iam.v1alpha1.CreateServ" +
       "iceAccountKeyRequest\032$.cbws.iam.v1alpha1" +
-      ".ServiceAccountKey\"|\332A#name,private_key_" +
+      ".ServiceAccountKey\"~\332A#name,private_key_" +
       "type,key_algorithm\202\263\033\021ServiceAccountKey\212" +
-      "\263\033\006create\202\323\344\223\0021\",/v1/{name=projects/*/se" +
-      "rviceAccounts/*}/keys:\001*\022\302\001\n\027DeleteServi" +
-      "ceAccountKey\0221.cbws.iam.v1alpha1.DeleteS" +
-      "erviceAccountKeyRequest\032\026.google.protobu" +
-      "f.Empty\"\\\332A\004name\202\263\033\021ServiceAccountKey\212\263\033" +
-      "\006delete\202\323\344\223\0020*./v1/{name=projects/*/serv" +
-      "iceAccounts/*/keys/*}\022\214\001\n\tGetPolicy\022*.cb" +
-      "ws.iam.policy.v1alpha1.GetPolicyRequest\032" +
-      " .cbws.iam.policy.v1alpha1.Policy\"1\332A\010re" +
-      "source\202\323\344\223\002 \"\036/v1alpha1/{resource}:getPo" +
-      "licy\022\226\001\n\tSetPolicy\022*.cbws.iam.policy.v1a" +
-      "lpha1.SetPolicyRequest\032 .cbws.iam.policy" +
-      ".v1alpha1.Policy\";\332A\017resource,policy\202\323\344\223" +
-      "\002#\"\036/v1alpha1/{resource}:setPolicy:\001*\032!\312" +
-      "A\014iam.cbws.xyz\372\262\033\016\n\014iam.cbws.xyzB\275\001\n\033clo" +
-      "ud.cbws.api.iam.v1alpha1B\010IamProtoP\001Z.gi" +
-      "thub.com/cbws/go-cbws-grpc/cbws/iam/v1al" +
-      "pha1\242\002\003CIX\252\002\021Cbws.Iam.V1alpha1\312\002\021Cbws\\Ia" +
-      "m\\V1alpha1\342\002\035Cbws\\Iam\\V1alpha1\\GPBMetada" +
-      "ta\352\002\023Cbws::Iam::V1alpha1b\006proto3"
+      "\263\033\006create\202\323\344\223\0023\"./v1/{parent=projects/*/" +
+      "serviceAccounts/*}/keys:\001*\022\302\001\n\027DeleteSer" +
+      "viceAccountKey\0221.cbws.iam.v1alpha1.Delet" +
+      "eServiceAccountKeyRequest\032\026.google.proto" +
+      "buf.Empty\"\\\332A\004name\202\263\033\021ServiceAccountKey\212" +
+      "\263\033\006delete\202\323\344\223\0020*./v1/{name=projects/*/se" +
+      "rviceAccounts/*/keys/*}\022\214\001\n\tGetPolicy\022*." +
+      "cbws.iam.policy.v1alpha1.GetPolicyReques" +
+      "t\032 .cbws.iam.policy.v1alpha1.Policy\"1\332A\010" +
+      "resource\202\323\344\223\002 \"\036/v1alpha1/{resource}:get" +
+      "Policy\022\226\001\n\tSetPolicy\022*.cbws.iam.policy.v" +
+      "1alpha1.SetPolicyRequest\032 .cbws.iam.poli" +
+      "cy.v1alpha1.Policy\";\332A\017resource,policy\202\323" +
+      "\344\223\002#\"\036/v1alpha1/{resource}:setPolicy:\001*\032" +
+      "!\312A\014iam.cbws.xyz\372\262\033\016\n\014iam.cbws.xyzB\275\001\n\033c" +
+      "loud.cbws.api.iam.v1alpha1B\010IamProtoP\001Z." +
+      "github.com/cbws/go-cbws-grpc/cbws/iam/v1" +
+      "alpha1\242\002\003CIX\252\002\021Cbws.Iam.V1alpha1\312\002\021Cbws\\" +
+      "Iam\\V1alpha1\342\002\035Cbws\\Iam\\V1alpha1\\GPBMeta" +
+      "data\352\002\023Cbws::Iam::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
