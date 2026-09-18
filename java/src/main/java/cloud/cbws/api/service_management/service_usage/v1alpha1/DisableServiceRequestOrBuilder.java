@@ -32,4 +32,19 @@ public interface DisableServiceRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getNameBytes();
+
+  /**
+   * <pre>
+   * Optional. Whether to also disable the enabled services that depend on
+   * this one. They are disabled first.
+   *
+   * If false and such services exist, the call fails with
+   * FAILED_PRECONDITION. The error names each dependent service in a
+   * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+   * </pre>
+   *
+   * <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The disableDependentServices.
+   */
+  boolean getDisableDependentServices();
 }

@@ -61,6 +61,42 @@ public object DisableServiceRequestKt {
     public fun clearName() {
       _builder.clearName()
     }
+
+    /**
+     * ```
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     *
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     * ```
+     *
+     * `bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];`
+     */
+    public var disableDependentServices: kotlin.Boolean
+      @kotlin.jvm.JvmName("getDisableDependentServices")
+        get() = _builder.disableDependentServices
+      @kotlin.jvm.JvmName("setDisableDependentServices")
+        set(value) {
+        _builder.disableDependentServices = value
+      }
+    /**
+     * <pre>
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     *
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     * </pre>
+     *
+     * <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearDisableDependentServices() {
+      _builder.clearDisableDependentServices()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

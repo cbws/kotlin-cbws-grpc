@@ -98,6 +98,26 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int DISABLE_DEPENDENT_SERVICES_FIELD_NUMBER = 2;
+  private boolean disableDependentServices_ = false;
+  /**
+   * <pre>
+   * Optional. Whether to also disable the enabled services that depend on
+   * this one. They are disabled first.
+   *
+   * If false and such services exist, the call fails with
+   * FAILED_PRECONDITION. The error names each dependent service in a
+   * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+   * </pre>
+   *
+   * <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The disableDependentServices.
+   */
+  @java.lang.Override
+  public boolean getDisableDependentServices() {
+    return disableDependentServices_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -115,6 +135,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, name_);
     }
+    if (disableDependentServices_ != false) {
+      output.writeBool(2, disableDependentServices_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -126,6 +149,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(name_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, name_);
+    }
+    if (disableDependentServices_ != false) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeBoolSize(2, disableDependentServices_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -144,6 +171,8 @@ private static final long serialVersionUID = 0L;
 
     if (!getName()
         .equals(other.getName())) return false;
+    if (getDisableDependentServices()
+        != other.getDisableDependentServices()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -157,6 +186,9 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + NAME_FIELD_NUMBER;
     hash = (53 * hash) + getName().hashCode();
+    hash = (37 * hash) + DISABLE_DEPENDENT_SERVICES_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+        getDisableDependentServices());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -293,6 +325,7 @@ private static final long serialVersionUID = 0L;
       super.clear();
       bitField0_ = 0;
       name_ = "";
+      disableDependentServices_ = false;
       return this;
     }
 
@@ -329,6 +362,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.name_ = name_;
       }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.disableDependentServices_ = disableDependentServices_;
+      }
     }
 
     @java.lang.Override
@@ -347,6 +383,9 @@ private static final long serialVersionUID = 0L;
         name_ = other.name_;
         bitField0_ |= 0x00000001;
         onChanged();
+      }
+      if (other.getDisableDependentServices() != false) {
+        setDisableDependentServices(other.getDisableDependentServices());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -379,6 +418,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 16: {
+              disableDependentServices_ = input.readBool();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 16
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -494,6 +538,65 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       name_ = value;
       bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private boolean disableDependentServices_ ;
+    /**
+     * <pre>
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     *
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     * </pre>
+     *
+     * <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The disableDependentServices.
+     */
+    @java.lang.Override
+    public boolean getDisableDependentServices() {
+      return disableDependentServices_;
+    }
+    /**
+     * <pre>
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     *
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     * </pre>
+     *
+     * <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The disableDependentServices to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDisableDependentServices(boolean value) {
+
+      disableDependentServices_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. Whether to also disable the enabled services that depend on
+     * this one. They are disabled first.
+     *
+     * If false and such services exist, the call fails with
+     * FAILED_PRECONDITION. The error names each dependent service in a
+     * `PreconditionFailure` violation of type `DEPENDENT_SERVICE_ENABLED`.
+     * </pre>
+     *
+     * <code>bool disable_dependent_services = 2 [json_name = "disableDependentServices", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDisableDependentServices() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      disableDependentServices_ = false;
       onChanged();
       return this;
     }
