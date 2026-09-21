@@ -41,17 +41,17 @@ public final class SubnetProto {
     java.lang.String[] descriptorData = {
       "\n\036cbws/vpc/v1alpha1/subnet.proto\022\021cbws.v" +
       "pc.v1alpha1\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\340\001\n\006Subn" +
+      "roto\032\031google/api/resource.proto\"\353\001\n\006Subn" +
       "et\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002" +
       " \001(\tB\004\342A\001\005R\006parent\022\034\n\006prefix\030\003 \001(\tB\004\342A\001\005" +
       "R\006prefix\022\036\n\007gateway\030\004 \001(\tB\004\342A\001\005R\007gateway" +
-      ":`\352A]\n\025vpc.cbws.cloud/Subnet\022Dprojects/{" +
-      "project}/privateNetworks/{privateNetwork" +
-      "}/subnets/{subnet}B\220\001\n\033cloud.cbws.api.vp" +
-      "c.v1alpha1B\013SubnetProtoP\001\242\002\003CVX\252\002\021Cbws.V" +
-      "pc.V1alpha1\312\002\021Cbws\\Vpc\\V1alpha1\342\002\035Cbws\\V" +
-      "pc\\V1alpha1\\GPBMetadata\352\002\023Cbws::Vpc::V1a" +
-      "lpha1b\006proto3"
+      ":k\352Ah\n\025vpc.cbws.cloud/Subnet\022Oprojects/{" +
+      "project}/vpcs/{vpc}/privateNetworks/{pri" +
+      "vateNetwork}/subnets/{subnet}B\220\001\n\033cloud." +
+      "cbws.api.vpc.v1alpha1B\013SubnetProtoP\001\242\002\003C" +
+      "VX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\V1alph" +
+      "a1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadata\352\002\023Cbw" +
+      "s::Vpc::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
