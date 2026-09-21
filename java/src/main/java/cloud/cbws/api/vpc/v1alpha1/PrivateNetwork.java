@@ -34,6 +34,7 @@ private static final long serialVersionUID = 0L;
   private PrivateNetwork() {
     name_ = "";
     parent_ = "";
+    zone_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -147,6 +148,55 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int ZONE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object zone_ = "";
+  /**
+   * <pre>
+   * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+   * buf:lint:ignore FIELD_SAME_JSON_NAME
+   * </pre>
+   *
+   * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The zone.
+   */
+  @java.lang.Override
+  public java.lang.String getZone() {
+    java.lang.Object ref = zone_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      zone_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+   * buf:lint:ignore FIELD_SAME_JSON_NAME
+   * </pre>
+   *
+   * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The bytes for zone.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getZoneBytes() {
+    java.lang.Object ref = zone_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      zone_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -167,6 +217,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(parent_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, parent_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(zone_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, zone_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -181,6 +234,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(parent_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, parent_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(zone_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, zone_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -201,6 +257,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getParent()
         .equals(other.getParent())) return false;
+    if (!getZone()
+        .equals(other.getZone())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -216,6 +274,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + PARENT_FIELD_NUMBER;
     hash = (53 * hash) + getParent().hashCode();
+    hash = (37 * hash) + ZONE_FIELD_NUMBER;
+    hash = (53 * hash) + getZone().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -354,6 +414,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       name_ = "";
       parent_ = "";
+      zone_ = "";
       return this;
     }
 
@@ -393,6 +454,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.parent_ = parent_;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.zone_ = zone_;
+      }
     }
 
     @java.lang.Override
@@ -415,6 +479,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getParent().isEmpty()) {
         parent_ = other.parent_;
         bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.getZone().isEmpty()) {
+        zone_ = other.zone_;
+        bitField0_ |= 0x00000004;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -453,6 +522,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 26: {
+              zone_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 26
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -660,6 +734,103 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       parent_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object zone_ = "";
+    /**
+     * <pre>
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     * </pre>
+     *
+     * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The zone.
+     */
+    public java.lang.String getZone() {
+      java.lang.Object ref = zone_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        zone_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     * </pre>
+     *
+     * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return The bytes for zone.
+     */
+    public com.google.protobuf.ByteString
+        getZoneBytes() {
+      java.lang.Object ref = zone_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        zone_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     * </pre>
+     *
+     * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The zone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setZone(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      zone_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     * </pre>
+     *
+     * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearZone() {
+      zone_ = getDefaultInstance().getZone();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     * </pre>
+     *
+     * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @param value The bytes for zone to set.
+     * @return This builder for chaining.
+     */
+    public Builder setZoneBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      zone_ = value;
+      bitField0_ |= 0x00000004;
       onChanged();
       return this;
     }

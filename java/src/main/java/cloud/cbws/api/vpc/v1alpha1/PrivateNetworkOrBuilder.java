@@ -52,4 +52,26 @@ public interface PrivateNetworkOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParentBytes();
+
+  /**
+   * <pre>
+   * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+   * buf:lint:ignore FIELD_SAME_JSON_NAME
+   * </pre>
+   *
+   * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The zone.
+   */
+  java.lang.String getZone();
+  /**
+   * <pre>
+   * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+   * buf:lint:ignore FIELD_SAME_JSON_NAME
+   * </pre>
+   *
+   * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * @return The bytes for zone.
+   */
+  com.google.protobuf.ByteString
+      getZoneBytes();
 }

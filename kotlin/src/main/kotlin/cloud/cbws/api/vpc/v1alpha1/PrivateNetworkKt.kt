@@ -88,6 +88,34 @@ public object PrivateNetworkKt {
     public fun clearParent() {
       _builder.clearParent()
     }
+
+    /**
+     * ```
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     * ```
+     *
+     * `string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];`
+     */
+    public var zone: kotlin.String
+      @kotlin.jvm.JvmName("getZone")
+        get() = _builder.zone
+      @kotlin.jvm.JvmName("setZone")
+        set(value) {
+        _builder.zone = value
+      }
+    /**
+     * <pre>
+     * The zone of the private network, such as `nl-ein-1` or `nl-ein-2`.
+     * buf:lint:ignore FIELD_SAME_JSON_NAME
+     * </pre>
+     *
+     * <code>string zone = 3 [json_name = "zone", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearZone() {
+      _builder.clearZone()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

@@ -67,28 +67,28 @@ public final class PrivatenetworkProto {
       "\n&cbws/vpc/v1alpha1/privatenetwork.proto" +
       "\022\021cbws.vpc.v1alpha1\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
-      "\242\001\n\016PrivateNetwork\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004" +
-      "name\022\034\n\006parent\030\002 \001(\tB\004\342A\001\005R\006parent:X\352AU\n" +
-      "\035vpc.cbws.cloud/PrivateNetwork\0224projects" +
-      "/{project}/vpcs/{vpc}/privateNetworks/{n" +
-      "ame}\"\231\001\n\032ListPrivateNetworksRequest\0223\n\006p" +
-      "arent\030\001 \001(\tB\033\342A\001\002\372A\024\n\022vpc.cbws.cloud/Vpc" +
-      "R\006parent\022!\n\tpage_size\030\002 \001(\005B\004\342A\001\001R\010pageS" +
-      "ize\022#\n\npage_token\030\003 \001(\tB\004\342A\001\001R\tpageToken" +
-      "\"\223\001\n\033ListPrivateNetworksResponse\022L\n\020priv" +
-      "ate_networks\030\001 \003(\0132!.cbws.vpc.v1alpha1.P" +
-      "rivateNetworkR\017privateNetworks\022&\n\017next_p" +
-      "age_token\030\002 \001(\tR\rnextPageToken\"V\n\030GetPri" +
-      "vateNetworkRequest\022:\n\004name\030\001 \001(\tB&\342A\001\002\372A" +
-      "\037\n\035vpc.cbws.cloud/PrivateNetworkR\004name\"Y" +
-      "\n\033DeletePrivateNetworkRequest\022:\n\004name\030\001 " +
-      "\001(\tB&\342A\001\002\372A\037\n\035vpc.cbws.cloud/PrivateNetw" +
-      "orkR\004name\"\036\n\034DeletePrivateNetworkMetadat" +
-      "aB\230\001\n\033cloud.cbws.api.vpc.v1alpha1B\023Priva" +
-      "tenetworkProtoP\001\242\002\003CVX\252\002\021Cbws.Vpc.V1alph" +
-      "a1\312\002\021Cbws\\Vpc\\V1alpha1\342\002\035Cbws\\Vpc\\V1alph" +
-      "a1\\GPBMetadata\352\002\023Cbws::Vpc::V1alpha1b\006pr" +
-      "oto3"
+      "\274\001\n\016PrivateNetwork\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004" +
+      "name\022\034\n\006parent\030\002 \001(\tB\004\342A\001\005R\006parent\022\030\n\004zo" +
+      "ne\030\003 \001(\tB\004\342A\001\005R\004zone:X\352AU\n\035vpc.cbws.clou" +
+      "d/PrivateNetwork\0224projects/{project}/vpc" +
+      "s/{vpc}/privateNetworks/{name}\"\231\001\n\032ListP" +
+      "rivateNetworksRequest\0223\n\006parent\030\001 \001(\tB\033\342" +
+      "A\001\002\372A\024\n\022vpc.cbws.cloud/VpcR\006parent\022!\n\tpa" +
+      "ge_size\030\002 \001(\005B\004\342A\001\001R\010pageSize\022#\n\npage_to" +
+      "ken\030\003 \001(\tB\004\342A\001\001R\tpageToken\"\223\001\n\033ListPriva" +
+      "teNetworksResponse\022L\n\020private_networks\030\001" +
+      " \003(\0132!.cbws.vpc.v1alpha1.PrivateNetworkR" +
+      "\017privateNetworks\022&\n\017next_page_token\030\002 \001(" +
+      "\tR\rnextPageToken\"V\n\030GetPrivateNetworkReq" +
+      "uest\022:\n\004name\030\001 \001(\tB&\342A\001\002\372A\037\n\035vpc.cbws.cl" +
+      "oud/PrivateNetworkR\004name\"Y\n\033DeletePrivat" +
+      "eNetworkRequest\022:\n\004name\030\001 \001(\tB&\342A\001\002\372A\037\n\035" +
+      "vpc.cbws.cloud/PrivateNetworkR\004name\"\036\n\034D" +
+      "eletePrivateNetworkMetadataB\230\001\n\033cloud.cb" +
+      "ws.api.vpc.v1alpha1B\023PrivatenetworkProto" +
+      "P\001\242\002\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\" +
+      "V1alpha1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadata" +
+      "\352\002\023Cbws::Vpc::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -101,7 +101,7 @@ public final class PrivatenetworkProto {
     internal_static_cbws_vpc_v1alpha1_PrivateNetwork_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_vpc_v1alpha1_PrivateNetwork_descriptor,
-        new java.lang.String[] { "Name", "Parent", });
+        new java.lang.String[] { "Name", "Parent", "Zone", });
     internal_static_cbws_vpc_v1alpha1_ListPrivateNetworksRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cbws_vpc_v1alpha1_ListPrivateNetworksRequest_fieldAccessorTable = new
