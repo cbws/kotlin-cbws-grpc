@@ -40,7 +40,7 @@ public final class ServiceProto {
       "roto\032\033cbws/vpc/v1alpha1/vpc.proto\032\034googl" +
       "e/api/annotations.proto\032\027google/api/clie" +
       "nt.proto\032#google/longrunning/operations." +
-      "proto2\223\013\n\nVpcService\022\210\001\n\010ListVpcs\022\".cbws" +
+      "proto2\244\017\n\nVpcService\022\210\001\n\010ListVpcs\022\".cbws" +
       ".vpc.v1alpha1.ListVpcsRequest\032#.cbws.vpc" +
       ".v1alpha1.ListVpcsResponse\"3\332A\006parent\202\323\344" +
       "\223\002$\022\"/v1alpha1/{parent=projects/*}/vpcs\022" +
@@ -75,11 +75,24 @@ public final class ServiceProto {
       ".vpc.v1alpha1.GetSubnetRequest\032\031.cbws.vp" +
       "c.v1alpha1.Subnet\"M\332A\004name\202\323\344\223\002@\022>/v1alp" +
       "ha1/{name=projects/*/vpcs/*/privateNetwo" +
-      "rks/*/subnets/*}\032\021\312A\016vpc.cbws.cloudB\221\001\n\033" +
-      "cloud.cbws.api.vpc.v1alpha1B\014ServiceProt" +
-      "oP\001\242\002\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc" +
-      "\\V1alpha1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadat" +
-      "a\352\002\023Cbws::Vpc::V1alpha1b\006proto3"
+      "rks/*/subnets/*}\022\223\002\n\014CreateSubnet\022&.cbws" +
+      ".vpc.v1alpha1.CreateSubnetRequest\032\035.goog" +
+      "le.longrunning.Operation\"\273\001\312AP\n&cbws.vpc" +
+      ".v1alpha1.CreateSubnetResponse\022&cbws.vpc" +
+      ".v1alpha1.CreateSubnetMetadata\332A\027parent," +
+      "subnet,subnet_id\202\323\344\223\002H\">/v1alpha1/{paren" +
+      "t=projects/*/vpcs/*/privateNetworks/*}/s" +
+      "ubnets:\006subnet\022\370\001\n\014DeleteSubnet\022&.cbws.v" +
+      "pc.v1alpha1.DeleteSubnetRequest\032\035.google" +
+      ".longrunning.Operation\"\240\001\312AP\n&cbws.vpc.v" +
+      "1alpha1.DeleteSubnetResponse\022&cbws.vpc.v" +
+      "1alpha1.DeleteSubnetMetadata\332A\004name\202\323\344\223\002" +
+      "@*>/v1alpha1/{name=projects/*/vpcs/*/pri" +
+      "vateNetworks/*/subnets/*}\032\021\312A\016vpc.cbws.c" +
+      "loudB\221\001\n\033cloud.cbws.api.vpc.v1alpha1B\014Se" +
+      "rviceProtoP\001\242\002\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002" +
+      "\021Cbws\\Vpc\\V1alpha1\342\002\035Cbws\\Vpc\\V1alpha1\\G" +
+      "PBMetadata\352\002\023Cbws::Vpc::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

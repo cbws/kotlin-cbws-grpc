@@ -45,6 +45,36 @@ public final class SubnetProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_vpc_v1alpha1_GetSubnetRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_CreateSubnetRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_CreateSubnetResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetMetadata_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_CreateSubnetMetadata_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_DeleteSubnetRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_DeleteSubnetResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetMetadata_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_DeleteSubnetMetadata_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -75,11 +105,21 @@ public final class SubnetProto {
       "n\"\205\001\n\020GetSubnetRequest\0222\n\004name\030\001 \001(\tB\036\342A" +
       "\001\002\372A\027\n\025vpc.cbws.cloud/SubnetR\004name\022=\n\tre" +
       "ad_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
-      "kB\004\342A\001\001R\010readMaskB\220\001\n\033cloud.cbws.api.vpc" +
-      ".v1alpha1B\013SubnetProtoP\001\242\002\003CVX\252\002\021Cbws.Vp" +
-      "c.V1alpha1\312\002\021Cbws\\Vpc\\V1alpha1\342\002\035Cbws\\Vp" +
-      "c\\V1alpha1\\GPBMetadata\352\002\023Cbws::Vpc::V1al" +
-      "pha1b\006proto3"
+      "kB\004\342A\001\001R\010readMask\"\261\001\n\023CreateSubnetReques" +
+      "t\022>\n\006parent\030\001 \001(\tB&\342A\001\002\372A\037\n\035vpc.cbws.clo" +
+      "ud/PrivateNetworkR\006parent\022!\n\tsubnet_id\030\002" +
+      " \001(\tB\004\342A\001\002R\010subnetId\0227\n\006subnet\030\003 \001(\0132\031.c" +
+      "bws.vpc.v1alpha1.SubnetB\004\342A\001\002R\006subnet\"\026\n" +
+      "\024CreateSubnetResponse\"O\n\024CreateSubnetMet" +
+      "adata\0227\n\006subnet\030\001 \001(\0132\031.cbws.vpc.v1alpha" +
+      "1.SubnetB\004\342A\001\003R\006subnet\"I\n\023DeleteSubnetRe" +
+      "quest\0222\n\004name\030\001 \001(\tB\036\342A\001\002\372A\027\n\025vpc.cbws.c" +
+      "loud/SubnetR\004name\"\026\n\024DeleteSubnetRespons" +
+      "e\"\026\n\024DeleteSubnetMetadataB\220\001\n\033cloud.cbws" +
+      ".api.vpc.v1alpha1B\013SubnetProtoP\001\242\002\003CVX\252\002" +
+      "\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\V1alpha1\342\002" +
+      "\035Cbws\\Vpc\\V1alpha1\\GPBMetadata\352\002\023Cbws::V" +
+      "pc::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -112,6 +152,42 @@ public final class SubnetProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_vpc_v1alpha1_GetSubnetRequest_descriptor,
         new java.lang.String[] { "Name", "ReadMask", });
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_CreateSubnetRequest_descriptor,
+        new java.lang.String[] { "Parent", "SubnetId", "Subnet", });
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetResponse_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_CreateSubnetResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(6);
+    internal_static_cbws_vpc_v1alpha1_CreateSubnetMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_CreateSubnetMetadata_descriptor,
+        new java.lang.String[] { "Subnet", });
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(7);
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_DeleteSubnetRequest_descriptor,
+        new java.lang.String[] { "Name", });
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetResponse_descriptor =
+      getDescriptor().getMessageTypes().get(8);
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_DeleteSubnetResponse_descriptor,
+        new java.lang.String[] { });
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetMetadata_descriptor =
+      getDescriptor().getMessageTypes().get(9);
+    internal_static_cbws_vpc_v1alpha1_DeleteSubnetMetadata_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_DeleteSubnetMetadata_descriptor,
+        new java.lang.String[] { });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();

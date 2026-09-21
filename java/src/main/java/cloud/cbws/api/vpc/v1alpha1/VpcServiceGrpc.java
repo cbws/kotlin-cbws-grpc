@@ -272,6 +272,68 @@ public final class VpcServiceGrpc {
     return getGetSubnetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest,
+      com.google.longrunning.Operation> getCreateSubnetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateSubnet",
+      requestType = cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest,
+      com.google.longrunning.Operation> getCreateSubnetMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest, com.google.longrunning.Operation> getCreateSubnetMethod;
+    if ((getCreateSubnetMethod = VpcServiceGrpc.getCreateSubnetMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getCreateSubnetMethod = VpcServiceGrpc.getCreateSubnetMethod) == null) {
+          VpcServiceGrpc.getCreateSubnetMethod = getCreateSubnetMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateSubnet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("CreateSubnet"))
+              .build();
+        }
+      }
+    }
+    return getCreateSubnetMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest,
+      com.google.longrunning.Operation> getDeleteSubnetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteSubnet",
+      requestType = cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest,
+      com.google.longrunning.Operation> getDeleteSubnetMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest, com.google.longrunning.Operation> getDeleteSubnetMethod;
+    if ((getDeleteSubnetMethod = VpcServiceGrpc.getDeleteSubnetMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getDeleteSubnetMethod = VpcServiceGrpc.getDeleteSubnetMethod) == null) {
+          VpcServiceGrpc.getDeleteSubnetMethod = getDeleteSubnetMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteSubnet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("DeleteSubnet"))
+              .build();
+        }
+      }
+    }
+    return getDeleteSubnetMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -433,6 +495,29 @@ public final class VpcServiceGrpc {
         io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Subnet> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSubnetMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates a subnet in a private network, with a prefix you choose.
+     * Requires `vpc.cbws.cloud/Subnet/create` on the private network. The new
+     * subnet, with its gateway, is in the operation's metadata.
+     * </pre>
+     */
+    default void createSubnet(cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateSubnetMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a subnet and frees its prefix. Requires
+     * `vpc.cbws.cloud/Subnet/delete` on the subnet.
+     * </pre>
+     */
+    default void deleteSubnet(cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSubnetMethod(), responseObserver);
+    }
   }
 
   /**
@@ -580,6 +665,31 @@ public final class VpcServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetSubnetMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Creates a subnet in a private network, with a prefix you choose.
+     * Requires `vpc.cbws.cloud/Subnet/create` on the private network. The new
+     * subnet, with its gateway, is in the operation's metadata.
+     * </pre>
+     */
+    public void createSubnet(cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateSubnetMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes a subnet and frees its prefix. Requires
+     * `vpc.cbws.cloud/Subnet/delete` on the subnet.
+     * </pre>
+     */
+    public void deleteSubnet(cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteSubnetMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -696,6 +806,29 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetSubnetMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Creates a subnet in a private network, with a prefix you choose.
+     * Requires `vpc.cbws.cloud/Subnet/create` on the private network. The new
+     * subnet, with its gateway, is in the operation's metadata.
+     * </pre>
+     */
+    public com.google.longrunning.Operation createSubnet(cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateSubnetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a subnet and frees its prefix. Requires
+     * `vpc.cbws.cloud/Subnet/delete` on the subnet.
+     * </pre>
+     */
+    public com.google.longrunning.Operation deleteSubnet(cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteSubnetMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -811,6 +944,29 @@ public final class VpcServiceGrpc {
     public cloud.cbws.api.vpc.v1alpha1.Subnet getSubnet(cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetSubnetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Creates a subnet in a private network, with a prefix you choose.
+     * Requires `vpc.cbws.cloud/Subnet/create` on the private network. The new
+     * subnet, with its gateway, is in the operation's metadata.
+     * </pre>
+     */
+    public com.google.longrunning.Operation createSubnet(cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateSubnetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a subnet and frees its prefix. Requires
+     * `vpc.cbws.cloud/Subnet/delete` on the subnet.
+     * </pre>
+     */
+    public com.google.longrunning.Operation deleteSubnet(cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteSubnetMethod(), getCallOptions(), request);
     }
   }
 
@@ -936,6 +1092,31 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetSubnetMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Creates a subnet in a private network, with a prefix you choose.
+     * Requires `vpc.cbws.cloud/Subnet/create` on the private network. The new
+     * subnet, with its gateway, is in the operation's metadata.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> createSubnet(
+        cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateSubnetMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes a subnet and frees its prefix. Requires
+     * `vpc.cbws.cloud/Subnet/delete` on the subnet.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> deleteSubnet(
+        cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteSubnetMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_VPCS = 0;
@@ -946,6 +1127,8 @@ public final class VpcServiceGrpc {
   private static final int METHODID_DELETE_PRIVATE_NETWORK = 5;
   private static final int METHODID_LIST_SUBNETS = 6;
   private static final int METHODID_GET_SUBNET = 7;
+  private static final int METHODID_CREATE_SUBNET = 8;
+  private static final int METHODID_DELETE_SUBNET = 9;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -995,6 +1178,14 @@ public final class VpcServiceGrpc {
         case METHODID_GET_SUBNET:
           serviceImpl.getSubnet((cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Subnet>) responseObserver);
+          break;
+        case METHODID_CREATE_SUBNET:
+          serviceImpl.createSubnet((cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_SUBNET:
+          serviceImpl.deleteSubnet((cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1070,6 +1261,20 @@ public final class VpcServiceGrpc {
               cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest,
               cloud.cbws.api.vpc.v1alpha1.Subnet>(
                 service, METHODID_GET_SUBNET)))
+        .addMethod(
+          getCreateSubnetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.vpc.v1alpha1.CreateSubnetRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_CREATE_SUBNET)))
+        .addMethod(
+          getDeleteSubnetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_DELETE_SUBNET)))
         .build();
   }
 
@@ -1126,6 +1331,8 @@ public final class VpcServiceGrpc {
               .addMethod(getDeletePrivateNetworkMethod())
               .addMethod(getListSubnetsMethod())
               .addMethod(getGetSubnetMethod())
+              .addMethod(getCreateSubnetMethod())
+              .addMethod(getDeleteSubnetMethod())
               .build();
         }
       }
