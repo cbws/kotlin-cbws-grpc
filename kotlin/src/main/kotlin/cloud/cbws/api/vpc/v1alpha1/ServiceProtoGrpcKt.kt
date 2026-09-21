@@ -58,6 +58,14 @@ public object VpcServiceGrpcKt {
     @JvmStatic
     get() = VpcServiceGrpc.getDeletePrivateNetworkMethod()
 
+  public val listSubnetsMethod: MethodDescriptor<ListSubnetsRequest, ListSubnetsResponse>
+    @JvmStatic
+    get() = VpcServiceGrpc.getListSubnetsMethod()
+
+  public val getSubnetMethod: MethodDescriptor<GetSubnetRequest, Subnet>
+    @JvmStatic
+    get() = VpcServiceGrpc.getGetSubnetMethod()
+
   /**
    * A stub for issuing RPCs to a(n) cbws.vpc.v1alpha1.VpcService service as suspending coroutines.
    */
@@ -187,6 +195,46 @@ public object VpcServiceGrpcKt {
       callOptions,
       headers
     )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun listSubnets(request: ListSubnetsRequest, headers: Metadata = Metadata()): ListSubnetsResponse = unaryRpc(
+      channel,
+      VpcServiceGrpc.getListSubnetsMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun getSubnet(request: GetSubnetRequest, headers: Metadata = Metadata()): Subnet = unaryRpc(
+      channel,
+      VpcServiceGrpc.getGetSubnetMethod(),
+      request,
+      callOptions,
+      headers
+    )
   }
 
   /**
@@ -267,6 +315,30 @@ public object VpcServiceGrpcKt {
      */
     public open suspend fun deletePrivateNetwork(request: DeletePrivateNetworkRequest): Operation = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.vpc.v1alpha1.VpcService.DeletePrivateNetwork is unimplemented"))
 
+    /**
+     * Returns the response to an RPC for cbws.vpc.v1alpha1.VpcService.ListSubnets.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun listSubnets(request: ListSubnetsRequest): ListSubnetsResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.vpc.v1alpha1.VpcService.ListSubnets is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for cbws.vpc.v1alpha1.VpcService.GetSubnet.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun getSubnet(request: GetSubnetRequest): Subnet = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.vpc.v1alpha1.VpcService.GetSubnet is unimplemented"))
+
     final override fun bindService(): ServerServiceDefinition = builder(getServiceDescriptor())
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
@@ -297,6 +369,16 @@ public object VpcServiceGrpcKt {
       context = this.context,
       descriptor = VpcServiceGrpc.getDeletePrivateNetworkMethod(),
       implementation = ::deletePrivateNetwork
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = VpcServiceGrpc.getListSubnetsMethod(),
+      implementation = ::listSubnets
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = VpcServiceGrpc.getGetSubnetMethod(),
+      implementation = ::getSubnet
     )).build()
   }
 }

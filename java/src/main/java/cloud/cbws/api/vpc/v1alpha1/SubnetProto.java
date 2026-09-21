@@ -30,6 +30,21 @@ public final class SubnetProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_vpc_v1alpha1_Subnet_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_ListSubnetsRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_ListSubnetsRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_ListSubnetsResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_ListSubnetsResponse_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_GetSubnetRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_GetSubnetRequest_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -41,23 +56,37 @@ public final class SubnetProto {
     java.lang.String[] descriptorData = {
       "\n\036cbws/vpc/v1alpha1/subnet.proto\022\021cbws.v" +
       "pc.v1alpha1\032\037google/api/field_behavior.p" +
-      "roto\032\031google/api/resource.proto\"\353\001\n\006Subn" +
-      "et\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002" +
-      " \001(\tB\004\342A\001\005R\006parent\022\034\n\006prefix\030\003 \001(\tB\004\342A\001\005" +
-      "R\006prefix\022\036\n\007gateway\030\004 \001(\tB\004\342A\001\005R\007gateway" +
-      ":k\352Ah\n\025vpc.cbws.cloud/Subnet\022Oprojects/{" +
-      "project}/vpcs/{vpc}/privateNetworks/{pri" +
-      "vateNetwork}/subnets/{subnet}B\220\001\n\033cloud." +
-      "cbws.api.vpc.v1alpha1B\013SubnetProtoP\001\242\002\003C" +
-      "VX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\V1alph" +
-      "a1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadata\352\002\023Cbw" +
-      "s::Vpc::V1alpha1b\006proto3"
+      "roto\032\031google/api/resource.proto\032 google/" +
+      "protobuf/field_mask.proto\"\353\001\n\006Subnet\022\030\n\004" +
+      "name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002 \001(\tB\004" +
+      "\342A\001\005R\006parent\022\034\n\006prefix\030\003 \001(\tB\004\342A\001\005R\006pref" +
+      "ix\022\036\n\007gateway\030\004 \001(\tB\004\342A\001\005R\007gateway:k\352Ah\n" +
+      "\025vpc.cbws.cloud/Subnet\022Oprojects/{projec" +
+      "t}/vpcs/{vpc}/privateNetworks/{privateNe" +
+      "twork}/subnets/{subnet}\"\333\001\n\022ListSubnetsR" +
+      "equest\022>\n\006parent\030\001 \001(\tB&\342A\001\002\372A\037\n\035vpc.cbw" +
+      "s.cloud/PrivateNetworkR\006parent\022!\n\tpage_s" +
+      "ize\030\002 \001(\005B\004\342A\001\001R\010pageSize\022#\n\npage_token\030" +
+      "\003 \001(\tB\004\342A\001\001R\tpageToken\022=\n\tread_mask\030\004 \001(" +
+      "\0132\032.google.protobuf.FieldMaskB\004\342A\001\001R\010rea" +
+      "dMask\"r\n\023ListSubnetsResponse\0223\n\007subnets\030" +
+      "\001 \003(\0132\031.cbws.vpc.v1alpha1.SubnetR\007subnet" +
+      "s\022&\n\017next_page_token\030\002 \001(\tR\rnextPageToke" +
+      "n\"\205\001\n\020GetSubnetRequest\0222\n\004name\030\001 \001(\tB\036\342A" +
+      "\001\002\372A\027\n\025vpc.cbws.cloud/SubnetR\004name\022=\n\tre" +
+      "ad_mask\030\002 \001(\0132\032.google.protobuf.FieldMas" +
+      "kB\004\342A\001\001R\010readMaskB\220\001\n\033cloud.cbws.api.vpc" +
+      ".v1alpha1B\013SubnetProtoP\001\242\002\003CVX\252\002\021Cbws.Vp" +
+      "c.V1alpha1\312\002\021Cbws\\Vpc\\V1alpha1\342\002\035Cbws\\Vp" +
+      "c\\V1alpha1\\GPBMetadata\352\002\023Cbws::Vpc::V1al" +
+      "pha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.FieldMaskProto.getDescriptor(),
         });
     internal_static_cbws_vpc_v1alpha1_Subnet_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -65,13 +94,33 @@ public final class SubnetProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_vpc_v1alpha1_Subnet_descriptor,
         new java.lang.String[] { "Name", "Parent", "Prefix", "Gateway", });
+    internal_static_cbws_vpc_v1alpha1_ListSubnetsRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_cbws_vpc_v1alpha1_ListSubnetsRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_ListSubnetsRequest_descriptor,
+        new java.lang.String[] { "Parent", "PageSize", "PageToken", "ReadMask", });
+    internal_static_cbws_vpc_v1alpha1_ListSubnetsResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_cbws_vpc_v1alpha1_ListSubnetsResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_ListSubnetsResponse_descriptor,
+        new java.lang.String[] { "Subnets", "NextPageToken", });
+    internal_static_cbws_vpc_v1alpha1_GetSubnetRequest_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_cbws_vpc_v1alpha1_GetSubnetRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_GetSubnetRequest_descriptor,
+        new java.lang.String[] { "Name", "ReadMask", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.FieldMaskProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
   }

@@ -210,6 +210,68 @@ public final class VpcServiceGrpc {
     return getDeletePrivateNetworkMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest,
+      cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse> getListSubnetsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListSubnets",
+      requestType = cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest.class,
+      responseType = cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest,
+      cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse> getListSubnetsMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest, cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse> getListSubnetsMethod;
+    if ((getListSubnetsMethod = VpcServiceGrpc.getListSubnetsMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getListSubnetsMethod = VpcServiceGrpc.getListSubnetsMethod) == null) {
+          VpcServiceGrpc.getListSubnetsMethod = getListSubnetsMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest, cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListSubnets"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("ListSubnets"))
+              .build();
+        }
+      }
+    }
+    return getListSubnetsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest,
+      cloud.cbws.api.vpc.v1alpha1.Subnet> getGetSubnetMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetSubnet",
+      requestType = cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest.class,
+      responseType = cloud.cbws.api.vpc.v1alpha1.Subnet.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest,
+      cloud.cbws.api.vpc.v1alpha1.Subnet> getGetSubnetMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest, cloud.cbws.api.vpc.v1alpha1.Subnet> getGetSubnetMethod;
+    if ((getGetSubnetMethod = VpcServiceGrpc.getGetSubnetMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getGetSubnetMethod = VpcServiceGrpc.getGetSubnetMethod) == null) {
+          VpcServiceGrpc.getGetSubnetMethod = getGetSubnetMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest, cloud.cbws.api.vpc.v1alpha1.Subnet>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetSubnet"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.Subnet.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("GetSubnet"))
+              .build();
+        }
+      }
+    }
+    return getGetSubnetMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -350,6 +412,27 @@ public final class VpcServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeletePrivateNetworkMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists the subnets of a private network. Requires
+     * `vpc.cbws.cloud/Subnet/list` on the private network.
+     * </pre>
+     */
+    default void listSubnets(cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListSubnetsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a subnet. Requires `vpc.cbws.cloud/Subnet/get` on the subnet.
+     * </pre>
+     */
+    default void getSubnet(cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Subnet> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetSubnetMethod(), responseObserver);
+    }
   }
 
   /**
@@ -474,6 +557,29 @@ public final class VpcServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeletePrivateNetworkMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists the subnets of a private network. Requires
+     * `vpc.cbws.cloud/Subnet/list` on the private network.
+     * </pre>
+     */
+    public void listSubnets(cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListSubnetsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a subnet. Requires `vpc.cbws.cloud/Subnet/get` on the subnet.
+     * </pre>
+     */
+    public void getSubnet(cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Subnet> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetSubnetMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -569,6 +675,27 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getDeletePrivateNetworkMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Lists the subnets of a private network. Requires
+     * `vpc.cbws.cloud/Subnet/list` on the private network.
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse listSubnets(cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListSubnetsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a subnet. Requires `vpc.cbws.cloud/Subnet/get` on the subnet.
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Subnet getSubnet(cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetSubnetMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -663,6 +790,27 @@ public final class VpcServiceGrpc {
     public com.google.longrunning.Operation deletePrivateNetwork(cloud.cbws.api.vpc.v1alpha1.DeletePrivateNetworkRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeletePrivateNetworkMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the subnets of a private network. Requires
+     * `vpc.cbws.cloud/Subnet/list` on the private network.
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse listSubnets(cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListSubnetsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a subnet. Requires `vpc.cbws.cloud/Subnet/get` on the subnet.
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Subnet getSubnet(cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetSubnetMethod(), getCallOptions(), request);
     }
   }
 
@@ -765,6 +913,29 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeletePrivateNetworkMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists the subnets of a private network. Requires
+     * `vpc.cbws.cloud/Subnet/list` on the private network.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse> listSubnets(
+        cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListSubnetsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a subnet. Requires `vpc.cbws.cloud/Subnet/get` on the subnet.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.vpc.v1alpha1.Subnet> getSubnet(
+        cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetSubnetMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_VPCS = 0;
@@ -773,6 +944,8 @@ public final class VpcServiceGrpc {
   private static final int METHODID_LIST_PRIVATE_NETWORKS = 3;
   private static final int METHODID_GET_PRIVATE_NETWORK = 4;
   private static final int METHODID_DELETE_PRIVATE_NETWORK = 5;
+  private static final int METHODID_LIST_SUBNETS = 6;
+  private static final int METHODID_GET_SUBNET = 7;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -814,6 +987,14 @@ public final class VpcServiceGrpc {
         case METHODID_DELETE_PRIVATE_NETWORK:
           serviceImpl.deletePrivateNetwork((cloud.cbws.api.vpc.v1alpha1.DeletePrivateNetworkRequest) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_SUBNETS:
+          serviceImpl.listSubnets((cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse>) responseObserver);
+          break;
+        case METHODID_GET_SUBNET:
+          serviceImpl.getSubnet((cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Subnet>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -875,6 +1056,20 @@ public final class VpcServiceGrpc {
               cloud.cbws.api.vpc.v1alpha1.DeletePrivateNetworkRequest,
               com.google.longrunning.Operation>(
                 service, METHODID_DELETE_PRIVATE_NETWORK)))
+        .addMethod(
+          getListSubnetsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.vpc.v1alpha1.ListSubnetsRequest,
+              cloud.cbws.api.vpc.v1alpha1.ListSubnetsResponse>(
+                service, METHODID_LIST_SUBNETS)))
+        .addMethod(
+          getGetSubnetMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.vpc.v1alpha1.GetSubnetRequest,
+              cloud.cbws.api.vpc.v1alpha1.Subnet>(
+                service, METHODID_GET_SUBNET)))
         .build();
   }
 
@@ -929,6 +1124,8 @@ public final class VpcServiceGrpc {
               .addMethod(getListPrivateNetworksMethod())
               .addMethod(getGetPrivateNetworkMethod())
               .addMethod(getDeletePrivateNetworkMethod())
+              .addMethod(getListSubnetsMethod())
+              .addMethod(getGetSubnetMethod())
               .build();
         }
       }

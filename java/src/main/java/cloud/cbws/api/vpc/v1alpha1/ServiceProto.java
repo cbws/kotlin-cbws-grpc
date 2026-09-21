@@ -36,46 +36,56 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n\037cbws/vpc/v1alpha1/service.proto\022\021cbws." +
       "vpc.v1alpha1\032&cbws/vpc/v1alpha1/privaten" +
-      "etwork.proto\032\033cbws/vpc/v1alpha1/vpc.prot" +
-      "o\032\034google/api/annotations.proto\032\027google/" +
-      "api/client.proto\032#google/longrunning/ope" +
-      "rations.proto2\306\010\n\nVpcService\022\210\001\n\010ListVpc" +
-      "s\022\".cbws.vpc.v1alpha1.ListVpcsRequest\032#." +
-      "cbws.vpc.v1alpha1.ListVpcsResponse\"3\332A\006p" +
-      "arent\202\323\344\223\002$\022\"/v1alpha1/{parent=projects/" +
-      "*}/vpcs\022u\n\006GetVpc\022 .cbws.vpc.v1alpha1.Ge" +
-      "tVpcRequest\032\026.cbws.vpc.v1alpha1.Vpc\"1\332A\004" +
-      "name\202\323\344\223\002$\022\"/v1alpha1/{name=projects/*/v" +
-      "pcs/*}\022\301\001\n\tDeleteVpc\022#.cbws.vpc.v1alpha1" +
-      ".DeleteVpcRequest\032\035.google.longrunning.O" +
-      "peration\"p\312A<\n\025google.protobuf.Empty\022#cb" +
-      "ws.vpc.v1alpha1.DeleteVpcMetadata\332A\004name" +
-      "\202\323\344\223\002$*\"/v1alpha1/{name=projects/*/vpcs/" +
-      "*}\022\273\001\n\023ListPrivateNetworks\022-.cbws.vpc.v1" +
-      "alpha1.ListPrivateNetworksRequest\032..cbws" +
-      ".vpc.v1alpha1.ListPrivateNetworksRespons" +
-      "e\"E\332A\006parent\202\323\344\223\0026\0224/v1alpha1/{parent=pr" +
-      "ojects/*/vpcs/*}/privateNetworks\022\250\001\n\021Get" +
-      "PrivateNetwork\022+.cbws.vpc.v1alpha1.GetPr" +
-      "ivateNetworkRequest\032!.cbws.vpc.v1alpha1." +
-      "PrivateNetwork\"C\332A\004name\202\323\344\223\0026\0224/v1alpha1" +
+      "etwork.proto\032\036cbws/vpc/v1alpha1/subnet.p" +
+      "roto\032\033cbws/vpc/v1alpha1/vpc.proto\032\034googl" +
+      "e/api/annotations.proto\032\027google/api/clie" +
+      "nt.proto\032#google/longrunning/operations." +
+      "proto2\223\013\n\nVpcService\022\210\001\n\010ListVpcs\022\".cbws" +
+      ".vpc.v1alpha1.ListVpcsRequest\032#.cbws.vpc" +
+      ".v1alpha1.ListVpcsResponse\"3\332A\006parent\202\323\344" +
+      "\223\002$\022\"/v1alpha1/{parent=projects/*}/vpcs\022" +
+      "u\n\006GetVpc\022 .cbws.vpc.v1alpha1.GetVpcRequ" +
+      "est\032\026.cbws.vpc.v1alpha1.Vpc\"1\332A\004name\202\323\344\223" +
+      "\002$\022\"/v1alpha1/{name=projects/*/vpcs/*}\022\301" +
+      "\001\n\tDeleteVpc\022#.cbws.vpc.v1alpha1.DeleteV" +
+      "pcRequest\032\035.google.longrunning.Operation" +
+      "\"p\312A<\n\025google.protobuf.Empty\022#cbws.vpc.v" +
+      "1alpha1.DeleteVpcMetadata\332A\004name\202\323\344\223\002$*\"" +
+      "/v1alpha1/{name=projects/*/vpcs/*}\022\273\001\n\023L" +
+      "istPrivateNetworks\022-.cbws.vpc.v1alpha1.L" +
+      "istPrivateNetworksRequest\032..cbws.vpc.v1a" +
+      "lpha1.ListPrivateNetworksResponse\"E\332A\006pa" +
+      "rent\202\323\344\223\0026\0224/v1alpha1/{parent=projects/*" +
+      "/vpcs/*}/privateNetworks\022\250\001\n\021GetPrivateN" +
+      "etwork\022+.cbws.vpc.v1alpha1.GetPrivateNet" +
+      "workRequest\032!.cbws.vpc.v1alpha1.PrivateN" +
+      "etwork\"C\332A\004name\202\323\344\223\0026\0224/v1alpha1/{name=p" +
+      "rojects/*/vpcs/*/privateNetworks/*}\022\365\001\n\024" +
+      "DeletePrivateNetwork\022..cbws.vpc.v1alpha1" +
+      ".DeletePrivateNetworkRequest\032\035.google.lo" +
+      "ngrunning.Operation\"\215\001\312AG\n\025google.protob" +
+      "uf.Empty\022.cbws.vpc.v1alpha1.DeletePrivat" +
+      "eNetworkMetadata\332A\004name\202\323\344\223\0026*4/v1alpha1" +
       "/{name=projects/*/vpcs/*/privateNetworks" +
-      "/*}\022\365\001\n\024DeletePrivateNetwork\022..cbws.vpc." +
-      "v1alpha1.DeletePrivateNetworkRequest\032\035.g" +
-      "oogle.longrunning.Operation\"\215\001\312AG\n\025googl" +
-      "e.protobuf.Empty\022.cbws.vpc.v1alpha1.Dele" +
-      "tePrivateNetworkMetadata\332A\004name\202\323\344\223\0026*4/" +
-      "v1alpha1/{name=projects/*/vpcs/*/private" +
-      "Networks/*}\032\021\312A\016vpc.cbws.cloudB\221\001\n\033cloud" +
-      ".cbws.api.vpc.v1alpha1B\014ServiceProtoP\001\242\002" +
-      "\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\V1al" +
-      "pha1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadata\352\002\023C" +
-      "bws::Vpc::V1alpha1b\006proto3"
+      "/*}\022\255\001\n\013ListSubnets\022%.cbws.vpc.v1alpha1." +
+      "ListSubnetsRequest\032&.cbws.vpc.v1alpha1.L" +
+      "istSubnetsResponse\"O\332A\006parent\202\323\344\223\002@\022>/v1" +
+      "alpha1/{parent=projects/*/vpcs/*/private" +
+      "Networks/*}/subnets\022\232\001\n\tGetSubnet\022#.cbws" +
+      ".vpc.v1alpha1.GetSubnetRequest\032\031.cbws.vp" +
+      "c.v1alpha1.Subnet\"M\332A\004name\202\323\344\223\002@\022>/v1alp" +
+      "ha1/{name=projects/*/vpcs/*/privateNetwo" +
+      "rks/*/subnets/*}\032\021\312A\016vpc.cbws.cloudB\221\001\n\033" +
+      "cloud.cbws.api.vpc.v1alpha1B\014ServiceProt" +
+      "oP\001\242\002\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc" +
+      "\\V1alpha1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadat" +
+      "a\352\002\023Cbws::Vpc::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           cloud.cbws.api.vpc.v1alpha1.PrivatenetworkProto.getDescriptor(),
+          cloud.cbws.api.vpc.v1alpha1.SubnetProto.getDescriptor(),
           cloud.cbws.api.vpc.v1alpha1.VpcProto.getDescriptor(),
           com.google.api.AnnotationsProto.getDescriptor(),
           com.google.api.ClientProto.getDescriptor(),
@@ -83,6 +93,7 @@ public final class ServiceProto {
         });
     descriptor.resolveAllFeaturesImmutable();
     cloud.cbws.api.vpc.v1alpha1.PrivatenetworkProto.getDescriptor();
+    cloud.cbws.api.vpc.v1alpha1.SubnetProto.getDescriptor();
     cloud.cbws.api.vpc.v1alpha1.VpcProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
     com.google.api.ClientProto.getDescriptor();
