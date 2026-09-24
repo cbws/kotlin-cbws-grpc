@@ -334,6 +334,68 @@ public final class VpcServiceGrpc {
     return getDeleteSubnetMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.ListPortsRequest,
+      cloud.cbws.api.vpc.v1alpha1.ListPortsResponse> getListPortsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListPorts",
+      requestType = cloud.cbws.api.vpc.v1alpha1.ListPortsRequest.class,
+      responseType = cloud.cbws.api.vpc.v1alpha1.ListPortsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.ListPortsRequest,
+      cloud.cbws.api.vpc.v1alpha1.ListPortsResponse> getListPortsMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.ListPortsRequest, cloud.cbws.api.vpc.v1alpha1.ListPortsResponse> getListPortsMethod;
+    if ((getListPortsMethod = VpcServiceGrpc.getListPortsMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getListPortsMethod = VpcServiceGrpc.getListPortsMethod) == null) {
+          VpcServiceGrpc.getListPortsMethod = getListPortsMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.vpc.v1alpha1.ListPortsRequest, cloud.cbws.api.vpc.v1alpha1.ListPortsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListPorts"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.ListPortsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.ListPortsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("ListPorts"))
+              .build();
+        }
+      }
+    }
+    return getListPortsMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.GetPortRequest,
+      cloud.cbws.api.vpc.v1alpha1.Port> getGetPortMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPort",
+      requestType = cloud.cbws.api.vpc.v1alpha1.GetPortRequest.class,
+      responseType = cloud.cbws.api.vpc.v1alpha1.Port.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.GetPortRequest,
+      cloud.cbws.api.vpc.v1alpha1.Port> getGetPortMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.vpc.v1alpha1.GetPortRequest, cloud.cbws.api.vpc.v1alpha1.Port> getGetPortMethod;
+    if ((getGetPortMethod = VpcServiceGrpc.getGetPortMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getGetPortMethod = VpcServiceGrpc.getGetPortMethod) == null) {
+          VpcServiceGrpc.getGetPortMethod = getGetPortMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.vpc.v1alpha1.GetPortRequest, cloud.cbws.api.vpc.v1alpha1.Port>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPort"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.GetPortRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.vpc.v1alpha1.Port.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("GetPort"))
+              .build();
+        }
+      }
+    }
+    return getGetPortMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -518,6 +580,29 @@ public final class VpcServiceGrpc {
         io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteSubnetMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists ports, either the ports a project holds or the ports on a private
+     * network. See
+     * [ListPortsRequest.parent][cbws.vpc.v1alpha1.ListPortsRequest.parent].
+     * </pre>
+     */
+    default void listPorts(cloud.cbws.api.vpc.v1alpha1.ListPortsRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.ListPortsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListPortsMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a port. Requires `vpc.cbws.cloud/Port/get` on the port, or on the
+     * private network it is attached to.
+     * </pre>
+     */
+    default void getPort(cloud.cbws.api.vpc.v1alpha1.GetPortRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Port> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortMethod(), responseObserver);
+    }
   }
 
   /**
@@ -690,6 +775,31 @@ public final class VpcServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getDeleteSubnetMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists ports, either the ports a project holds or the ports on a private
+     * network. See
+     * [ListPortsRequest.parent][cbws.vpc.v1alpha1.ListPortsRequest.parent].
+     * </pre>
+     */
+    public void listPorts(cloud.cbws.api.vpc.v1alpha1.ListPortsRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.ListPortsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListPortsMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a port. Requires `vpc.cbws.cloud/Port/get` on the port, or on the
+     * private network it is attached to.
+     * </pre>
+     */
+    public void getPort(cloud.cbws.api.vpc.v1alpha1.GetPortRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Port> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPortMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -829,6 +939,29 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getDeleteSubnetMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Lists ports, either the ports a project holds or the ports on a private
+     * network. See
+     * [ListPortsRequest.parent][cbws.vpc.v1alpha1.ListPortsRequest.parent].
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.ListPortsResponse listPorts(cloud.cbws.api.vpc.v1alpha1.ListPortsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListPortsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a port. Requires `vpc.cbws.cloud/Port/get` on the port, or on the
+     * private network it is attached to.
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port getPort(cloud.cbws.api.vpc.v1alpha1.GetPortRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPortMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -967,6 +1100,29 @@ public final class VpcServiceGrpc {
     public com.google.longrunning.Operation deleteSubnet(cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getDeleteSubnetMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists ports, either the ports a project holds or the ports on a private
+     * network. See
+     * [ListPortsRequest.parent][cbws.vpc.v1alpha1.ListPortsRequest.parent].
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.ListPortsResponse listPorts(cloud.cbws.api.vpc.v1alpha1.ListPortsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListPortsMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a port. Requires `vpc.cbws.cloud/Port/get` on the port, or on the
+     * private network it is attached to.
+     * </pre>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port getPort(cloud.cbws.api.vpc.v1alpha1.GetPortRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPortMethod(), getCallOptions(), request);
     }
   }
 
@@ -1117,6 +1273,31 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getDeleteSubnetMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists ports, either the ports a project holds or the ports on a private
+     * network. See
+     * [ListPortsRequest.parent][cbws.vpc.v1alpha1.ListPortsRequest.parent].
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.vpc.v1alpha1.ListPortsResponse> listPorts(
+        cloud.cbws.api.vpc.v1alpha1.ListPortsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListPortsMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a port. Requires `vpc.cbws.cloud/Port/get` on the port, or on the
+     * private network it is attached to.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.vpc.v1alpha1.Port> getPort(
+        cloud.cbws.api.vpc.v1alpha1.GetPortRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPortMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_VPCS = 0;
@@ -1129,6 +1310,8 @@ public final class VpcServiceGrpc {
   private static final int METHODID_GET_SUBNET = 7;
   private static final int METHODID_CREATE_SUBNET = 8;
   private static final int METHODID_DELETE_SUBNET = 9;
+  private static final int METHODID_LIST_PORTS = 10;
+  private static final int METHODID_GET_PORT = 11;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1186,6 +1369,14 @@ public final class VpcServiceGrpc {
         case METHODID_DELETE_SUBNET:
           serviceImpl.deleteSubnet((cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest) request,
               (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_LIST_PORTS:
+          serviceImpl.listPorts((cloud.cbws.api.vpc.v1alpha1.ListPortsRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.ListPortsResponse>) responseObserver);
+          break;
+        case METHODID_GET_PORT:
+          serviceImpl.getPort((cloud.cbws.api.vpc.v1alpha1.GetPortRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Port>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1275,6 +1466,20 @@ public final class VpcServiceGrpc {
               cloud.cbws.api.vpc.v1alpha1.DeleteSubnetRequest,
               com.google.longrunning.Operation>(
                 service, METHODID_DELETE_SUBNET)))
+        .addMethod(
+          getListPortsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.vpc.v1alpha1.ListPortsRequest,
+              cloud.cbws.api.vpc.v1alpha1.ListPortsResponse>(
+                service, METHODID_LIST_PORTS)))
+        .addMethod(
+          getGetPortMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.vpc.v1alpha1.GetPortRequest,
+              cloud.cbws.api.vpc.v1alpha1.Port>(
+                service, METHODID_GET_PORT)))
         .build();
   }
 
@@ -1333,6 +1538,8 @@ public final class VpcServiceGrpc {
               .addMethod(getGetSubnetMethod())
               .addMethod(getCreateSubnetMethod())
               .addMethod(getDeleteSubnetMethod())
+              .addMethod(getListPortsMethod())
+              .addMethod(getGetPortMethod())
               .build();
         }
       }
