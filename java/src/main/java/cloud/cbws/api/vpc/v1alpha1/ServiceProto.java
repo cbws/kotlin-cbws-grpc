@@ -40,7 +40,7 @@ public final class ServiceProto {
       "to\032\036cbws/vpc/v1alpha1/subnet.proto\032\033cbws" +
       "/vpc/v1alpha1/vpc.proto\032\034google/api/anno" +
       "tations.proto\032\027google/api/client.proto\032#" +
-      "google/longrunning/operations.proto2\341\021\n\n" +
+      "google/longrunning/operations.proto2\356\021\n\n" +
       "VpcService\022\210\001\n\010ListVpcs\022\".cbws.vpc.v1alp" +
       "ha1.ListVpcsRequest\032#.cbws.vpc.v1alpha1." +
       "ListVpcsResponse\"3\332A\006parent\202\323\344\223\002$\022\"/v1al" +
@@ -89,19 +89,19 @@ public final class ServiceProto {
       "leteSubnetResponse\022&cbws.vpc.v1alpha1.De" +
       "leteSubnetMetadata\332A\004name\202\323\344\223\002@*>/v1alph" +
       "a1/{name=projects/*/vpcs/*/privateNetwor" +
-      "ks/*/subnets/*}\022\245\001\n\tListPorts\022#.cbws.vpc" +
+      "ks/*/subnets/*}\022\314\001\n\tListPorts\022#.cbws.vpc" +
       ".v1alpha1.ListPortsRequest\032$.cbws.vpc.v1" +
-      "alpha1.ListPortsResponse\"M\332A\006parent\202\323\344\223\002" +
-      ">\022</v1alpha1/{parent=projects/*/vpcs/*/p" +
-      "rivateNetworks/*}/ports\022\222\001\n\007GetPort\022!.cb" +
-      "ws.vpc.v1alpha1.GetPortRequest\032\027.cbws.vp" +
-      "c.v1alpha1.Port\"K\332A\004name\202\323\344\223\002>\022</v1alpha" +
-      "1/{name=projects/*/vpcs/*/privateNetwork" +
-      "s/*/ports/*}\032\021\312A\016vpc.cbws.cloudB\221\001\n\033clou" +
-      "d.cbws.api.vpc.v1alpha1B\014ServiceProtoP\001\242" +
-      "\002\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\V1a" +
-      "lpha1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadata\352\002\023" +
-      "Cbws::Vpc::V1alpha1b\006proto3"
+      "alpha1.ListPortsResponse\"t\332A\006parent\202\323\344\223\002" +
+      "e\022#/v1alpha1/{parent=projects/*}/portsZ>" +
+      "\022</v1alpha1/{parent=projects/*/vpcs/*/pr" +
+      "ivateNetworks/*}/ports\022y\n\007GetPort\022!.cbws" +
+      ".vpc.v1alpha1.GetPortRequest\032\027.cbws.vpc." +
+      "v1alpha1.Port\"2\332A\004name\202\323\344\223\002%\022#/v1alpha1/" +
+      "{name=projects/*/ports/*}\032\021\312A\016vpc.cbws.c" +
+      "loudB\221\001\n\033cloud.cbws.api.vpc.v1alpha1B\014Se" +
+      "rviceProtoP\001\242\002\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002" +
+      "\021Cbws\\Vpc\\V1alpha1\342\002\035Cbws\\Vpc\\V1alpha1\\G" +
+      "PBMetadata\352\002\023Cbws::Vpc::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

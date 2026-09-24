@@ -26,7 +26,7 @@ public interface ListPortsRequestOrBuilder extends
    * own networks. Use one of the network forms for those.
    * </pre>
    *
-   * <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The parent.
    */
   java.lang.String getParent();
@@ -47,7 +47,7 @@ public interface ListPortsRequestOrBuilder extends
    * own networks. Use one of the network forms for those.
    * </pre>
    *
-   * <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+   * <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for parent.
    */
   com.google.protobuf.ByteString

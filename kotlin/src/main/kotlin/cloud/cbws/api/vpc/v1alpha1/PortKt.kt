@@ -100,6 +100,36 @@ public object PortKt {
 
     /**
      * ```
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     * ```
+     *
+     * `string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }`
+     */
+    public var privateNetwork: kotlin.String
+      @kotlin.jvm.JvmName("getPrivateNetwork")
+        get() = _builder.privateNetwork
+      @kotlin.jvm.JvmName("setPrivateNetwork")
+        set(value) {
+        _builder.privateNetwork = value
+      }
+    /**
+     * <pre>
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     * </pre>
+     *
+     * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public fun clearPrivateNetwork() {
+      _builder.clearPrivateNetwork()
+    }
+
+    /**
+     * ```
      * The full resource name of what holds the port, such as
      * `//compute.cbws.cloud/projects/my-project/machines/vm-1`.
      *

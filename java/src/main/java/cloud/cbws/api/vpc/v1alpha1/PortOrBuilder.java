@@ -55,6 +55,30 @@ public interface PortOrBuilder extends
 
   /**
    * <pre>
+   * The private network the port is on, such as
+   * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+   * belong to another project.
+   * </pre>
+   *
+   * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The privateNetwork.
+   */
+  java.lang.String getPrivateNetwork();
+  /**
+   * <pre>
+   * The private network the port is on, such as
+   * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+   * belong to another project.
+   * </pre>
+   *
+   * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for privateNetwork.
+   */
+  com.google.protobuf.ByteString
+      getPrivateNetworkBytes();
+
+  /**
+   * <pre>
    * The full resource name of what holds the port, such as
    * `//compute.cbws.cloud/projects/my-project/machines/vm-1`.
    *

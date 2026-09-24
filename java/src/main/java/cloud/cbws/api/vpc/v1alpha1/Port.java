@@ -43,6 +43,7 @@ private static final long serialVersionUID = 0L;
   private Port() {
     name_ = "";
     parent_ = "";
+    privateNetwork_ = "";
     owner_ = "";
     ipFamilies_ = emptyIntList();
     ipv4Address_ = "";
@@ -457,6 +458,57 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int PRIVATE_NETWORK_FIELD_NUMBER = 9;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object privateNetwork_ = "";
+  /**
+   * <pre>
+   * The private network the port is on, such as
+   * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+   * belong to another project.
+   * </pre>
+   *
+   * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The privateNetwork.
+   */
+  @java.lang.Override
+  public java.lang.String getPrivateNetwork() {
+    java.lang.Object ref = privateNetwork_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      privateNetwork_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The private network the port is on, such as
+   * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+   * belong to another project.
+   * </pre>
+   *
+   * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for privateNetwork.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPrivateNetworkBytes() {
+    java.lang.Object ref = privateNetwork_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      privateNetwork_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int OWNER_FIELD_NUMBER = 3;
   @SuppressWarnings("serial")
   private volatile java.lang.Object owner_ = "";
@@ -823,6 +875,9 @@ private static final long serialVersionUID = 0L;
     if (state_ != cloud.cbws.api.vpc.v1alpha1.Port.State.STATE_UNSPECIFIED.getNumber()) {
       output.writeEnum(8, state_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(privateNetwork_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 9, privateNetwork_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -866,6 +921,9 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(8, state_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(privateNetwork_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(9, privateNetwork_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -885,6 +943,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getParent()
         .equals(other.getParent())) return false;
+    if (!getPrivateNetwork()
+        .equals(other.getPrivateNetwork())) return false;
     if (!getOwner()
         .equals(other.getOwner())) return false;
     if (!ipFamilies_.equals(other.ipFamilies_)) return false;
@@ -910,6 +970,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + PARENT_FIELD_NUMBER;
     hash = (53 * hash) + getParent().hashCode();
+    hash = (37 * hash) + PRIVATE_NETWORK_FIELD_NUMBER;
+    hash = (53 * hash) + getPrivateNetwork().hashCode();
     hash = (37 * hash) + OWNER_FIELD_NUMBER;
     hash = (53 * hash) + getOwner().hashCode();
     if (getIpFamiliesCount() > 0) {
@@ -1071,9 +1133,10 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       name_ = "";
       parent_ = "";
+      privateNetwork_ = "";
       owner_ = "";
       ipFamilies_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       ipv4Address_ = "";
       ipv6Address_ = "";
       macAddress_ = "";
@@ -1111,9 +1174,9 @@ private static final long serialVersionUID = 0L;
     }
 
     private void buildPartialRepeatedFields(cloud.cbws.api.vpc.v1alpha1.Port result) {
-      if (((bitField0_ & 0x00000008) != 0)) {
+      if (((bitField0_ & 0x00000010) != 0)) {
         ipFamilies_.makeImmutable();
-        bitField0_ = (bitField0_ & ~0x00000008);
+        bitField0_ = (bitField0_ & ~0x00000010);
       }
       result.ipFamilies_ = ipFamilies_;
     }
@@ -1127,18 +1190,21 @@ private static final long serialVersionUID = 0L;
         result.parent_ = parent_;
       }
       if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.privateNetwork_ = privateNetwork_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
         result.owner_ = owner_;
       }
-      if (((from_bitField0_ & 0x00000010) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.ipv4Address_ = ipv4Address_;
       }
-      if (((from_bitField0_ & 0x00000020) != 0)) {
+      if (((from_bitField0_ & 0x00000040) != 0)) {
         result.ipv6Address_ = ipv6Address_;
       }
-      if (((from_bitField0_ & 0x00000040) != 0)) {
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         result.macAddress_ = macAddress_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.state_ = state_;
       }
     }
@@ -1165,15 +1231,20 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000002;
         onChanged();
       }
+      if (!other.getPrivateNetwork().isEmpty()) {
+        privateNetwork_ = other.privateNetwork_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
       if (!other.getOwner().isEmpty()) {
         owner_ = other.owner_;
-        bitField0_ |= 0x00000004;
+        bitField0_ |= 0x00000008;
         onChanged();
       }
       if (!other.ipFamilies_.isEmpty()) {
         if (ipFamilies_.isEmpty()) {
           ipFamilies_ = other.ipFamilies_;
-          bitField0_ = (bitField0_ & ~0x00000008);
+          bitField0_ = (bitField0_ & ~0x00000010);
         } else {
           ensureIpFamiliesIsMutable();
           ipFamilies_.addAll(other.ipFamilies_);
@@ -1182,17 +1253,17 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getIpv4Address().isEmpty()) {
         ipv4Address_ = other.ipv4Address_;
-        bitField0_ |= 0x00000010;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       if (!other.getIpv6Address().isEmpty()) {
         ipv6Address_ = other.ipv6Address_;
-        bitField0_ |= 0x00000020;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       if (!other.getMacAddress().isEmpty()) {
         macAddress_ = other.macAddress_;
-        bitField0_ |= 0x00000040;
+        bitField0_ |= 0x00000080;
         onChanged();
       }
       if (other.state_ != 0) {
@@ -1236,7 +1307,7 @@ private static final long serialVersionUID = 0L;
             } // case 18
             case 26: {
               owner_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000004;
+              bitField0_ |= 0x00000008;
               break;
             } // case 26
             case 32: {
@@ -1258,24 +1329,29 @@ private static final long serialVersionUID = 0L;
             } // case 34
             case 42: {
               ipv4Address_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000010;
+              bitField0_ |= 0x00000020;
               break;
             } // case 42
             case 50: {
               ipv6Address_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000020;
+              bitField0_ |= 0x00000040;
               break;
             } // case 50
             case 58: {
               macAddress_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000040;
+              bitField0_ |= 0x00000080;
               break;
             } // case 58
             case 64: {
               state_ = input.readEnum();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 64
+            case 74: {
+              privateNetwork_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 74
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1487,6 +1563,108 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object privateNetwork_ = "";
+    /**
+     * <pre>
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     * </pre>
+     *
+     * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The privateNetwork.
+     */
+    public java.lang.String getPrivateNetwork() {
+      java.lang.Object ref = privateNetwork_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        privateNetwork_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     * </pre>
+     *
+     * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for privateNetwork.
+     */
+    public com.google.protobuf.ByteString
+        getPrivateNetworkBytes() {
+      java.lang.Object ref = privateNetwork_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        privateNetwork_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     * </pre>
+     *
+     * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The privateNetwork to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrivateNetwork(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      privateNetwork_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     * </pre>
+     *
+     * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPrivateNetwork() {
+      privateNetwork_ = getDefaultInstance().getPrivateNetwork();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The private network the port is on, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared`. It may
+     * belong to another project.
+     * </pre>
+     *
+     * <code>string private_network = 9 [json_name = "privateNetwork", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for privateNetwork to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPrivateNetworkBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      privateNetwork_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
     private java.lang.Object owner_ = "";
     /**
      * <pre>
@@ -1554,7 +1732,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       owner_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1572,7 +1750,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearOwner() {
       owner_ = getDefaultInstance().getOwner();
-      bitField0_ = (bitField0_ & ~0x00000004);
+      bitField0_ = (bitField0_ & ~0x00000008);
       onChanged();
       return this;
     }
@@ -1594,7 +1772,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       owner_ = value;
-      bitField0_ |= 0x00000004;
+      bitField0_ |= 0x00000008;
       onChanged();
       return this;
     }
@@ -1602,9 +1780,9 @@ private static final long serialVersionUID = 0L;
     private com.google.protobuf.Internal.IntList ipFamilies_ =
       emptyIntList();
     private void ensureIpFamiliesIsMutable() {
-      if (!((bitField0_ & 0x00000008) != 0)) {
+      if (!((bitField0_ & 0x00000010) != 0)) {
         ipFamilies_ = makeMutableCopy(ipFamilies_);
-        bitField0_ |= 0x00000008;
+        bitField0_ |= 0x00000010;
       }
     }
     /**
@@ -1715,7 +1893,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearIpFamilies() {
       ipFamilies_ = emptyIntList();
-      bitField0_ = (bitField0_ & ~0x00000008);
+      bitField0_ = (bitField0_ & ~0x00000010);
       onChanged();
       return this;
     }
@@ -1869,7 +2047,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ipv4Address_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1888,7 +2066,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearIpv4Address() {
       ipv4Address_ = getDefaultInstance().getIpv4Address();
-      bitField0_ = (bitField0_ & ~0x00000010);
+      bitField0_ = (bitField0_ & ~0x00000020);
       onChanged();
       return this;
     }
@@ -1911,7 +2089,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       ipv4Address_ = value;
-      bitField0_ |= 0x00000010;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -1977,7 +2155,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       ipv6Address_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -1993,7 +2171,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearIpv6Address() {
       ipv6Address_ = getDefaultInstance().getIpv6Address();
-      bitField0_ = (bitField0_ & ~0x00000020);
+      bitField0_ = (bitField0_ & ~0x00000040);
       onChanged();
       return this;
     }
@@ -2013,7 +2191,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       ipv6Address_ = value;
-      bitField0_ |= 0x00000020;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }
@@ -2076,7 +2254,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       macAddress_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2091,7 +2269,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearMacAddress() {
       macAddress_ = getDefaultInstance().getMacAddress();
-      bitField0_ = (bitField0_ & ~0x00000040);
+      bitField0_ = (bitField0_ & ~0x00000080);
       onChanged();
       return this;
     }
@@ -2110,7 +2288,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       macAddress_ = value;
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2140,7 +2318,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStateValue(int value) {
       state_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2172,7 +2350,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       state_ = value.getNumber();
       onChanged();
       return this;
@@ -2187,7 +2365,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       state_ = 0;
       onChanged();
       return this;

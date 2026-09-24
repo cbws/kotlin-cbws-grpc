@@ -49,7 +49,7 @@ public object ListPortsRequestKt {
      * own networks. Use one of the network forms for those.
      * ```
      *
-     * `string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }`
+     * `string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED];`
      */
     public var parent: kotlin.String
       @kotlin.jvm.JvmName("getParent")
@@ -75,7 +75,7 @@ public object ListPortsRequestKt {
      * own networks. Use one of the network forms for those.
      * </pre>
      *
-     * <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
+     * <code>string parent = 1 [json_name = "parent", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public fun clearParent() {
