@@ -62,7 +62,7 @@ public interface PortOrBuilder extends
    * still holds its addresses and its MAC address.
    * </pre>
    *
-   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The owner.
    */
   java.lang.String getOwner();
@@ -75,7 +75,7 @@ public interface PortOrBuilder extends
    * still holds its addresses and its MAC address.
    * </pre>
    *
-   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for owner.
    */
   com.google.protobuf.ByteString

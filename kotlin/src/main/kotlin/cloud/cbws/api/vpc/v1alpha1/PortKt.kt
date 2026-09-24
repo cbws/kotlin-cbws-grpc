@@ -107,7 +107,7 @@ public object PortKt {
      * still holds its addresses and its MAC address.
      * ```
      *
-     * `string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];`
+     * `string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var owner: kotlin.String
       @kotlin.jvm.JvmName("getOwner")
@@ -125,7 +125,7 @@ public object PortKt {
      * still holds its addresses and its MAC address.
      * </pre>
      *
-     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearOwner() {

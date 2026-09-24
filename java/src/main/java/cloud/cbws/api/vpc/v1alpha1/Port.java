@@ -469,7 +469,7 @@ private static final long serialVersionUID = 0L;
    * still holds its addresses and its MAC address.
    * </pre>
    *
-   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The owner.
    */
   @java.lang.Override
@@ -494,7 +494,7 @@ private static final long serialVersionUID = 0L;
    * still holds its addresses and its MAC address.
    * </pre>
    *
-   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for owner.
    */
   @java.lang.Override
@@ -1497,7 +1497,7 @@ private static final long serialVersionUID = 0L;
      * still holds its addresses and its MAC address.
      * </pre>
      *
-     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The owner.
      */
     public java.lang.String getOwner() {
@@ -1521,7 +1521,7 @@ private static final long serialVersionUID = 0L;
      * still holds its addresses and its MAC address.
      * </pre>
      *
-     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The bytes for owner.
      */
     public com.google.protobuf.ByteString
@@ -1546,7 +1546,7 @@ private static final long serialVersionUID = 0L;
      * still holds its addresses and its MAC address.
      * </pre>
      *
-     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The owner to set.
      * @return This builder for chaining.
      */
@@ -1567,7 +1567,7 @@ private static final long serialVersionUID = 0L;
      * still holds its addresses and its MAC address.
      * </pre>
      *
-     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearOwner() {
@@ -1585,7 +1585,7 @@ private static final long serialVersionUID = 0L;
      * still holds its addresses and its MAC address.
      * </pre>
      *
-     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = REQUIRED, (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string owner = 3 [json_name = "owner", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The bytes for owner to set.
      * @return This builder for chaining.
      */
