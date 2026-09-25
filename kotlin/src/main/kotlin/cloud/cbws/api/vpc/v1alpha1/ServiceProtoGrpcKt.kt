@@ -1,5 +1,10 @@
 package cloud.cbws.api.vpc.v1alpha1
 
+import cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest
+import cloud.cbws.api.iam.policy.v1alpha1.Policy
+import cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest
+import cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest
+import cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse
 import cloud.cbws.api.vpc.v1alpha1.VpcServiceGrpc.getServiceDescriptor
 import com.google.longrunning.Operation
 import io.grpc.CallOptions
@@ -81,6 +86,19 @@ public object VpcServiceGrpcKt {
   public val getPortMethod: MethodDescriptor<GetPortRequest, Port>
     @JvmStatic
     get() = VpcServiceGrpc.getGetPortMethod()
+
+  public val getPolicyMethod: MethodDescriptor<GetPolicyRequest, Policy>
+    @JvmStatic
+    get() = VpcServiceGrpc.getGetPolicyMethod()
+
+  public val setPolicyMethod: MethodDescriptor<SetPolicyRequest, Policy>
+    @JvmStatic
+    get() = VpcServiceGrpc.getSetPolicyMethod()
+
+  public val testPermissionsMethod:
+      MethodDescriptor<TestPermissionsRequest, TestPermissionsResponse>
+    @JvmStatic
+    get() = VpcServiceGrpc.getTestPermissionsMethod()
 
   /**
    * A stub for issuing RPCs to a(n) cbws.vpc.v1alpha1.VpcService service as suspending coroutines.
@@ -331,6 +349,66 @@ public object VpcServiceGrpcKt {
       callOptions,
       headers
     )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun getPolicy(request: GetPolicyRequest, headers: Metadata = Metadata()): Policy = unaryRpc(
+      channel,
+      VpcServiceGrpc.getGetPolicyMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun setPolicy(request: SetPolicyRequest, headers: Metadata = Metadata()): Policy = unaryRpc(
+      channel,
+      VpcServiceGrpc.getSetPolicyMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun testPermissions(request: TestPermissionsRequest, headers: Metadata = Metadata()): TestPermissionsResponse = unaryRpc(
+      channel,
+      VpcServiceGrpc.getTestPermissionsMethod(),
+      request,
+      callOptions,
+      headers
+    )
   }
 
   /**
@@ -483,6 +561,42 @@ public object VpcServiceGrpcKt {
      */
     public open suspend fun getPort(request: GetPortRequest): Port = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.vpc.v1alpha1.VpcService.GetPort is unimplemented"))
 
+    /**
+     * Returns the response to an RPC for cbws.vpc.v1alpha1.VpcService.GetPolicy.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun getPolicy(request: GetPolicyRequest): Policy = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.vpc.v1alpha1.VpcService.GetPolicy is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for cbws.vpc.v1alpha1.VpcService.SetPolicy.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun setPolicy(request: SetPolicyRequest): Policy = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.vpc.v1alpha1.VpcService.SetPolicy is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for cbws.vpc.v1alpha1.VpcService.TestPermissions.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun testPermissions(request: TestPermissionsRequest): TestPermissionsResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.vpc.v1alpha1.VpcService.TestPermissions is unimplemented"))
+
     final override fun bindService(): ServerServiceDefinition = builder(getServiceDescriptor())
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
@@ -543,6 +657,21 @@ public object VpcServiceGrpcKt {
       context = this.context,
       descriptor = VpcServiceGrpc.getGetPortMethod(),
       implementation = ::getPort
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = VpcServiceGrpc.getGetPolicyMethod(),
+      implementation = ::getPolicy
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = VpcServiceGrpc.getSetPolicyMethod(),
+      implementation = ::setPolicy
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = VpcServiceGrpc.getTestPermissionsMethod(),
+      implementation = ::testPermissions
     )).build()
   }
 }

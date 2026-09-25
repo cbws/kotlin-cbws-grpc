@@ -396,6 +396,99 @@ public final class VpcServiceGrpc {
     return getGetPortMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest,
+      cloud.cbws.api.iam.policy.v1alpha1.Policy> getGetPolicyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetPolicy",
+      requestType = cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest.class,
+      responseType = cloud.cbws.api.iam.policy.v1alpha1.Policy.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest,
+      cloud.cbws.api.iam.policy.v1alpha1.Policy> getGetPolicyMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest, cloud.cbws.api.iam.policy.v1alpha1.Policy> getGetPolicyMethod;
+    if ((getGetPolicyMethod = VpcServiceGrpc.getGetPolicyMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getGetPolicyMethod = VpcServiceGrpc.getGetPolicyMethod) == null) {
+          VpcServiceGrpc.getGetPolicyMethod = getGetPolicyMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest, cloud.cbws.api.iam.policy.v1alpha1.Policy>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetPolicy"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.policy.v1alpha1.Policy.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("GetPolicy"))
+              .build();
+        }
+      }
+    }
+    return getGetPolicyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest,
+      cloud.cbws.api.iam.policy.v1alpha1.Policy> getSetPolicyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SetPolicy",
+      requestType = cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest.class,
+      responseType = cloud.cbws.api.iam.policy.v1alpha1.Policy.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest,
+      cloud.cbws.api.iam.policy.v1alpha1.Policy> getSetPolicyMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest, cloud.cbws.api.iam.policy.v1alpha1.Policy> getSetPolicyMethod;
+    if ((getSetPolicyMethod = VpcServiceGrpc.getSetPolicyMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getSetPolicyMethod = VpcServiceGrpc.getSetPolicyMethod) == null) {
+          VpcServiceGrpc.getSetPolicyMethod = getSetPolicyMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest, cloud.cbws.api.iam.policy.v1alpha1.Policy>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SetPolicy"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.policy.v1alpha1.Policy.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("SetPolicy"))
+              .build();
+        }
+      }
+    }
+    return getSetPolicyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest,
+      cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse> getTestPermissionsMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "TestPermissions",
+      requestType = cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest.class,
+      responseType = cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest,
+      cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse> getTestPermissionsMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest, cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse> getTestPermissionsMethod;
+    if ((getTestPermissionsMethod = VpcServiceGrpc.getTestPermissionsMethod) == null) {
+      synchronized (VpcServiceGrpc.class) {
+        if ((getTestPermissionsMethod = VpcServiceGrpc.getTestPermissionsMethod) == null) {
+          VpcServiceGrpc.getTestPermissionsMethod = getTestPermissionsMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest, cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "TestPermissions"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new VpcServiceMethodDescriptorSupplier("TestPermissions"))
+              .build();
+        }
+      }
+    }
+    return getTestPermissionsMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -603,6 +696,50 @@ public final class VpcServiceGrpc {
         io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Port> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPortMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Gets the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/getIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/getIAMPolicy` on the private network.
+     * The `resource` is the resource name of a VPC, such as
+     * `projects/my-project/vpcs/default`, or of a private network, such as
+     * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`. A binding on
+     * a VPC applies to every private network in it. A binding on a private
+     * network applies to that network only, so a network can be shared with
+     * other projects without sharing the rest of its VPC.
+     * </pre>
+     */
+    default void getPolicy(cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.Policy> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetPolicyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/setIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/setIAMPolicy` on the private network. The
+     * accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    default void setPolicy(cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.Policy> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSetPolicyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns which of the given permissions the caller has on a VPC or a
+     * private network. The accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    default void testPermissions(cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getTestPermissionsMethod(), responseObserver);
+    }
   }
 
   /**
@@ -800,6 +937,53 @@ public final class VpcServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetPortMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Gets the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/getIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/getIAMPolicy` on the private network.
+     * The `resource` is the resource name of a VPC, such as
+     * `projects/my-project/vpcs/default`, or of a private network, such as
+     * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`. A binding on
+     * a VPC applies to every private network in it. A binding on a private
+     * network applies to that network only, so a network can be shared with
+     * other projects without sharing the rest of its VPC.
+     * </pre>
+     */
+    public void getPolicy(cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.Policy> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetPolicyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Replaces the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/setIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/setIAMPolicy` on the private network. The
+     * accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public void setPolicy(cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.Policy> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSetPolicyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns which of the given permissions the caller has on a VPC or a
+     * private network. The accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public void testPermissions(cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getTestPermissionsMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -962,6 +1146,50 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetPortMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Gets the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/getIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/getIAMPolicy` on the private network.
+     * The `resource` is the resource name of a VPC, such as
+     * `projects/my-project/vpcs/default`, or of a private network, such as
+     * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`. A binding on
+     * a VPC applies to every private network in it. A binding on a private
+     * network applies to that network only, so a network can be shared with
+     * other projects without sharing the rest of its VPC.
+     * </pre>
+     */
+    public cloud.cbws.api.iam.policy.v1alpha1.Policy getPolicy(cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetPolicyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/setIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/setIAMPolicy` on the private network. The
+     * accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public cloud.cbws.api.iam.policy.v1alpha1.Policy setPolicy(cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSetPolicyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns which of the given permissions the caller has on a VPC or a
+     * private network. The accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse testPermissions(cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getTestPermissionsMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1123,6 +1351,50 @@ public final class VpcServiceGrpc {
     public cloud.cbws.api.vpc.v1alpha1.Port getPort(cloud.cbws.api.vpc.v1alpha1.GetPortRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetPortMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/getIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/getIAMPolicy` on the private network.
+     * The `resource` is the resource name of a VPC, such as
+     * `projects/my-project/vpcs/default`, or of a private network, such as
+     * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`. A binding on
+     * a VPC applies to every private network in it. A binding on a private
+     * network applies to that network only, so a network can be shared with
+     * other projects without sharing the rest of its VPC.
+     * </pre>
+     */
+    public cloud.cbws.api.iam.policy.v1alpha1.Policy getPolicy(cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetPolicyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/setIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/setIAMPolicy` on the private network. The
+     * accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public cloud.cbws.api.iam.policy.v1alpha1.Policy setPolicy(cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSetPolicyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns which of the given permissions the caller has on a VPC or a
+     * private network. The accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse testPermissions(cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getTestPermissionsMethod(), getCallOptions(), request);
     }
   }
 
@@ -1298,6 +1570,53 @@ public final class VpcServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetPortMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Gets the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/getIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/getIAMPolicy` on the private network.
+     * The `resource` is the resource name of a VPC, such as
+     * `projects/my-project/vpcs/default`, or of a private network, such as
+     * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`. A binding on
+     * a VPC applies to every private network in it. A binding on a private
+     * network applies to that network only, so a network can be shared with
+     * other projects without sharing the rest of its VPC.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.iam.policy.v1alpha1.Policy> getPolicy(
+        cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetPolicyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Replaces the IAM policy of a VPC or a private network. Requires
+     * `vpc.cbws.cloud/Vpc/setIAMPolicy` on the VPC, or
+     * `vpc.cbws.cloud/PrivateNetwork/setIAMPolicy` on the private network. The
+     * accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.iam.policy.v1alpha1.Policy> setPolicy(
+        cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSetPolicyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns which of the given permissions the caller has on a VPC or a
+     * private network. The accepted resources are the same as for
+     * [GetPolicy][cbws.vpc.v1alpha1.VpcService.GetPolicy].
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse> testPermissions(
+        cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getTestPermissionsMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_VPCS = 0;
@@ -1312,6 +1631,9 @@ public final class VpcServiceGrpc {
   private static final int METHODID_DELETE_SUBNET = 9;
   private static final int METHODID_LIST_PORTS = 10;
   private static final int METHODID_GET_PORT = 11;
+  private static final int METHODID_GET_POLICY = 12;
+  private static final int METHODID_SET_POLICY = 13;
+  private static final int METHODID_TEST_PERMISSIONS = 14;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1377,6 +1699,18 @@ public final class VpcServiceGrpc {
         case METHODID_GET_PORT:
           serviceImpl.getPort((cloud.cbws.api.vpc.v1alpha1.GetPortRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.vpc.v1alpha1.Port>) responseObserver);
+          break;
+        case METHODID_GET_POLICY:
+          serviceImpl.getPolicy((cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.Policy>) responseObserver);
+          break;
+        case METHODID_SET_POLICY:
+          serviceImpl.setPolicy((cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.Policy>) responseObserver);
+          break;
+        case METHODID_TEST_PERMISSIONS:
+          serviceImpl.testPermissions((cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse>) responseObserver);
           break;
         default:
           throw new AssertionError();
@@ -1480,6 +1814,27 @@ public final class VpcServiceGrpc {
               cloud.cbws.api.vpc.v1alpha1.GetPortRequest,
               cloud.cbws.api.vpc.v1alpha1.Port>(
                 service, METHODID_GET_PORT)))
+        .addMethod(
+          getGetPolicyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.iam.policy.v1alpha1.GetPolicyRequest,
+              cloud.cbws.api.iam.policy.v1alpha1.Policy>(
+                service, METHODID_GET_POLICY)))
+        .addMethod(
+          getSetPolicyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.iam.policy.v1alpha1.SetPolicyRequest,
+              cloud.cbws.api.iam.policy.v1alpha1.Policy>(
+                service, METHODID_SET_POLICY)))
+        .addMethod(
+          getTestPermissionsMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsRequest,
+              cloud.cbws.api.iam.policy.v1alpha1.TestPermissionsResponse>(
+                service, METHODID_TEST_PERMISSIONS)))
         .build();
   }
 
@@ -1540,6 +1895,9 @@ public final class VpcServiceGrpc {
               .addMethod(getDeleteSubnetMethod())
               .addMethod(getListPortsMethod())
               .addMethod(getGetPortMethod())
+              .addMethod(getGetPolicyMethod())
+              .addMethod(getSetPolicyMethod())
+              .addMethod(getTestPermissionsMethod())
               .build();
         }
       }
