@@ -37,6 +37,7 @@ private static final long serialVersionUID = 0L;
     image_ = "";
     hostname_ = "";
     address_ = "";
+    ipv6Address_ = "";
     sshKeys_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     userdata_ = "";
@@ -614,6 +615,57 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IPV6_ADDRESS_FIELD_NUMBER = 17;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object ipv6Address_ = "";
+  /**
+   * <pre>
+   * The IPv6 address the machine holds, the counterpart of
+   * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+   * address, which is normal on a network with no IPv6 subnet.
+   * </pre>
+   *
+   * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The ipv6Address.
+   */
+  @java.lang.Override
+  public java.lang.String getIpv6Address() {
+    java.lang.Object ref = ipv6Address_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      ipv6Address_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The IPv6 address the machine holds, the counterpart of
+   * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+   * address, which is normal on a network with no IPv6 subnet.
+   * </pre>
+   *
+   * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for ipv6Address.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getIpv6AddressBytes() {
+    java.lang.Object ref = ipv6Address_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      ipv6Address_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int SSH_KEYS_FIELD_NUMBER = 9;
   @SuppressWarnings("serial")
   private com.google.protobuf.LazyStringArrayList sshKeys_ =
@@ -803,6 +855,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userdata_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 16, userdata_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ipv6Address_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 17, ipv6Address_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -845,6 +900,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(userdata_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(16, userdata_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ipv6Address_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(17, ipv6Address_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -872,6 +930,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getHostname())) return false;
     if (!getAddress()
         .equals(other.getAddress())) return false;
+    if (!getIpv6Address()
+        .equals(other.getIpv6Address())) return false;
     if (!getSshKeysList()
         .equals(other.getSshKeysList())) return false;
     if (!getUserdata()
@@ -900,6 +960,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getHostname().hashCode();
     hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getAddress().hashCode();
+    hash = (37 * hash) + IPV6_ADDRESS_FIELD_NUMBER;
+    hash = (53 * hash) + getIpv6Address().hashCode();
     if (getSshKeysCount() > 0) {
       hash = (37 * hash) + SSH_KEYS_FIELD_NUMBER;
       hash = (53 * hash) + getSshKeysList().hashCode();
@@ -1049,6 +1111,7 @@ private static final long serialVersionUID = 0L;
       image_ = "";
       hostname_ = "";
       address_ = "";
+      ipv6Address_ = "";
       sshKeys_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       userdata_ = "";
@@ -1105,13 +1168,16 @@ private static final long serialVersionUID = 0L;
         result.address_ = address_;
       }
       if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.ipv6Address_ = ipv6Address_;
+      }
+      if (((from_bitField0_ & 0x00000080) != 0)) {
         sshKeys_.makeImmutable();
         result.sshKeys_ = sshKeys_;
       }
-      if (((from_bitField0_ & 0x00000080) != 0)) {
+      if (((from_bitField0_ & 0x00000100) != 0)) {
         result.userdata_ = userdata_;
       }
-      if (((from_bitField0_ & 0x00000100) != 0)) {
+      if (((from_bitField0_ & 0x00000200) != 0)) {
         result.state_ = state_;
       }
     }
@@ -1158,10 +1224,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000020;
         onChanged();
       }
+      if (!other.getIpv6Address().isEmpty()) {
+        ipv6Address_ = other.ipv6Address_;
+        bitField0_ |= 0x00000040;
+        onChanged();
+      }
       if (!other.sshKeys_.isEmpty()) {
         if (sshKeys_.isEmpty()) {
           sshKeys_ = other.sshKeys_;
-          bitField0_ |= 0x00000040;
+          bitField0_ |= 0x00000080;
         } else {
           ensureSshKeysIsMutable();
           sshKeys_.addAll(other.sshKeys_);
@@ -1170,7 +1241,7 @@ private static final long serialVersionUID = 0L;
       }
       if (!other.getUserdata().isEmpty()) {
         userdata_ = other.userdata_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000100;
         onChanged();
       }
       if (other.state_ != 0) {
@@ -1229,7 +1300,7 @@ private static final long serialVersionUID = 0L;
             } // case 58
             case 64: {
               state_ = input.readEnum();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000200;
               break;
             } // case 64
             case 74: {
@@ -1245,9 +1316,14 @@ private static final long serialVersionUID = 0L;
             } // case 82
             case 130: {
               userdata_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000100;
               break;
             } // case 130
+            case 138: {
+              ipv6Address_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 138
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1852,13 +1928,115 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object ipv6Address_ = "";
+    /**
+     * <pre>
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     * </pre>
+     *
+     * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The ipv6Address.
+     */
+    public java.lang.String getIpv6Address() {
+      java.lang.Object ref = ipv6Address_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        ipv6Address_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     * </pre>
+     *
+     * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for ipv6Address.
+     */
+    public com.google.protobuf.ByteString
+        getIpv6AddressBytes() {
+      java.lang.Object ref = ipv6Address_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        ipv6Address_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     * </pre>
+     *
+     * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The ipv6Address to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIpv6Address(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      ipv6Address_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     * </pre>
+     *
+     * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearIpv6Address() {
+      ipv6Address_ = getDefaultInstance().getIpv6Address();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     * </pre>
+     *
+     * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes for ipv6Address to set.
+     * @return This builder for chaining.
+     */
+    public Builder setIpv6AddressBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      ipv6Address_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.LazyStringArrayList sshKeys_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     private void ensureSshKeysIsMutable() {
       if (!sshKeys_.isModifiable()) {
         sshKeys_ = new com.google.protobuf.LazyStringArrayList(sshKeys_);
       }
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
     }
     /**
      * <pre>
@@ -1939,7 +2117,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSshKeysIsMutable();
       sshKeys_.set(index, value);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1960,7 +2138,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       ensureSshKeysIsMutable();
       sshKeys_.add(value);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1981,7 +2159,7 @@ private static final long serialVersionUID = 0L;
       ensureSshKeysIsMutable();
       com.google.protobuf.AbstractMessageLite.Builder.addAll(
           values, sshKeys_);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -1999,7 +2177,7 @@ private static final long serialVersionUID = 0L;
     public Builder clearSshKeys() {
       sshKeys_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
-      bitField0_ = (bitField0_ & ~0x00000040);;
+      bitField0_ = (bitField0_ & ~0x00000080);;
       onChanged();
       return this;
     }
@@ -2021,7 +2199,7 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       ensureSshKeysIsMutable();
       sshKeys_.add(value);
-      bitField0_ |= 0x00000040;
+      bitField0_ |= 0x00000080;
       onChanged();
       return this;
     }
@@ -2093,7 +2271,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       userdata_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2111,7 +2289,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearUserdata() {
       userdata_ = getDefaultInstance().getUserdata();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000100);
       onChanged();
       return this;
     }
@@ -2133,7 +2311,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       userdata_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000100;
       onChanged();
       return this;
     }
@@ -2163,7 +2341,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStateValue(int value) {
       state_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2195,7 +2373,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000200;
       state_ = value.getNumber();
       onChanged();
       return this;
@@ -2210,7 +2388,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000200);
       state_ = 0;
       onChanged();
       return this;

@@ -145,6 +145,30 @@ public interface MachineOrBuilder extends
 
   /**
    * <pre>
+   * The IPv6 address the machine holds, the counterpart of
+   * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+   * address, which is normal on a network with no IPv6 subnet.
+   * </pre>
+   *
+   * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The ipv6Address.
+   */
+  java.lang.String getIpv6Address();
+  /**
+   * <pre>
+   * The IPv6 address the machine holds, the counterpart of
+   * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+   * address, which is normal on a network with no IPv6 subnet.
+   * </pre>
+   *
+   * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for ipv6Address.
+   */
+  com.google.protobuf.ByteString
+      getIpv6AddressBytes();
+
+  /**
+   * <pre>
    * Public keys installed for the image's default user when the machine first boots.
    *
    * Accepted on create and never returned, so a machine read back always reports this

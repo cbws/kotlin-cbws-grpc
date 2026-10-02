@@ -203,6 +203,36 @@ public object MachineKt {
     }
 
     /**
+     * ```
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     * ```
+     *
+     * `string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var ipv6Address: kotlin.String
+      @kotlin.jvm.JvmName("getIpv6Address")
+        get() = _builder.ipv6Address
+      @kotlin.jvm.JvmName("setIpv6Address")
+        set(value) {
+        _builder.ipv6Address = value
+      }
+    /**
+     * <pre>
+     * The IPv6 address the machine holds, the counterpart of
+     * [address][cbws.compute.v1alpha1.Machine.address]. Empty on a machine with no IPv6
+     * address, which is normal on a network with no IPv6 subnet.
+     * </pre>
+     *
+     * <code>string ipv6_address = 17 [json_name = "ipv6Address", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearIpv6Address() {
+      _builder.clearIpv6Address()
+    }
+
+    /**
      * An uninstantiable, behaviorless type to represent the field in
      * generics.
      */
