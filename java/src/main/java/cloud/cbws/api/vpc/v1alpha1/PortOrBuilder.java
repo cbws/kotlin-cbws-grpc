@@ -215,6 +215,81 @@ public interface PortOrBuilder extends
 
   /**
    * <pre>
+   * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+   * with what is needed to configure the address. Unset when the port has
+   * no IPv4 address.
+   *
+   * It is on the port so that the address can be configured from the port
+   * alone, without access to the private network's subnets.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the ipv4Subnet field is set.
+   */
+  boolean hasIpv4Subnet();
+  /**
+   * <pre>
+   * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+   * with what is needed to configure the address. Unset when the port has
+   * no IPv4 address.
+   *
+   * It is on the port so that the address can be configured from the port
+   * alone, without access to the private network's subnets.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The ipv4Subnet.
+   */
+  cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getIpv4Subnet();
+  /**
+   * <pre>
+   * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+   * with what is needed to configure the address. Unset when the port has
+   * no IPv4 address.
+   *
+   * It is on the port so that the address can be configured from the port
+   * alone, without access to the private network's subnets.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder getIpv4SubnetOrBuilder();
+
+  /**
+   * <pre>
+   * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+   * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+   * Unset when the port has no IPv6 address.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the ipv6Subnet field is set.
+   */
+  boolean hasIpv6Subnet();
+  /**
+   * <pre>
+   * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+   * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+   * Unset when the port has no IPv6 address.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The ipv6Subnet.
+   */
+  cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getIpv6Subnet();
+  /**
+   * <pre>
+   * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+   * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+   * Unset when the port has no IPv6 address.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder getIpv6SubnetOrBuilder();
+
+  /**
+   * <pre>
    * The MAC address of the port, in lowercase with colons, such as
    * `02:00:5e:10:00:01`. It does not change for the life of the port.
    * </pre>

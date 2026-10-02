@@ -31,6 +31,11 @@ public final class PortProto {
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_vpc_v1alpha1_Port_fieldAccessorTable;
   static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
     internal_static_cbws_vpc_v1alpha1_ListPortsRequest_descriptor;
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
@@ -56,7 +61,7 @@ public final class PortProto {
     java.lang.String[] descriptorData = {
       "\n\034cbws/vpc/v1alpha1/port.proto\022\021cbws.vpc" +
       ".v1alpha1\032\037google/api/field_behavior.pro" +
-      "to\032\031google/api/resource.proto\"\346\004\n\004Port\022\030" +
+      "to\032\031google/api/resource.proto\"\212\007\n\004Port\022\030" +
       "\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002 \001(\t" +
       "B\004\342A\001\005R\006parent\022P\n\017private_network\030\t \001(\tB" +
       "\'\342A\002\002\005\372A\037\n\035vpc.cbws.cloud/PrivateNetwork" +
@@ -65,25 +70,32 @@ public final class PortProto {
       "lpha1.Port.IpFamilyB\005\342A\002\001\005R\nipFamilies\022\'" +
       "\n\014ipv4_address\030\005 \001(\tB\004\342A\001\003R\013ipv4Address\022" +
       "\'\n\014ipv6_address\030\006 \001(\tB\004\342A\001\003R\013ipv6Address" +
-      "\022%\n\013mac_address\030\007 \001(\tB\004\342A\001\003R\nmacAddress\022" +
-      "9\n\005state\030\010 \001(\0162\035.cbws.vpc.v1alpha1.Port." +
-      "StateB\004\342A\001\003R\005state\"M\n\010IpFamily\022\031\n\025IP_FAM" +
-      "ILY_UNSPECIFIED\020\000\022\022\n\016IP_FAMILY_IPV4\020\001\022\022\n" +
-      "\016IP_FAMILY_IPV6\020\002\"0\n\005State\022\025\n\021STATE_UNSP" +
-      "ECIFIED\020\000\022\020\n\014STATE_ACTIVE\020\002:9\352A6\n\023vpc.cb" +
-      "ws.cloud/Port\022\037projects/{project}/ports/" +
-      "{port}\"x\n\020ListPortsRequest\022\034\n\006parent\030\001 \001" +
-      "(\tB\004\342A\001\002R\006parent\022!\n\tpage_size\030\002 \001(\005B\004\342A\001" +
-      "\001R\010pageSize\022#\n\npage_token\030\003 \001(\tB\004\342A\001\001R\tp" +
-      "ageToken\"j\n\021ListPortsResponse\022-\n\005ports\030\001" +
-      " \003(\0132\027.cbws.vpc.v1alpha1.PortR\005ports\022&\n\017" +
-      "next_page_token\030\002 \001(\tR\rnextPageToken\"B\n\016" +
-      "GetPortRequest\0220\n\004name\030\001 \001(\tB\034\342A\001\002\372A\025\n\023v" +
-      "pc.cbws.cloud/PortR\004nameB\216\001\n\033cloud.cbws." +
-      "api.vpc.v1alpha1B\tPortProtoP\001\242\002\003CVX\252\002\021Cb" +
-      "ws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\V1alpha1\342\002\035Cb" +
-      "ws\\Vpc\\V1alpha1\\GPBMetadata\352\002\023Cbws::Vpc:" +
-      ":V1alpha1b\006proto3"
+      "\022L\n\013ipv4_subnet\030\n \001(\0132%.cbws.vpc.v1alpha" +
+      "1.Port.AddressSubnetB\004\342A\001\003R\nipv4Subnet\022L" +
+      "\n\013ipv6_subnet\030\013 \001(\0132%.cbws.vpc.v1alpha1." +
+      "Port.AddressSubnetB\004\342A\001\003R\nipv6Subnet\022%\n\013" +
+      "mac_address\030\007 \001(\tB\004\342A\001\003R\nmacAddress\0229\n\005s" +
+      "tate\030\010 \001(\0162\035.cbws.vpc.v1alpha1.Port.Stat" +
+      "eB\004\342A\001\003R\005state\032\205\001\n\rAddressSubnet\0226\n\006subn" +
+      "et\030\001 \001(\tB\036\342A\001\003\372A\027\n\025vpc.cbws.cloud/Subnet" +
+      "R\006subnet\022\034\n\006prefix\030\002 \001(\tB\004\342A\001\003R\006prefix\022\036" +
+      "\n\007gateway\030\003 \001(\tB\004\342A\001\003R\007gateway\"M\n\010IpFami" +
+      "ly\022\031\n\025IP_FAMILY_UNSPECIFIED\020\000\022\022\n\016IP_FAMI" +
+      "LY_IPV4\020\001\022\022\n\016IP_FAMILY_IPV6\020\002\"0\n\005State\022\025" +
+      "\n\021STATE_UNSPECIFIED\020\000\022\020\n\014STATE_ACTIVE\020\002:" +
+      "9\352A6\n\023vpc.cbws.cloud/Port\022\037projects/{pro" +
+      "ject}/ports/{port}\"x\n\020ListPortsRequest\022\034" +
+      "\n\006parent\030\001 \001(\tB\004\342A\001\002R\006parent\022!\n\tpage_siz" +
+      "e\030\002 \001(\005B\004\342A\001\001R\010pageSize\022#\n\npage_token\030\003 " +
+      "\001(\tB\004\342A\001\001R\tpageToken\"j\n\021ListPortsRespons" +
+      "e\022-\n\005ports\030\001 \003(\0132\027.cbws.vpc.v1alpha1.Por" +
+      "tR\005ports\022&\n\017next_page_token\030\002 \001(\tR\rnextP" +
+      "ageToken\"B\n\016GetPortRequest\0220\n\004name\030\001 \001(\t" +
+      "B\034\342A\001\002\372A\025\n\023vpc.cbws.cloud/PortR\004nameB\216\001\n" +
+      "\033cloud.cbws.api.vpc.v1alpha1B\tPortProtoP" +
+      "\001\242\002\003CVX\252\002\021Cbws.Vpc.V1alpha1\312\002\021Cbws\\Vpc\\V" +
+      "1alpha1\342\002\035Cbws\\Vpc\\V1alpha1\\GPBMetadata\352" +
+      "\002\023Cbws::Vpc::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -96,7 +108,13 @@ public final class PortProto {
     internal_static_cbws_vpc_v1alpha1_Port_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_vpc_v1alpha1_Port_descriptor,
-        new java.lang.String[] { "Name", "Parent", "PrivateNetwork", "Owner", "IpFamilies", "Ipv4Address", "Ipv6Address", "MacAddress", "State", });
+        new java.lang.String[] { "Name", "Parent", "PrivateNetwork", "Owner", "IpFamilies", "Ipv4Address", "Ipv6Address", "Ipv4Subnet", "Ipv6Subnet", "MacAddress", "State", });
+    internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_descriptor =
+      internal_static_cbws_vpc_v1alpha1_Port_descriptor.getNestedTypes().get(0);
+    internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_descriptor,
+        new java.lang.String[] { "Subnet", "Prefix", "Gateway", });
     internal_static_cbws_vpc_v1alpha1_ListPortsRequest_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cbws_vpc_v1alpha1_ListPortsRequest_fieldAccessorTable = new

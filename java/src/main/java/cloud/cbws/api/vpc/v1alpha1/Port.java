@@ -360,6 +360,1010 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:cbws.vpc.v1alpha1.Port.State)
   }
 
+  public interface AddressSubnetOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:cbws.vpc.v1alpha1.Port.AddressSubnet)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <pre>
+     * The resource name of the subnet, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+     * It gives no access to the subnet itself.
+     * </pre>
+     *
+     * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The subnet.
+     */
+    java.lang.String getSubnet();
+    /**
+     * <pre>
+     * The resource name of the subnet, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+     * It gives no access to the subnet itself.
+     * </pre>
+     *
+     * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for subnet.
+     */
+    com.google.protobuf.ByteString
+        getSubnetBytes();
+
+    /**
+     * <pre>
+     * The prefix of the subnet in CIDR notation, such as
+     * `198.51.100.0/26`. Configure the address with this prefix length.
+     * Every address in the prefix is on-link.
+     * </pre>
+     *
+     * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The prefix.
+     */
+    java.lang.String getPrefix();
+    /**
+     * <pre>
+     * The prefix of the subnet in CIDR notation, such as
+     * `198.51.100.0/26`. Configure the address with this prefix length.
+     * Every address in the prefix is on-link.
+     * </pre>
+     *
+     * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for prefix.
+     */
+    com.google.protobuf.ByteString
+        getPrefixBytes();
+
+    /**
+     * <pre>
+     * The gateway of the subnet, such as `198.51.100.1`. Point the
+     * default route for the address's family here.
+     *
+     * Empty when the subnet has no gateway. The address then has only its
+     * on-link prefix. Do not pick a gateway of your own, because any
+     * other address on the network may belong to someone else.
+     * </pre>
+     *
+     * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The gateway.
+     */
+    java.lang.String getGateway();
+    /**
+     * <pre>
+     * The gateway of the subnet, such as `198.51.100.1`. Point the
+     * default route for the address's family here.
+     *
+     * Empty when the subnet has no gateway. The address then has only its
+     * on-link prefix. Do not pick a gateway of your own, because any
+     * other address on the network may belong to someone else.
+     * </pre>
+     *
+     * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for gateway.
+     */
+    com.google.protobuf.ByteString
+        getGatewayBytes();
+  }
+  /**
+   * <pre>
+   * The subnet one of the port's addresses is from.
+   * </pre>
+   *
+   * Protobuf type {@code cbws.vpc.v1alpha1.Port.AddressSubnet}
+   */
+  public static final class AddressSubnet extends
+      com.google.protobuf.GeneratedMessage implements
+      // @@protoc_insertion_point(message_implements:cbws.vpc.v1alpha1.Port.AddressSubnet)
+      AddressSubnetOrBuilder {
+  private static final long serialVersionUID = 0L;
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        AddressSubnet.class.getName());
+    }
+    // Use AddressSubnet.newBuilder() to construct.
+    private AddressSubnet(com.google.protobuf.GeneratedMessage.Builder<?> builder) {
+      super(builder);
+    }
+    private AddressSubnet() {
+      subnet_ = "";
+      prefix_ = "";
+      gateway_ = "";
+    }
+
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return cloud.cbws.api.vpc.v1alpha1.PortProto.internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return cloud.cbws.api.vpc.v1alpha1.PortProto.internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.class, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder.class);
+    }
+
+    public static final int SUBNET_FIELD_NUMBER = 1;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object subnet_ = "";
+    /**
+     * <pre>
+     * The resource name of the subnet, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+     * It gives no access to the subnet itself.
+     * </pre>
+     *
+     * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The subnet.
+     */
+    @java.lang.Override
+    public java.lang.String getSubnet() {
+      java.lang.Object ref = subnet_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        subnet_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The resource name of the subnet, such as
+     * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+     * It gives no access to the subnet itself.
+     * </pre>
+     *
+     * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for subnet.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getSubnetBytes() {
+      java.lang.Object ref = subnet_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        subnet_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int PREFIX_FIELD_NUMBER = 2;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object prefix_ = "";
+    /**
+     * <pre>
+     * The prefix of the subnet in CIDR notation, such as
+     * `198.51.100.0/26`. Configure the address with this prefix length.
+     * Every address in the prefix is on-link.
+     * </pre>
+     *
+     * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The prefix.
+     */
+    @java.lang.Override
+    public java.lang.String getPrefix() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        prefix_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The prefix of the subnet in CIDR notation, such as
+     * `198.51.100.0/26`. Configure the address with this prefix length.
+     * Every address in the prefix is on-link.
+     * </pre>
+     *
+     * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for prefix.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getPrefixBytes() {
+      java.lang.Object ref = prefix_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        prefix_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int GATEWAY_FIELD_NUMBER = 3;
+    @SuppressWarnings("serial")
+    private volatile java.lang.Object gateway_ = "";
+    /**
+     * <pre>
+     * The gateway of the subnet, such as `198.51.100.1`. Point the
+     * default route for the address's family here.
+     *
+     * Empty when the subnet has no gateway. The address then has only its
+     * on-link prefix. Do not pick a gateway of your own, because any
+     * other address on the network may belong to someone else.
+     * </pre>
+     *
+     * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The gateway.
+     */
+    @java.lang.Override
+    public java.lang.String getGateway() {
+      java.lang.Object ref = gateway_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        gateway_ = s;
+        return s;
+      }
+    }
+    /**
+     * <pre>
+     * The gateway of the subnet, such as `198.51.100.1`. Point the
+     * default route for the address's family here.
+     *
+     * Empty when the subnet has no gateway. The address then has only its
+     * on-link prefix. Do not pick a gateway of your own, because any
+     * other address on the network may belong to someone else.
+     * </pre>
+     *
+     * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for gateway.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getGatewayBytes() {
+      java.lang.Object ref = gateway_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        gateway_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(subnet_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 1, subnet_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(prefix_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 2, prefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(gateway_)) {
+        com.google.protobuf.GeneratedMessage.writeString(output, 3, gateway_);
+      }
+      getUnknownFields().writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(subnet_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(1, subnet_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(prefix_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(2, prefix_);
+      }
+      if (!com.google.protobuf.GeneratedMessage.isStringEmpty(gateway_)) {
+        size += com.google.protobuf.GeneratedMessage.computeStringSize(3, gateway_);
+      }
+      size += getUnknownFields().getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet)) {
+        return super.equals(obj);
+      }
+      cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet other = (cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet) obj;
+
+      if (!getSubnet()
+          .equals(other.getSubnet())) return false;
+      if (!getPrefix()
+          .equals(other.getPrefix())) return false;
+      if (!getGateway()
+          .equals(other.getGateway())) return false;
+      if (!getUnknownFields().equals(other.getUnknownFields())) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + SUBNET_FIELD_NUMBER;
+      hash = (53 * hash) + getSubnet().hashCode();
+      hash = (37 * hash) + PREFIX_FIELD_NUMBER;
+      hash = (53 * hash) + getPrefix().hashCode();
+      hash = (37 * hash) + GATEWAY_FIELD_NUMBER;
+      hash = (53 * hash) + getGateway().hashCode();
+      hash = (29 * hash) + getUnknownFields().hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input);
+    }
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessage
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * <pre>
+     * The subnet one of the port's addresses is from.
+     * </pre>
+     *
+     * Protobuf type {@code cbws.vpc.v1alpha1.Port.AddressSubnet}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessage.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:cbws.vpc.v1alpha1.Port.AddressSubnet)
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return cloud.cbws.api.vpc.v1alpha1.PortProto.internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return cloud.cbws.api.vpc.v1alpha1.PortProto.internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.class, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder.class);
+      }
+
+      // Construct using cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.newBuilder()
+      private Builder() {
+
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessage.BuilderParent parent) {
+        super(parent);
+
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        bitField0_ = 0;
+        subnet_ = "";
+        prefix_ = "";
+        gateway_ = "";
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return cloud.cbws.api.vpc.v1alpha1.PortProto.internal_static_cbws_vpc_v1alpha1_Port_AddressSubnet_descriptor;
+      }
+
+      @java.lang.Override
+      public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getDefaultInstanceForType() {
+        return cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet build() {
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet buildPartial() {
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet result = new cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet(this);
+        if (bitField0_ != 0) { buildPartial0(result); }
+        onBuilt();
+        return result;
+      }
+
+      private void buildPartial0(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet result) {
+        int from_bitField0_ = bitField0_;
+        if (((from_bitField0_ & 0x00000001) != 0)) {
+          result.subnet_ = subnet_;
+        }
+        if (((from_bitField0_ & 0x00000002) != 0)) {
+          result.prefix_ = prefix_;
+        }
+        if (((from_bitField0_ & 0x00000004) != 0)) {
+          result.gateway_ = gateway_;
+        }
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet) {
+          return mergeFrom((cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet other) {
+        if (other == cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance()) return this;
+        if (!other.getSubnet().isEmpty()) {
+          subnet_ = other.subnet_;
+          bitField0_ |= 0x00000001;
+          onChanged();
+        }
+        if (!other.getPrefix().isEmpty()) {
+          prefix_ = other.prefix_;
+          bitField0_ |= 0x00000002;
+          onChanged();
+        }
+        if (!other.getGateway().isEmpty()) {
+          gateway_ = other.gateway_;
+          bitField0_ |= 0x00000004;
+          onChanged();
+        }
+        this.mergeUnknownFields(other.getUnknownFields());
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        if (extensionRegistry == null) {
+          throw new java.lang.NullPointerException();
+        }
+        try {
+          boolean done = false;
+          while (!done) {
+            int tag = input.readTag();
+            switch (tag) {
+              case 0:
+                done = true;
+                break;
+              case 10: {
+                subnet_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000001;
+                break;
+              } // case 10
+              case 18: {
+                prefix_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000002;
+                break;
+              } // case 18
+              case 26: {
+                gateway_ = input.readStringRequireUtf8();
+                bitField0_ |= 0x00000004;
+                break;
+              } // case 26
+              default: {
+                if (!super.parseUnknownField(input, extensionRegistry, tag)) {
+                  done = true; // was an endgroup tag
+                }
+                break;
+              } // default:
+            } // switch (tag)
+          } // while (!done)
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.unwrapIOException();
+        } finally {
+          onChanged();
+        } // finally
+        return this;
+      }
+      private int bitField0_;
+
+      private java.lang.Object subnet_ = "";
+      /**
+       * <pre>
+       * The resource name of the subnet, such as
+       * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+       * It gives no access to the subnet itself.
+       * </pre>
+       *
+       * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+       * @return The subnet.
+       */
+      public java.lang.String getSubnet() {
+        java.lang.Object ref = subnet_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          subnet_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The resource name of the subnet, such as
+       * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+       * It gives no access to the subnet itself.
+       * </pre>
+       *
+       * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+       * @return The bytes for subnet.
+       */
+      public com.google.protobuf.ByteString
+          getSubnetBytes() {
+        java.lang.Object ref = subnet_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          subnet_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The resource name of the subnet, such as
+       * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+       * It gives no access to the subnet itself.
+       * </pre>
+       *
+       * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+       * @param value The subnet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnet(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        subnet_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource name of the subnet, such as
+       * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+       * It gives no access to the subnet itself.
+       * </pre>
+       *
+       * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearSubnet() {
+        subnet_ = getDefaultInstance().getSubnet();
+        bitField0_ = (bitField0_ & ~0x00000001);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The resource name of the subnet, such as
+       * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+       * It gives no access to the subnet itself.
+       * </pre>
+       *
+       * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+       * @param value The bytes for subnet to set.
+       * @return This builder for chaining.
+       */
+      public Builder setSubnetBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        subnet_ = value;
+        bitField0_ |= 0x00000001;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object prefix_ = "";
+      /**
+       * <pre>
+       * The prefix of the subnet in CIDR notation, such as
+       * `198.51.100.0/26`. Configure the address with this prefix length.
+       * Every address in the prefix is on-link.
+       * </pre>
+       *
+       * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The prefix.
+       */
+      public java.lang.String getPrefix() {
+        java.lang.Object ref = prefix_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          prefix_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The prefix of the subnet in CIDR notation, such as
+       * `198.51.100.0/26`. Configure the address with this prefix length.
+       * Every address in the prefix is on-link.
+       * </pre>
+       *
+       * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for prefix.
+       */
+      public com.google.protobuf.ByteString
+          getPrefixBytes() {
+        java.lang.Object ref = prefix_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          prefix_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The prefix of the subnet in CIDR notation, such as
+       * `198.51.100.0/26`. Configure the address with this prefix length.
+       * Every address in the prefix is on-link.
+       * </pre>
+       *
+       * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefix(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        prefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The prefix of the subnet in CIDR notation, such as
+       * `198.51.100.0/26`. Configure the address with this prefix length.
+       * Every address in the prefix is on-link.
+       * </pre>
+       *
+       * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearPrefix() {
+        prefix_ = getDefaultInstance().getPrefix();
+        bitField0_ = (bitField0_ & ~0x00000002);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The prefix of the subnet in CIDR notation, such as
+       * `198.51.100.0/26`. Configure the address with this prefix length.
+       * Every address in the prefix is on-link.
+       * </pre>
+       *
+       * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for prefix to set.
+       * @return This builder for chaining.
+       */
+      public Builder setPrefixBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        prefix_ = value;
+        bitField0_ |= 0x00000002;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object gateway_ = "";
+      /**
+       * <pre>
+       * The gateway of the subnet, such as `198.51.100.1`. Point the
+       * default route for the address's family here.
+       *
+       * Empty when the subnet has no gateway. The address then has only its
+       * on-link prefix. Do not pick a gateway of your own, because any
+       * other address on the network may belong to someone else.
+       * </pre>
+       *
+       * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The gateway.
+       */
+      public java.lang.String getGateway() {
+        java.lang.Object ref = gateway_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          gateway_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The gateway of the subnet, such as `198.51.100.1`. Point the
+       * default route for the address's family here.
+       *
+       * Empty when the subnet has no gateway. The address then has only its
+       * on-link prefix. Do not pick a gateway of your own, because any
+       * other address on the network may belong to someone else.
+       * </pre>
+       *
+       * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return The bytes for gateway.
+       */
+      public com.google.protobuf.ByteString
+          getGatewayBytes() {
+        java.lang.Object ref = gateway_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          gateway_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <pre>
+       * The gateway of the subnet, such as `198.51.100.1`. Point the
+       * default route for the address's family here.
+       *
+       * Empty when the subnet has no gateway. The address then has only its
+       * on-link prefix. Do not pick a gateway of your own, because any
+       * other address on the network may belong to someone else.
+       * </pre>
+       *
+       * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The gateway to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGateway(
+          java.lang.String value) {
+        if (value == null) { throw new NullPointerException(); }
+        gateway_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The gateway of the subnet, such as `198.51.100.1`. Point the
+       * default route for the address's family here.
+       *
+       * Empty when the subnet has no gateway. The address then has only its
+       * on-link prefix. Do not pick a gateway of your own, because any
+       * other address on the network may belong to someone else.
+       * </pre>
+       *
+       * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearGateway() {
+        gateway_ = getDefaultInstance().getGateway();
+        bitField0_ = (bitField0_ & ~0x00000004);
+        onChanged();
+        return this;
+      }
+      /**
+       * <pre>
+       * The gateway of the subnet, such as `198.51.100.1`. Point the
+       * default route for the address's family here.
+       *
+       * Empty when the subnet has no gateway. The address then has only its
+       * on-link prefix. Do not pick a gateway of your own, because any
+       * other address on the network may belong to someone else.
+       * </pre>
+       *
+       * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @param value The bytes for gateway to set.
+       * @return This builder for chaining.
+       */
+      public Builder setGatewayBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) { throw new NullPointerException(); }
+        checkByteStringIsUtf8(value);
+        gateway_ = value;
+        bitField0_ |= 0x00000004;
+        onChanged();
+        return this;
+      }
+
+      // @@protoc_insertion_point(builder_scope:cbws.vpc.v1alpha1.Port.AddressSubnet)
+    }
+
+    // @@protoc_insertion_point(class_scope:cbws.vpc.v1alpha1.Port.AddressSubnet)
+    private static final cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet();
+    }
+
+    public static cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<AddressSubnet>
+        PARSER = new com.google.protobuf.AbstractParser<AddressSubnet>() {
+      @java.lang.Override
+      public AddressSubnet parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        Builder builder = newBuilder();
+        try {
+          builder.mergeFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          throw e.setUnfinishedMessage(builder.buildPartial());
+        } catch (com.google.protobuf.UninitializedMessageException e) {
+          throw e.asInvalidProtocolBufferException().setUnfinishedMessage(builder.buildPartial());
+        } catch (java.io.IOException e) {
+          throw new com.google.protobuf.InvalidProtocolBufferException(e)
+              .setUnfinishedMessage(builder.buildPartial());
+        }
+        return builder.buildPartial();
+      }
+    };
+
+    public static com.google.protobuf.Parser<AddressSubnet> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<AddressSubnet> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
@@ -755,6 +1759,103 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int IPV4_SUBNET_FIELD_NUMBER = 10;
+  private cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet ipv4Subnet_;
+  /**
+   * <pre>
+   * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+   * with what is needed to configure the address. Unset when the port has
+   * no IPv4 address.
+   *
+   * It is on the port so that the address can be configured from the port
+   * alone, without access to the private network's subnets.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the ipv4Subnet field is set.
+   */
+  @java.lang.Override
+  public boolean hasIpv4Subnet() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+   * with what is needed to configure the address. Unset when the port has
+   * no IPv4 address.
+   *
+   * It is on the port so that the address can be configured from the port
+   * alone, without access to the private network's subnets.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The ipv4Subnet.
+   */
+  @java.lang.Override
+  public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getIpv4Subnet() {
+    return ipv4Subnet_ == null ? cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv4Subnet_;
+  }
+  /**
+   * <pre>
+   * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+   * with what is needed to configure the address. Unset when the port has
+   * no IPv4 address.
+   *
+   * It is on the port so that the address can be configured from the port
+   * alone, without access to the private network's subnets.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder getIpv4SubnetOrBuilder() {
+    return ipv4Subnet_ == null ? cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv4Subnet_;
+  }
+
+  public static final int IPV6_SUBNET_FIELD_NUMBER = 11;
+  private cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet ipv6Subnet_;
+  /**
+   * <pre>
+   * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+   * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+   * Unset when the port has no IPv6 address.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the ipv6Subnet field is set.
+   */
+  @java.lang.Override
+  public boolean hasIpv6Subnet() {
+    return ((bitField0_ & 0x00000002) != 0);
+  }
+  /**
+   * <pre>
+   * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+   * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+   * Unset when the port has no IPv6 address.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The ipv6Subnet.
+   */
+  @java.lang.Override
+  public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getIpv6Subnet() {
+    return ipv6Subnet_ == null ? cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv6Subnet_;
+  }
+  /**
+   * <pre>
+   * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+   * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+   * Unset when the port has no IPv6 address.
+   * </pre>
+   *
+   * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder getIpv6SubnetOrBuilder() {
+    return ipv6Subnet_ == null ? cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv6Subnet_;
+  }
+
   public static final int MAC_ADDRESS_FIELD_NUMBER = 7;
   @SuppressWarnings("serial")
   private volatile java.lang.Object macAddress_ = "";
@@ -878,6 +1979,12 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(privateNetwork_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 9, privateNetwork_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(10, getIpv4Subnet());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      output.writeMessage(11, getIpv6Subnet());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -924,6 +2031,14 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(privateNetwork_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(9, privateNetwork_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(10, getIpv4Subnet());
+    }
+    if (((bitField0_ & 0x00000002) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(11, getIpv6Subnet());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -952,6 +2067,16 @@ private static final long serialVersionUID = 0L;
         .equals(other.getIpv4Address())) return false;
     if (!getIpv6Address()
         .equals(other.getIpv6Address())) return false;
+    if (hasIpv4Subnet() != other.hasIpv4Subnet()) return false;
+    if (hasIpv4Subnet()) {
+      if (!getIpv4Subnet()
+          .equals(other.getIpv4Subnet())) return false;
+    }
+    if (hasIpv6Subnet() != other.hasIpv6Subnet()) return false;
+    if (hasIpv6Subnet()) {
+      if (!getIpv6Subnet()
+          .equals(other.getIpv6Subnet())) return false;
+    }
     if (!getMacAddress()
         .equals(other.getMacAddress())) return false;
     if (state_ != other.state_) return false;
@@ -982,6 +2107,14 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getIpv4Address().hashCode();
     hash = (37 * hash) + IPV6_ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getIpv6Address().hashCode();
+    if (hasIpv4Subnet()) {
+      hash = (37 * hash) + IPV4_SUBNET_FIELD_NUMBER;
+      hash = (53 * hash) + getIpv4Subnet().hashCode();
+    }
+    if (hasIpv6Subnet()) {
+      hash = (37 * hash) + IPV6_SUBNET_FIELD_NUMBER;
+      hash = (53 * hash) + getIpv6Subnet().hashCode();
+    }
     hash = (37 * hash) + MAC_ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getMacAddress().hashCode();
     hash = (37 * hash) + STATE_FIELD_NUMBER;
@@ -1119,13 +2252,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cloud.cbws.api.vpc.v1alpha1.Port.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetIpv4SubnetFieldBuilder();
+        internalGetIpv6SubnetFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1139,6 +2279,16 @@ private static final long serialVersionUID = 0L;
       bitField0_ = (bitField0_ & ~0x00000010);
       ipv4Address_ = "";
       ipv6Address_ = "";
+      ipv4Subnet_ = null;
+      if (ipv4SubnetBuilder_ != null) {
+        ipv4SubnetBuilder_.dispose();
+        ipv4SubnetBuilder_ = null;
+      }
+      ipv6Subnet_ = null;
+      if (ipv6SubnetBuilder_ != null) {
+        ipv6SubnetBuilder_.dispose();
+        ipv6SubnetBuilder_ = null;
+      }
       macAddress_ = "";
       state_ = 0;
       return this;
@@ -1201,12 +2351,26 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000040) != 0)) {
         result.ipv6Address_ = ipv6Address_;
       }
+      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000080) != 0)) {
-        result.macAddress_ = macAddress_;
+        result.ipv4Subnet_ = ipv4SubnetBuilder_ == null
+            ? ipv4Subnet_
+            : ipv4SubnetBuilder_.build();
+        to_bitField0_ |= 0x00000001;
       }
       if (((from_bitField0_ & 0x00000100) != 0)) {
+        result.ipv6Subnet_ = ipv6SubnetBuilder_ == null
+            ? ipv6Subnet_
+            : ipv6SubnetBuilder_.build();
+        to_bitField0_ |= 0x00000002;
+      }
+      if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.macAddress_ = macAddress_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.state_ = state_;
       }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1261,9 +2425,15 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000040;
         onChanged();
       }
+      if (other.hasIpv4Subnet()) {
+        mergeIpv4Subnet(other.getIpv4Subnet());
+      }
+      if (other.hasIpv6Subnet()) {
+        mergeIpv6Subnet(other.getIpv6Subnet());
+      }
       if (!other.getMacAddress().isEmpty()) {
         macAddress_ = other.macAddress_;
-        bitField0_ |= 0x00000080;
+        bitField0_ |= 0x00000200;
         onChanged();
       }
       if (other.state_ != 0) {
@@ -1339,12 +2509,12 @@ private static final long serialVersionUID = 0L;
             } // case 50
             case 58: {
               macAddress_ = input.readStringRequireUtf8();
-              bitField0_ |= 0x00000080;
+              bitField0_ |= 0x00000200;
               break;
             } // case 58
             case 64: {
               state_ = input.readEnum();
-              bitField0_ |= 0x00000100;
+              bitField0_ |= 0x00000400;
               break;
             } // case 64
             case 74: {
@@ -1352,6 +2522,20 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 74
+            case 82: {
+              input.readMessage(
+                  internalGetIpv4SubnetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000080;
+              break;
+            } // case 82
+            case 90: {
+              input.readMessage(
+                  internalGetIpv6SubnetFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000100;
+              break;
+            } // case 90
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2196,6 +3380,383 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet ipv4Subnet_;
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder> ipv4SubnetBuilder_;
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the ipv4Subnet field is set.
+     */
+    public boolean hasIpv4Subnet() {
+      return ((bitField0_ & 0x00000080) != 0);
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The ipv4Subnet.
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getIpv4Subnet() {
+      if (ipv4SubnetBuilder_ == null) {
+        return ipv4Subnet_ == null ? cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv4Subnet_;
+      } else {
+        return ipv4SubnetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setIpv4Subnet(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet value) {
+      if (ipv4SubnetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ipv4Subnet_ = value;
+      } else {
+        ipv4SubnetBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setIpv4Subnet(
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder builderForValue) {
+      if (ipv4SubnetBuilder_ == null) {
+        ipv4Subnet_ = builderForValue.build();
+      } else {
+        ipv4SubnetBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeIpv4Subnet(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet value) {
+      if (ipv4SubnetBuilder_ == null) {
+        if (((bitField0_ & 0x00000080) != 0) &&
+          ipv4Subnet_ != null &&
+          ipv4Subnet_ != cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance()) {
+          getIpv4SubnetBuilder().mergeFrom(value);
+        } else {
+          ipv4Subnet_ = value;
+        }
+      } else {
+        ipv4SubnetBuilder_.mergeFrom(value);
+      }
+      if (ipv4Subnet_ != null) {
+        bitField0_ |= 0x00000080;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearIpv4Subnet() {
+      bitField0_ = (bitField0_ & ~0x00000080);
+      ipv4Subnet_ = null;
+      if (ipv4SubnetBuilder_ != null) {
+        ipv4SubnetBuilder_.dispose();
+        ipv4SubnetBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder getIpv4SubnetBuilder() {
+      bitField0_ |= 0x00000080;
+      onChanged();
+      return internalGetIpv4SubnetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder getIpv4SubnetOrBuilder() {
+      if (ipv4SubnetBuilder_ != null) {
+        return ipv4SubnetBuilder_.getMessageOrBuilder();
+      } else {
+        return ipv4Subnet_ == null ?
+            cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv4Subnet_;
+      }
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder> 
+        internalGetIpv4SubnetFieldBuilder() {
+      if (ipv4SubnetBuilder_ == null) {
+        ipv4SubnetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder>(
+                getIpv4Subnet(),
+                getParentForChildren(),
+                isClean());
+        ipv4Subnet_ = null;
+      }
+      return ipv4SubnetBuilder_;
+    }
+
+    private cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet ipv6Subnet_;
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder> ipv6SubnetBuilder_;
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the ipv6Subnet field is set.
+     */
+    public boolean hasIpv6Subnet() {
+      return ((bitField0_ & 0x00000100) != 0);
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The ipv6Subnet.
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet getIpv6Subnet() {
+      if (ipv6SubnetBuilder_ == null) {
+        return ipv6Subnet_ == null ? cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv6Subnet_;
+      } else {
+        return ipv6SubnetBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setIpv6Subnet(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet value) {
+      if (ipv6SubnetBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ipv6Subnet_ = value;
+      } else {
+        ipv6SubnetBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setIpv6Subnet(
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder builderForValue) {
+      if (ipv6SubnetBuilder_ == null) {
+        ipv6Subnet_ = builderForValue.build();
+      } else {
+        ipv6SubnetBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeIpv6Subnet(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet value) {
+      if (ipv6SubnetBuilder_ == null) {
+        if (((bitField0_ & 0x00000100) != 0) &&
+          ipv6Subnet_ != null &&
+          ipv6Subnet_ != cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance()) {
+          getIpv6SubnetBuilder().mergeFrom(value);
+        } else {
+          ipv6Subnet_ = value;
+        }
+      } else {
+        ipv6SubnetBuilder_.mergeFrom(value);
+      }
+      if (ipv6Subnet_ != null) {
+        bitField0_ |= 0x00000100;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearIpv6Subnet() {
+      bitField0_ = (bitField0_ & ~0x00000100);
+      ipv6Subnet_ = null;
+      if (ipv6SubnetBuilder_ != null) {
+        ipv6SubnetBuilder_.dispose();
+        ipv6SubnetBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder getIpv6SubnetBuilder() {
+      bitField0_ |= 0x00000100;
+      onChanged();
+      return internalGetIpv6SubnetFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder getIpv6SubnetOrBuilder() {
+      if (ipv6SubnetBuilder_ != null) {
+        return ipv6SubnetBuilder_.getMessageOrBuilder();
+      } else {
+        return ipv6Subnet_ == null ?
+            cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.getDefaultInstance() : ipv6Subnet_;
+      }
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder> 
+        internalGetIpv6SubnetFieldBuilder() {
+      if (ipv6SubnetBuilder_ == null) {
+        ipv6SubnetBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder, cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnetOrBuilder>(
+                getIpv6Subnet(),
+                getParentForChildren(),
+                isClean());
+        ipv6Subnet_ = null;
+      }
+      return ipv6SubnetBuilder_;
+    }
+
     private java.lang.Object macAddress_ = "";
     /**
      * <pre>
@@ -2254,7 +3815,7 @@ private static final long serialVersionUID = 0L;
         java.lang.String value) {
       if (value == null) { throw new NullPointerException(); }
       macAddress_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2269,7 +3830,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder clearMacAddress() {
       macAddress_ = getDefaultInstance().getMacAddress();
-      bitField0_ = (bitField0_ & ~0x00000080);
+      bitField0_ = (bitField0_ & ~0x00000200);
       onChanged();
       return this;
     }
@@ -2288,7 +3849,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) { throw new NullPointerException(); }
       checkByteStringIsUtf8(value);
       macAddress_ = value;
-      bitField0_ |= 0x00000080;
+      bitField0_ |= 0x00000200;
       onChanged();
       return this;
     }
@@ -2318,7 +3879,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStateValue(int value) {
       state_ = value;
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2350,7 +3911,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000100;
+      bitField0_ |= 0x00000400;
       state_ = value.getNumber();
       onChanged();
       return this;
@@ -2365,7 +3926,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000100);
+      bitField0_ = (bitField0_ & ~0x00000400);
       state_ = 0;
       onChanged();
       return this;

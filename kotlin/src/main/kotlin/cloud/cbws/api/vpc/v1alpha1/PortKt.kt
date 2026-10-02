@@ -336,6 +336,109 @@ public object PortKt {
 
     /**
      * ```
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * ```
+     *
+     * `.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var ipv4Subnet: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet
+      @kotlin.jvm.JvmName("getIpv4Subnet")
+        get() = _builder.ipv4Subnet
+      @kotlin.jvm.JvmName("setIpv4Subnet")
+        set(value) {
+        _builder.ipv4Subnet = value
+      }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearIpv4Subnet() {
+      _builder.clearIpv4Subnet()
+    }
+    /**
+     * <pre>
+     * The subnet [ipv4_address][cbws.vpc.v1alpha1.Port.ipv4_address] is from,
+     * with what is needed to configure the address. Unset when the port has
+     * no IPv4 address.
+     *
+     * It is on the port so that the address can be configured from the port
+     * alone, without access to the private network's subnets.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv4_subnet = 10 [json_name = "ipv4Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the ipv4Subnet field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasIpv4Subnet(): kotlin.Boolean {
+      return _builder.hasIpv4Subnet()
+    }
+
+    public val PortKt.Dsl.ipv4SubnetOrNull: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet?
+      get() = _builder.ipv4SubnetOrNull
+
+    /**
+     * ```
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * ```
+     *
+     * `.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var ipv6Subnet: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet
+      @kotlin.jvm.JvmName("getIpv6Subnet")
+        get() = _builder.ipv6Subnet
+      @kotlin.jvm.JvmName("setIpv6Subnet")
+        set(value) {
+        _builder.ipv6Subnet = value
+      }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearIpv6Subnet() {
+      _builder.clearIpv6Subnet()
+    }
+    /**
+     * <pre>
+     * The subnet [ipv6_address][cbws.vpc.v1alpha1.Port.ipv6_address] is from,
+     * on the same terms as [ipv4_subnet][cbws.vpc.v1alpha1.Port.ipv4_subnet].
+     * Unset when the port has no IPv6 address.
+     * </pre>
+     *
+     * <code>.cbws.vpc.v1alpha1.Port.AddressSubnet ipv6_subnet = 11 [json_name = "ipv6Subnet", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the ipv6Subnet field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasIpv6Subnet(): kotlin.Boolean {
+      return _builder.hasIpv6Subnet()
+    }
+
+    public val PortKt.Dsl.ipv6SubnetOrNull: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet?
+      get() = _builder.ipv6SubnetOrNull
+
+    /**
+     * ```
      * The MAC address of the port, in lowercase with colons, such as
      * `02:00:5e:10:00:01`. It does not change for the life of the port.
      * ```
@@ -397,8 +500,141 @@ public object PortKt {
       _builder.clearState()
     }
   }
+  @kotlin.jvm.JvmName("-initializeaddressSubnet")
+  public inline fun addressSubnet(block: cloud.cbws.api.vpc.v1alpha1.PortKt.AddressSubnetKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet =
+    cloud.cbws.api.vpc.v1alpha1.PortKt.AddressSubnetKt.Dsl._create(cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.newBuilder()).apply { block() }._build()
+  /**
+   * ```
+   * The subnet one of the port's addresses is from.
+   * ```
+   *
+   * Protobuf type `cbws.vpc.v1alpha1.Port.AddressSubnet`
+   */
+  public object AddressSubnetKt {
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    @com.google.protobuf.kotlin.ProtoDslMarker
+    public class Dsl private constructor(
+      private val _builder: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder
+    ) {
+      public companion object {
+        @kotlin.jvm.JvmSynthetic
+    @kotlin.PublishedApi
+        internal fun _create(builder: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.Builder): Dsl = Dsl(builder)
+      }
+
+      @kotlin.jvm.JvmSynthetic
+  @kotlin.PublishedApi
+      internal fun _build(): cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet = _builder.build()
+
+      /**
+       * ```
+       * The resource name of the subnet, such as
+       * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+       * It gives no access to the subnet itself.
+       * ```
+       *
+       * `string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }`
+       */
+      public var subnet: kotlin.String
+        @kotlin.jvm.JvmName("getSubnet")
+          get() = _builder.subnet
+        @kotlin.jvm.JvmName("setSubnet")
+          set(value) {
+          _builder.subnet = value
+        }
+      /**
+       * <pre>
+       * The resource name of the subnet, such as
+       * `projects/other-project/vpcs/default/privateNetworks/shared/subnets/subnet-1`.
+       * It gives no access to the subnet itself.
+       * </pre>
+       *
+       * <code>string subnet = 1 [json_name = "subnet", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+       * @return This builder for chaining.
+       */
+      public fun clearSubnet() {
+        _builder.clearSubnet()
+      }
+
+      /**
+       * ```
+       * The prefix of the subnet in CIDR notation, such as
+       * `198.51.100.0/26`. Configure the address with this prefix length.
+       * Every address in the prefix is on-link.
+       * ```
+       *
+       * `string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];`
+       */
+      public var prefix: kotlin.String
+        @kotlin.jvm.JvmName("getPrefix")
+          get() = _builder.prefix
+        @kotlin.jvm.JvmName("setPrefix")
+          set(value) {
+          _builder.prefix = value
+        }
+      /**
+       * <pre>
+       * The prefix of the subnet in CIDR notation, such as
+       * `198.51.100.0/26`. Configure the address with this prefix length.
+       * Every address in the prefix is on-link.
+       * </pre>
+       *
+       * <code>string prefix = 2 [json_name = "prefix", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public fun clearPrefix() {
+        _builder.clearPrefix()
+      }
+
+      /**
+       * ```
+       * The gateway of the subnet, such as `198.51.100.1`. Point the
+       * default route for the address's family here.
+       *
+       * Empty when the subnet has no gateway. The address then has only its
+       * on-link prefix. Do not pick a gateway of your own, because any
+       * other address on the network may belong to someone else.
+       * ```
+       *
+       * `string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];`
+       */
+      public var gateway: kotlin.String
+        @kotlin.jvm.JvmName("getGateway")
+          get() = _builder.gateway
+        @kotlin.jvm.JvmName("setGateway")
+          set(value) {
+          _builder.gateway = value
+        }
+      /**
+       * <pre>
+       * The gateway of the subnet, such as `198.51.100.1`. Point the
+       * default route for the address's family here.
+       *
+       * Empty when the subnet has no gateway. The address then has only its
+       * on-link prefix. Do not pick a gateway of your own, because any
+       * other address on the network may belong to someone else.
+       * </pre>
+       *
+       * <code>string gateway = 3 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+       * @return This builder for chaining.
+       */
+      public fun clearGateway() {
+        _builder.clearGateway()
+      }
+    }
+  }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun cloud.cbws.api.vpc.v1alpha1.Port.copy(block: `cloud.cbws.api.vpc.v1alpha1`.PortKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.vpc.v1alpha1.Port =
   `cloud.cbws.api.vpc.v1alpha1`.PortKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+@kotlin.jvm.JvmSynthetic
+public inline fun cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet.copy(block: `cloud.cbws.api.vpc.v1alpha1`.PortKt.AddressSubnetKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet =
+  `cloud.cbws.api.vpc.v1alpha1`.PortKt.AddressSubnetKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val cloud.cbws.api.vpc.v1alpha1.PortOrBuilder.ipv4SubnetOrNull: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet?
+  get() = if (hasIpv4Subnet()) getIpv4Subnet() else null
+
+public val cloud.cbws.api.vpc.v1alpha1.PortOrBuilder.ipv6SubnetOrNull: cloud.cbws.api.vpc.v1alpha1.Port.AddressSubnet?
+  get() = if (hasIpv6Subnet()) getIpv6Subnet() else null
 
