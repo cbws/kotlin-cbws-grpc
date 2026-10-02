@@ -151,7 +151,7 @@ public interface MachineOrBuilder extends
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return A list containing the sshKeys.
    */
   java.util.List<java.lang.String>
@@ -164,7 +164,7 @@ public interface MachineOrBuilder extends
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The count of sshKeys.
    */
   int getSshKeysCount();
@@ -176,7 +176,7 @@ public interface MachineOrBuilder extends
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @param index The index of the element to return.
    * @return The sshKeys at the given index.
    */
@@ -189,7 +189,7 @@ public interface MachineOrBuilder extends
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @param index The index of the value to return.
    * @return The bytes of the sshKeys at the given index.
    */
@@ -205,7 +205,7 @@ public interface MachineOrBuilder extends
    * read the machine or its operations. Keep your own record of the userdata you sent.
    * </pre>
    *
-   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The userdata.
    */
   java.lang.String getUserdata();
@@ -218,7 +218,7 @@ public interface MachineOrBuilder extends
    * read the machine or its operations. Keep your own record of the userdata you sent.
    * </pre>
    *
-   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for userdata.
    */
   com.google.protobuf.ByteString

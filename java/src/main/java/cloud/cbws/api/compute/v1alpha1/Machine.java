@@ -626,7 +626,7 @@ private static final long serialVersionUID = 0L;
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return A list containing the sshKeys.
    */
   public com.google.protobuf.ProtocolStringList
@@ -641,7 +641,7 @@ private static final long serialVersionUID = 0L;
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The count of sshKeys.
    */
   public int getSshKeysCount() {
@@ -655,7 +655,7 @@ private static final long serialVersionUID = 0L;
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @param index The index of the element to return.
    * @return The sshKeys at the given index.
    */
@@ -670,7 +670,7 @@ private static final long serialVersionUID = 0L;
    * empty. Keep your own record of the keys you sent.
    * </pre>
    *
-   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @param index The index of the value to return.
    * @return The bytes of the sshKeys at the given index.
    */
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
    * read the machine or its operations. Keep your own record of the userdata you sent.
    * </pre>
    *
-   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The userdata.
    */
   @java.lang.Override
@@ -716,7 +716,7 @@ private static final long serialVersionUID = 0L;
    * read the machine or its operations. Keep your own record of the userdata you sent.
    * </pre>
    *
-   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
    * @return The bytes for userdata.
    */
   @java.lang.Override
@@ -1868,7 +1868,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return A list containing the sshKeys.
      */
     public com.google.protobuf.ProtocolStringList
@@ -1884,7 +1884,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The count of sshKeys.
      */
     public int getSshKeysCount() {
@@ -1898,7 +1898,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param index The index of the element to return.
      * @return The sshKeys at the given index.
      */
@@ -1913,7 +1913,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param index The index of the value to return.
      * @return The bytes of the sshKeys at the given index.
      */
@@ -1929,7 +1929,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param index The index to set the value at.
      * @param value The sshKeys to set.
      * @return This builder for chaining.
@@ -1951,7 +1951,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The sshKeys to add.
      * @return This builder for chaining.
      */
@@ -1972,7 +1972,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param values The sshKeys to add.
      * @return This builder for chaining.
      */
@@ -1993,7 +1993,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearSshKeys() {
@@ -2011,7 +2011,7 @@ private static final long serialVersionUID = 0L;
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes of the sshKeys to add.
      * @return This builder for chaining.
      */
@@ -2036,7 +2036,7 @@ private static final long serialVersionUID = 0L;
      * read the machine or its operations. Keep your own record of the userdata you sent.
      * </pre>
      *
-     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The userdata.
      */
     public java.lang.String getUserdata() {
@@ -2060,7 +2060,7 @@ private static final long serialVersionUID = 0L;
      * read the machine or its operations. Keep your own record of the userdata you sent.
      * </pre>
      *
-     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return The bytes for userdata.
      */
     public com.google.protobuf.ByteString
@@ -2085,7 +2085,7 @@ private static final long serialVersionUID = 0L;
      * read the machine or its operations. Keep your own record of the userdata you sent.
      * </pre>
      *
-     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The userdata to set.
      * @return This builder for chaining.
      */
@@ -2106,7 +2106,7 @@ private static final long serialVersionUID = 0L;
      * read the machine or its operations. Keep your own record of the userdata you sent.
      * </pre>
      *
-     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public Builder clearUserdata() {
@@ -2124,7 +2124,7 @@ private static final long serialVersionUID = 0L;
      * read the machine or its operations. Keep your own record of the userdata you sent.
      * </pre>
      *
-     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The bytes for userdata to set.
      * @return This builder for chaining.
      */

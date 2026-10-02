@@ -216,7 +216,7 @@ public object MachineKt {
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return A list containing the sshKeys.
      * @return This builder for chaining.
      */
@@ -233,7 +233,7 @@ public object MachineKt {
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The sshKeys to add.
      * @return This builder for chaining.
      */
@@ -250,7 +250,7 @@ public object MachineKt {
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param value The sshKeys to add.
      * @return This builder for chaining.
      */
@@ -268,7 +268,7 @@ public object MachineKt {
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param values The sshKeys to add.
      * @return This builder for chaining.
      */
@@ -285,7 +285,7 @@ public object MachineKt {
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param values The sshKeys to add.
      * @return This builder for chaining.
      */
@@ -303,7 +303,7 @@ public object MachineKt {
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @param index The index to set the value at.
      * @param value The sshKeys to set.
      * @return This builder for chaining.
@@ -320,7 +320,7 @@ public object MachineKt {
      * empty. Keep your own record of the keys you sent.
      * </pre>
      *
-     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>repeated string ssh_keys = 9 [json_name = "sshKeys", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic
@@ -337,7 +337,7 @@ public object MachineKt {
      * read the machine or its operations. Keep your own record of the userdata you sent.
      * ```
      *
-     * `string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];`
+     * `string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];`
      */
     public var userdata: kotlin.String
       @kotlin.jvm.JvmName("getUserdata")
@@ -355,7 +355,7 @@ public object MachineKt {
      * read the machine or its operations. Keep your own record of the userdata you sent.
      * </pre>
      *
-     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string userdata = 16 [json_name = "userdata", (.google.api.field_behavior) = INPUT_ONLY, (.google.api.field_behavior) = IMMUTABLE];</code>
      * @return This builder for chaining.
      */
     public fun clearUserdata() {
