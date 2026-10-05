@@ -173,6 +173,68 @@ public final class IAMServiceGrpc {
     return getGenerateAccessTokenMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.iam.v1alpha1.SignJwtRequest,
+      cloud.cbws.api.iam.v1alpha1.SignJwtResponse> getSignJwtMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SignJwt",
+      requestType = cloud.cbws.api.iam.v1alpha1.SignJwtRequest.class,
+      responseType = cloud.cbws.api.iam.v1alpha1.SignJwtResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.iam.v1alpha1.SignJwtRequest,
+      cloud.cbws.api.iam.v1alpha1.SignJwtResponse> getSignJwtMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.iam.v1alpha1.SignJwtRequest, cloud.cbws.api.iam.v1alpha1.SignJwtResponse> getSignJwtMethod;
+    if ((getSignJwtMethod = IAMServiceGrpc.getSignJwtMethod) == null) {
+      synchronized (IAMServiceGrpc.class) {
+        if ((getSignJwtMethod = IAMServiceGrpc.getSignJwtMethod) == null) {
+          IAMServiceGrpc.getSignJwtMethod = getSignJwtMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.iam.v1alpha1.SignJwtRequest, cloud.cbws.api.iam.v1alpha1.SignJwtResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SignJwt"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.v1alpha1.SignJwtRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.v1alpha1.SignJwtResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IAMServiceMethodDescriptorSupplier("SignJwt"))
+              .build();
+        }
+      }
+    }
+    return getSignJwtMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.iam.v1alpha1.SignBlobRequest,
+      cloud.cbws.api.iam.v1alpha1.SignBlobResponse> getSignBlobMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "SignBlob",
+      requestType = cloud.cbws.api.iam.v1alpha1.SignBlobRequest.class,
+      responseType = cloud.cbws.api.iam.v1alpha1.SignBlobResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.iam.v1alpha1.SignBlobRequest,
+      cloud.cbws.api.iam.v1alpha1.SignBlobResponse> getSignBlobMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.iam.v1alpha1.SignBlobRequest, cloud.cbws.api.iam.v1alpha1.SignBlobResponse> getSignBlobMethod;
+    if ((getSignBlobMethod = IAMServiceGrpc.getSignBlobMethod) == null) {
+      synchronized (IAMServiceGrpc.class) {
+        if ((getSignBlobMethod = IAMServiceGrpc.getSignBlobMethod) == null) {
+          IAMServiceGrpc.getSignBlobMethod = getSignBlobMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.iam.v1alpha1.SignBlobRequest, cloud.cbws.api.iam.v1alpha1.SignBlobResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "SignBlob"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.v1alpha1.SignBlobRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.iam.v1alpha1.SignBlobResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new IAMServiceMethodDescriptorSupplier("SignBlob"))
+              .build();
+        }
+      }
+    }
+    return getSignBlobMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.iam.v1alpha1.ListServiceAccountKeysRequest,
       cloud.cbws.api.iam.v1alpha1.ListServiceAccountKeysResponse> getListServiceAccountKeysMethod;
 
@@ -490,6 +552,34 @@ public final class IAMServiceGrpc {
 
     /**
      * <pre>
+     * Signs a JWT with one of the service account's system-managed keys, so
+     * that it verifies against the account's published key set. Requires
+     * `iam.cbws.xyz/ServiceAccount/signJwt` on the service account.
+     * The JWT header is `{"alg":"RS256","kid":"&lt;key_id&gt;","typ":"JWT"}`. The
+     * call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    default void signJwt(cloud.cbws.api.iam.v1alpha1.SignJwtRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.v1alpha1.SignJwtResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSignJwtMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Signs a blob with one of the service account's system-managed keys.
+     * Requires `iam.cbws.xyz/ServiceAccount/signBlob` on the service account.
+     * The call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    default void signBlob(cloud.cbws.api.iam.v1alpha1.SignBlobRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.v1alpha1.SignBlobResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getSignBlobMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the keys of a service account, newest first. Requires
      * `iam.cbws.xyz/ServiceAccountKey/list` on the service account.
      * A key is listed once its validity has started. The listed keys carry
@@ -681,6 +771,36 @@ public final class IAMServiceGrpc {
 
     /**
      * <pre>
+     * Signs a JWT with one of the service account's system-managed keys, so
+     * that it verifies against the account's published key set. Requires
+     * `iam.cbws.xyz/ServiceAccount/signJwt` on the service account.
+     * The JWT header is `{"alg":"RS256","kid":"&lt;key_id&gt;","typ":"JWT"}`. The
+     * call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public void signJwt(cloud.cbws.api.iam.v1alpha1.SignJwtRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.v1alpha1.SignJwtResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSignJwtMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Signs a blob with one of the service account's system-managed keys.
+     * Requires `iam.cbws.xyz/ServiceAccount/signBlob` on the service account.
+     * The call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public void signBlob(cloud.cbws.api.iam.v1alpha1.SignBlobRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.iam.v1alpha1.SignBlobResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getSignBlobMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the keys of a service account, newest first. Requires
      * `iam.cbws.xyz/ServiceAccountKey/list` on the service account.
      * A key is listed once its validity has started. The listed keys carry
@@ -856,6 +976,34 @@ public final class IAMServiceGrpc {
 
     /**
      * <pre>
+     * Signs a JWT with one of the service account's system-managed keys, so
+     * that it verifies against the account's published key set. Requires
+     * `iam.cbws.xyz/ServiceAccount/signJwt` on the service account.
+     * The JWT header is `{"alg":"RS256","kid":"&lt;key_id&gt;","typ":"JWT"}`. The
+     * call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public cloud.cbws.api.iam.v1alpha1.SignJwtResponse signJwt(cloud.cbws.api.iam.v1alpha1.SignJwtRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSignJwtMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Signs a blob with one of the service account's system-managed keys.
+     * Requires `iam.cbws.xyz/ServiceAccount/signBlob` on the service account.
+     * The call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public cloud.cbws.api.iam.v1alpha1.SignBlobResponse signBlob(cloud.cbws.api.iam.v1alpha1.SignBlobRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getSignBlobMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists the keys of a service account, newest first. Requires
      * `iam.cbws.xyz/ServiceAccountKey/list` on the service account.
      * A key is listed once its validity has started. The listed keys carry
@@ -1021,6 +1169,34 @@ public final class IAMServiceGrpc {
     public cloud.cbws.api.iam.v1alpha1.GenerateAccessTokenResponse generateAccessToken(cloud.cbws.api.iam.v1alpha1.GenerateAccessTokenRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGenerateAccessTokenMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Signs a JWT with one of the service account's system-managed keys, so
+     * that it verifies against the account's published key set. Requires
+     * `iam.cbws.xyz/ServiceAccount/signJwt` on the service account.
+     * The JWT header is `{"alg":"RS256","kid":"&lt;key_id&gt;","typ":"JWT"}`. The
+     * call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public cloud.cbws.api.iam.v1alpha1.SignJwtResponse signJwt(cloud.cbws.api.iam.v1alpha1.SignJwtRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSignJwtMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Signs a blob with one of the service account's system-managed keys.
+     * Requires `iam.cbws.xyz/ServiceAccount/signBlob` on the service account.
+     * The call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public cloud.cbws.api.iam.v1alpha1.SignBlobResponse signBlob(cloud.cbws.api.iam.v1alpha1.SignBlobRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getSignBlobMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1199,6 +1375,36 @@ public final class IAMServiceGrpc {
 
     /**
      * <pre>
+     * Signs a JWT with one of the service account's system-managed keys, so
+     * that it verifies against the account's published key set. Requires
+     * `iam.cbws.xyz/ServiceAccount/signJwt` on the service account.
+     * The JWT header is `{"alg":"RS256","kid":"&lt;key_id&gt;","typ":"JWT"}`. The
+     * call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.iam.v1alpha1.SignJwtResponse> signJwt(
+        cloud.cbws.api.iam.v1alpha1.SignJwtRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSignJwtMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Signs a blob with one of the service account's system-managed keys.
+     * Requires `iam.cbws.xyz/ServiceAccount/signBlob` on the service account.
+     * The call fails with FAILED_PRECONDITION when the account has no
+     * system-managed key that stays valid for at least another hour.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.iam.v1alpha1.SignBlobResponse> signBlob(
+        cloud.cbws.api.iam.v1alpha1.SignBlobRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getSignBlobMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists the keys of a service account, newest first. Requires
      * `iam.cbws.xyz/ServiceAccountKey/list` on the service account.
      * A key is listed once its validity has started. The listed keys carry
@@ -1295,12 +1501,14 @@ public final class IAMServiceGrpc {
   private static final int METHODID_CREATE_SERVICE_ACCOUNT = 2;
   private static final int METHODID_DELETE_SERVICE_ACCOUNT = 3;
   private static final int METHODID_GENERATE_ACCESS_TOKEN = 4;
-  private static final int METHODID_LIST_SERVICE_ACCOUNT_KEYS = 5;
-  private static final int METHODID_GET_SERVICE_ACCOUNT_KEY = 6;
-  private static final int METHODID_CREATE_SERVICE_ACCOUNT_KEY = 7;
-  private static final int METHODID_DELETE_SERVICE_ACCOUNT_KEY = 8;
-  private static final int METHODID_GET_POLICY = 9;
-  private static final int METHODID_SET_POLICY = 10;
+  private static final int METHODID_SIGN_JWT = 5;
+  private static final int METHODID_SIGN_BLOB = 6;
+  private static final int METHODID_LIST_SERVICE_ACCOUNT_KEYS = 7;
+  private static final int METHODID_GET_SERVICE_ACCOUNT_KEY = 8;
+  private static final int METHODID_CREATE_SERVICE_ACCOUNT_KEY = 9;
+  private static final int METHODID_DELETE_SERVICE_ACCOUNT_KEY = 10;
+  private static final int METHODID_GET_POLICY = 11;
+  private static final int METHODID_SET_POLICY = 12;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1338,6 +1546,14 @@ public final class IAMServiceGrpc {
         case METHODID_GENERATE_ACCESS_TOKEN:
           serviceImpl.generateAccessToken((cloud.cbws.api.iam.v1alpha1.GenerateAccessTokenRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.iam.v1alpha1.GenerateAccessTokenResponse>) responseObserver);
+          break;
+        case METHODID_SIGN_JWT:
+          serviceImpl.signJwt((cloud.cbws.api.iam.v1alpha1.SignJwtRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.iam.v1alpha1.SignJwtResponse>) responseObserver);
+          break;
+        case METHODID_SIGN_BLOB:
+          serviceImpl.signBlob((cloud.cbws.api.iam.v1alpha1.SignBlobRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.iam.v1alpha1.SignBlobResponse>) responseObserver);
           break;
         case METHODID_LIST_SERVICE_ACCOUNT_KEYS:
           serviceImpl.listServiceAccountKeys((cloud.cbws.api.iam.v1alpha1.ListServiceAccountKeysRequest) request,
@@ -1416,6 +1632,20 @@ public final class IAMServiceGrpc {
               cloud.cbws.api.iam.v1alpha1.GenerateAccessTokenRequest,
               cloud.cbws.api.iam.v1alpha1.GenerateAccessTokenResponse>(
                 service, METHODID_GENERATE_ACCESS_TOKEN)))
+        .addMethod(
+          getSignJwtMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.iam.v1alpha1.SignJwtRequest,
+              cloud.cbws.api.iam.v1alpha1.SignJwtResponse>(
+                service, METHODID_SIGN_JWT)))
+        .addMethod(
+          getSignBlobMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.iam.v1alpha1.SignBlobRequest,
+              cloud.cbws.api.iam.v1alpha1.SignBlobResponse>(
+                service, METHODID_SIGN_BLOB)))
         .addMethod(
           getListServiceAccountKeysMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -1511,6 +1741,8 @@ public final class IAMServiceGrpc {
               .addMethod(getCreateServiceAccountMethod())
               .addMethod(getDeleteServiceAccountMethod())
               .addMethod(getGenerateAccessTokenMethod())
+              .addMethod(getSignJwtMethod())
+              .addMethod(getSignBlobMethod())
               .addMethod(getListServiceAccountKeysMethod())
               .addMethod(getGetServiceAccountKeyMethod())
               .addMethod(getCreateServiceAccountKeyMethod())

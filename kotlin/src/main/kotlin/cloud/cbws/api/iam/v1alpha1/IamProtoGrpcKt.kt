@@ -59,6 +59,14 @@ public object IAMServiceGrpcKt {
     @JvmStatic
     get() = IAMServiceGrpc.getGenerateAccessTokenMethod()
 
+  public val signJwtMethod: MethodDescriptor<SignJwtRequest, SignJwtResponse>
+    @JvmStatic
+    get() = IAMServiceGrpc.getSignJwtMethod()
+
+  public val signBlobMethod: MethodDescriptor<SignBlobRequest, SignBlobResponse>
+    @JvmStatic
+    get() = IAMServiceGrpc.getSignBlobMethod()
+
   public val listServiceAccountKeysMethod:
       MethodDescriptor<ListServiceAccountKeysRequest, ListServiceAccountKeysResponse>
     @JvmStatic
@@ -191,6 +199,46 @@ public object IAMServiceGrpcKt {
     public suspend fun generateAccessToken(request: GenerateAccessTokenRequest, headers: Metadata = Metadata()): GenerateAccessTokenResponse = unaryRpc(
       channel,
       IAMServiceGrpc.getGenerateAccessTokenMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun signJwt(request: SignJwtRequest, headers: Metadata = Metadata()): SignJwtResponse = unaryRpc(
+      channel,
+      IAMServiceGrpc.getSignJwtMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun signBlob(request: SignBlobRequest, headers: Metadata = Metadata()): SignBlobResponse = unaryRpc(
+      channel,
+      IAMServiceGrpc.getSignBlobMethod(),
       request,
       callOptions,
       headers
@@ -384,6 +432,30 @@ public object IAMServiceGrpcKt {
     public open suspend fun generateAccessToken(request: GenerateAccessTokenRequest): GenerateAccessTokenResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.iam.v1alpha1.IAMService.GenerateAccessToken is unimplemented"))
 
     /**
+     * Returns the response to an RPC for cbws.iam.v1alpha1.IAMService.SignJwt.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun signJwt(request: SignJwtRequest): SignJwtResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.iam.v1alpha1.IAMService.SignJwt is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for cbws.iam.v1alpha1.IAMService.SignBlob.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun signBlob(request: SignBlobRequest): SignBlobResponse = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.iam.v1alpha1.IAMService.SignBlob is unimplemented"))
+
+    /**
      * Returns the response to an RPC for cbws.iam.v1alpha1.IAMService.ListServiceAccountKeys.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
@@ -480,6 +552,16 @@ public object IAMServiceGrpcKt {
       context = this.context,
       descriptor = IAMServiceGrpc.getGenerateAccessTokenMethod(),
       implementation = ::generateAccessToken
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = IAMServiceGrpc.getSignJwtMethod(),
+      implementation = ::signJwt
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = IAMServiceGrpc.getSignBlobMethod(),
+      implementation = ::signBlob
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
