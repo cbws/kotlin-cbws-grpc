@@ -394,6 +394,56 @@ public object MachineKt {
 
     /**
      * ```
+     * The email of the service account the machine runs as, such as
+     * `my-account@my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+     * from the metadata service. Empty means the machine runs as no service account, and the
+     * metadata service issues no tokens.
+     *
+     * A machine runs as one service account at most. To act as another, software on the machine
+     * uses this account's token to request one for the other account from IAM, which that account
+     * must be allowed to do.
+     *
+     * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+     * to the permission on the machine. The account may live in another project, provided that
+     * project's owner allows the Compute service agent of the machine's project to generate access
+     * tokens for it.
+     * ```
+     *
+     * `string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];`
+     */
+    public var serviceAccount: kotlin.String
+      @kotlin.jvm.JvmName("getServiceAccount")
+        get() = _builder.serviceAccount
+      @kotlin.jvm.JvmName("setServiceAccount")
+        set(value) {
+        _builder.serviceAccount = value
+      }
+    /**
+     * <pre>
+     * The email of the service account the machine runs as, such as
+     * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+     * from the metadata service. Empty means the machine runs as no service account, and the
+     * metadata service issues no tokens.
+     *
+     * A machine runs as one service account at most. To act as another, software on the machine
+     * uses this account's token to request one for the other account from IAM, which that account
+     * must be allowed to do.
+     *
+     * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+     * to the permission on the machine. The account may live in another project, provided that
+     * project's owner allows the Compute service agent of the machine's project to generate access
+     * tokens for it.
+     * </pre>
+     *
+     * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearServiceAccount() {
+      _builder.clearServiceAccount()
+    }
+
+    /**
+     * ```
      * The current state of the machine. Unset when the request's read mask
      * leaves out `status`.
      * ```

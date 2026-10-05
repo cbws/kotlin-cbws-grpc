@@ -41,6 +41,7 @@ private static final long serialVersionUID = 0L;
     sshKeys_ =
         com.google.protobuf.LazyStringArrayList.emptyList();
     userdata_ = "";
+    serviceAccount_ = "";
     state_ = 0;
   }
 
@@ -786,6 +787,77 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int SERVICE_ACCOUNT_FIELD_NUMBER = 18;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object serviceAccount_ = "";
+  /**
+   * <pre>
+   * The email of the service account the machine runs as, such as
+   * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+   * from the metadata service. Empty means the machine runs as no service account, and the
+   * metadata service issues no tokens.
+   *
+   * A machine runs as one service account at most. To act as another, software on the machine
+   * uses this account's token to request one for the other account from IAM, which that account
+   * must be allowed to do.
+   *
+   * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+   * to the permission on the machine. The account may live in another project, provided that
+   * project's owner allows the Compute service agent of the machine's project to generate access
+   * tokens for it.
+   * </pre>
+   *
+   * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The serviceAccount.
+   */
+  @java.lang.Override
+  public java.lang.String getServiceAccount() {
+    java.lang.Object ref = serviceAccount_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      serviceAccount_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The email of the service account the machine runs as, such as
+   * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+   * from the metadata service. Empty means the machine runs as no service account, and the
+   * metadata service issues no tokens.
+   *
+   * A machine runs as one service account at most. To act as another, software on the machine
+   * uses this account's token to request one for the other account from IAM, which that account
+   * must be allowed to do.
+   *
+   * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+   * to the permission on the machine. The account may live in another project, provided that
+   * project's owner allows the Compute service agent of the machine's project to generate access
+   * tokens for it.
+   * </pre>
+   *
+   * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for serviceAccount.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getServiceAccountBytes() {
+    java.lang.Object ref = serviceAccount_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      serviceAccount_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int STATE_FIELD_NUMBER = 8;
   private int state_ = 0;
   /**
@@ -858,6 +930,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ipv6Address_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 17, ipv6Address_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(serviceAccount_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 18, serviceAccount_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -903,6 +978,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(ipv6Address_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(17, ipv6Address_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(serviceAccount_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(18, serviceAccount_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -936,6 +1014,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getSshKeysList())) return false;
     if (!getUserdata()
         .equals(other.getUserdata())) return false;
+    if (!getServiceAccount()
+        .equals(other.getServiceAccount())) return false;
     if (state_ != other.state_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
@@ -968,6 +1048,8 @@ private static final long serialVersionUID = 0L;
     }
     hash = (37 * hash) + USERDATA_FIELD_NUMBER;
     hash = (53 * hash) + getUserdata().hashCode();
+    hash = (37 * hash) + SERVICE_ACCOUNT_FIELD_NUMBER;
+    hash = (53 * hash) + getServiceAccount().hashCode();
     hash = (37 * hash) + STATE_FIELD_NUMBER;
     hash = (53 * hash) + state_;
     hash = (29 * hash) + getUnknownFields().hashCode();
@@ -1115,6 +1197,7 @@ private static final long serialVersionUID = 0L;
       sshKeys_ =
           com.google.protobuf.LazyStringArrayList.emptyList();
       userdata_ = "";
+      serviceAccount_ = "";
       state_ = 0;
       return this;
     }
@@ -1178,6 +1261,9 @@ private static final long serialVersionUID = 0L;
         result.userdata_ = userdata_;
       }
       if (((from_bitField0_ & 0x00000200) != 0)) {
+        result.serviceAccount_ = serviceAccount_;
+      }
+      if (((from_bitField0_ & 0x00000400) != 0)) {
         result.state_ = state_;
       }
     }
@@ -1244,6 +1330,11 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000100;
         onChanged();
       }
+      if (!other.getServiceAccount().isEmpty()) {
+        serviceAccount_ = other.serviceAccount_;
+        bitField0_ |= 0x00000200;
+        onChanged();
+      }
       if (other.state_ != 0) {
         setStateValue(other.getStateValue());
       }
@@ -1300,7 +1391,7 @@ private static final long serialVersionUID = 0L;
             } // case 58
             case 64: {
               state_ = input.readEnum();
-              bitField0_ |= 0x00000200;
+              bitField0_ |= 0x00000400;
               break;
             } // case 64
             case 74: {
@@ -1324,6 +1415,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000040;
               break;
             } // case 138
+            case 146: {
+              serviceAccount_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000200;
+              break;
+            } // case 146
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2316,6 +2412,158 @@ private static final long serialVersionUID = 0L;
       return this;
     }
 
+    private java.lang.Object serviceAccount_ = "";
+    /**
+     * <pre>
+     * The email of the service account the machine runs as, such as
+     * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+     * from the metadata service. Empty means the machine runs as no service account, and the
+     * metadata service issues no tokens.
+     *
+     * A machine runs as one service account at most. To act as another, software on the machine
+     * uses this account's token to request one for the other account from IAM, which that account
+     * must be allowed to do.
+     *
+     * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+     * to the permission on the machine. The account may live in another project, provided that
+     * project's owner allows the Compute service agent of the machine's project to generate access
+     * tokens for it.
+     * </pre>
+     *
+     * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The serviceAccount.
+     */
+    public java.lang.String getServiceAccount() {
+      java.lang.Object ref = serviceAccount_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        serviceAccount_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The email of the service account the machine runs as, such as
+     * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+     * from the metadata service. Empty means the machine runs as no service account, and the
+     * metadata service issues no tokens.
+     *
+     * A machine runs as one service account at most. To act as another, software on the machine
+     * uses this account's token to request one for the other account from IAM, which that account
+     * must be allowed to do.
+     *
+     * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+     * to the permission on the machine. The account may live in another project, provided that
+     * project's owner allows the Compute service agent of the machine's project to generate access
+     * tokens for it.
+     * </pre>
+     *
+     * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The bytes for serviceAccount.
+     */
+    public com.google.protobuf.ByteString
+        getServiceAccountBytes() {
+      java.lang.Object ref = serviceAccount_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        serviceAccount_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The email of the service account the machine runs as, such as
+     * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+     * from the metadata service. Empty means the machine runs as no service account, and the
+     * metadata service issues no tokens.
+     *
+     * A machine runs as one service account at most. To act as another, software on the machine
+     * uses this account's token to request one for the other account from IAM, which that account
+     * must be allowed to do.
+     *
+     * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+     * to the permission on the machine. The account may live in another project, provided that
+     * project's owner allows the Compute service agent of the machine's project to generate access
+     * tokens for it.
+     * </pre>
+     *
+     * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The serviceAccount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceAccount(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      serviceAccount_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The email of the service account the machine runs as, such as
+     * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+     * from the metadata service. Empty means the machine runs as no service account, and the
+     * metadata service issues no tokens.
+     *
+     * A machine runs as one service account at most. To act as another, software on the machine
+     * uses this account's token to request one for the other account from IAM, which that account
+     * must be allowed to do.
+     *
+     * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+     * to the permission on the machine. The account may live in another project, provided that
+     * project's owner allows the Compute service agent of the machine's project to generate access
+     * tokens for it.
+     * </pre>
+     *
+     * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearServiceAccount() {
+      serviceAccount_ = getDefaultInstance().getServiceAccount();
+      bitField0_ = (bitField0_ & ~0x00000200);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The email of the service account the machine runs as, such as
+     * `my-account&#64;my-project.iam-sa.cbws.xyz`. Software on the machine gets access tokens for it
+     * from the metadata service. Empty means the machine runs as no service account, and the
+     * metadata service issues no tokens.
+     *
+     * A machine runs as one service account at most. To act as another, software on the machine
+     * uses this account's token to request one for the other account from IAM, which that account
+     * must be allowed to do.
+     *
+     * Setting it requires `iam.cbws.xyz/ServiceAccount/actAs` on the service account, in addition
+     * to the permission on the machine. The account may live in another project, provided that
+     * project's owner allows the Compute service agent of the machine's project to generate access
+     * tokens for it.
+     * </pre>
+     *
+     * <code>string service_account = 18 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The bytes for serviceAccount to set.
+     * @return This builder for chaining.
+     */
+    public Builder setServiceAccountBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      serviceAccount_ = value;
+      bitField0_ |= 0x00000200;
+      onChanged();
+      return this;
+    }
+
     private int state_ = 0;
     /**
      * <pre>
@@ -2341,7 +2589,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder setStateValue(int value) {
       state_ = value;
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       onChanged();
       return this;
     }
@@ -2373,7 +2621,7 @@ private static final long serialVersionUID = 0L;
       if (value == null) {
         throw new NullPointerException();
       }
-      bitField0_ |= 0x00000200;
+      bitField0_ |= 0x00000400;
       state_ = value.getNumber();
       onChanged();
       return this;
@@ -2388,7 +2636,7 @@ private static final long serialVersionUID = 0L;
      * @return This builder for chaining.
      */
     public Builder clearState() {
-      bitField0_ = (bitField0_ & ~0x00000200);
+      bitField0_ = (bitField0_ & ~0x00000400);
       state_ = 0;
       onChanged();
       return this;
