@@ -31,9 +31,97 @@ public object ResetMachineMetadataKt {
     @kotlin.jvm.JvmSynthetic
   @kotlin.PublishedApi
     internal fun _build(): cloud.cbws.api.compute.v1alpha1.ResetMachineMetadata = _builder.build()
+
+    /**
+     * ```
+     * When the operation was created. Unset where the time is not known.
+     * ```
+     *
+     * `.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var createTime: com.google.protobuf.Timestamp
+      @kotlin.jvm.JvmName("getCreateTime")
+        get() = _builder.createTime
+      @kotlin.jvm.JvmName("setCreateTime")
+        set(value) {
+        _builder.createTime = value
+      }
+    /**
+     * <pre>
+     * When the operation was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearCreateTime() {
+      _builder.clearCreateTime()
+    }
+    /**
+     * <pre>
+     * When the operation was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the createTime field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasCreateTime(): kotlin.Boolean {
+      return _builder.hasCreateTime()
+    }
+
+    public val ResetMachineMetadataKt.Dsl.createTimeOrNull: com.google.protobuf.Timestamp?
+      get() = _builder.createTimeOrNull
+
+    /**
+     * ```
+     * When the operation finished, successfully or not. Unset while it runs.
+     * ```
+     *
+     * `.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var endTime: com.google.protobuf.Timestamp
+      @kotlin.jvm.JvmName("getEndTime")
+        get() = _builder.endTime
+      @kotlin.jvm.JvmName("setEndTime")
+        set(value) {
+        _builder.endTime = value
+      }
+    /**
+     * <pre>
+     * When the operation finished, successfully or not. Unset while it runs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearEndTime() {
+      _builder.clearEndTime()
+    }
+    /**
+     * <pre>
+     * When the operation finished, successfully or not. Unset while it runs.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the endTime field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasEndTime(): kotlin.Boolean {
+      return _builder.hasEndTime()
+    }
+
+    public val ResetMachineMetadataKt.Dsl.endTimeOrNull: com.google.protobuf.Timestamp?
+      get() = _builder.endTimeOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun cloud.cbws.api.compute.v1alpha1.ResetMachineMetadata.copy(block: `cloud.cbws.api.compute.v1alpha1`.ResetMachineMetadataKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.compute.v1alpha1.ResetMachineMetadata =
   `cloud.cbws.api.compute.v1alpha1`.ResetMachineMetadataKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val cloud.cbws.api.compute.v1alpha1.ResetMachineMetadataOrBuilder.createTimeOrNull: com.google.protobuf.Timestamp?
+  get() = if (hasCreateTime()) getCreateTime() else null
+
+public val cloud.cbws.api.compute.v1alpha1.ResetMachineMetadataOrBuilder.endTimeOrNull: com.google.protobuf.Timestamp?
+  get() = if (hasEndTime()) getEndTime() else null
 

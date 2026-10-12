@@ -8,4 +8,58 @@ package cloud.cbws.api.compute.v1alpha1;
 public interface StopMachineMetadataOrBuilder extends
     // @@protoc_insertion_point(interface_extends:cbws.compute.v1alpha1.StopMachineMetadata)
     com.google.protobuf.MessageOrBuilder {
+
+  /**
+   * <pre>
+   * When the operation was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the createTime field is set.
+   */
+  boolean hasCreateTime();
+  /**
+   * <pre>
+   * When the operation was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The createTime.
+   */
+  com.google.protobuf.Timestamp getCreateTime();
+  /**
+   * <pre>
+   * When the operation was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * When the operation finished, successfully or not. Unset while it runs.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the endTime field is set.
+   */
+  boolean hasEndTime();
+  /**
+   * <pre>
+   * When the operation finished, successfully or not. Unset while it runs.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The endTime.
+   */
+  com.google.protobuf.Timestamp getEndTime();
+  /**
+   * <pre>
+   * When the operation finished, successfully or not. Unset while it runs.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getEndTimeOrBuilder();
 }
