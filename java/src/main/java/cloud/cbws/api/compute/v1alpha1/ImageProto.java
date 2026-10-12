@@ -30,6 +30,11 @@ public final class ImageProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_compute_v1alpha1_Image_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_compute_v1alpha1_ImageFamily_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_compute_v1alpha1_ImageFamily_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -45,12 +50,15 @@ public final class ImageProto {
       "\001\n\005Image\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006pa" +
       "rent\030\002 \001(\tB\004\342A\001\005R\006parent\022\034\n\006family\030\003 \001(\t" +
       "B\004\342A\001\005R\006family:?\352A<\n\030compute.cbws.cloud/" +
-      "Image\022 projects/{project}/images/{name}B" +
-      "\243\001\n\037cloud.cbws.api.compute.v1alpha1B\nIma" +
-      "geProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alpha1\312" +
-      "\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\Compute\\V" +
-      "1alpha1\\GPBMetadata\352\002\027Cbws::Compute::V1a" +
-      "lpha1b\006proto3"
+      "Image\022 projects/{project}/images/{name}\"" +
+      "\220\001\n\013ImageFamily\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004nam" +
+      "e\022\034\n\006parent\030\002 \001(\tB\004\342A\001\005R\006parent:I\352AF\n\036co" +
+      "mpute.cbws.cloud/ImageFamily\022$projects/{" +
+      "project}/families/{family}B\243\001\n\037cloud.cbw" +
+      "s.api.compute.v1alpha1B\nImageProtoP\001\242\002\003C" +
+      "CX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws\\Comput" +
+      "e\\V1alpha1\342\002!Cbws\\Compute\\V1alpha1\\GPBMe" +
+      "tadata\352\002\027Cbws::Compute::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -64,6 +72,12 @@ public final class ImageProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_Image_descriptor,
         new java.lang.String[] { "Name", "Parent", "Family", });
+    internal_static_cbws_compute_v1alpha1_ImageFamily_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_cbws_compute_v1alpha1_ImageFamily_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_compute_v1alpha1_ImageFamily_descriptor,
+        new java.lang.String[] { "Name", "Parent", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();

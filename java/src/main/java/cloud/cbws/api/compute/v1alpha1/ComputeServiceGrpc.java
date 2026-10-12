@@ -450,6 +450,99 @@ public final class ComputeServiceGrpc {
     return getGetImageMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest,
+      cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse> getListImageFamiliesMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "ListImageFamilies",
+      requestType = cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest.class,
+      responseType = cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest,
+      cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse> getListImageFamiliesMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest, cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse> getListImageFamiliesMethod;
+    if ((getListImageFamiliesMethod = ComputeServiceGrpc.getListImageFamiliesMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getListImageFamiliesMethod = ComputeServiceGrpc.getListImageFamiliesMethod) == null) {
+          ComputeServiceGrpc.getListImageFamiliesMethod = getListImageFamiliesMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest, cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "ListImageFamilies"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("ListImageFamilies"))
+              .build();
+        }
+      }
+    }
+    return getListImageFamiliesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest,
+      cloud.cbws.api.compute.v1alpha1.ImageFamily> getGetImageFamilyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetImageFamily",
+      requestType = cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest.class,
+      responseType = cloud.cbws.api.compute.v1alpha1.ImageFamily.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest,
+      cloud.cbws.api.compute.v1alpha1.ImageFamily> getGetImageFamilyMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest, cloud.cbws.api.compute.v1alpha1.ImageFamily> getGetImageFamilyMethod;
+    if ((getGetImageFamilyMethod = ComputeServiceGrpc.getGetImageFamilyMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getGetImageFamilyMethod = ComputeServiceGrpc.getGetImageFamilyMethod) == null) {
+          ComputeServiceGrpc.getGetImageFamilyMethod = getGetImageFamilyMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest, cloud.cbws.api.compute.v1alpha1.ImageFamily>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetImageFamily"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.ImageFamily.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("GetImageFamily"))
+              .build();
+        }
+      }
+    }
+    return getGetImageFamilyMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest,
+      cloud.cbws.api.compute.v1alpha1.Image> getGetImageFromFamilyMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetImageFromFamily",
+      requestType = cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest.class,
+      responseType = cloud.cbws.api.compute.v1alpha1.Image.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest,
+      cloud.cbws.api.compute.v1alpha1.Image> getGetImageFromFamilyMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest, cloud.cbws.api.compute.v1alpha1.Image> getGetImageFromFamilyMethod;
+    if ((getGetImageFromFamilyMethod = ComputeServiceGrpc.getGetImageFromFamilyMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getGetImageFromFamilyMethod = ComputeServiceGrpc.getGetImageFromFamilyMethod) == null) {
+          ComputeServiceGrpc.getGetImageFromFamilyMethod = getGetImageFromFamilyMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest, cloud.cbws.api.compute.v1alpha1.Image>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetImageFromFamily"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.Image.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("GetImageFromFamily"))
+              .build();
+        }
+      }
+    }
+    return getGetImageFromFamilyMethod;
+  }
+
   /**
    * Creates a new async stub that supports all call types for the service
    */
@@ -660,6 +753,37 @@ public final class ComputeServiceGrpc {
         io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetImageMethod(), responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists the image families in a project.
+     * </pre>
+     */
+    default void listImageFamilies(cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListImageFamiliesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets an image family.
+     * </pre>
+     */
+    default void getImageFamily(cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ImageFamily> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetImageFamilyMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the image a machine of the given type would boot from the family
+     * right now.
+     * </pre>
+     */
+    default void getImageFromFamily(cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetImageFromFamilyMethod(), responseObserver);
+    }
   }
 
   /**
@@ -854,6 +978,40 @@ public final class ComputeServiceGrpc {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getGetImageMethod(), getCallOptions()), request, responseObserver);
     }
+
+    /**
+     * <pre>
+     * Lists the image families in a project.
+     * </pre>
+     */
+    public void listImageFamilies(cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getListImageFamiliesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets an image family.
+     * </pre>
+     */
+    public void getImageFamily(cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ImageFamily> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetImageFamilyMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Returns the image a machine of the given type would boot from the family
+     * right now.
+     * </pre>
+     */
+    public void getImageFromFamily(cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetImageFromFamilyMethod(), getCallOptions()), request, responseObserver);
+    }
   }
 
   /**
@@ -1019,6 +1177,37 @@ public final class ComputeServiceGrpc {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getGetImageMethod(), getCallOptions(), request);
     }
+
+    /**
+     * <pre>
+     * Lists the image families in a project.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse listImageFamilies(cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getListImageFamiliesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets an image family.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.ImageFamily getImageFamily(cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetImageFamilyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the image a machine of the given type would boot from the family
+     * right now.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.Image getImageFromFamily(cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetImageFromFamilyMethod(), getCallOptions(), request);
+    }
   }
 
   /**
@@ -1183,6 +1372,37 @@ public final class ComputeServiceGrpc {
     public cloud.cbws.api.compute.v1alpha1.Image getImage(cloud.cbws.api.compute.v1alpha1.GetImageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Lists the image families in a project.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse listImageFamilies(cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getListImageFamiliesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets an image family.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.ImageFamily getImageFamily(cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetImageFamilyMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the image a machine of the given type would boot from the family
+     * right now.
+     * </pre>
+     */
+    public cloud.cbws.api.compute.v1alpha1.Image getImageFromFamily(cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetImageFromFamilyMethod(), getCallOptions(), request);
     }
   }
 
@@ -1363,6 +1583,40 @@ public final class ComputeServiceGrpc {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getGetImageMethod(), getCallOptions()), request);
     }
+
+    /**
+     * <pre>
+     * Lists the image families in a project.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse> listImageFamilies(
+        cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getListImageFamiliesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets an image family.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.compute.v1alpha1.ImageFamily> getImageFamily(
+        cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetImageFamilyMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Returns the image a machine of the given type would boot from the family
+     * right now.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.compute.v1alpha1.Image> getImageFromFamily(
+        cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetImageFromFamilyMethod(), getCallOptions()), request);
+    }
   }
 
   private static final int METHODID_LIST_MACHINES = 0;
@@ -1379,6 +1633,9 @@ public final class ComputeServiceGrpc {
   private static final int METHODID_GET_MACHINE_TYPE = 11;
   private static final int METHODID_LIST_IMAGES = 12;
   private static final int METHODID_GET_IMAGE = 13;
+  private static final int METHODID_LIST_IMAGE_FAMILIES = 14;
+  private static final int METHODID_GET_IMAGE_FAMILY = 15;
+  private static final int METHODID_GET_IMAGE_FROM_FAMILY = 16;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1451,6 +1708,18 @@ public final class ComputeServiceGrpc {
           break;
         case METHODID_GET_IMAGE:
           serviceImpl.getImage((cloud.cbws.api.compute.v1alpha1.GetImageRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image>) responseObserver);
+          break;
+        case METHODID_LIST_IMAGE_FAMILIES:
+          serviceImpl.listImageFamilies((cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse>) responseObserver);
+          break;
+        case METHODID_GET_IMAGE_FAMILY:
+          serviceImpl.getImageFamily((cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.ImageFamily>) responseObserver);
+          break;
+        case METHODID_GET_IMAGE_FROM_FAMILY:
+          serviceImpl.getImageFromFamily((cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image>) responseObserver);
           break;
         default:
@@ -1569,6 +1838,27 @@ public final class ComputeServiceGrpc {
               cloud.cbws.api.compute.v1alpha1.GetImageRequest,
               cloud.cbws.api.compute.v1alpha1.Image>(
                 service, METHODID_GET_IMAGE)))
+        .addMethod(
+          getListImageFamiliesMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest,
+              cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse>(
+                service, METHODID_LIST_IMAGE_FAMILIES)))
+        .addMethod(
+          getGetImageFamilyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.GetImageFamilyRequest,
+              cloud.cbws.api.compute.v1alpha1.ImageFamily>(
+                service, METHODID_GET_IMAGE_FAMILY)))
+        .addMethod(
+          getGetImageFromFamilyMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.GetImageFromFamilyRequest,
+              cloud.cbws.api.compute.v1alpha1.Image>(
+                service, METHODID_GET_IMAGE_FROM_FAMILY)))
         .build();
   }
 
@@ -1631,6 +1921,9 @@ public final class ComputeServiceGrpc {
               .addMethod(getGetMachineTypeMethod())
               .addMethod(getListImagesMethod())
               .addMethod(getGetImageMethod())
+              .addMethod(getListImageFamiliesMethod())
+              .addMethod(getGetImageFamilyMethod())
+              .addMethod(getGetImageFromFamilyMethod())
               .build();
         }
       }
