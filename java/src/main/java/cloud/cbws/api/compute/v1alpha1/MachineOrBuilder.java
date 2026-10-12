@@ -312,4 +312,34 @@ public interface MachineOrBuilder extends
    * @return The state.
    */
   cloud.cbws.api.compute.v1alpha1.Machine.State getState();
+
+  /**
+   * <pre>
+   * When the machine was created, which is when it was requested rather than when it first
+   * booted. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the createTime field is set.
+   */
+  boolean hasCreateTime();
+  /**
+   * <pre>
+   * When the machine was created, which is when it was requested rather than when it first
+   * booted. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The createTime.
+   */
+  com.google.protobuf.Timestamp getCreateTime();
+  /**
+   * <pre>
+   * When the machine was created, which is when it was requested rather than when it first
+   * booted. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
 }

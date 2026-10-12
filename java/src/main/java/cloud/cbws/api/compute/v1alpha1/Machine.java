@@ -320,6 +320,7 @@ private static final long serialVersionUID = 0L;
     // @@protoc_insertion_point(enum_scope:cbws.compute.v1alpha1.Machine.State)
   }
 
+  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
@@ -886,6 +887,47 @@ private static final long serialVersionUID = 0L;
     return result == null ? cloud.cbws.api.compute.v1alpha1.Machine.State.UNRECOGNIZED : result;
   }
 
+  public static final int CREATE_TIME_FIELD_NUMBER = 19;
+  private com.google.protobuf.Timestamp createTime_;
+  /**
+   * <pre>
+   * When the machine was created, which is when it was requested rather than when it first
+   * booted. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the createTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasCreateTime() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * When the machine was created, which is when it was requested rather than when it first
+   * booted. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The createTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getCreateTime() {
+    return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+  }
+  /**
+   * <pre>
+   * When the machine was created, which is when it was requested rather than when it first
+   * booted. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+    return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -932,6 +974,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(serviceAccount_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 18, serviceAccount_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(19, getCreateTime());
     }
     getUnknownFields().writeTo(output);
   }
@@ -981,6 +1026,10 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(serviceAccount_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(18, serviceAccount_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(19, getCreateTime());
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -1017,6 +1066,11 @@ private static final long serialVersionUID = 0L;
     if (!getServiceAccount()
         .equals(other.getServiceAccount())) return false;
     if (state_ != other.state_) return false;
+    if (hasCreateTime() != other.hasCreateTime()) return false;
+    if (hasCreateTime()) {
+      if (!getCreateTime()
+          .equals(other.getCreateTime())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -1052,6 +1106,10 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getServiceAccount().hashCode();
     hash = (37 * hash) + STATE_FIELD_NUMBER;
     hash = (53 * hash) + state_;
+    if (hasCreateTime()) {
+      hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getCreateTime().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -1175,13 +1233,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cloud.cbws.api.compute.v1alpha1.Machine.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetCreateTimeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -1199,6 +1263,11 @@ private static final long serialVersionUID = 0L;
       userdata_ = "";
       serviceAccount_ = "";
       state_ = 0;
+      createTime_ = null;
+      if (createTimeBuilder_ != null) {
+        createTimeBuilder_.dispose();
+        createTimeBuilder_ = null;
+      }
       return this;
     }
 
@@ -1266,6 +1335,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000400) != 0)) {
         result.state_ = state_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000800) != 0)) {
+        result.createTime_ = createTimeBuilder_ == null
+            ? createTime_
+            : createTimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -1337,6 +1414,9 @@ private static final long serialVersionUID = 0L;
       }
       if (other.state_ != 0) {
         setStateValue(other.getStateValue());
+      }
+      if (other.hasCreateTime()) {
+        mergeCreateTime(other.getCreateTime());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -1420,6 +1500,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000200;
               break;
             } // case 146
+            case 154: {
+              input.readMessage(
+                  internalGetCreateTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000800;
+              break;
+            } // case 154
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -2640,6 +2727,172 @@ private static final long serialVersionUID = 0L;
       state_ = 0;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.Timestamp createTime_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the createTime field is set.
+     */
+    public boolean hasCreateTime() {
+      return ((bitField0_ & 0x00000800) != 0);
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The createTime.
+     */
+    public com.google.protobuf.Timestamp getCreateTime() {
+      if (createTimeBuilder_ == null) {
+        return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+      } else {
+        return createTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setCreateTime(com.google.protobuf.Timestamp value) {
+      if (createTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        createTime_ = value;
+      } else {
+        createTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setCreateTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (createTimeBuilder_ == null) {
+        createTime_ = builderForValue.build();
+      } else {
+        createTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
+      if (createTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000800) != 0) &&
+          createTime_ != null &&
+          createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getCreateTimeBuilder().mergeFrom(value);
+        } else {
+          createTime_ = value;
+        }
+      } else {
+        createTimeBuilder_.mergeFrom(value);
+      }
+      if (createTime_ != null) {
+        bitField0_ |= 0x00000800;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearCreateTime() {
+      bitField0_ = (bitField0_ & ~0x00000800);
+      createTime_ = null;
+      if (createTimeBuilder_ != null) {
+        createTimeBuilder_.dispose();
+        createTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
+      bitField0_ |= 0x00000800;
+      onChanged();
+      return internalGetCreateTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+      if (createTimeBuilder_ != null) {
+        return createTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return createTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+      }
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        internalGetCreateTimeFieldBuilder() {
+      if (createTimeBuilder_ == null) {
+        createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getCreateTime(),
+                getParentForChildren(),
+                isClean());
+        createTime_ = null;
+      }
+      return createTimeBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:cbws.compute.v1alpha1.Machine)

@@ -476,9 +476,56 @@ public object MachineKt {
     public fun clearState() {
       _builder.clearState()
     }
+
+    /**
+     * ```
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * ```
+     *
+     * `.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var createTime: com.google.protobuf.Timestamp
+      @kotlin.jvm.JvmName("getCreateTime")
+        get() = _builder.createTime
+      @kotlin.jvm.JvmName("setCreateTime")
+        set(value) {
+        _builder.createTime = value
+      }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearCreateTime() {
+      _builder.clearCreateTime()
+    }
+    /**
+     * <pre>
+     * When the machine was created, which is when it was requested rather than when it first
+     * booted. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 19 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the createTime field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasCreateTime(): kotlin.Boolean {
+      return _builder.hasCreateTime()
+    }
+
+    public val MachineKt.Dsl.createTimeOrNull: com.google.protobuf.Timestamp?
+      get() = _builder.createTimeOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun cloud.cbws.api.compute.v1alpha1.Machine.copy(block: `cloud.cbws.api.compute.v1alpha1`.MachineKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.compute.v1alpha1.Machine =
   `cloud.cbws.api.compute.v1alpha1`.MachineKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val cloud.cbws.api.compute.v1alpha1.MachineOrBuilder.createTimeOrNull: com.google.protobuf.Timestamp?
+  get() = if (hasCreateTime()) getCreateTime() else null
 
