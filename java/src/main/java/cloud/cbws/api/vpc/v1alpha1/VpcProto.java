@@ -68,7 +68,7 @@ public final class VpcProto {
       "v1alpha1\032\037google/api/field_behavior.prot" +
       "o\032\031google/api/resource.proto\"v\n\003Vpc\022\030\n\004n" +
       "ame\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002 \001(\tB\004\342" +
-      "A\001\005R\006parent:7\352A4\n\022vpc.cbws.cloud/Vpc\022\036pr" +
+      "A\001\003R\006parent:7\352A4\n\022vpc.cbws.cloud/Vpc\022\036pr" +
       "ojects/{project}/vpcs/{name}\"\225\001\n\017ListVpc" +
       "sRequest\022:\n\006parent\030\001 \001(\tB\"\342A\001\002\372A\033\n\031proje" +
       "cts.cbws.xyz/ProjectR\006parent\022!\n\tpage_siz" +

@@ -36,7 +36,7 @@ public interface VpcOrBuilder extends
    * The project the VPC belongs to, such as `projects/my-project`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   java.lang.String getParent();
@@ -45,7 +45,7 @@ public interface VpcOrBuilder extends
    * The project the VPC belongs to, such as `projects/my-project`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   com.google.protobuf.ByteString

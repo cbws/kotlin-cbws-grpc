@@ -66,7 +66,7 @@ public object CreateServiceAccountKeyRequestKt {
      * file format is supported, which is also the default.
      * ```
      *
-     * `.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];`
+     * `.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var privateKeyType: cloud.cbws.api.iam.v1alpha1.ServiceAccountPrivateKeyType
       @kotlin.jvm.JvmName("getPrivateKeyType")
@@ -88,7 +88,7 @@ public object CreateServiceAccountKeyRequestKt {
      * file format is supported, which is also the default.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearPrivateKeyType() {
@@ -101,7 +101,7 @@ public object CreateServiceAccountKeyRequestKt {
      * RSA key.
      * ```
      *
-     * `.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];`
+     * `.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var keyAlgorithm: cloud.cbws.api.iam.v1alpha1.ServiceAccountKeyAlgorithm
       @kotlin.jvm.JvmName("getKeyAlgorithm")
@@ -123,7 +123,7 @@ public object CreateServiceAccountKeyRequestKt {
      * RSA key.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearKeyAlgorithm() {

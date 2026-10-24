@@ -39,7 +39,7 @@ public interface ServiceAccountOrBuilder extends
    * `my-project`.
    * </pre>
    *
-   * <code>string project_id = 2 [json_name = "projectId"];</code>
+   * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The projectId.
    */
   java.lang.String getProjectId();
@@ -49,7 +49,7 @@ public interface ServiceAccountOrBuilder extends
    * `my-project`.
    * </pre>
    *
-   * <code>string project_id = 2 [json_name = "projectId"];</code>
+   * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for projectId.
    */
   com.google.protobuf.ByteString
@@ -60,7 +60,7 @@ public interface ServiceAccountOrBuilder extends
    * The unique and stable ID of the service account, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The uniqueId.
    */
   java.lang.String getUniqueId();
@@ -69,7 +69,7 @@ public interface ServiceAccountOrBuilder extends
    * The unique and stable ID of the service account, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for uniqueId.
    */
   com.google.protobuf.ByteString
@@ -83,7 +83,7 @@ public interface ServiceAccountOrBuilder extends
    * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
    * </pre>
    *
-   * <code>string email = 5 [json_name = "email"];</code>
+   * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The email.
    */
   java.lang.String getEmail();
@@ -95,7 +95,7 @@ public interface ServiceAccountOrBuilder extends
    * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
    * </pre>
    *
-   * <code>string email = 5 [json_name = "email"];</code>
+   * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for email.
    */
   com.google.protobuf.ByteString
@@ -107,7 +107,7 @@ public interface ServiceAccountOrBuilder extends
    * characters.
    * </pre>
    *
-   * <code>string display_name = 6 [json_name = "displayName"];</code>
+   * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The displayName.
    */
   java.lang.String getDisplayName();
@@ -117,7 +117,7 @@ public interface ServiceAccountOrBuilder extends
    * characters.
    * </pre>
    *
-   * <code>string display_name = 6 [json_name = "displayName"];</code>
+   * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for displayName.
    */
   com.google.protobuf.ByteString

@@ -14,7 +14,7 @@ public interface ListProjectsRequestOrBuilder extends
    * Optional. The maximum number of projects to return. The default is 10.
    * </pre>
    *
-   * <code>int32 page_size = 2 [json_name = "pageSize"];</code>
+   * <code>int32 page_size = 2 [json_name = "pageSize", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The pageSize.
    */
   int getPageSize();
@@ -26,7 +26,7 @@ public interface ListProjectsRequestOrBuilder extends
    * of a previous response, to get the next page.
    * </pre>
    *
-   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The pageToken.
    */
   java.lang.String getPageToken();
@@ -37,7 +37,7 @@ public interface ListProjectsRequestOrBuilder extends
    * of a previous response, to get the next page.
    * </pre>
    *
-   * <code>string page_token = 3 [json_name = "pageToken"];</code>
+   * <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for pageToken.
    */
   com.google.protobuf.ByteString

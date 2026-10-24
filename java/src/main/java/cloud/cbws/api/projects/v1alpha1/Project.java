@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * characters.
    * </pre>
    *
-   * <code>string display_name = 2 [json_name = "displayName"];</code>
+   * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The displayName.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * characters.
    * </pre>
    *
-   * <code>string display_name = 2 [json_name = "displayName"];</code>
+   * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for displayName.
    */
   @java.lang.Override
@@ -158,7 +158,7 @@ private static final long serialVersionUID = 0L;
    * organization's UUID.
    * </pre>
    *
-   * <code>string organization = 3 [json_name = "organization"];</code>
+   * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The organization.
    */
   @java.lang.Override
@@ -181,7 +181,7 @@ private static final long serialVersionUID = 0L;
    * organization's UUID.
    * </pre>
    *
-   * <code>string organization = 3 [json_name = "organization"];</code>
+   * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for organization.
    */
   @java.lang.Override
@@ -207,7 +207,7 @@ private static final long serialVersionUID = 0L;
    * The unique and stable ID of the project, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The uniqueId.
    */
   @java.lang.Override
@@ -228,7 +228,7 @@ private static final long serialVersionUID = 0L;
    * The unique and stable ID of the project, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for uniqueId.
    */
   @java.lang.Override
@@ -717,7 +717,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 2 [json_name = "displayName"];</code>
+     * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
@@ -738,7 +738,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 2 [json_name = "displayName"];</code>
+     * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The bytes for displayName.
      */
     public com.google.protobuf.ByteString
@@ -760,7 +760,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 2 [json_name = "displayName"];</code>
+     * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
@@ -778,7 +778,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 2 [json_name = "displayName"];</code>
+     * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
@@ -793,7 +793,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 2 [json_name = "displayName"];</code>
+     * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */
@@ -815,7 +815,7 @@ private static final long serialVersionUID = 0L;
      * organization's UUID.
      * </pre>
      *
-     * <code>string organization = 3 [json_name = "organization"];</code>
+     * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The organization.
      */
     public java.lang.String getOrganization() {
@@ -837,7 +837,7 @@ private static final long serialVersionUID = 0L;
      * organization's UUID.
      * </pre>
      *
-     * <code>string organization = 3 [json_name = "organization"];</code>
+     * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for organization.
      */
     public com.google.protobuf.ByteString
@@ -860,7 +860,7 @@ private static final long serialVersionUID = 0L;
      * organization's UUID.
      * </pre>
      *
-     * <code>string organization = 3 [json_name = "organization"];</code>
+     * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The organization to set.
      * @return This builder for chaining.
      */
@@ -879,7 +879,7 @@ private static final long serialVersionUID = 0L;
      * organization's UUID.
      * </pre>
      *
-     * <code>string organization = 3 [json_name = "organization"];</code>
+     * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearOrganization() {
@@ -895,7 +895,7 @@ private static final long serialVersionUID = 0L;
      * organization's UUID.
      * </pre>
      *
-     * <code>string organization = 3 [json_name = "organization"];</code>
+     * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for organization to set.
      * @return This builder for chaining.
      */
@@ -915,7 +915,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the project, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The uniqueId.
      */
     public java.lang.String getUniqueId() {
@@ -935,7 +935,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the project, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for uniqueId.
      */
     public com.google.protobuf.ByteString
@@ -956,7 +956,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the project, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The uniqueId to set.
      * @return This builder for chaining.
      */
@@ -973,7 +973,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the project, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearUniqueId() {
@@ -987,7 +987,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the project, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for uniqueId to set.
      * @return This builder for chaining.
      */

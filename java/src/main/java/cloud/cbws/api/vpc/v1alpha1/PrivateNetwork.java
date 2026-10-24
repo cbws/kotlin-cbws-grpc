@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * `projects/my-project/vpcs/default`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * `projects/my-project/vpcs/default`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   @java.lang.Override
@@ -648,7 +648,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The parent.
      */
     public java.lang.String getParent() {
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for parent.
      */
     public com.google.protobuf.ByteString
@@ -691,7 +691,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The parent to set.
      * @return This builder for chaining.
      */
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearParent() {
@@ -724,7 +724,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for parent to set.
      * @return This builder for chaining.
      */

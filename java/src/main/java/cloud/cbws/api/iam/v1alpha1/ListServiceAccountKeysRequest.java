@@ -114,7 +114,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return A list containing the keyTypes.
    */
   @java.lang.Override
@@ -127,7 +127,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The count of keyTypes.
    */
   @java.lang.Override
@@ -139,7 +139,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @param index The index of the element to return.
    * @return The keyTypes at the given index.
    */
@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return A list containing the enum numeric values on the wire for keyTypes.
    */
   @java.lang.Override
@@ -165,7 +165,7 @@ private static final long serialVersionUID = 0L;
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of keyTypes at the given index.
    */
@@ -646,7 +646,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return A list containing the keyTypes.
      */
     public java.util.List<cloud.cbws.api.iam.v1alpha1.ServiceAccountKeyType> getKeyTypesList() {
@@ -658,7 +658,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The count of keyTypes.
      */
     public int getKeyTypesCount() {
@@ -669,7 +669,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param index The index of the element to return.
      * @return The keyTypes at the given index.
      */
@@ -681,7 +681,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param index The index to set the value at.
      * @param value The keyTypes to set.
      * @return This builder for chaining.
@@ -701,7 +701,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The keyTypes to add.
      * @return This builder for chaining.
      */
@@ -719,7 +719,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param values The keyTypes to add.
      * @return This builder for chaining.
      */
@@ -737,7 +737,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearKeyTypes() {
@@ -751,7 +751,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return A list containing the enum numeric values on the wire for keyTypes.
      */
     public java.util.List<java.lang.Integer>
@@ -763,7 +763,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param index The index of the value to return.
      * @return The enum numeric value on the wire of keyTypes at the given index.
      */
@@ -775,7 +775,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param index The index to set the value at.
      * @param value The enum numeric value on the wire for keyTypes to set.
      * @return This builder for chaining.
@@ -792,7 +792,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The enum numeric value on the wire for keyTypes to add.
      * @return This builder for chaining.
      */
@@ -807,7 +807,7 @@ private static final long serialVersionUID = 0L;
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param values The enum numeric values on the wire for keyTypes to add.
      * @return This builder for chaining.
      */

@@ -98,7 +98,7 @@ public object CreateServiceAccountRequestKt {
      * `display_name` is read.
      * ```
      *
-     * `.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount"];`
+     * `.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var serviceAccount: cloud.cbws.api.iam.v1alpha1.ServiceAccount
       @kotlin.jvm.JvmName("getServiceAccount")
@@ -113,7 +113,7 @@ public object CreateServiceAccountRequestKt {
      * `display_name` is read.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearServiceAccount() {
@@ -125,7 +125,7 @@ public object CreateServiceAccountRequestKt {
      * `display_name` is read.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the serviceAccount field is set.
      * @return This builder for chaining.
      */

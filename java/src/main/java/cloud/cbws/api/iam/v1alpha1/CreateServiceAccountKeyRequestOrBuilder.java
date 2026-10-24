@@ -37,7 +37,7 @@ public interface CreateServiceAccountKeyRequestOrBuilder extends
    * file format is supported, which is also the default.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The enum numeric value on the wire for privateKeyType.
    */
   int getPrivateKeyTypeValue();
@@ -47,7 +47,7 @@ public interface CreateServiceAccountKeyRequestOrBuilder extends
    * file format is supported, which is also the default.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The privateKeyType.
    */
   cloud.cbws.api.iam.v1alpha1.ServiceAccountPrivateKeyType getPrivateKeyType();
@@ -58,7 +58,7 @@ public interface CreateServiceAccountKeyRequestOrBuilder extends
    * RSA key.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The enum numeric value on the wire for keyAlgorithm.
    */
   int getKeyAlgorithmValue();
@@ -68,7 +68,7 @@ public interface CreateServiceAccountKeyRequestOrBuilder extends
    * RSA key.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The keyAlgorithm.
    */
   cloud.cbws.api.iam.v1alpha1.ServiceAccountKeyAlgorithm getKeyAlgorithm();

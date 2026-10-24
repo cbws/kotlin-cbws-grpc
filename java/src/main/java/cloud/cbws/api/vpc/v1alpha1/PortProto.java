@@ -63,7 +63,7 @@ public final class PortProto {
       ".v1alpha1\032\037google/api/field_behavior.pro" +
       "to\032\031google/api/resource.proto\"\212\007\n\004Port\022\030" +
       "\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002 \001(\t" +
-      "B\004\342A\001\005R\006parent\022P\n\017private_network\030\t \001(\tB" +
+      "B\004\342A\001\003R\006parent\022P\n\017private_network\030\t \001(\tB" +
       "\'\342A\002\002\005\372A\037\n\035vpc.cbws.cloud/PrivateNetwork" +
       "R\016privateNetwork\022\032\n\005owner\030\003 \001(\tB\004\342A\001\001R\005o" +
       "wner\022H\n\013ip_families\030\004 \003(\0162 .cbws.vpc.v1a" +

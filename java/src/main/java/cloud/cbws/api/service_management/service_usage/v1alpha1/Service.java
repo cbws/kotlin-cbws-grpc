@@ -60,7 +60,7 @@ private static final long serialVersionUID = 0L;
    * `projects/my-project/services/logging.cbws.xyz`.
    * </pre>
    *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   @java.lang.Override
@@ -83,7 +83,7 @@ private static final long serialVersionUID = 0L;
    * `projects/my-project/services/logging.cbws.xyz`.
    * </pre>
    *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   @java.lang.Override
@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
    * The project, such as `projects/my-project`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent"];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   @java.lang.Override
@@ -130,7 +130,7 @@ private static final long serialVersionUID = 0L;
    * The project, such as `projects/my-project`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent"];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   @java.lang.Override
@@ -155,7 +155,7 @@ private static final long serialVersionUID = 0L;
    * The name and title of the service.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the config field is set.
    */
   @java.lang.Override
@@ -167,7 +167,7 @@ private static final long serialVersionUID = 0L;
    * The name and title of the service.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The config.
    */
   @java.lang.Override
@@ -179,7 +179,7 @@ private static final long serialVersionUID = 0L;
    * The name and title of the service.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   @java.lang.Override
   public cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigOrBuilder getConfigOrBuilder() {
@@ -193,7 +193,7 @@ private static final long serialVersionUID = 0L;
    * Whether the service is enabled in the project.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for state.
    */
   @java.lang.Override public int getStateValue() {
@@ -204,7 +204,7 @@ private static final long serialVersionUID = 0L;
    * Whether the service is enabled in the project.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The state.
    */
   @java.lang.Override public cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceState getState() {
@@ -609,7 +609,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/services/logging.cbws.xyz`.
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The name.
      */
     public java.lang.String getName() {
@@ -631,7 +631,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/services/logging.cbws.xyz`.
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for name.
      */
     public com.google.protobuf.ByteString
@@ -654,7 +654,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/services/logging.cbws.xyz`.
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The name to set.
      * @return This builder for chaining.
      */
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/services/logging.cbws.xyz`.
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearName() {
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/services/logging.cbws.xyz`.
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for name to set.
      * @return This builder for chaining.
      */
@@ -709,7 +709,7 @@ private static final long serialVersionUID = 0L;
      * The project, such as `projects/my-project`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent"];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The parent.
      */
     public java.lang.String getParent() {
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * The project, such as `projects/my-project`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent"];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for parent.
      */
     public com.google.protobuf.ByteString
@@ -750,7 +750,7 @@ private static final long serialVersionUID = 0L;
      * The project, such as `projects/my-project`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent"];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The parent to set.
      * @return This builder for chaining.
      */
@@ -767,7 +767,7 @@ private static final long serialVersionUID = 0L;
      * The project, such as `projects/my-project`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent"];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearParent() {
@@ -781,7 +781,7 @@ private static final long serialVersionUID = 0L;
      * The project, such as `projects/my-project`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent"];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for parent to set.
      * @return This builder for chaining.
      */
@@ -803,7 +803,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the config field is set.
      */
     public boolean hasConfig() {
@@ -814,7 +814,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The config.
      */
     public cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig getConfig() {
@@ -829,7 +829,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setConfig(cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig value) {
       if (configBuilder_ == null) {
@@ -849,7 +849,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder setConfig(
         cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.Builder builderForValue) {
@@ -867,7 +867,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder mergeConfig(cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig value) {
       if (configBuilder_ == null) {
@@ -892,7 +892,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearConfig() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -909,7 +909,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.Builder getConfigBuilder() {
       bitField0_ |= 0x00000004;
@@ -921,7 +921,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigOrBuilder getConfigOrBuilder() {
       if (configBuilder_ != null) {
@@ -936,7 +936,7 @@ private static final long serialVersionUID = 0L;
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig, cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigOrBuilder> 
@@ -958,7 +958,7 @@ private static final long serialVersionUID = 0L;
      * Whether the service is enabled in the project.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for state.
      */
     @java.lang.Override public int getStateValue() {
@@ -969,7 +969,7 @@ private static final long serialVersionUID = 0L;
      * Whether the service is enabled in the project.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The enum numeric value on the wire for state to set.
      * @return This builder for chaining.
      */
@@ -984,7 +984,7 @@ private static final long serialVersionUID = 0L;
      * Whether the service is enabled in the project.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The state.
      */
     @java.lang.Override
@@ -997,7 +997,7 @@ private static final long serialVersionUID = 0L;
      * Whether the service is enabled in the project.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The state to set.
      * @return This builder for chaining.
      */
@@ -1015,7 +1015,7 @@ private static final long serialVersionUID = 0L;
      * Whether the service is enabled in the project.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearState() {

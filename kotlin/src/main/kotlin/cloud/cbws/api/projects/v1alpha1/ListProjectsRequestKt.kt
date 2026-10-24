@@ -37,7 +37,7 @@ public object ListProjectsRequestKt {
      * Optional. The maximum number of projects to return. The default is 10.
      * ```
      *
-     * `int32 page_size = 2 [json_name = "pageSize"];`
+     * `int32 page_size = 2 [json_name = "pageSize", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var pageSize: kotlin.Int
       @kotlin.jvm.JvmName("getPageSize")
@@ -51,7 +51,7 @@ public object ListProjectsRequestKt {
      * Optional. The maximum number of projects to return. The default is 10.
      * </pre>
      *
-     * <code>int32 page_size = 2 [json_name = "pageSize"];</code>
+     * <code>int32 page_size = 2 [json_name = "pageSize", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearPageSize() {
@@ -65,7 +65,7 @@ public object ListProjectsRequestKt {
      * of a previous response, to get the next page.
      * ```
      *
-     * `string page_token = 3 [json_name = "pageToken"];`
+     * `string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var pageToken: kotlin.String
       @kotlin.jvm.JvmName("getPageToken")
@@ -81,7 +81,7 @@ public object ListProjectsRequestKt {
      * of a previous response, to get the next page.
      * </pre>
      *
-     * <code>string page_token = 3 [json_name = "pageToken"];</code>
+     * <code>string page_token = 3 [json_name = "pageToken", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearPageToken() {

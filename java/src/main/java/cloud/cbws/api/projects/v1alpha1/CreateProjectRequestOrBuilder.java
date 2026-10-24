@@ -67,7 +67,7 @@ public interface CreateProjectRequestOrBuilder extends
    * read.
    * </pre>
    *
-   * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+   * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the project field is set.
    */
   boolean hasProject();
@@ -77,7 +77,7 @@ public interface CreateProjectRequestOrBuilder extends
    * read.
    * </pre>
    *
-   * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+   * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The project.
    */
   cloud.cbws.api.projects.v1alpha1.Project getProject();
@@ -87,7 +87,7 @@ public interface CreateProjectRequestOrBuilder extends
    * read.
    * </pre>
    *
-   * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+   * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
    */
   cloud.cbws.api.projects.v1alpha1.ProjectOrBuilder getProjectOrBuilder();
 }

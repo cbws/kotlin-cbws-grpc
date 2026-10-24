@@ -35,7 +35,7 @@ public interface ProjectOrBuilder extends
    * characters.
    * </pre>
    *
-   * <code>string display_name = 2 [json_name = "displayName"];</code>
+   * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The displayName.
    */
   java.lang.String getDisplayName();
@@ -45,7 +45,7 @@ public interface ProjectOrBuilder extends
    * characters.
    * </pre>
    *
-   * <code>string display_name = 2 [json_name = "displayName"];</code>
+   * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for displayName.
    */
   com.google.protobuf.ByteString
@@ -58,7 +58,7 @@ public interface ProjectOrBuilder extends
    * organization's UUID.
    * </pre>
    *
-   * <code>string organization = 3 [json_name = "organization"];</code>
+   * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The organization.
    */
   java.lang.String getOrganization();
@@ -69,7 +69,7 @@ public interface ProjectOrBuilder extends
    * organization's UUID.
    * </pre>
    *
-   * <code>string organization = 3 [json_name = "organization"];</code>
+   * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for organization.
    */
   com.google.protobuf.ByteString
@@ -80,7 +80,7 @@ public interface ProjectOrBuilder extends
    * The unique and stable ID of the project, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The uniqueId.
    */
   java.lang.String getUniqueId();
@@ -89,7 +89,7 @@ public interface ProjectOrBuilder extends
    * The unique and stable ID of the project, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for uniqueId.
    */
   com.google.protobuf.ByteString

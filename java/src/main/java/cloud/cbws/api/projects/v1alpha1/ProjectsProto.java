@@ -79,66 +79,66 @@ public final class ProjectsProto {
       "proto\032\037google/api/field_behavior.proto\032\031" +
       "google/api/resource.proto\032#google/longru" +
       "nning/operations.proto\032 google/protobuf/" +
-      "field_mask.proto\"\265\001\n\024CreateProjectReques" +
+      "field_mask.proto\"\273\001\n\024CreateProjectReques" +
       "t\022H\n\006parent\030\001 \001(\tB0\342A\001\002\372A)\n\'organization" +
       "s.cloudbear.nl/OrganizationR\006parent\022\030\n\004n" +
-      "ame\030\002 \001(\tB\004\342A\001\002R\004name\0229\n\007project\030\003 \001(\0132\037" +
-      ".cbws.projects.v1alpha1.ProjectR\007project" +
-      "\"Q\n\023ListProjectsRequest\022\033\n\tpage_size\030\002 \001" +
-      "(\005R\010pageSize\022\035\n\npage_token\030\003 \001(\tR\tpageTo" +
-      "ken\"{\n\024ListProjectsResponse\022;\n\010projects\030" +
-      "\001 \003(\0132\037.cbws.projects.v1alpha1.ProjectR\010" +
-      "projects\022&\n\017next_page_token\030\002 \001(\tR\rnextP" +
-      "ageToken\"K\n\021GetProjectRequest\0226\n\004name\030\001 " +
-      "\001(\tB\"\342A\001\002\372A\033\n\031projects.cbws.xyz/ProjectR" +
-      "\004name\"\224\001\n\024UpdateProjectRequest\022?\n\007projec" +
-      "t\030\001 \001(\0132\037.cbws.projects.v1alpha1.Project" +
-      "B\004\342A\001\002R\007project\022;\n\013update_mask\030\002 \001(\0132\032.g" +
-      "oogle.protobuf.FieldMaskR\nupdateMask\"N\n\024" +
-      "DeleteProjectRequest\0226\n\004name\030\001 \001(\tB\"\342A\001\002" +
-      "\372A\033\n\031projects.cbws.xyz/ProjectR\004name\"\027\n\025" +
-      "DeleteProjectMetadata2\363\n\n\017ProjectsServic" +
-      "e\022\222\001\n\rCreateProject\022,.cbws.projects.v1al" +
-      "pha1.CreateProjectRequest\032\037.cbws.project" +
-      "s.v1alpha1.Project\"2\202\263\033\007Project\212\263\033\006creat" +
-      "e\202\323\344\223\002\027\"\022/v1alpha1/projects:\001*\022\214\001\n\014ListP" +
-      "rojects\022+.cbws.projects.v1alpha1.ListPro" +
-      "jectsRequest\032,.cbws.projects.v1alpha1.Li" +
-      "stProjectsResponse\"!\332A\004name\202\323\344\223\002\024\022\022/v1al" +
-      "pha1/projects\022\226\001\n\nGetProject\022).cbws.proj" +
-      "ects.v1alpha1.GetProjectRequest\032\037.cbws.p" +
-      "rojects.v1alpha1.Project\"<\332A\004name\202\263\033\007Pro" +
-      "ject\212\263\033\003get\202\323\344\223\002\035\022\033/v1alpha1/{name=proje" +
-      "cts/*}\022\243\001\n\rUpdateProject\022,.cbws.projects" +
-      ".v1alpha1.UpdateProjectRequest\032\037.cbws.pr" +
-      "ojects.v1alpha1.Project\"C\202\263\033\007Project\212\263\033\006" +
-      "update\202\323\344\223\002(\"#/v1alpha1/{project.name=pr" +
-      "ojects/*}:\001*\022\346\001\n\rDeleteProject\022,.cbws.pr" +
-      "ojects.v1alpha1.DeleteProjectRequest\032\035.g" +
-      "oogle.longrunning.Operation\"\207\001\312AE\n\025googl" +
-      "e.protobuf.Empty\022,cbws.projects.v1alpha1" +
-      ".DeleteProjectMetadata\332A\004name\202\263\033\007Project" +
-      "\212\263\033\006delete\202\323\344\223\002\035*\033/v1alpha1/{name=projec" +
-      "ts/*}\022\214\001\n\tGetPolicy\022*.cbws.iam.policy.v1" +
-      "alpha1.GetPolicyRequest\032 .cbws.iam.polic" +
-      "y.v1alpha1.Policy\"1\332A\010resource\202\323\344\223\002 \"\036/v" +
-      "1alpha1/{resource}:getPolicy\022\226\001\n\tSetPoli" +
-      "cy\022*.cbws.iam.policy.v1alpha1.SetPolicyR" +
-      "equest\032 .cbws.iam.policy.v1alpha1.Policy" +
-      "\";\332A\017resource,policy\202\323\344\223\002#\"\036/v1alpha1/{r" +
-      "esource}:setPolicy:\001*\022\276\001\n\017TestPermission" +
-      "s\0220.cbws.iam.policy.v1alpha1.TestPermiss" +
-      "ionsRequest\0321.cbws.iam.policy.v1alpha1.T" +
-      "estPermissionsResponse\"F\332A\024resource,perm" +
-      "issions\202\323\344\223\002)\"$/v1alpha1/{resource}:test" +
-      "Permissions:\001*\032+\312A\021projects.cbws.xyz\372\262\033\023" +
-      "\n\021projects.cbws.xyzB\340\001\n cloud.cbws.api.p" +
-      "rojects.v1alpha1B\rProjectsProtoP\001Z3githu" +
-      "b.com/cbws/go-cbws-grpc/cbws/projects/v1" +
-      "alpha1\242\002\003CPX\252\002\026Cbws.Projects.V1alpha1\312\002\026" +
-      "Cbws\\Projects\\V1alpha1\342\002\"Cbws\\Projects\\V" +
-      "1alpha1\\GPBMetadata\352\002\030Cbws::Projects::V1" +
-      "alpha1b\006proto3"
+      "ame\030\002 \001(\tB\004\342A\001\002R\004name\022?\n\007project\030\003 \001(\0132\037" +
+      ".cbws.projects.v1alpha1.ProjectB\004\342A\001\001R\007p" +
+      "roject\"]\n\023ListProjectsRequest\022!\n\tpage_si" +
+      "ze\030\002 \001(\005B\004\342A\001\001R\010pageSize\022#\n\npage_token\030\003" +
+      " \001(\tB\004\342A\001\001R\tpageToken\"{\n\024ListProjectsRes" +
+      "ponse\022;\n\010projects\030\001 \003(\0132\037.cbws.projects." +
+      "v1alpha1.ProjectR\010projects\022&\n\017next_page_" +
+      "token\030\002 \001(\tR\rnextPageToken\"K\n\021GetProject" +
+      "Request\0226\n\004name\030\001 \001(\tB\"\342A\001\002\372A\033\n\031projects" +
+      ".cbws.xyz/ProjectR\004name\"\232\001\n\024UpdateProjec" +
+      "tRequest\022?\n\007project\030\001 \001(\0132\037.cbws.project" +
+      "s.v1alpha1.ProjectB\004\342A\001\002R\007project\022A\n\013upd" +
+      "ate_mask\030\002 \001(\0132\032.google.protobuf.FieldMa" +
+      "skB\004\342A\001\002R\nupdateMask\"N\n\024DeleteProjectReq" +
+      "uest\0226\n\004name\030\001 \001(\tB\"\342A\001\002\372A\033\n\031projects.cb" +
+      "ws.xyz/ProjectR\004name\"\027\n\025DeleteProjectMet" +
+      "adata2\356\n\n\017ProjectsService\022\222\001\n\rCreateProj" +
+      "ect\022,.cbws.projects.v1alpha1.CreateProje" +
+      "ctRequest\032\037.cbws.projects.v1alpha1.Proje" +
+      "ct\"2\202\263\033\007Project\212\263\033\006create\202\323\344\223\002\027\"\022/v1alph" +
+      "a1/projects:\001*\022\205\001\n\014ListProjects\022+.cbws.p" +
+      "rojects.v1alpha1.ListProjectsRequest\032,.c" +
+      "bws.projects.v1alpha1.ListProjectsRespon" +
+      "se\"\032\202\323\344\223\002\024\022\022/v1alpha1/projects\022\226\001\n\nGetPr" +
+      "oject\022).cbws.projects.v1alpha1.GetProjec" +
+      "tRequest\032\037.cbws.projects.v1alpha1.Projec" +
+      "t\"<\332A\004name\202\263\033\007Project\212\263\033\003get\202\323\344\223\002\035\022\033/v1a" +
+      "lpha1/{name=projects/*}\022\243\001\n\rUpdateProjec" +
+      "t\022,.cbws.projects.v1alpha1.UpdateProject" +
+      "Request\032\037.cbws.projects.v1alpha1.Project" +
+      "\"C\202\263\033\007Project\212\263\033\006update\202\323\344\223\002(\"#/v1alpha1" +
+      "/{project.name=projects/*}:\001*\022\346\001\n\rDelete" +
+      "Project\022,.cbws.projects.v1alpha1.DeleteP" +
+      "rojectRequest\032\035.google.longrunning.Opera" +
+      "tion\"\207\001\312AE\n\025google.protobuf.Empty\022,cbws." +
+      "projects.v1alpha1.DeleteProjectMetadata\332" +
+      "A\004name\202\263\033\007Project\212\263\033\006delete\202\323\344\223\002\035*\033/v1al" +
+      "pha1/{name=projects/*}\022\214\001\n\tGetPolicy\022*.c" +
+      "bws.iam.policy.v1alpha1.GetPolicyRequest" +
+      "\032 .cbws.iam.policy.v1alpha1.Policy\"1\332A\010r" +
+      "esource\202\323\344\223\002 \"\036/v1alpha1/{resource}:getP" +
+      "olicy\022\226\001\n\tSetPolicy\022*.cbws.iam.policy.v1" +
+      "alpha1.SetPolicyRequest\032 .cbws.iam.polic" +
+      "y.v1alpha1.Policy\";\332A\017resource,policy\202\323\344" +
+      "\223\002#\"\036/v1alpha1/{resource}:setPolicy:\001*\022\276" +
+      "\001\n\017TestPermissions\0220.cbws.iam.policy.v1a" +
+      "lpha1.TestPermissionsRequest\0321.cbws.iam." +
+      "policy.v1alpha1.TestPermissionsResponse\"" +
+      "F\332A\024resource,permissions\202\323\344\223\002)\"$/v1alpha" +
+      "1/{resource}:testPermissions:\001*\032-\312A\023proj" +
+      "ects.cbws.cloud\372\262\033\023\n\021projects.cbws.xyzB\340" +
+      "\001\n cloud.cbws.api.projects.v1alpha1B\rPro" +
+      "jectsProtoP\001Z3github.com/cbws/go-cbws-gr" +
+      "pc/cbws/projects/v1alpha1\242\002\003CPX\252\002\026Cbws.P" +
+      "rojects.V1alpha1\312\002\026Cbws\\Projects\\V1alpha" +
+      "1\342\002\"Cbws\\Projects\\V1alpha1\\GPBMetadata\352\002" +
+      "\030Cbws::Projects::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

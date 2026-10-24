@@ -66,7 +66,7 @@ public object ProjectKt {
      * characters.
      * ```
      *
-     * `string display_name = 2 [json_name = "displayName"];`
+     * `string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var displayName: kotlin.String
       @kotlin.jvm.JvmName("getDisplayName")
@@ -81,7 +81,7 @@ public object ProjectKt {
      * characters.
      * </pre>
      *
-     * <code>string display_name = 2 [json_name = "displayName"];</code>
+     * <code>string display_name = 2 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearDisplayName() {
@@ -95,7 +95,7 @@ public object ProjectKt {
      * organization's UUID.
      * ```
      *
-     * `string organization = 3 [json_name = "organization"];`
+     * `string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var organization: kotlin.String
       @kotlin.jvm.JvmName("getOrganization")
@@ -111,7 +111,7 @@ public object ProjectKt {
      * organization's UUID.
      * </pre>
      *
-     * <code>string organization = 3 [json_name = "organization"];</code>
+     * <code>string organization = 3 [json_name = "organization", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearOrganization() {
@@ -123,7 +123,7 @@ public object ProjectKt {
      * The unique and stable ID of the project, a UUID.
      * ```
      *
-     * `string unique_id = 4 [json_name = "uniqueId"];`
+     * `string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var uniqueId: kotlin.String
       @kotlin.jvm.JvmName("getUniqueId")
@@ -137,7 +137,7 @@ public object ProjectKt {
      * The unique and stable ID of the project, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearUniqueId() {

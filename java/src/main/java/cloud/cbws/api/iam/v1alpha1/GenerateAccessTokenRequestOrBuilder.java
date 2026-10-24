@@ -78,7 +78,7 @@ public interface GenerateAccessTokenRequestOrBuilder extends
    * hour, which is also the default.
    * </pre>
    *
-   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the lifetime field is set.
    */
   boolean hasLifetime();
@@ -88,7 +88,7 @@ public interface GenerateAccessTokenRequestOrBuilder extends
    * hour, which is also the default.
    * </pre>
    *
-   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The lifetime.
    */
   com.google.protobuf.Duration getLifetime();
@@ -98,7 +98,7 @@ public interface GenerateAccessTokenRequestOrBuilder extends
    * hour, which is also the default.
    * </pre>
    *
-   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder();
 }

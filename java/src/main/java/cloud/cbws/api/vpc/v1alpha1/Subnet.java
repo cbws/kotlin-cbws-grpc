@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
    * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   @java.lang.Override
@@ -131,7 +131,7 @@ private static final long serialVersionUID = 0L;
    * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   @java.lang.Override
@@ -218,7 +218,7 @@ private static final long serialVersionUID = 0L;
    * gives `2001:db8::1`. It is set by the service.
    * </pre>
    *
-   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The gateway.
    */
   @java.lang.Override
@@ -241,7 +241,7 @@ private static final long serialVersionUID = 0L;
    * gives `2001:db8::1`. It is set by the service.
    * </pre>
    *
-   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for gateway.
    */
   @java.lang.Override
@@ -734,7 +734,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The parent.
      */
     public java.lang.String getParent() {
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for parent.
      */
     public com.google.protobuf.ByteString
@@ -777,7 +777,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The parent to set.
      * @return This builder for chaining.
      */
@@ -795,7 +795,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearParent() {
@@ -810,7 +810,7 @@ private static final long serialVersionUID = 0L;
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for parent to set.
      * @return This builder for chaining.
      */
@@ -954,7 +954,7 @@ private static final long serialVersionUID = 0L;
      * gives `2001:db8::1`. It is set by the service.
      * </pre>
      *
-     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The gateway.
      */
     public java.lang.String getGateway() {
@@ -976,7 +976,7 @@ private static final long serialVersionUID = 0L;
      * gives `2001:db8::1`. It is set by the service.
      * </pre>
      *
-     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for gateway.
      */
     public com.google.protobuf.ByteString
@@ -999,7 +999,7 @@ private static final long serialVersionUID = 0L;
      * gives `2001:db8::1`. It is set by the service.
      * </pre>
      *
-     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The gateway to set.
      * @return This builder for chaining.
      */
@@ -1018,7 +1018,7 @@ private static final long serialVersionUID = 0L;
      * gives `2001:db8::1`. It is set by the service.
      * </pre>
      *
-     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearGateway() {
@@ -1034,7 +1034,7 @@ private static final long serialVersionUID = 0L;
      * gives `2001:db8::1`. It is set by the service.
      * </pre>
      *
-     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for gateway to set.
      * @return This builder for chaining.
      */

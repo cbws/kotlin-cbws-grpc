@@ -16,7 +16,7 @@ public interface ServiceOrBuilder extends
    * `projects/my-project/services/logging.cbws.xyz`.
    * </pre>
    *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The name.
    */
   java.lang.String getName();
@@ -27,7 +27,7 @@ public interface ServiceOrBuilder extends
    * `projects/my-project/services/logging.cbws.xyz`.
    * </pre>
    *
-   * <code>string name = 1 [json_name = "name"];</code>
+   * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for name.
    */
   com.google.protobuf.ByteString
@@ -38,7 +38,7 @@ public interface ServiceOrBuilder extends
    * The project, such as `projects/my-project`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent"];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   java.lang.String getParent();
@@ -47,7 +47,7 @@ public interface ServiceOrBuilder extends
    * The project, such as `projects/my-project`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent"];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   com.google.protobuf.ByteString
@@ -58,7 +58,7 @@ public interface ServiceOrBuilder extends
    * The name and title of the service.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return Whether the config field is set.
    */
   boolean hasConfig();
@@ -67,7 +67,7 @@ public interface ServiceOrBuilder extends
    * The name and title of the service.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The config.
    */
   cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig getConfig();
@@ -76,7 +76,7 @@ public interface ServiceOrBuilder extends
    * The name and title of the service.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    */
   cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigOrBuilder getConfigOrBuilder();
 
@@ -85,7 +85,7 @@ public interface ServiceOrBuilder extends
    * Whether the service is enabled in the project.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for state.
    */
   int getStateValue();
@@ -94,7 +94,7 @@ public interface ServiceOrBuilder extends
    * Whether the service is enabled in the project.
    * </pre>
    *
-   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+   * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The state.
    */
   cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceState getState();

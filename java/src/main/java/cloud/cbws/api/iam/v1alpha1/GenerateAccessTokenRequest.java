@@ -160,7 +160,7 @@ private static final long serialVersionUID = 0L;
    * hour, which is also the default.
    * </pre>
    *
-   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the lifetime field is set.
    */
   @java.lang.Override
@@ -173,7 +173,7 @@ private static final long serialVersionUID = 0L;
    * hour, which is also the default.
    * </pre>
    *
-   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The lifetime.
    */
   @java.lang.Override
@@ -186,7 +186,7 @@ private static final long serialVersionUID = 0L;
    * hour, which is also the default.
    * </pre>
    *
-   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+   * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
    */
   @java.lang.Override
   public com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder() {
@@ -828,7 +828,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the lifetime field is set.
      */
     public boolean hasLifetime() {
@@ -840,7 +840,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The lifetime.
      */
     public com.google.protobuf.Duration getLifetime() {
@@ -856,7 +856,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setLifetime(com.google.protobuf.Duration value) {
       if (lifetimeBuilder_ == null) {
@@ -877,7 +877,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setLifetime(
         com.google.protobuf.Duration.Builder builderForValue) {
@@ -896,7 +896,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder mergeLifetime(com.google.protobuf.Duration value) {
       if (lifetimeBuilder_ == null) {
@@ -922,7 +922,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearLifetime() {
       bitField0_ = (bitField0_ & ~0x00000004);
@@ -940,7 +940,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.protobuf.Duration.Builder getLifetimeBuilder() {
       bitField0_ |= 0x00000004;
@@ -953,7 +953,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.protobuf.DurationOrBuilder getLifetimeOrBuilder() {
       if (lifetimeBuilder_ != null) {
@@ -969,7 +969,7 @@ private static final long serialVersionUID = 0L;
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Duration, com.google.protobuf.Duration.Builder, com.google.protobuf.DurationOrBuilder> 

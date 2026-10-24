@@ -68,7 +68,7 @@ public final class PrivatenetworkProto {
       "\022\021cbws.vpc.v1alpha1\032\037google/api/field_be" +
       "havior.proto\032\031google/api/resource.proto\"" +
       "\274\001\n\016PrivateNetwork\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004" +
-      "name\022\034\n\006parent\030\002 \001(\tB\004\342A\001\005R\006parent\022\030\n\004zo" +
+      "name\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006parent\022\030\n\004zo" +
       "ne\030\003 \001(\tB\004\342A\001\005R\004zone:X\352AU\n\035vpc.cbws.clou" +
       "d/PrivateNetwork\0224projects/{project}/vpc" +
       "s/{vpc}/privateNetworks/{name}\"\231\001\n\032ListP" +

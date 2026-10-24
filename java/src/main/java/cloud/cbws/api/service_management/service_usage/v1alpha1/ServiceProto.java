@@ -46,32 +46,35 @@ public final class ServiceProto {
     java.lang.String[] descriptorData = {
       "\n<cbws/service_management/service_usage/" +
       "v1alpha1/service.proto\022.cbws.service_man" +
-      "agement.service_usage.v1alpha1\032\031google/a" +
-      "pi/resource.proto\"\263\002\n\007Service\022\022\n\004name\030\001 " +
-      "\001(\tR\004name\022\026\n\006parent\030\002 \001(\tR\006parent\022U\n\006con" +
-      "fig\030\003 \001(\0132=.cbws.service_management.serv" +
-      "ice_usage.v1alpha1.ServiceConfigR\006config" +
-      "\022R\n\005state\030\004 \001(\0162<.cbws.service_managemen" +
-      "t.service_usage.v1alpha1.ServiceStateR\005s" +
-      "tate:Q\352AN\n\035serviceusage.cbws.xyz/Service" +
-      "\022-projects/{project}/services/{service_a" +
-      "ccount}\"9\n\rServiceConfig\022\022\n\004name\030\001 \001(\tR\004" +
-      "name\022\024\n\005title\030\002 \001(\tR\005title*d\n\014ServiceSta" +
-      "te\022\035\n\031SERVICE_STATE_UNSPECIFIED\020\000\022\032\n\026SER" +
-      "VICE_STATE_DISABLED\020\001\022\031\n\025SERVICE_STATE_E" +
-      "NABLED\020\002B\325\002\n8cloud.cbws.api.service_mana" +
-      "gement.service_usage.v1alpha1B\014ServicePr" +
-      "otoP\001Z8github.com/cbws/go-cbws-grpc/cbws" +
-      "/service-usage/v1alpha1\242\002\003CSS\252\002,Cbws.Ser" +
-      "viceManagement.ServiceUsage.V1alpha1\312\002,C" +
-      "bws\\ServiceManagement\\ServiceUsage\\V1alp" +
-      "ha1\342\0028Cbws\\ServiceManagement\\ServiceUsag" +
-      "e\\V1alpha1\\GPBMetadata\352\002/Cbws::ServiceMa" +
-      "nagement::ServiceUsage::V1alpha1b\006proto3"
+      "agement.service_usage.v1alpha1\032\037google/a" +
+      "pi/field_behavior.proto\032\031google/api/reso" +
+      "urce.proto\"\303\002\n\007Service\022\030\n\004name\030\001 \001(\tB\004\342A" +
+      "\001\003R\004name\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006parent\022[" +
+      "\n\006config\030\003 \001(\0132=.cbws.service_management" +
+      ".service_usage.v1alpha1.ServiceConfigB\004\342" +
+      "A\001\003R\006config\022X\n\005state\030\004 \001(\0162<.cbws.servic" +
+      "e_management.service_usage.v1alpha1.Serv" +
+      "iceStateB\004\342A\001\003R\005state:I\352AF\n\035serviceusage" +
+      ".cbws.xyz/Service\022%projects/{project}/se" +
+      "rvices/{service}\"9\n\rServiceConfig\022\022\n\004nam" +
+      "e\030\001 \001(\tR\004name\022\024\n\005title\030\002 \001(\tR\005title*d\n\014S" +
+      "erviceState\022\035\n\031SERVICE_STATE_UNSPECIFIED" +
+      "\020\000\022\032\n\026SERVICE_STATE_DISABLED\020\001\022\031\n\025SERVIC" +
+      "E_STATE_ENABLED\020\002B\325\002\n8cloud.cbws.api.ser" +
+      "vice_management.service_usage.v1alpha1B\014" +
+      "ServiceProtoP\001Z8github.com/cbws/go-cbws-" +
+      "grpc/cbws/service-usage/v1alpha1\242\002\003CSS\252\002" +
+      ",Cbws.ServiceManagement.ServiceUsage.V1a" +
+      "lpha1\312\002,Cbws\\ServiceManagement\\ServiceUs" +
+      "age\\V1alpha1\342\0028Cbws\\ServiceManagement\\Se" +
+      "rviceUsage\\V1alpha1\\GPBMetadata\352\002/Cbws::" +
+      "ServiceManagement::ServiceUsage::V1alpha" +
+      "1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
     internal_static_cbws_service_management_service_usage_v1alpha1_Service_descriptor =
@@ -87,9 +90,11 @@ public final class ServiceProto {
         internal_static_cbws_service_management_service_usage_v1alpha1_ServiceConfig_descriptor,
         new java.lang.String[] { "Name", "Title", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

@@ -89,8 +89,8 @@ public final class SubnetProto {
       "roto\032\031google/api/resource.proto\032 google/" +
       "protobuf/field_mask.proto\"\353\001\n\006Subnet\022\030\n\004" +
       "name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002 \001(\tB\004" +
-      "\342A\001\005R\006parent\022\034\n\006prefix\030\003 \001(\tB\004\342A\001\005R\006pref" +
-      "ix\022\036\n\007gateway\030\004 \001(\tB\004\342A\001\005R\007gateway:k\352Ah\n" +
+      "\342A\001\003R\006parent\022\034\n\006prefix\030\003 \001(\tB\004\342A\001\005R\006pref" +
+      "ix\022\036\n\007gateway\030\004 \001(\tB\004\342A\001\003R\007gateway:k\352Ah\n" +
       "\025vpc.cbws.cloud/Subnet\022Oprojects/{projec" +
       "t}/vpcs/{vpc}/privateNetworks/{privateNe" +
       "twork}/subnets/{subnet}\"\333\001\n\022ListSubnetsR" +

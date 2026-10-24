@@ -68,7 +68,7 @@ public object ServiceAccountKt {
      * `my-project`.
      * ```
      *
-     * `string project_id = 2 [json_name = "projectId"];`
+     * `string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var projectId: kotlin.String
       @kotlin.jvm.JvmName("getProjectId")
@@ -83,7 +83,7 @@ public object ServiceAccountKt {
      * `my-project`.
      * </pre>
      *
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearProjectId() {
@@ -95,7 +95,7 @@ public object ServiceAccountKt {
      * The unique and stable ID of the service account, a UUID.
      * ```
      *
-     * `string unique_id = 4 [json_name = "uniqueId"];`
+     * `string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var uniqueId: kotlin.String
       @kotlin.jvm.JvmName("getUniqueId")
@@ -109,7 +109,7 @@ public object ServiceAccountKt {
      * The unique and stable ID of the service account, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearUniqueId() {
@@ -124,7 +124,7 @@ public object ServiceAccountKt {
      * `serviceAccount:my-app@my-project.iam-sa.cbws.xyz`.
      * ```
      *
-     * `string email = 5 [json_name = "email"];`
+     * `string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var email: kotlin.String
       @kotlin.jvm.JvmName("getEmail")
@@ -141,7 +141,7 @@ public object ServiceAccountKt {
      * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
      * </pre>
      *
-     * <code>string email = 5 [json_name = "email"];</code>
+     * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearEmail() {
@@ -154,7 +154,7 @@ public object ServiceAccountKt {
      * characters.
      * ```
      *
-     * `string display_name = 6 [json_name = "displayName"];`
+     * `string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var displayName: kotlin.String
       @kotlin.jvm.JvmName("getDisplayName")
@@ -169,7 +169,7 @@ public object ServiceAccountKt {
      * characters.
      * </pre>
      *
-     * <code>string display_name = 6 [json_name = "displayName"];</code>
+     * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearDisplayName() {

@@ -39,7 +39,7 @@ public object ServiceKt {
      * `projects/my-project/services/logging.cbws.xyz`.
      * ```
      *
-     * `string name = 1 [json_name = "name"];`
+     * `string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var name: kotlin.String
       @kotlin.jvm.JvmName("getName")
@@ -55,7 +55,7 @@ public object ServiceKt {
      * `projects/my-project/services/logging.cbws.xyz`.
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name"];</code>
+     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearName() {
@@ -67,7 +67,7 @@ public object ServiceKt {
      * The project, such as `projects/my-project`.
      * ```
      *
-     * `string parent = 2 [json_name = "parent"];`
+     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var parent: kotlin.String
       @kotlin.jvm.JvmName("getParent")
@@ -81,7 +81,7 @@ public object ServiceKt {
      * The project, such as `projects/my-project`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent"];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearParent() {
@@ -93,7 +93,7 @@ public object ServiceKt {
      * The name and title of the service.
      * ```
      *
-     * `.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];`
+     * `.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var config: cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig
       @kotlin.jvm.JvmName("getConfig")
@@ -107,7 +107,7 @@ public object ServiceKt {
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearConfig() {
@@ -118,7 +118,7 @@ public object ServiceKt {
      * The name and title of the service.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return Whether the config field is set.
      * @return This builder for chaining.
      */
@@ -134,7 +134,7 @@ public object ServiceKt {
      * Whether the service is enabled in the project.
      * ```
      *
-     * `.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];`
+     * `.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var state: cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceState
       @kotlin.jvm.JvmName("getState")
@@ -155,7 +155,7 @@ public object ServiceKt {
      * Whether the service is enabled in the project.
      * </pre>
      *
-     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state"];</code>
+     * <code>.cbws.service_management.service_usage.v1alpha1.ServiceState state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearState() {

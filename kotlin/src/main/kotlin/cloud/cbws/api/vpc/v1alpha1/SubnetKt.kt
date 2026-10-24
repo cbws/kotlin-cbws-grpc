@@ -67,7 +67,7 @@ public object SubnetKt {
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      * ```
      *
-     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];`
+     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var parent: kotlin.String
       @kotlin.jvm.JvmName("getParent")
@@ -82,7 +82,7 @@ public object SubnetKt {
      * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearParent() {
@@ -134,7 +134,7 @@ public object SubnetKt {
      * gives `2001:db8::1`. It is set by the service.
      * ```
      *
-     * `string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];`
+     * `string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var gateway: kotlin.String
       @kotlin.jvm.JvmName("getGateway")
@@ -150,7 +150,7 @@ public object SubnetKt {
      * gives `2001:db8::1`. It is set by the service.
      * </pre>
      *
-     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearGateway() {

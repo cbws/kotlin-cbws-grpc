@@ -102,7 +102,7 @@ public object CreateProjectRequestKt {
      * read.
      * ```
      *
-     * `.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];`
+     * `.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var project: cloud.cbws.api.projects.v1alpha1.Project
       @kotlin.jvm.JvmName("getProject")
@@ -117,7 +117,7 @@ public object CreateProjectRequestKt {
      * read.
      * </pre>
      *
-     * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+     * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearProject() {
@@ -129,7 +129,7 @@ public object CreateProjectRequestKt {
      * read.
      * </pre>
      *
-     * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project"];</code>
+     * <code>.cbws.projects.v1alpha1.Project project = 3 [json_name = "project", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the project field is set.
      * @return This builder for chaining.
      */

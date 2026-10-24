@@ -71,7 +71,7 @@ public object ListServiceAccountKeysRequestKt {
      * Optional. The key types to list. Empty lists keys of every type.
      * ```
      *
-     * `repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];`
+     * `repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];`
      */
      public val keyTypes: com.google.protobuf.kotlin.DslList<cloud.cbws.api.iam.v1alpha1.ServiceAccountKeyType, KeyTypesProxy>
       @kotlin.jvm.JvmSynthetic
@@ -83,7 +83,7 @@ public object ListServiceAccountKeysRequestKt {
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The keyTypes to add.
      * @return This builder for chaining.
      */
@@ -96,7 +96,7 @@ public object ListServiceAccountKeysRequestKt {
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The keyTypes to add.
      * @return This builder for chaining.
      */
@@ -110,7 +110,7 @@ public object ListServiceAccountKeysRequestKt {
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param values The keyTypes to add.
      * @return This builder for chaining.
      */
@@ -123,7 +123,7 @@ public object ListServiceAccountKeysRequestKt {
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param values The keyTypes to add.
      * @return This builder for chaining.
      */
@@ -137,7 +137,7 @@ public object ListServiceAccountKeysRequestKt {
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param index The index to set the value at.
      * @param value The keyTypes to set.
      * @return This builder for chaining.
@@ -151,7 +151,7 @@ public object ListServiceAccountKeysRequestKt {
      * Optional. The key types to list. Empty lists keys of every type.
      * </pre>
      *
-     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+     * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     @kotlin.jvm.JvmSynthetic

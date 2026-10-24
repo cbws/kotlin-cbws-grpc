@@ -96,7 +96,7 @@ private static final long serialVersionUID = 0L;
    * `display_name`. Any other path fails with INVALID_ARGUMENT.
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
    * @return Whether the updateMask field is set.
    */
   @java.lang.Override
@@ -109,7 +109,7 @@ private static final long serialVersionUID = 0L;
    * `display_name`. Any other path fails with INVALID_ARGUMENT.
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The updateMask.
    */
   @java.lang.Override
@@ -122,7 +122,7 @@ private static final long serialVersionUID = 0L;
    * `display_name`. Any other path fails with INVALID_ARGUMENT.
    * </pre>
    *
-   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+   * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
    */
   @java.lang.Override
   public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the updateMask field is set.
      */
     public boolean hasUpdateMask() {
@@ -673,7 +673,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The updateMask.
      */
     public com.google.protobuf.FieldMask getUpdateMask() {
@@ -689,7 +689,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setUpdateMask(com.google.protobuf.FieldMask value) {
       if (updateMaskBuilder_ == null) {
@@ -710,7 +710,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setUpdateMask(
         com.google.protobuf.FieldMask.Builder builderForValue) {
@@ -729,7 +729,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder mergeUpdateMask(com.google.protobuf.FieldMask value) {
       if (updateMaskBuilder_ == null) {
@@ -755,7 +755,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearUpdateMask() {
       bitField0_ = (bitField0_ & ~0x00000002);
@@ -773,7 +773,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.FieldMask.Builder getUpdateMaskBuilder() {
       bitField0_ |= 0x00000002;
@@ -786,7 +786,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.FieldMaskOrBuilder getUpdateMaskOrBuilder() {
       if (updateMaskBuilder_ != null) {
@@ -802,7 +802,7 @@ private static final long serialVersionUID = 0L;
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      */
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 

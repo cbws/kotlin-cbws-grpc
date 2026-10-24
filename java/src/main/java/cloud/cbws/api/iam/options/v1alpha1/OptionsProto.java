@@ -31,6 +31,11 @@ public final class OptionsProto {
   }
   public static final int SERVICE_FIELD_NUMBER = 56111;
   /**
+   * <pre>
+   * The IAM service name that prefixes the permissions of the API's
+   * methods, such as `projects.cbws.xyz`.
+   * </pre>
+   *
    * <code>extend .google.protobuf.ServiceOptions { ... }</code>
    */
   public static final
@@ -42,6 +47,11 @@ public final class OptionsProto {
         cloud.cbws.api.iam.options.v1alpha1.Service.getDefaultInstance());
   public static final int RESOURCE_TYPE_FIELD_NUMBER = 56112;
   /**
+   * <pre>
+   * The resource type part of the permission the method needs, such as
+   * `Project` or `ServiceAccount`.
+   * </pre>
+   *
    * <code>extend .google.protobuf.MethodOptions { ... }</code>
    */
   public static final
@@ -53,6 +63,11 @@ public final class OptionsProto {
         null);
   public static final int ACTION_FIELD_NUMBER = 56113;
   /**
+   * <pre>
+   * The action part of the permission the method needs, such as `get`,
+   * `list` or `create`.
+   * </pre>
+   *
    * <code>extend .google.protobuf.MethodOptions { ... }</code>
    */
   public static final
@@ -64,6 +79,11 @@ public final class OptionsProto {
         null);
   public static final int IAM_FIELD_FIELD_NUMBER = 56114;
   /**
+   * <pre>
+   * Marks the request field that identifies the resource the permission is
+   * checked on, and says what the field holds.
+   * </pre>
+   *
    * <code>extend .google.protobuf.FieldOptions { ... }</code>
    */
   public static final

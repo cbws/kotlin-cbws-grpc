@@ -171,7 +171,7 @@ public object GenerateAccessTokenRequestKt {
      * hour, which is also the default.
      * ```
      *
-     * `.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];`
+     * `.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var lifetime: com.google.protobuf.Duration
       @kotlin.jvm.JvmName("getLifetime")
@@ -186,7 +186,7 @@ public object GenerateAccessTokenRequestKt {
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearLifetime() {
@@ -198,7 +198,7 @@ public object GenerateAccessTokenRequestKt {
      * hour, which is also the default.
      * </pre>
      *
-     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime"];</code>
+     * <code>.google.protobuf.Duration lifetime = 7 [json_name = "lifetime", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return Whether the lifetime field is set.
      * @return This builder for chaining.
      */

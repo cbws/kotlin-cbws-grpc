@@ -40,22 +40,24 @@ public final class ProjectProto {
   static {
     java.lang.String[] descriptorData = {
       "\n$cbws/projects/v1alpha1/project.proto\022\026" +
-      "cbws.projects.v1alpha1\032\031google/api/resou" +
-      "rce.proto\"\265\001\n\007Project\022\022\n\004name\030\001 \001(\tR\004nam" +
-      "e\022!\n\014display_name\030\002 \001(\tR\013displayName\022\"\n\014" +
-      "organization\030\003 \001(\tR\014organization\022\033\n\tuniq" +
-      "ue_id\030\004 \001(\tR\010uniqueId:2\352A/\n\031projects.cbw" +
-      "s.xyz/Project\022\022projects/{project}B\337\001\n cl" +
-      "oud.cbws.api.projects.v1alpha1B\014ProjectP" +
-      "rotoP\001Z3github.com/cbws/go-cbws-grpc/cbw" +
-      "s/projects/v1alpha1\242\002\003CPX\252\002\026Cbws.Project" +
-      "s.V1alpha1\312\002\026Cbws\\Projects\\V1alpha1\342\002\"Cb" +
-      "ws\\Projects\\V1alpha1\\GPBMetadata\352\002\030Cbws:" +
-      ":Projects::V1alpha1b\006proto3"
+      "cbws.projects.v1alpha1\032\037google/api/field" +
+      "_behavior.proto\032\031google/api/resource.pro" +
+      "to\"\307\001\n\007Project\022\022\n\004name\030\001 \001(\tR\004name\022\'\n\014di" +
+      "splay_name\030\002 \001(\tB\004\342A\001\001R\013displayName\022(\n\014o" +
+      "rganization\030\003 \001(\tB\004\342A\001\003R\014organization\022!\n" +
+      "\tunique_id\030\004 \001(\tB\004\342A\001\003R\010uniqueId:2\352A/\n\031p" +
+      "rojects.cbws.xyz/Project\022\022projects/{proj" +
+      "ect}B\337\001\n cloud.cbws.api.projects.v1alpha" +
+      "1B\014ProjectProtoP\001Z3github.com/cbws/go-cb" +
+      "ws-grpc/cbws/projects/v1alpha1\242\002\003CPX\252\002\026C" +
+      "bws.Projects.V1alpha1\312\002\026Cbws\\Projects\\V1" +
+      "alpha1\342\002\"Cbws\\Projects\\V1alpha1\\GPBMetad" +
+      "ata\352\002\030Cbws::Projects::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
+          com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
         });
     internal_static_cbws_projects_v1alpha1_Project_descriptor =
@@ -65,9 +67,11 @@ public final class ProjectProto {
         internal_static_cbws_projects_v1alpha1_Project_descriptor,
         new java.lang.String[] { "Name", "DisplayName", "Organization", "UniqueId", });
     descriptor.resolveAllFeaturesImmutable();
+    com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
+    registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);

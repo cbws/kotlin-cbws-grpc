@@ -88,48 +88,49 @@ public final class ServiceManagementProto {
       "xyz/ProjectR\006parent\"k\n\024ListServicesRespo" +
       "nse\022S\n\010services\030\001 \003(\01327.cbws.service_man" +
       "agement.service_usage.v1alpha1.ServiceR\010" +
-      "services\"0\n\024EnableServiceRequest\022\030\n\004name" +
-      "\030\001 \001(\tB\004\342A\001\002R\004name\"\027\n\025EnableServiceMetad" +
-      "ata\"\027\n\025EnableServiceResponse\"u\n\025DisableS" +
-      "erviceRequest\022\030\n\004name\030\001 \001(\tB\004\342A\001\002R\004name\022" +
-      "B\n\032disable_dependent_services\030\002 \001(\010B\004\342A\001" +
-      "\001R\030disableDependentServices\"\030\n\026DisableSe" +
-      "rviceMetadata\"\030\n\026DisableServiceResponse2" +
-      "\357\007\n\023ServiceUsageService\022\343\001\n\014ListServices" +
-      "\022C.cbws.service_management.service_usage" +
-      ".v1alpha1.ListServicesRequest\032D.cbws.ser" +
+      "services\"R\n\024EnableServiceRequest\022:\n\004name" +
+      "\030\001 \001(\tB&\342A\001\002\372A\037\n\035serviceusage.cbws.xyz/S" +
+      "erviceR\004name\"\027\n\025EnableServiceMetadata\"\027\n" +
+      "\025EnableServiceResponse\"\227\001\n\025DisableServic" +
+      "eRequest\022:\n\004name\030\001 \001(\tB&\342A\001\002\372A\037\n\035service" +
+      "usage.cbws.xyz/ServiceR\004name\022B\n\032disable_" +
+      "dependent_services\030\002 \001(\010B\004\342A\001\001R\030disableD" +
+      "ependentServices\"\030\n\026DisableServiceMetada" +
+      "ta\"\030\n\026DisableServiceResponse2\313\007\n\023Service" +
+      "UsageService\022\345\001\n\014ListServices\022C.cbws.ser" +
       "vice_management.service_usage.v1alpha1.L" +
-      "istServicesResponse\"H\332A\004name\202\263\033\007Service\212" +
-      "\263\033\004list\202\323\344\223\002(\022&/v1alpha1/{parent=project" +
-      "s/*}/services\022\332\002\n\rEnableService\022D.cbws.s" +
-      "ervice_management.service_usage.v1alpha1" +
-      ".EnableServiceRequest\032\035.google.longrunni" +
-      "ng.Operation\"\343\001\312A\214\001\nDcbws.service_manage" +
-      "ment.service_usage.v1alpha1.EnableServic" +
-      "eResponse\022Dcbws.service_management.servi" +
-      "ce_usage.v1alpha1.EnableServiceMetadata\332" +
-      "A\030service_name,consumer_id\202\323\344\223\0022\"-/v1alp" +
-      "ha1/{name=projects/*/services/*}:enable:" +
-      "\001*\022\337\002\n\016DisableService\022E.cbws.service_man" +
-      "agement.service_usage.v1alpha1.DisableSe" +
+      "istServicesRequest\032D.cbws.service_manage" +
+      "ment.service_usage.v1alpha1.ListServices" +
+      "Response\"J\332A\006parent\202\263\033\007Service\212\263\033\004list\202\323" +
+      "\344\223\002(\022&/v1alpha1/{parent=projects/*}/serv" +
+      "ices\022\306\002\n\rEnableService\022D.cbws.service_ma" +
+      "nagement.service_usage.v1alpha1.EnableSe" +
       "rviceRequest\032\035.google.longrunning.Operat" +
-      "ion\"\346\001\312A\216\001\nEcbws.service_management.serv" +
-      "ice_usage.v1alpha1.DisableServiceRespons" +
-      "e\022Ecbws.service_management.service_usage" +
-      ".v1alpha1.DisableServiceMetadata\332A\030servi" +
-      "ce_name,consumer_id\202\323\344\223\0023\"./v1alpha1/{na" +
-      "me=projects/*/services/*}:disable:\001*\0323\312A" +
-      "\025serviceusage.cbws.xyz\372\262\033\027\n\025serviceusage" +
-      ".cbws.xyzB\337\002\n8cloud.cbws.api.service_man" +
-      "agement.service_usage.v1alpha1B\026ServiceM" +
-      "anagementProtoP\001Z8github.com/cbws/go-cbw" +
-      "s-grpc/cbws/service-usage/v1alpha1\242\002\003CSS" +
-      "\252\002,Cbws.ServiceManagement.ServiceUsage.V" +
-      "1alpha1\312\002,Cbws\\ServiceManagement\\Service" +
-      "Usage\\V1alpha1\342\0028Cbws\\ServiceManagement\\" +
-      "ServiceUsage\\V1alpha1\\GPBMetadata\352\002/Cbws" +
-      "::ServiceManagement::ServiceUsage::V1alp" +
-      "ha1b\006proto3"
+      "ion\"\317\001\312A\214\001\nDcbws.service_management.serv" +
+      "ice_usage.v1alpha1.EnableServiceResponse" +
+      "\022Dcbws.service_management.service_usage." +
+      "v1alpha1.EnableServiceMetadata\332A\004name\202\323\344" +
+      "\223\0022\"-/v1alpha1/{name=projects/*/services" +
+      "/*}:enable:\001*\022\313\002\n\016DisableService\022E.cbws." +
+      "service_management.service_usage.v1alpha" +
+      "1.DisableServiceRequest\032\035.google.longrun" +
+      "ning.Operation\"\322\001\312A\216\001\nEcbws.service_mana" +
+      "gement.service_usage.v1alpha1.DisableSer" +
+      "viceResponse\022Ecbws.service_management.se" +
+      "rvice_usage.v1alpha1.DisableServiceMetad" +
+      "ata\332A\004name\202\323\344\223\0023\"./v1alpha1/{name=projec" +
+      "ts/*/services/*}:disable:\001*\0325\312A\027serviceu" +
+      "sage.cbws.cloud\372\262\033\027\n\025serviceusage.cbws.x" +
+      "yzB\337\002\n8cloud.cbws.api.service_management" +
+      ".service_usage.v1alpha1B\026ServiceManageme" +
+      "ntProtoP\001Z8github.com/cbws/go-cbws-grpc/" +
+      "cbws/service-usage/v1alpha1\242\002\003CSS\252\002,Cbws" +
+      ".ServiceManagement.ServiceUsage.V1alpha1" +
+      "\312\002,Cbws\\ServiceManagement\\ServiceUsage\\V" +
+      "1alpha1\342\0028Cbws\\ServiceManagement\\Service" +
+      "Usage\\V1alpha1\\GPBMetadata\352\002/Cbws::Servi" +
+      "ceManagement::ServiceUsage::V1alpha1b\006pr" +
+      "oto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

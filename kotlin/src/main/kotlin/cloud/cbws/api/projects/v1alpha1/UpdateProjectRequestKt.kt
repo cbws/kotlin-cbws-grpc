@@ -82,7 +82,7 @@ public object UpdateProjectRequestKt {
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * ```
      *
-     * `.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];`
+     * `.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];`
      */
     public var updateMask: com.google.protobuf.FieldMask
       @kotlin.jvm.JvmName("getUpdateMask")
@@ -97,7 +97,7 @@ public object UpdateProjectRequestKt {
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public fun clearUpdateMask() {
@@ -109,7 +109,7 @@ public object UpdateProjectRequestKt {
      * `display_name`. Any other path fails with INVALID_ARGUMENT.
      * </pre>
      *
-     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask"];</code>
+     * <code>.google.protobuf.FieldMask update_mask = 2 [json_name = "updateMask", (.google.api.field_behavior) = REQUIRED];</code>
      * @return Whether the updateMask field is set.
      * @return This builder for chaining.
      */

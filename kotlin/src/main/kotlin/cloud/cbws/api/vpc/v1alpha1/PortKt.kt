@@ -76,7 +76,7 @@ public object PortKt {
      * not necessarily the project that owns the private network.
      * ```
      *
-     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];`
+     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var parent: kotlin.String
       @kotlin.jvm.JvmName("getParent")
@@ -91,7 +91,7 @@ public object PortKt {
      * not necessarily the project that owns the private network.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearParent() {

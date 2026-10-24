@@ -63,7 +63,7 @@ public interface CreateServiceAccountRequestOrBuilder extends
    * `display_name` is read.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return Whether the serviceAccount field is set.
    */
   boolean hasServiceAccount();
@@ -73,7 +73,7 @@ public interface CreateServiceAccountRequestOrBuilder extends
    * `display_name` is read.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The serviceAccount.
    */
   cloud.cbws.api.iam.v1alpha1.ServiceAccount getServiceAccount();
@@ -83,7 +83,7 @@ public interface CreateServiceAccountRequestOrBuilder extends
    * `display_name` is read.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
    */
   cloud.cbws.api.iam.v1alpha1.ServiceAccountOrBuilder getServiceAccountOrBuilder();
 }

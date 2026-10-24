@@ -111,7 +111,7 @@ private static final long serialVersionUID = 0L;
    * `my-project`.
    * </pre>
    *
-   * <code>string project_id = 2 [json_name = "projectId"];</code>
+   * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The projectId.
    */
   @java.lang.Override
@@ -133,7 +133,7 @@ private static final long serialVersionUID = 0L;
    * `my-project`.
    * </pre>
    *
-   * <code>string project_id = 2 [json_name = "projectId"];</code>
+   * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for projectId.
    */
   @java.lang.Override
@@ -159,7 +159,7 @@ private static final long serialVersionUID = 0L;
    * The unique and stable ID of the service account, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The uniqueId.
    */
   @java.lang.Override
@@ -180,7 +180,7 @@ private static final long serialVersionUID = 0L;
    * The unique and stable ID of the service account, a UUID.
    * </pre>
    *
-   * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+   * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for uniqueId.
    */
   @java.lang.Override
@@ -209,7 +209,7 @@ private static final long serialVersionUID = 0L;
    * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
    * </pre>
    *
-   * <code>string email = 5 [json_name = "email"];</code>
+   * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The email.
    */
   @java.lang.Override
@@ -233,7 +233,7 @@ private static final long serialVersionUID = 0L;
    * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
    * </pre>
    *
-   * <code>string email = 5 [json_name = "email"];</code>
+   * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for email.
    */
   @java.lang.Override
@@ -260,7 +260,7 @@ private static final long serialVersionUID = 0L;
    * characters.
    * </pre>
    *
-   * <code>string display_name = 6 [json_name = "displayName"];</code>
+   * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The displayName.
    */
   @java.lang.Override
@@ -282,7 +282,7 @@ private static final long serialVersionUID = 0L;
    * characters.
    * </pre>
    *
-   * <code>string display_name = 6 [json_name = "displayName"];</code>
+   * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for displayName.
    */
   @java.lang.Override
@@ -803,7 +803,7 @@ private static final long serialVersionUID = 0L;
      * `my-project`.
      * </pre>
      *
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The projectId.
      */
     public java.lang.String getProjectId() {
@@ -824,7 +824,7 @@ private static final long serialVersionUID = 0L;
      * `my-project`.
      * </pre>
      *
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for projectId.
      */
     public com.google.protobuf.ByteString
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
      * `my-project`.
      * </pre>
      *
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The projectId to set.
      * @return This builder for chaining.
      */
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
      * `my-project`.
      * </pre>
      *
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearProjectId() {
@@ -879,7 +879,7 @@ private static final long serialVersionUID = 0L;
      * `my-project`.
      * </pre>
      *
-     * <code>string project_id = 2 [json_name = "projectId"];</code>
+     * <code>string project_id = 2 [json_name = "projectId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for projectId to set.
      * @return This builder for chaining.
      */
@@ -899,7 +899,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the service account, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The uniqueId.
      */
     public java.lang.String getUniqueId() {
@@ -919,7 +919,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the service account, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for uniqueId.
      */
     public com.google.protobuf.ByteString
@@ -940,7 +940,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the service account, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The uniqueId to set.
      * @return This builder for chaining.
      */
@@ -957,7 +957,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the service account, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearUniqueId() {
@@ -971,7 +971,7 @@ private static final long serialVersionUID = 0L;
      * The unique and stable ID of the service account, a UUID.
      * </pre>
      *
-     * <code>string unique_id = 4 [json_name = "uniqueId"];</code>
+     * <code>string unique_id = 4 [json_name = "uniqueId", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for uniqueId to set.
      * @return This builder for chaining.
      */
@@ -994,7 +994,7 @@ private static final long serialVersionUID = 0L;
      * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
      * </pre>
      *
-     * <code>string email = 5 [json_name = "email"];</code>
+     * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The email.
      */
     public java.lang.String getEmail() {
@@ -1017,7 +1017,7 @@ private static final long serialVersionUID = 0L;
      * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
      * </pre>
      *
-     * <code>string email = 5 [json_name = "email"];</code>
+     * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for email.
      */
     public com.google.protobuf.ByteString
@@ -1041,7 +1041,7 @@ private static final long serialVersionUID = 0L;
      * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
      * </pre>
      *
-     * <code>string email = 5 [json_name = "email"];</code>
+     * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The email to set.
      * @return This builder for chaining.
      */
@@ -1061,7 +1061,7 @@ private static final long serialVersionUID = 0L;
      * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
      * </pre>
      *
-     * <code>string email = 5 [json_name = "email"];</code>
+     * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearEmail() {
@@ -1078,7 +1078,7 @@ private static final long serialVersionUID = 0L;
      * `serviceAccount:my-app&#64;my-project.iam-sa.cbws.xyz`.
      * </pre>
      *
-     * <code>string email = 5 [json_name = "email"];</code>
+     * <code>string email = 5 [json_name = "email", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for email to set.
      * @return This builder for chaining.
      */
@@ -1099,7 +1099,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 6 [json_name = "displayName"];</code>
+     * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The displayName.
      */
     public java.lang.String getDisplayName() {
@@ -1120,7 +1120,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 6 [json_name = "displayName"];</code>
+     * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The bytes for displayName.
      */
     public com.google.protobuf.ByteString
@@ -1142,7 +1142,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 6 [json_name = "displayName"];</code>
+     * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The displayName to set.
      * @return This builder for chaining.
      */
@@ -1160,7 +1160,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 6 [json_name = "displayName"];</code>
+     * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearDisplayName() {
@@ -1175,7 +1175,7 @@ private static final long serialVersionUID = 0L;
      * characters.
      * </pre>
      *
-     * <code>string display_name = 6 [json_name = "displayName"];</code>
+     * <code>string display_name = 6 [json_name = "displayName", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The bytes for displayName to set.
      * @return This builder for chaining.
      */

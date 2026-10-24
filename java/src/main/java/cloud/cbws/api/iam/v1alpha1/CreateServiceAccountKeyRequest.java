@@ -106,7 +106,7 @@ private static final long serialVersionUID = 0L;
    * file format is supported, which is also the default.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The enum numeric value on the wire for privateKeyType.
    */
   @java.lang.Override public int getPrivateKeyTypeValue() {
@@ -118,7 +118,7 @@ private static final long serialVersionUID = 0L;
    * file format is supported, which is also the default.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The privateKeyType.
    */
   @java.lang.Override public cloud.cbws.api.iam.v1alpha1.ServiceAccountPrivateKeyType getPrivateKeyType() {
@@ -134,7 +134,7 @@ private static final long serialVersionUID = 0L;
    * RSA key.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The enum numeric value on the wire for keyAlgorithm.
    */
   @java.lang.Override public int getKeyAlgorithmValue() {
@@ -146,7 +146,7 @@ private static final long serialVersionUID = 0L;
    * RSA key.
    * </pre>
    *
-   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+   * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The keyAlgorithm.
    */
   @java.lang.Override public cloud.cbws.api.iam.v1alpha1.ServiceAccountKeyAlgorithm getKeyAlgorithm() {
@@ -600,7 +600,7 @@ private static final long serialVersionUID = 0L;
      * file format is supported, which is also the default.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The enum numeric value on the wire for privateKeyType.
      */
     @java.lang.Override public int getPrivateKeyTypeValue() {
@@ -612,7 +612,7 @@ private static final long serialVersionUID = 0L;
      * file format is supported, which is also the default.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The enum numeric value on the wire for privateKeyType to set.
      * @return This builder for chaining.
      */
@@ -628,7 +628,7 @@ private static final long serialVersionUID = 0L;
      * file format is supported, which is also the default.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The privateKeyType.
      */
     @java.lang.Override
@@ -642,7 +642,7 @@ private static final long serialVersionUID = 0L;
      * file format is supported, which is also the default.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The privateKeyType to set.
      * @return This builder for chaining.
      */
@@ -661,7 +661,7 @@ private static final long serialVersionUID = 0L;
      * file format is supported, which is also the default.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountPrivateKeyType private_key_type = 2 [json_name = "privateKeyType", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearPrivateKeyType() {
@@ -678,7 +678,7 @@ private static final long serialVersionUID = 0L;
      * RSA key.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The enum numeric value on the wire for keyAlgorithm.
      */
     @java.lang.Override public int getKeyAlgorithmValue() {
@@ -690,7 +690,7 @@ private static final long serialVersionUID = 0L;
      * RSA key.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The enum numeric value on the wire for keyAlgorithm to set.
      * @return This builder for chaining.
      */
@@ -706,7 +706,7 @@ private static final long serialVersionUID = 0L;
      * RSA key.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The keyAlgorithm.
      */
     @java.lang.Override
@@ -720,7 +720,7 @@ private static final long serialVersionUID = 0L;
      * RSA key.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The keyAlgorithm to set.
      * @return This builder for chaining.
      */
@@ -739,7 +739,7 @@ private static final long serialVersionUID = 0L;
      * RSA key.
      * </pre>
      *
-     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm"];</code>
+     * <code>.cbws.iam.v1alpha1.ServiceAccountKeyAlgorithm key_algorithm = 3 [json_name = "keyAlgorithm", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearKeyAlgorithm() {

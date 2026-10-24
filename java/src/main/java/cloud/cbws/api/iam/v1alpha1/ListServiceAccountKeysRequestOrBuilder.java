@@ -36,7 +36,7 @@ public interface ListServiceAccountKeysRequestOrBuilder extends
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return A list containing the keyTypes.
    */
   java.util.List<cloud.cbws.api.iam.v1alpha1.ServiceAccountKeyType> getKeyTypesList();
@@ -45,7 +45,7 @@ public interface ListServiceAccountKeysRequestOrBuilder extends
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The count of keyTypes.
    */
   int getKeyTypesCount();
@@ -54,7 +54,7 @@ public interface ListServiceAccountKeysRequestOrBuilder extends
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @param index The index of the element to return.
    * @return The keyTypes at the given index.
    */
@@ -64,7 +64,7 @@ public interface ListServiceAccountKeysRequestOrBuilder extends
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return A list containing the enum numeric values on the wire for keyTypes.
    */
   java.util.List<java.lang.Integer>
@@ -74,7 +74,7 @@ public interface ListServiceAccountKeysRequestOrBuilder extends
    * Optional. The key types to list. Empty lists keys of every type.
    * </pre>
    *
-   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes"];</code>
+   * <code>repeated .cbws.iam.v1alpha1.ServiceAccountKeyType key_types = 2 [json_name = "keyTypes", (.google.api.field_behavior) = OPTIONAL];</code>
    * @param index The index of the value to return.
    * @return The enum numeric value on the wire of keyTypes at the given index.
    */

@@ -39,7 +39,7 @@ public object DisableServiceRequestKt {
      * `projects/my-project/services/logging.cbws.xyz`.
      * ```
      *
-     * `string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED];`
+     * `string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }`
      */
     public var name: kotlin.String
       @kotlin.jvm.JvmName("getName")
@@ -55,7 +55,7 @@ public object DisableServiceRequestKt {
      * `projects/my-project/services/logging.cbws.xyz`.
      * </pre>
      *
-     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string name = 1 [json_name = "name", (.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }</code>
      * @return This builder for chaining.
      */
     public fun clearName() {

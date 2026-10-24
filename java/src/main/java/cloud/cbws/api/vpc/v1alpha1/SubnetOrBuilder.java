@@ -37,7 +37,7 @@ public interface SubnetOrBuilder extends
    * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   java.lang.String getParent();
@@ -47,7 +47,7 @@ public interface SubnetOrBuilder extends
    * `projects/my-project/vpcs/default/privateNetworks/nl-ein-1`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   com.google.protobuf.ByteString
@@ -92,7 +92,7 @@ public interface SubnetOrBuilder extends
    * gives `2001:db8::1`. It is set by the service.
    * </pre>
    *
-   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The gateway.
    */
   java.lang.String getGateway();
@@ -103,7 +103,7 @@ public interface SubnetOrBuilder extends
    * gives `2001:db8::1`. It is set by the service.
    * </pre>
    *
-   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string gateway = 4 [json_name = "gateway", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for gateway.
    */
   com.google.protobuf.ByteString
