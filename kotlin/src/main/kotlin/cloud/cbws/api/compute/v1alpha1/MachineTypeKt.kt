@@ -172,7 +172,7 @@ public object MachineTypeKt {
      * request's read mask leaves out `stock_status`.
      * ```
      *
-     * `.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];`
+     * `.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var stockStatus: cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus
       @kotlin.jvm.JvmName("getStockStatus")
@@ -194,7 +194,7 @@ public object MachineTypeKt {
      * request's read mask leaves out `stock_status`.
      * </pre>
      *
-     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearStockStatus() {

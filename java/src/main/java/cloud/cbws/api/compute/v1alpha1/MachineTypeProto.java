@@ -42,23 +42,23 @@ public final class MachineTypeProto {
       "\n(cbws/compute/v1alpha1/machine_type.pro" +
       "to\022\025cbws.compute.v1alpha1\032\037google/api/fi" +
       "eld_behavior.proto\032\031google/api/resource." +
-      "proto\"\305\003\n\013MachineType\022\030\n\004name\030\001 \001(\tB\004\342A\001" +
+      "proto\"\321\003\n\013MachineType\022\030\n\004name\030\001 \001(\tB\004\342A\001" +
       "\003R\004name\022\030\n\004zone\030\003 \001(\tB\004\342A\001\003R\004zone\022\026\n\003cpu" +
       "\030\004 \001(\005B\004\342A\001\003R\003cpu\022!\n\tmemory_mb\030\005 \001(\005B\004\342A" +
       "\001\003R\010memoryMb\0220\n\021ephemeral_disk_gb\030\006 \001(\005B" +
-      "\004\342A\001\003R\017ephemeralDiskGb\022Q\n\014stock_status\030\007" +
+      "\004\342A\001\003R\017ephemeralDiskGb\022W\n\014stock_status\030\007" +
       " \001(\0162..cbws.compute.v1alpha1.MachineType" +
-      ".StockStatusR\013stockStatus\"\201\001\n\013StockStatu" +
-      "s\022\034\n\030STOCK_STATUS_UNSPECIFIED\020\000\022\031\n\025STOCK" +
-      "_STATUS_IN_STOCK\020\001\022\032\n\026STOCK_STATUS_LOW_S" +
-      "TOCK\020\002\022\035\n\031STOCK_STATUS_OUT_OF_STOCK\020\003:>\352" +
-      "A;\n\036compute.cbws.cloud/MachineType\022\031zone" +
-      "s/{zone}/types/{name}B\251\001\n\037cloud.cbws.api" +
-      ".compute.v1alpha1B\020MachineTypeProtoP\001\242\002\003" +
-      "CCX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws\\Compu" +
-      "te\\V1alpha1\342\002!Cbws\\Compute\\V1alpha1\\GPBM" +
-      "etadata\352\002\027Cbws::Compute::V1alpha1b\006proto" +
-      "3"
+      ".StockStatusB\004\342A\001\003R\013stockStatus\"\201\001\n\013Stoc" +
+      "kStatus\022\034\n\030STOCK_STATUS_UNSPECIFIED\020\000\022\031\n" +
+      "\025STOCK_STATUS_IN_STOCK\020\001\022\032\n\026STOCK_STATUS" +
+      "_LOW_STOCK\020\002\022\035\n\031STOCK_STATUS_OUT_OF_STOC" +
+      "K\020\003:>\352A;\n\036compute.cbws.cloud/MachineType" +
+      "\022\031zones/{zone}/types/{name}J\004\010\002\020\003B\251\001\n\037cl" +
+      "oud.cbws.api.compute.v1alpha1B\020MachineTy" +
+      "peProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alpha1\312" +
+      "\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\Compute\\V" +
+      "1alpha1\\GPBMetadata\352\002\027Cbws::Compute::V1a" +
+      "lpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

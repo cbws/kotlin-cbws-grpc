@@ -39,7 +39,7 @@ public interface ResizeMachineRequestOrBuilder extends
    * runs in. A resize to the machine's current type finishes without change.
    * </pre>
    *
-   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The type.
    */
   java.lang.String getType();
@@ -51,7 +51,7 @@ public interface ResizeMachineRequestOrBuilder extends
    * runs in. A resize to the machine's current type finishes without change.
    * </pre>
    *
-   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for type.
    */
   com.google.protobuf.ByteString

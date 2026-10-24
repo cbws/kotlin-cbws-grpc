@@ -67,7 +67,7 @@ public object MachineKt {
      * The project that holds the machine, such as `projects/my-project-123`.
      * ```
      *
-     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];`
+     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var parent: kotlin.String
       @kotlin.jvm.JvmName("getParent")
@@ -81,7 +81,7 @@ public object MachineKt {
      * The project that holds the machine, such as `projects/my-project-123`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearParent() {
@@ -95,7 +95,7 @@ public object MachineKt {
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      * ```
      *
-     * `string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];`
+     * `string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];`
      */
     public var type: kotlin.String
       @kotlin.jvm.JvmName("getType")
@@ -111,7 +111,7 @@ public object MachineKt {
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      * </pre>
      *
-     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public fun clearType() {
@@ -155,7 +155,7 @@ public object MachineKt {
      * The hostname the machine boots with. Defaults to the machine id.
      * ```
      *
-     * `string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];`
+     * `string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];`
      */
     public var hostname: kotlin.String
       @kotlin.jvm.JvmName("getHostname")
@@ -169,7 +169,7 @@ public object MachineKt {
      * The hostname the machine boots with. Defaults to the machine id.
      * </pre>
      *
-     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public fun clearHostname() {

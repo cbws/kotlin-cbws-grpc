@@ -44,9 +44,9 @@ public final class MachineProto {
       "ehavior.proto\032\031google/api/resource.proto" +
       "\032\037google/protobuf/timestamp.proto\"\351\005\n\007Ma" +
       "chine\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006paren" +
-      "t\030\002 \001(\tB\004\342A\001\005R\006parent\022\030\n\004type\030\003 \001(\tB\004\342A\001" +
-      "\005R\004type\022\032\n\005image\030\n \001(\tB\004\342A\001\002R\005image\022 \n\010h" +
-      "ostname\030\004 \001(\tB\004\342A\001\002R\010hostname\022\036\n\007address" +
+      "t\030\002 \001(\tB\004\342A\001\003R\006parent\022\030\n\004type\030\003 \001(\tB\004\342A\001" +
+      "\002R\004type\022\032\n\005image\030\n \001(\tB\004\342A\001\002R\005image\022 \n\010h" +
+      "ostname\030\004 \001(\tB\004\342A\001\001R\010hostname\022\036\n\007address" +
       "\030\007 \001(\tB\004\342A\001\003R\007address\022\'\n\014ipv6_address\030\021 " +
       "\001(\tB\004\342A\001\003R\013ipv6Address\022 \n\010ssh_keys\030\t \003(\t" +
       "B\005\342A\002\004\005R\007sshKeys\022!\n\010userdata\030\020 \001(\tB\005\342A\002\004" +

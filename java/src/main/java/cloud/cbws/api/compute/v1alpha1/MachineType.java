@@ -372,7 +372,7 @@ private static final long serialVersionUID = 0L;
    * request's read mask leaves out `stock_status`.
    * </pre>
    *
-   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for stockStatus.
    */
   @java.lang.Override public int getStockStatusValue() {
@@ -384,7 +384,7 @@ private static final long serialVersionUID = 0L;
    * request's read mask leaves out `stock_status`.
    * </pre>
    *
-   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The stockStatus.
    */
   @java.lang.Override public cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus getStockStatus() {
@@ -1136,7 +1136,7 @@ private static final long serialVersionUID = 0L;
      * request's read mask leaves out `stock_status`.
      * </pre>
      *
-     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The enum numeric value on the wire for stockStatus.
      */
     @java.lang.Override public int getStockStatusValue() {
@@ -1148,7 +1148,7 @@ private static final long serialVersionUID = 0L;
      * request's read mask leaves out `stock_status`.
      * </pre>
      *
-     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The enum numeric value on the wire for stockStatus to set.
      * @return This builder for chaining.
      */
@@ -1164,7 +1164,7 @@ private static final long serialVersionUID = 0L;
      * request's read mask leaves out `stock_status`.
      * </pre>
      *
-     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The stockStatus.
      */
     @java.lang.Override
@@ -1178,7 +1178,7 @@ private static final long serialVersionUID = 0L;
      * request's read mask leaves out `stock_status`.
      * </pre>
      *
-     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The stockStatus to set.
      * @return This builder for chaining.
      */
@@ -1197,7 +1197,7 @@ private static final long serialVersionUID = 0L;
      * request's read mask leaves out `stock_status`.
      * </pre>
      *
-     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+     * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearStockStatus() {

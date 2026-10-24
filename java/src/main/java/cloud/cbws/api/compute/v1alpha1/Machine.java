@@ -380,7 +380,7 @@ private static final long serialVersionUID = 0L;
    * The project that holds the machine, such as `projects/my-project-123`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   @java.lang.Override
@@ -401,7 +401,7 @@ private static final long serialVersionUID = 0L;
    * The project that holds the machine, such as `projects/my-project-123`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   @java.lang.Override
@@ -429,7 +429,7 @@ private static final long serialVersionUID = 0L;
    * CBWS choose a zone that offers the type. Change it with ResizeMachine.
    * </pre>
    *
-   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The type.
    */
   @java.lang.Override
@@ -452,7 +452,7 @@ private static final long serialVersionUID = 0L;
    * CBWS choose a zone that offers the type. Change it with ResizeMachine.
    * </pre>
    *
-   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -531,7 +531,7 @@ private static final long serialVersionUID = 0L;
    * The hostname the machine boots with. Defaults to the machine id.
    * </pre>
    *
-   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The hostname.
    */
   @java.lang.Override
@@ -552,7 +552,7 @@ private static final long serialVersionUID = 0L;
    * The hostname the machine boots with. Defaults to the machine id.
    * </pre>
    *
-   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for hostname.
    */
   @java.lang.Override
@@ -1632,7 +1632,7 @@ private static final long serialVersionUID = 0L;
      * The project that holds the machine, such as `projects/my-project-123`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The parent.
      */
     public java.lang.String getParent() {
@@ -1652,7 +1652,7 @@ private static final long serialVersionUID = 0L;
      * The project that holds the machine, such as `projects/my-project-123`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return The bytes for parent.
      */
     public com.google.protobuf.ByteString
@@ -1673,7 +1673,7 @@ private static final long serialVersionUID = 0L;
      * The project that holds the machine, such as `projects/my-project-123`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The parent to set.
      * @return This builder for chaining.
      */
@@ -1690,7 +1690,7 @@ private static final long serialVersionUID = 0L;
      * The project that holds the machine, such as `projects/my-project-123`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public Builder clearParent() {
@@ -1704,7 +1704,7 @@ private static final long serialVersionUID = 0L;
      * The project that holds the machine, such as `projects/my-project-123`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @param value The bytes for parent to set.
      * @return This builder for chaining.
      */
@@ -1726,7 +1726,7 @@ private static final long serialVersionUID = 0L;
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      * </pre>
      *
-     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The type.
      */
     public java.lang.String getType() {
@@ -1748,7 +1748,7 @@ private static final long serialVersionUID = 0L;
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      * </pre>
      *
-     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
@@ -1771,7 +1771,7 @@ private static final long serialVersionUID = 0L;
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      * </pre>
      *
-     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -1790,7 +1790,7 @@ private static final long serialVersionUID = 0L;
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      * </pre>
      *
-     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
@@ -1806,7 +1806,7 @@ private static final long serialVersionUID = 0L;
      * CBWS choose a zone that offers the type. Change it with ResizeMachine.
      * </pre>
      *
-     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */
@@ -1933,7 +1933,7 @@ private static final long serialVersionUID = 0L;
      * The hostname the machine boots with. Defaults to the machine id.
      * </pre>
      *
-     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The hostname.
      */
     public java.lang.String getHostname() {
@@ -1953,7 +1953,7 @@ private static final long serialVersionUID = 0L;
      * The hostname the machine boots with. Defaults to the machine id.
      * </pre>
      *
-     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return The bytes for hostname.
      */
     public com.google.protobuf.ByteString
@@ -1974,7 +1974,7 @@ private static final long serialVersionUID = 0L;
      * The hostname the machine boots with. Defaults to the machine id.
      * </pre>
      *
-     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The hostname to set.
      * @return This builder for chaining.
      */
@@ -1991,7 +1991,7 @@ private static final long serialVersionUID = 0L;
      * The hostname the machine boots with. Defaults to the machine id.
      * </pre>
      *
-     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @return This builder for chaining.
      */
     public Builder clearHostname() {
@@ -2005,7 +2005,7 @@ private static final long serialVersionUID = 0L;
      * The hostname the machine boots with. Defaults to the machine id.
      * </pre>
      *
-     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+     * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
      * @param value The bytes for hostname to set.
      * @return This builder for chaining.
      */

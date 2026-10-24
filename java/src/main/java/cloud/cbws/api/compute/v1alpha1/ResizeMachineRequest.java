@@ -108,7 +108,7 @@ private static final long serialVersionUID = 0L;
    * runs in. A resize to the machine's current type finishes without change.
    * </pre>
    *
-   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The type.
    */
   @java.lang.Override
@@ -132,7 +132,7 @@ private static final long serialVersionUID = 0L;
    * runs in. A resize to the machine's current type finishes without change.
    * </pre>
    *
-   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+   * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for type.
    */
   @java.lang.Override
@@ -578,7 +578,7 @@ private static final long serialVersionUID = 0L;
      * runs in. A resize to the machine's current type finishes without change.
      * </pre>
      *
-     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The type.
      */
     public java.lang.String getType() {
@@ -601,7 +601,7 @@ private static final long serialVersionUID = 0L;
      * runs in. A resize to the machine's current type finishes without change.
      * </pre>
      *
-     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return The bytes for type.
      */
     public com.google.protobuf.ByteString
@@ -625,7 +625,7 @@ private static final long serialVersionUID = 0L;
      * runs in. A resize to the machine's current type finishes without change.
      * </pre>
      *
-     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The type to set.
      * @return This builder for chaining.
      */
@@ -645,7 +645,7 @@ private static final long serialVersionUID = 0L;
      * runs in. A resize to the machine's current type finishes without change.
      * </pre>
      *
-     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public Builder clearType() {
@@ -662,7 +662,7 @@ private static final long serialVersionUID = 0L;
      * runs in. A resize to the machine's current type finishes without change.
      * </pre>
      *
-     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @param value The bytes for type to set.
      * @return This builder for chaining.
      */

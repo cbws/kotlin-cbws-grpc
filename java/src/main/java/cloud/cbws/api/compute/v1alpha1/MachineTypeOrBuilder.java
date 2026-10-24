@@ -88,7 +88,7 @@ public interface MachineTypeOrBuilder extends
    * request's read mask leaves out `stock_status`.
    * </pre>
    *
-   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The enum numeric value on the wire for stockStatus.
    */
   int getStockStatusValue();
@@ -98,7 +98,7 @@ public interface MachineTypeOrBuilder extends
    * request's read mask leaves out `stock_status`.
    * </pre>
    *
-   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus"];</code>
+   * <code>.cbws.compute.v1alpha1.MachineType.StockStatus stock_status = 7 [json_name = "stockStatus", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The stockStatus.
    */
   cloud.cbws.api.compute.v1alpha1.MachineType.StockStatus getStockStatus();

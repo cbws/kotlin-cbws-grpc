@@ -68,7 +68,7 @@ public object ImageFamilyKt {
      * The project that holds the family, such as `projects/my-project-123`.
      * ```
      *
-     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];`
+     * `string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];`
      */
     public var parent: kotlin.String
       @kotlin.jvm.JvmName("getParent")
@@ -82,7 +82,7 @@ public object ImageFamilyKt {
      * The project that holds the family, such as `projects/my-project-123`.
      * </pre>
      *
-     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+     * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      * @return This builder for chaining.
      */
     public fun clearParent() {

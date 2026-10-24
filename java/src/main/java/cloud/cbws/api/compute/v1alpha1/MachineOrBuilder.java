@@ -38,7 +38,7 @@ public interface MachineOrBuilder extends
    * The project that holds the machine, such as `projects/my-project-123`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The parent.
    */
   java.lang.String getParent();
@@ -47,7 +47,7 @@ public interface MachineOrBuilder extends
    * The project that holds the machine, such as `projects/my-project-123`.
    * </pre>
    *
-   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string parent = 2 [json_name = "parent", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
    * @return The bytes for parent.
    */
   com.google.protobuf.ByteString
@@ -60,7 +60,7 @@ public interface MachineOrBuilder extends
    * CBWS choose a zone that offers the type. Change it with ResizeMachine.
    * </pre>
    *
-   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The type.
    */
   java.lang.String getType();
@@ -71,7 +71,7 @@ public interface MachineOrBuilder extends
    * CBWS choose a zone that offers the type. Change it with ResizeMachine.
    * </pre>
    *
-   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = IMMUTABLE];</code>
+   * <code>string type = 3 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
    * @return The bytes for type.
    */
   com.google.protobuf.ByteString
@@ -108,7 +108,7 @@ public interface MachineOrBuilder extends
    * The hostname the machine boots with. Defaults to the machine id.
    * </pre>
    *
-   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The hostname.
    */
   java.lang.String getHostname();
@@ -117,7 +117,7 @@ public interface MachineOrBuilder extends
    * The hostname the machine boots with. Defaults to the machine id.
    * </pre>
    *
-   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = REQUIRED];</code>
+   * <code>string hostname = 4 [json_name = "hostname", (.google.api.field_behavior) = OPTIONAL];</code>
    * @return The bytes for hostname.
    */
   com.google.protobuf.ByteString

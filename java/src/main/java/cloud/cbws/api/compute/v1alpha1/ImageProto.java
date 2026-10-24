@@ -48,11 +48,11 @@ public final class ImageProto {
       "s.compute.v1alpha1\032\037google/api/field_beh" +
       "avior.proto\032\031google/api/resource.proto\"\236" +
       "\001\n\005Image\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006pa" +
-      "rent\030\002 \001(\tB\004\342A\001\005R\006parent\022\034\n\006family\030\003 \001(\t" +
+      "rent\030\002 \001(\tB\004\342A\001\003R\006parent\022\034\n\006family\030\003 \001(\t" +
       "B\004\342A\001\005R\006family:?\352A<\n\030compute.cbws.cloud/" +
       "Image\022 projects/{project}/images/{name}\"" +
       "\220\001\n\013ImageFamily\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004nam" +
-      "e\022\034\n\006parent\030\002 \001(\tB\004\342A\001\005R\006parent:I\352AF\n\036co" +
+      "e\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006parent:I\352AF\n\036co" +
       "mpute.cbws.cloud/ImageFamily\022$projects/{" +
       "project}/families/{family}B\243\001\n\037cloud.cbw" +
       "s.api.compute.v1alpha1B\nImageProtoP\001\242\002\003C" +

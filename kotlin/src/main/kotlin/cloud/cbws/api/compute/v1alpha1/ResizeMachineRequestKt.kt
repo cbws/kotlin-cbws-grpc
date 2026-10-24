@@ -68,7 +68,7 @@ public object ResizeMachineRequestKt {
      * runs in. A resize to the machine's current type finishes without change.
      * ```
      *
-     * `string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];`
+     * `string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];`
      */
     public var type: kotlin.String
       @kotlin.jvm.JvmName("getType")
@@ -85,7 +85,7 @@ public object ResizeMachineRequestKt {
      * runs in. A resize to the machine's current type finishes without change.
      * </pre>
      *
-     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = INPUT_ONLY];</code>
+     * <code>string type = 2 [json_name = "type", (.google.api.field_behavior) = REQUIRED];</code>
      * @return This builder for chaining.
      */
     public fun clearType() {
