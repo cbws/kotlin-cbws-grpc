@@ -98,7 +98,7 @@ public final class ProjectsProto {
       "skB\004\342A\001\002R\nupdateMask\"N\n\024DeleteProjectReq" +
       "uest\0226\n\004name\030\001 \001(\tB\"\342A\001\002\372A\033\n\031projects.cb" +
       "ws.xyz/ProjectR\004name\"\027\n\025DeleteProjectMet" +
-      "adata2\356\n\n\017ProjectsService\022\222\001\n\rCreateProj" +
+      "adata2\244\013\n\017ProjectsService\022\222\001\n\rCreateProj" +
       "ect\022,.cbws.projects.v1alpha1.CreateProje" +
       "ctRequest\032\037.cbws.projects.v1alpha1.Proje" +
       "ct\"2\202\263\033\007Project\212\263\033\006create\202\323\344\223\002\027\"\022/v1alph" +
@@ -119,26 +119,28 @@ public final class ProjectsProto {
       "tion\"\207\001\312AE\n\025google.protobuf.Empty\022,cbws." +
       "projects.v1alpha1.DeleteProjectMetadata\332" +
       "A\004name\202\263\033\007Project\212\263\033\006delete\202\323\344\223\002\035*\033/v1al" +
-      "pha1/{name=projects/*}\022\214\001\n\tGetPolicy\022*.c" +
+      "pha1/{name=projects/*}\022\247\001\n\tGetPolicy\022*.c" +
       "bws.iam.policy.v1alpha1.GetPolicyRequest" +
-      "\032 .cbws.iam.policy.v1alpha1.Policy\"1\332A\010r" +
-      "esource\202\323\344\223\002 \"\036/v1alpha1/{resource}:getP" +
-      "olicy\022\226\001\n\tSetPolicy\022*.cbws.iam.policy.v1" +
-      "alpha1.SetPolicyRequest\032 .cbws.iam.polic" +
-      "y.v1alpha1.Policy\";\332A\017resource,policy\202\323\344" +
-      "\223\002#\"\036/v1alpha1/{resource}:setPolicy:\001*\022\276" +
-      "\001\n\017TestPermissions\0220.cbws.iam.policy.v1a" +
-      "lpha1.TestPermissionsRequest\0321.cbws.iam." +
-      "policy.v1alpha1.TestPermissionsResponse\"" +
-      "F\332A\024resource,permissions\202\323\344\223\002)\"$/v1alpha" +
-      "1/{resource}:testPermissions:\001*\032-\312A\023proj" +
-      "ects.cbws.cloud\372\262\033\023\n\021projects.cbws.xyzB\340" +
-      "\001\n cloud.cbws.api.projects.v1alpha1B\rPro" +
-      "jectsProtoP\001Z3github.com/cbws/go-cbws-gr" +
-      "pc/cbws/projects/v1alpha1\242\002\003CPX\252\002\026Cbws.P" +
-      "rojects.V1alpha1\312\002\026Cbws\\Projects\\V1alpha" +
-      "1\342\002\"Cbws\\Projects\\V1alpha1\\GPBMetadata\352\002" +
-      "\030Cbws::Projects::V1alpha1b\006proto3"
+      "\032 .cbws.iam.policy.v1alpha1.Policy\"L\332A\010r" +
+      "esource\202\263\033\007Project\212\263\033\014getIAMPolicy\202\323\344\223\002 " +
+      "\"\036/v1alpha1/{resource}:getPolicy\022\261\001\n\tSet" +
+      "Policy\022*.cbws.iam.policy.v1alpha1.SetPol" +
+      "icyRequest\032 .cbws.iam.policy.v1alpha1.Po" +
+      "licy\"V\332A\017resource,policy\202\263\033\007Project\212\263\033\014s" +
+      "etIAMPolicy\202\323\344\223\002#\"\036/v1alpha1/{resource}:" +
+      "setPolicy:\001*\022\276\001\n\017TestPermissions\0220.cbws." +
+      "iam.policy.v1alpha1.TestPermissionsReque" +
+      "st\0321.cbws.iam.policy.v1alpha1.TestPermis" +
+      "sionsResponse\"F\332A\024resource,permissions\202\323" +
+      "\344\223\002)\"$/v1alpha1/{resource}:testPermissio" +
+      "ns:\001*\032-\312A\023projects.cbws.cloud\372\262\033\023\n\021proje" +
+      "cts.cbws.xyzB\340\001\n cloud.cbws.api.projects" +
+      ".v1alpha1B\rProjectsProtoP\001Z3github.com/c" +
+      "bws/go-cbws-grpc/cbws/projects/v1alpha1\242" +
+      "\002\003CPX\252\002\026Cbws.Projects.V1alpha1\312\002\026Cbws\\Pr" +
+      "ojects\\V1alpha1\342\002\"Cbws\\Projects\\V1alpha1" +
+      "\\GPBMetadata\352\002\030Cbws::Projects::V1alpha1b" +
+      "\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

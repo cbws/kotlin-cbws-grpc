@@ -174,7 +174,7 @@ public final class IamProto {
       "iceAccountR\004name\022\036\n\007payload\030\005 \001(\014B\004\342A\001\002R" +
       "\007payload\"J\n\020SignBlobResponse\022\025\n\006key_id\030\001" +
       " \001(\tR\005keyId\022\037\n\013signed_blob\030\004 \001(\014R\nsigned" +
-      "Blob2\244\024\n\nIAMService\022\316\001\n\023ListServiceAccou" +
+      "Blob2\243\025\n\nIAMService\022\316\001\n\023ListServiceAccou" +
       "nts\022-.cbws.iam.v1alpha1.ListServiceAccou" +
       "ntsRequest\032..cbws.iam.v1alpha1.ListServi" +
       "ceAccountsResponse\"X\332A\006parent\202\263\033\016Service" +
@@ -200,51 +200,54 @@ public final class IamProto {
       "gates,scope,lifetime\202\263\033\016ServiceAccount\212\263" +
       "\033\023generateAccessToken\202\323\344\223\002@\";/v1/{name=p" +
       "rojects/*/serviceAccounts/*}:generateAcc" +
-      "essToken:\001*\022\245\001\n\007SignJwt\022!.cbws.iam.v1alp" +
+      "essToken:\001*\022\302\001\n\007SignJwt\022!.cbws.iam.v1alp" +
       "ha1.SignJwtRequest\032\".cbws.iam.v1alpha1.S" +
-      "ignJwtResponse\"S\332A\026name,delegates,payloa" +
-      "d\202\323\344\223\0024\"//v1/{name=projects/*/serviceAcc" +
-      "ounts/*}:signJwt:\001*\022\251\001\n\010SignBlob\022\".cbws." +
-      "iam.v1alpha1.SignBlobRequest\032#.cbws.iam." +
-      "v1alpha1.SignBlobResponse\"T\332A\026name,deleg" +
-      "ates,payload\202\323\344\223\0025\"0/v1/{name=projects/*" +
-      "/serviceAccounts/*}:signBlob:\001*\022\345\001\n\026List" +
-      "ServiceAccountKeys\0220.cbws.iam.v1alpha1.L" +
-      "istServiceAccountKeysRequest\0321.cbws.iam." +
-      "v1alpha1.ListServiceAccountKeysResponse\"" +
-      "f\332A\020parent,key_types\202\263\033\021ServiceAccountKe" +
-      "y\212\263\033\004list\202\323\344\223\0020\022./v1/{parent=projects/*/" +
-      "serviceAccounts/*}/keys\022\307\001\n\024GetServiceAc" +
-      "countKey\022..cbws.iam.v1alpha1.GetServiceA" +
-      "ccountKeyRequest\032$.cbws.iam.v1alpha1.Ser" +
-      "viceAccountKey\"Y\332A\004name\202\263\033\021ServiceAccoun" +
-      "tKey\212\263\033\003get\202\323\344\223\0020\022./v1/{name=projects/*/" +
-      "serviceAccounts/*/keys/*}\022\365\001\n\027CreateServ" +
-      "iceAccountKey\0221.cbws.iam.v1alpha1.Create" +
-      "ServiceAccountKeyRequest\032$.cbws.iam.v1al" +
-      "pha1.ServiceAccountKey\"\200\001\332A%parent,priva" +
-      "te_key_type,key_algorithm\202\263\033\021ServiceAcco" +
-      "untKey\212\263\033\006create\202\323\344\223\0023\"./v1/{parent=proj" +
-      "ects/*/serviceAccounts/*}/keys:\001*\022\302\001\n\027De" +
-      "leteServiceAccountKey\0221.cbws.iam.v1alpha" +
-      "1.DeleteServiceAccountKeyRequest\032\026.googl" +
-      "e.protobuf.Empty\"\\\332A\004name\202\263\033\021ServiceAcco" +
-      "untKey\212\263\033\006delete\202\323\344\223\0020*./v1/{name=projec" +
-      "ts/*/serviceAccounts/*/keys/*}\022\214\001\n\tGetPo" +
-      "licy\022*.cbws.iam.policy.v1alpha1.GetPolic" +
-      "yRequest\032 .cbws.iam.policy.v1alpha1.Poli" +
-      "cy\"1\332A\010resource\202\323\344\223\002 \"\036/v1alpha1/{resour" +
-      "ce}:getPolicy\022\226\001\n\tSetPolicy\022*.cbws.iam.p" +
-      "olicy.v1alpha1.SetPolicyRequest\032 .cbws.i" +
-      "am.policy.v1alpha1.Policy\";\332A\017resource,p" +
-      "olicy\202\323\344\223\002#\"\036/v1alpha1/{resource}:setPol" +
-      "icy:\001*\032#\312A\016iam.cbws.cloud\372\262\033\016\n\014iam.cbws." +
-      "xyzB\275\001\n\033cloud.cbws.api.iam.v1alpha1B\010Iam" +
-      "ProtoP\001Z.github.com/cbws/go-cbws-grpc/cb" +
-      "ws/iam/v1alpha1\242\002\003CIX\252\002\021Cbws.Iam.V1alpha" +
-      "1\312\002\021Cbws\\Iam\\V1alpha1\342\002\035Cbws\\Iam\\V1alpha" +
-      "1\\GPBMetadata\352\002\023Cbws::Iam::V1alpha1b\006pro" +
-      "to3"
+      "ignJwtResponse\"p\332A\026name,delegates,payloa" +
+      "d\202\263\033\016ServiceAccount\212\263\033\007signJwt\202\323\344\223\0024\"//v" +
+      "1/{name=projects/*/serviceAccounts/*}:si" +
+      "gnJwt:\001*\022\307\001\n\010SignBlob\022\".cbws.iam.v1alpha" +
+      "1.SignBlobRequest\032#.cbws.iam.v1alpha1.Si" +
+      "gnBlobResponse\"r\332A\026name,delegates,payloa" +
+      "d\202\263\033\016ServiceAccount\212\263\033\010signBlob\202\323\344\223\0025\"0/" +
+      "v1/{name=projects/*/serviceAccounts/*}:s" +
+      "ignBlob:\001*\022\345\001\n\026ListServiceAccountKeys\0220." +
+      "cbws.iam.v1alpha1.ListServiceAccountKeys" +
+      "Request\0321.cbws.iam.v1alpha1.ListServiceA" +
+      "ccountKeysResponse\"f\332A\020parent,key_types\202" +
+      "\263\033\021ServiceAccountKey\212\263\033\004list\202\323\344\223\0020\022./v1/" +
+      "{parent=projects/*/serviceAccounts/*}/ke" +
+      "ys\022\307\001\n\024GetServiceAccountKey\022..cbws.iam.v" +
+      "1alpha1.GetServiceAccountKeyRequest\032$.cb" +
+      "ws.iam.v1alpha1.ServiceAccountKey\"Y\332A\004na" +
+      "me\202\263\033\021ServiceAccountKey\212\263\033\003get\202\323\344\223\0020\022./v" +
+      "1/{name=projects/*/serviceAccounts/*/key" +
+      "s/*}\022\365\001\n\027CreateServiceAccountKey\0221.cbws." +
+      "iam.v1alpha1.CreateServiceAccountKeyRequ" +
+      "est\032$.cbws.iam.v1alpha1.ServiceAccountKe" +
+      "y\"\200\001\332A%parent,private_key_type,key_algor" +
+      "ithm\202\263\033\021ServiceAccountKey\212\263\033\006create\202\323\344\223\002" +
+      "3\"./v1/{parent=projects/*/serviceAccount" +
+      "s/*}/keys:\001*\022\302\001\n\027DeleteServiceAccountKey" +
+      "\0221.cbws.iam.v1alpha1.DeleteServiceAccoun" +
+      "tKeyRequest\032\026.google.protobuf.Empty\"\\\332A\004" +
+      "name\202\263\033\021ServiceAccountKey\212\263\033\006delete\202\323\344\223\002" +
+      "0*./v1/{name=projects/*/serviceAccounts/" +
+      "*/keys/*}\022\256\001\n\tGetPolicy\022*.cbws.iam.polic" +
+      "y.v1alpha1.GetPolicyRequest\032 .cbws.iam.p" +
+      "olicy.v1alpha1.Policy\"S\332A\010resource\202\263\033\016Se" +
+      "rviceAccount\212\263\033\014getIAMPolicy\202\323\344\223\002 \"\036/v1a" +
+      "lpha1/{resource}:getPolicy\022\270\001\n\tSetPolicy" +
+      "\022*.cbws.iam.policy.v1alpha1.SetPolicyReq" +
+      "uest\032 .cbws.iam.policy.v1alpha1.Policy\"]" +
+      "\332A\017resource,policy\202\263\033\016ServiceAccount\212\263\033\014" +
+      "setIAMPolicy\202\323\344\223\002#\"\036/v1alpha1/{resource}" +
+      ":setPolicy:\001*\032#\312A\016iam.cbws.cloud\372\262\033\016\n\014ia" +
+      "m.cbws.xyzB\275\001\n\033cloud.cbws.api.iam.v1alph" +
+      "a1B\010IamProtoP\001Z.github.com/cbws/go-cbws-" +
+      "grpc/cbws/iam/v1alpha1\242\002\003CIX\252\002\021Cbws.Iam." +
+      "V1alpha1\312\002\021Cbws\\Iam\\V1alpha1\342\002\035Cbws\\Iam\\" +
+      "V1alpha1\\GPBMetadata\352\002\023Cbws::Iam::V1alph" +
+      "a1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
