@@ -1,0 +1,61 @@
+# Publishes the libraries of a version tag to GitHub Packages and creates the tag's GitHub release.
+# The tags come from the process that generates this repository. Maven Central receives them too
+# once the repository variable MAVEN_CENTRAL is true and the maven-central environment holds its
+# secrets. To publish a version again, run the workflow by hand on its tag.
+name: Publish
+
+on:
+  push:
+    tags:
+      - "v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  github-packages:
+    # Only a tag has a release version.
+    if: startsWith(github.ref, 'refs/tags/v')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      packages: write
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          gradle-version: "9.8.2"
+      - run: gradle publishAllPublicationsToGitHubPackagesRepository -Pversion="${GITHUB_REF_NAME#v}"
+        env:
+          ORG_GRADLE_PROJECT_GitHubPackagesUsername: ${{ github.actor }}
+          ORG_GRADLE_PROJECT_GitHubPackagesPassword: ${{ secrets.GITHUB_TOKEN }}
+      - run: gh release view "$GITHUB_REF_NAME" > /dev/null 2>&1 || gh release create "$GITHUB_REF_NAME" --verify-tag --prerelease --title "Version ${GITHUB_REF_NAME#v}" --notes "Generated from cbws/protobufs $GITHUB_REF_NAME."
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  maven-central:
+    if: startsWith(github.ref, 'refs/tags/v') && vars.MAVEN_CENTRAL == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: maven-central
+      url: https://central.sonatype.com/namespace/cloud.cbws
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@b843ebf9b913146b38da2eaa7aeddf76074ae1ad # v6.1.0
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: gradle/actions/setup-gradle@3f5f9adaf7d9fecd50b5935e54106014257a94e6 # v6.4.0
+        with:
+          gradle-version: "9.8.2"
+      - run: gradle publishAndReleaseToMavenCentral -Pversion="${GITHUB_REF_NAME#v}"
+        env:
+          ORG_GRADLE_PROJECT_mavenCentralUsername: ${{ secrets.MAVEN_CENTRAL_USERNAME }}
+          ORG_GRADLE_PROJECT_mavenCentralPassword: ${{ secrets.MAVEN_CENTRAL_PASSWORD }}
+          ORG_GRADLE_PROJECT_signingInMemoryKey: ${{ secrets.SIGNING_KEY }}
+          ORG_GRADLE_PROJECT_signingInMemoryKeyPassword: ${{ secrets.SIGNING_KEY_PASSWORD }}
