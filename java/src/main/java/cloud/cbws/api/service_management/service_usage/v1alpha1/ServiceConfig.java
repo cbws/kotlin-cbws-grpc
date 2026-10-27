@@ -7,7 +7,7 @@ package cloud.cbws.api.service_management.service_usage.v1alpha1;
 
 /**
  * <pre>
- * The name and title of a service.
+ * The name, title and launch stage of a service.
  * </pre>
  *
  * Protobuf type {@code cbws.service_management.service_usage.v1alpha1.ServiceConfig}
@@ -33,6 +33,7 @@ private static final long serialVersionUID = 0L;
   private ServiceConfig() {
     name_ = "";
     title_ = "";
+    launchStage_ = 0;
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -144,6 +145,32 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int LAUNCH_STAGE_FIELD_NUMBER = 3;
+  private int launchStage_ = 0;
+  /**
+   * <pre>
+   * The service's launch stage.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+   * @return The enum numeric value on the wire for launchStage.
+   */
+  @java.lang.Override public int getLaunchStageValue() {
+    return launchStage_;
+  }
+  /**
+   * <pre>
+   * The service's launch stage.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+   * @return The launchStage.
+   */
+  @java.lang.Override public cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage getLaunchStage() {
+    cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage result = cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.forNumber(launchStage_);
+    return result == null ? cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.UNRECOGNIZED : result;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -164,6 +191,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 2, title_);
     }
+    if (launchStage_ != cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.LAUNCH_STAGE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(3, launchStage_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -178,6 +208,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(title_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(2, title_);
+    }
+    if (launchStage_ != cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.LAUNCH_STAGE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(3, launchStage_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -198,6 +232,7 @@ private static final long serialVersionUID = 0L;
         .equals(other.getName())) return false;
     if (!getTitle()
         .equals(other.getTitle())) return false;
+    if (launchStage_ != other.launchStage_) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -213,6 +248,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getName().hashCode();
     hash = (37 * hash) + TITLE_FIELD_NUMBER;
     hash = (53 * hash) + getTitle().hashCode();
+    hash = (37 * hash) + LAUNCH_STAGE_FIELD_NUMBER;
+    hash = (53 * hash) + launchStage_;
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -312,7 +349,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The name and title of a service.
+   * The name, title and launch stage of a service.
    * </pre>
    *
    * Protobuf type {@code cbws.service_management.service_usage.v1alpha1.ServiceConfig}
@@ -350,6 +387,7 @@ private static final long serialVersionUID = 0L;
       bitField0_ = 0;
       name_ = "";
       title_ = "";
+      launchStage_ = 0;
       return this;
     }
 
@@ -389,6 +427,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000002) != 0)) {
         result.title_ = title_;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.launchStage_ = launchStage_;
+      }
     }
 
     @java.lang.Override
@@ -412,6 +453,9 @@ private static final long serialVersionUID = 0L;
         title_ = other.title_;
         bitField0_ |= 0x00000002;
         onChanged();
+      }
+      if (other.launchStage_ != 0) {
+        setLaunchStageValue(other.getLaunchStageValue());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -449,6 +493,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 18
+            case 24: {
+              launchStage_ = input.readEnum();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 24
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -651,6 +700,79 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       title_ = value;
       bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private int launchStage_ = 0;
+    /**
+     * <pre>
+     * The service's launch stage.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @return The enum numeric value on the wire for launchStage.
+     */
+    @java.lang.Override public int getLaunchStageValue() {
+      return launchStage_;
+    }
+    /**
+     * <pre>
+     * The service's launch stage.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @param value The enum numeric value on the wire for launchStage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLaunchStageValue(int value) {
+      launchStage_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The service's launch stage.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @return The launchStage.
+     */
+    @java.lang.Override
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage getLaunchStage() {
+      cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage result = cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.forNumber(launchStage_);
+      return result == null ? cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * The service's launch stage.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @param value The launchStage to set.
+     * @return This builder for chaining.
+     */
+    public Builder setLaunchStage(cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000004;
+      launchStage_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The service's launch stage.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearLaunchStage() {
+      bitField0_ = (bitField0_ & ~0x00000004);
+      launchStage_ = 0;
       onChanged();
       return this;
     }

@@ -56,20 +56,25 @@ public final class ServiceProto {
       "e_management.service_usage.v1alpha1.Serv" +
       "iceStateB\004\342A\001\003R\005state:I\352AF\n\035serviceusage" +
       ".cbws.xyz/Service\022%projects/{project}/se" +
-      "rvices/{service}\"9\n\rServiceConfig\022\022\n\004nam" +
-      "e\030\001 \001(\tR\004name\022\024\n\005title\030\002 \001(\tR\005title*d\n\014S" +
-      "erviceState\022\035\n\031SERVICE_STATE_UNSPECIFIED" +
-      "\020\000\022\032\n\026SERVICE_STATE_DISABLED\020\001\022\031\n\025SERVIC" +
-      "E_STATE_ENABLED\020\002B\325\002\n8cloud.cbws.api.ser" +
-      "vice_management.service_usage.v1alpha1B\014" +
-      "ServiceProtoP\001Z8github.com/cbws/go-cbws-" +
-      "grpc/cbws/service-usage/v1alpha1\242\002\003CSS\252\002" +
-      ",Cbws.ServiceManagement.ServiceUsage.V1a" +
-      "lpha1\312\002,Cbws\\ServiceManagement\\ServiceUs" +
-      "age\\V1alpha1\342\0028Cbws\\ServiceManagement\\Se" +
-      "rviceUsage\\V1alpha1\\GPBMetadata\352\002/Cbws::" +
-      "ServiceManagement::ServiceUsage::V1alpha" +
-      "1b\006proto3"
+      "rvices/{service}\"\231\001\n\rServiceConfig\022\022\n\004na" +
+      "me\030\001 \001(\tR\004name\022\024\n\005title\030\002 \001(\tR\005title\022^\n\014" +
+      "launch_stage\030\003 \001(\0162;.cbws.service_manage" +
+      "ment.service_usage.v1alpha1.LaunchStageR" +
+      "\013launchStage*|\n\013LaunchStage\022\034\n\030LAUNCH_ST" +
+      "AGE_UNSPECIFIED\020\000\022 \n\034LAUNCH_STAGE_PRIVAT" +
+      "E_PREVIEW\020\002\022\030\n\024LAUNCH_STAGE_PREVIEW\020\003\022\023\n" +
+      "\017LAUNCH_STAGE_GA\020\004*d\n\014ServiceState\022\035\n\031SE" +
+      "RVICE_STATE_UNSPECIFIED\020\000\022\032\n\026SERVICE_STA" +
+      "TE_DISABLED\020\001\022\031\n\025SERVICE_STATE_ENABLED\020\002" +
+      "B\325\002\n8cloud.cbws.api.service_management.s" +
+      "ervice_usage.v1alpha1B\014ServiceProtoP\001Z8g" +
+      "ithub.com/cbws/go-cbws-grpc/cbws/service" +
+      "-usage/v1alpha1\242\002\003CSS\252\002,Cbws.ServiceMana" +
+      "gement.ServiceUsage.V1alpha1\312\002,Cbws\\Serv" +
+      "iceManagement\\ServiceUsage\\V1alpha1\342\0028Cb" +
+      "ws\\ServiceManagement\\ServiceUsage\\V1alph" +
+      "a1\\GPBMetadata\352\002/Cbws::ServiceManagement" +
+      "::ServiceUsage::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -88,7 +93,7 @@ public final class ServiceProto {
     internal_static_cbws_service_management_service_usage_v1alpha1_ServiceConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_service_management_service_usage_v1alpha1_ServiceConfig_descriptor,
-        new java.lang.String[] { "Name", "Title", });
+        new java.lang.String[] { "Name", "Title", "LaunchStage", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();

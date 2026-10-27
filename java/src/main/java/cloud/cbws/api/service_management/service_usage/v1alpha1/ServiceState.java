@@ -135,7 +135,7 @@ public enum ServiceState
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceProto.getDescriptor().getEnumTypes().get(0);
+    return cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceProto.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final ServiceState[] VALUES = values();

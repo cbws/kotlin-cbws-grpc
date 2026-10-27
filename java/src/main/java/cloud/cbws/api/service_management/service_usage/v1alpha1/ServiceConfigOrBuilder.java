@@ -50,4 +50,23 @@ public interface ServiceConfigOrBuilder extends
    */
   com.google.protobuf.ByteString
       getTitleBytes();
+
+  /**
+   * <pre>
+   * The service's launch stage.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+   * @return The enum numeric value on the wire for launchStage.
+   */
+  int getLaunchStageValue();
+  /**
+   * <pre>
+   * The service's launch stage.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+   * @return The launchStage.
+   */
+  cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage getLaunchStage();
 }

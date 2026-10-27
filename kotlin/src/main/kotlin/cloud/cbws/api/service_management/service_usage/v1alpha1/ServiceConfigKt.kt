@@ -11,7 +11,7 @@ public inline fun serviceConfig(block: cloud.cbws.api.service_management.service
   cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigKt.Dsl._create(cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.newBuilder()).apply { block() }._build()
 /**
  * ```
- * The name and title of a service.
+ * The name, title and launch stage of a service.
  * ```
  *
  * Protobuf type `cbws.service_management.service_usage.v1alpha1.ServiceConfig`
@@ -84,6 +84,39 @@ public object ServiceConfigKt {
      */
     public fun clearTitle() {
       _builder.clearTitle()
+    }
+
+    /**
+     * ```
+     * The service's launch stage.
+     * ```
+     *
+     * `.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];`
+     */
+    public var launchStage: cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage
+      @kotlin.jvm.JvmName("getLaunchStage")
+        get() = _builder.launchStage
+      @kotlin.jvm.JvmName("setLaunchStage")
+        set(value) {
+        _builder.launchStage = value
+      }
+    public var launchStageValue: kotlin.Int
+      @kotlin.jvm.JvmName("getLaunchStageValue")
+        get() = _builder.launchStageValue
+      @kotlin.jvm.JvmName("setLaunchStageValue")
+        set(value) {
+        _builder.launchStageValue = value
+      }
+    /**
+     * <pre>
+     * The service's launch stage.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.LaunchStage launch_stage = 3 [json_name = "launchStage"];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearLaunchStage() {
+      _builder.clearLaunchStage()
     }
   }
 }
