@@ -36,6 +36,7 @@ private static final long serialVersionUID = 0L;
     uniqueId_ = "";
     email_ = "";
     displayName_ = "";
+    description_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -300,6 +301,55 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int DESCRIPTION_FIELD_NUMBER = 8;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
+  /**
+   * <pre>
+   * Optional. A description of the service account, at most 128
+   * characters.
+   * </pre>
+   *
+   * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The description.
+   */
+  @java.lang.Override
+  public java.lang.String getDescription() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      description_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * Optional. A description of the service account, at most 128
+   * characters.
+   * </pre>
+   *
+   * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for description.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      description_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -329,6 +379,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(displayName_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 6, displayName_);
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 8, description_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -352,6 +405,9 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(displayName_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(6, displayName_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(8, description_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -378,6 +434,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEmail())) return false;
     if (!getDisplayName()
         .equals(other.getDisplayName())) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -399,6 +457,8 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getEmail().hashCode();
     hash = (37 * hash) + DISPLAY_NAME_FIELD_NUMBER;
     hash = (53 * hash) + getDisplayName().hashCode();
+    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getDescription().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -539,6 +599,7 @@ private static final long serialVersionUID = 0L;
       uniqueId_ = "";
       email_ = "";
       displayName_ = "";
+      description_ = "";
       return this;
     }
 
@@ -587,6 +648,9 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.displayName_ = displayName_;
       }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.description_ = description_;
+      }
     }
 
     @java.lang.Override
@@ -624,6 +688,11 @@ private static final long serialVersionUID = 0L;
       if (!other.getDisplayName().isEmpty()) {
         displayName_ = other.displayName_;
         bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -677,6 +746,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 50
+            case 66: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 66
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -1185,6 +1259,103 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       displayName_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * Optional. A description of the service account, at most 128
+     * characters.
+     * </pre>
+     *
+     * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The description.
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. A description of the service account, at most 128
+     * characters.
+     * </pre>
+     *
+     * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The bytes for description.
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. A description of the service account, at most 128
+     * characters.
+     * </pre>
+     *
+     * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      description_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. A description of the service account, at most 128
+     * characters.
+     * </pre>
+     *
+     * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDescription() {
+      description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. A description of the service account, at most 128
+     * characters.
+     * </pre>
+     *
+     * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @param value The bytes for description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      description_ = value;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }

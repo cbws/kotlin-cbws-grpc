@@ -47,12 +47,13 @@ public final class ServiceAccountProto {
       "\n\'cbws/iam/v1alpha1/service_account.prot" +
       "o\022\021cbws.iam.v1alpha1\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\032\037google/protobuf/timestamp.proto\"\211\002\n\016Se" +
+      "\032\037google/protobuf/timestamp.proto\"\261\002\n\016Se" +
       "rviceAccount\022\022\n\004name\030\001 \001(\tR\004name\022#\n\nproj" +
       "ect_id\030\002 \001(\tB\004\342A\001\003R\tprojectId\022!\n\tunique_" +
       "id\030\004 \001(\tB\004\342A\001\003R\010uniqueId\022\032\n\005email\030\005 \001(\tB" +
       "\004\342A\001\003R\005email\022\'\n\014display_name\030\006 \001(\tB\004\342A\001\001" +
-      "R\013displayName:V\352AS\n\033iam.cbws.xyz/Service" +
+      "R\013displayName\022&\n\013description\030\010 \001(\tB\004\342A\001\001" +
+      "R\013description:V\352AS\n\033iam.cbws.xyz/Service" +
       "Account\0224projects/{project}/serviceAccou" +
       "nts/{service_account}\"\341\004\n\021ServiceAccount" +
       "Key\022\022\n\004name\030\001 \001(\tR\004name\022C\n\010key_type\030\002 \001(" +
@@ -101,7 +102,7 @@ public final class ServiceAccountProto {
     internal_static_cbws_iam_v1alpha1_ServiceAccount_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_iam_v1alpha1_ServiceAccount_descriptor,
-        new java.lang.String[] { "Name", "ProjectId", "UniqueId", "Email", "DisplayName", });
+        new java.lang.String[] { "Name", "ProjectId", "UniqueId", "Email", "DisplayName", "Description", });
     internal_static_cbws_iam_v1alpha1_ServiceAccountKey_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cbws_iam_v1alpha1_ServiceAccountKey_fieldAccessorTable = new

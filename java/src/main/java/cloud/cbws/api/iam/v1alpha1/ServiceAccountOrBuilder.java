@@ -122,4 +122,26 @@ public interface ServiceAccountOrBuilder extends
    */
   com.google.protobuf.ByteString
       getDisplayNameBytes();
+
+  /**
+   * <pre>
+   * Optional. A description of the service account, at most 128
+   * characters.
+   * </pre>
+   *
+   * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The description.
+   */
+  java.lang.String getDescription();
+  /**
+   * <pre>
+   * Optional. A description of the service account, at most 128
+   * characters.
+   * </pre>
+   *
+   * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The bytes for description.
+   */
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
 }

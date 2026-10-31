@@ -175,6 +175,34 @@ public object ServiceAccountKt {
     public fun clearDisplayName() {
       _builder.clearDisplayName()
     }
+
+    /**
+     * ```
+     * Optional. A description of the service account, at most 128
+     * characters.
+     * ```
+     *
+     * `string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];`
+     */
+    public var description: kotlin.String
+      @kotlin.jvm.JvmName("getDescription")
+        get() = _builder.description
+      @kotlin.jvm.JvmName("setDescription")
+        set(value) {
+        _builder.description = value
+      }
+    /**
+     * <pre>
+     * Optional. A description of the service account, at most 128
+     * characters.
+     * </pre>
+     *
+     * <code>string description = 8 [json_name = "description", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearDescription() {
+      _builder.clearDescription()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic

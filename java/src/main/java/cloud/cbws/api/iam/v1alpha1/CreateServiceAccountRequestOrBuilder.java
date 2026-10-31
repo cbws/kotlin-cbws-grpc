@@ -60,7 +60,7 @@ public interface CreateServiceAccountRequestOrBuilder extends
   /**
    * <pre>
    * Optional. The properties of the new service account. Only
-   * `display_name` is read.
+   * `display_name` and `description` are read.
    * </pre>
    *
    * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
@@ -70,7 +70,7 @@ public interface CreateServiceAccountRequestOrBuilder extends
   /**
    * <pre>
    * Optional. The properties of the new service account. Only
-   * `display_name` is read.
+   * `display_name` and `description` are read.
    * </pre>
    *
    * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
@@ -80,7 +80,7 @@ public interface CreateServiceAccountRequestOrBuilder extends
   /**
    * <pre>
    * Optional. The properties of the new service account. Only
-   * `display_name` is read.
+   * `display_name` and `description` are read.
    * </pre>
    *
    * <code>.cbws.iam.v1alpha1.ServiceAccount service_account = 3 [json_name = "serviceAccount", (.google.api.field_behavior) = OPTIONAL];</code>
