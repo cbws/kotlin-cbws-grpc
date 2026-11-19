@@ -4,7 +4,7 @@ import static io.grpc.MethodDescriptor.generateFullMethodName;
 
 /**
  * <pre>
- * Lists, enables and disables the CBWS services of a project.
+ * Lists, describes, enables and disables the CBWS services of a project.
  * A service must be enabled in a project before its API can be used for the
  * project's resources.
  * </pre>
@@ -46,6 +46,37 @@ public final class ServiceUsageServiceGrpc {
       }
     }
     return getListServicesMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest,
+      cloud.cbws.api.service_management.service_usage.v1alpha1.Service> getGetServiceMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "GetService",
+      requestType = cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest.class,
+      responseType = cloud.cbws.api.service_management.service_usage.v1alpha1.Service.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest,
+      cloud.cbws.api.service_management.service_usage.v1alpha1.Service> getGetServiceMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest, cloud.cbws.api.service_management.service_usage.v1alpha1.Service> getGetServiceMethod;
+    if ((getGetServiceMethod = ServiceUsageServiceGrpc.getGetServiceMethod) == null) {
+      synchronized (ServiceUsageServiceGrpc.class) {
+        if ((getGetServiceMethod = ServiceUsageServiceGrpc.getGetServiceMethod) == null) {
+          ServiceUsageServiceGrpc.getGetServiceMethod = getGetServiceMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest, cloud.cbws.api.service_management.service_usage.v1alpha1.Service>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "GetService"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.service_management.service_usage.v1alpha1.Service.getDefaultInstance()))
+              .setSchemaDescriptor(new ServiceUsageServiceMethodDescriptorSupplier("GetService"))
+              .build();
+        }
+      }
+    }
+    return getGetServiceMethod;
   }
 
   private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.service_management.service_usage.v1alpha1.EnableServiceRequest,
@@ -171,7 +202,7 @@ public final class ServiceUsageServiceGrpc {
 
   /**
    * <pre>
-   * Lists, enables and disables the CBWS services of a project.
+   * Lists, describes, enables and disables the CBWS services of a project.
    * A service must be enabled in a project before its API can be used for the
    * project's resources.
    * </pre>
@@ -190,6 +221,21 @@ public final class ServiceUsageServiceGrpc {
     default void listServices(cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest request,
         io.grpc.stub.StreamObserver<cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesResponse> responseObserver) {
       io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getListServicesMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a service of a project. Requires `serviceusage.cbws.xyz/Service/get`
+     * on the project.
+     * The service must be enabled in the project, or the caller must have
+     * `servicemanagement.cbws.xyz/Service/bind` on it, the same as for
+     * [ListServices][cbws.service_management.service_usage.v1alpha1.ServiceUsageService.ListServices].
+     * Otherwise the call fails with NOT_FOUND, also when the service exists.
+     * </pre>
+     */
+    default void getService(cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.service_management.service_usage.v1alpha1.Service> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getGetServiceMethod(), responseObserver);
     }
 
     /**
@@ -231,7 +277,7 @@ public final class ServiceUsageServiceGrpc {
   /**
    * Base class for the server implementation of the service ServiceUsageService.
    * <pre>
-   * Lists, enables and disables the CBWS services of a project.
+   * Lists, describes, enables and disables the CBWS services of a project.
    * A service must be enabled in a project before its API can be used for the
    * project's resources.
    * </pre>
@@ -247,7 +293,7 @@ public final class ServiceUsageServiceGrpc {
   /**
    * A stub to allow clients to do asynchronous rpc calls to service ServiceUsageService.
    * <pre>
-   * Lists, enables and disables the CBWS services of a project.
+   * Lists, describes, enables and disables the CBWS services of a project.
    * A service must be enabled in a project before its API can be used for the
    * project's resources.
    * </pre>
@@ -278,6 +324,22 @@ public final class ServiceUsageServiceGrpc {
         io.grpc.stub.StreamObserver<cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesResponse> responseObserver) {
       io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getListServicesMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Gets a service of a project. Requires `serviceusage.cbws.xyz/Service/get`
+     * on the project.
+     * The service must be enabled in the project, or the caller must have
+     * `servicemanagement.cbws.xyz/Service/bind` on it, the same as for
+     * [ListServices][cbws.service_management.service_usage.v1alpha1.ServiceUsageService.ListServices].
+     * Otherwise the call fails with NOT_FOUND, also when the service exists.
+     * </pre>
+     */
+    public void getService(cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest request,
+        io.grpc.stub.StreamObserver<cloud.cbws.api.service_management.service_usage.v1alpha1.Service> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getGetServiceMethod(), getCallOptions()), request, responseObserver);
     }
 
     /**
@@ -321,7 +383,7 @@ public final class ServiceUsageServiceGrpc {
   /**
    * A stub to allow clients to do synchronous rpc calls to service ServiceUsageService.
    * <pre>
-   * Lists, enables and disables the CBWS services of a project.
+   * Lists, describes, enables and disables the CBWS services of a project.
    * A service must be enabled in a project before its API can be used for the
    * project's resources.
    * </pre>
@@ -351,6 +413,21 @@ public final class ServiceUsageServiceGrpc {
     public cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesResponse listServices(cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest request) throws io.grpc.StatusException {
       return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
           getChannel(), getListServicesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a service of a project. Requires `serviceusage.cbws.xyz/Service/get`
+     * on the project.
+     * The service must be enabled in the project, or the caller must have
+     * `servicemanagement.cbws.xyz/Service/bind` on it, the same as for
+     * [ListServices][cbws.service_management.service_usage.v1alpha1.ServiceUsageService.ListServices].
+     * Otherwise the call fails with NOT_FOUND, also when the service exists.
+     * </pre>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Service getService(cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getGetServiceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -392,7 +469,7 @@ public final class ServiceUsageServiceGrpc {
   /**
    * A stub to allow clients to do limited synchronous rpc calls to service ServiceUsageService.
    * <pre>
-   * Lists, enables and disables the CBWS services of a project.
+   * Lists, describes, enables and disables the CBWS services of a project.
    * A service must be enabled in a project before its API can be used for the
    * project's resources.
    * </pre>
@@ -422,6 +499,21 @@ public final class ServiceUsageServiceGrpc {
     public cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesResponse listServices(cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getListServicesMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a service of a project. Requires `serviceusage.cbws.xyz/Service/get`
+     * on the project.
+     * The service must be enabled in the project, or the caller must have
+     * `servicemanagement.cbws.xyz/Service/bind` on it, the same as for
+     * [ListServices][cbws.service_management.service_usage.v1alpha1.ServiceUsageService.ListServices].
+     * Otherwise the call fails with NOT_FOUND, also when the service exists.
+     * </pre>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Service getService(cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getGetServiceMethod(), getCallOptions(), request);
     }
 
     /**
@@ -463,7 +555,7 @@ public final class ServiceUsageServiceGrpc {
   /**
    * A stub to allow clients to do ListenableFuture-style rpc calls to service ServiceUsageService.
    * <pre>
-   * Lists, enables and disables the CBWS services of a project.
+   * Lists, describes, enables and disables the CBWS services of a project.
    * A service must be enabled in a project before its API can be used for the
    * project's resources.
    * </pre>
@@ -494,6 +586,22 @@ public final class ServiceUsageServiceGrpc {
         cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest request) {
       return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getListServicesMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Gets a service of a project. Requires `serviceusage.cbws.xyz/Service/get`
+     * on the project.
+     * The service must be enabled in the project, or the caller must have
+     * `servicemanagement.cbws.xyz/Service/bind` on it, the same as for
+     * [ListServices][cbws.service_management.service_usage.v1alpha1.ServiceUsageService.ListServices].
+     * Otherwise the call fails with NOT_FOUND, also when the service exists.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<cloud.cbws.api.service_management.service_usage.v1alpha1.Service> getService(
+        cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getGetServiceMethod(), getCallOptions()), request);
     }
 
     /**
@@ -535,8 +643,9 @@ public final class ServiceUsageServiceGrpc {
   }
 
   private static final int METHODID_LIST_SERVICES = 0;
-  private static final int METHODID_ENABLE_SERVICE = 1;
-  private static final int METHODID_DISABLE_SERVICE = 2;
+  private static final int METHODID_GET_SERVICE = 1;
+  private static final int METHODID_ENABLE_SERVICE = 2;
+  private static final int METHODID_DISABLE_SERVICE = 3;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -558,6 +667,10 @@ public final class ServiceUsageServiceGrpc {
         case METHODID_LIST_SERVICES:
           serviceImpl.listServices((cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesResponse>) responseObserver);
+          break;
+        case METHODID_GET_SERVICE:
+          serviceImpl.getService((cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest) request,
+              (io.grpc.stub.StreamObserver<cloud.cbws.api.service_management.service_usage.v1alpha1.Service>) responseObserver);
           break;
         case METHODID_ENABLE_SERVICE:
           serviceImpl.enableService((cloud.cbws.api.service_management.service_usage.v1alpha1.EnableServiceRequest) request,
@@ -592,6 +705,13 @@ public final class ServiceUsageServiceGrpc {
               cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest,
               cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesResponse>(
                 service, METHODID_LIST_SERVICES)))
+        .addMethod(
+          getGetServiceMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.service_management.service_usage.v1alpha1.GetServiceRequest,
+              cloud.cbws.api.service_management.service_usage.v1alpha1.Service>(
+                service, METHODID_GET_SERVICE)))
         .addMethod(
           getEnableServiceMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
@@ -655,6 +775,7 @@ public final class ServiceUsageServiceGrpc {
           serviceDescriptor = result = io.grpc.ServiceDescriptor.newBuilder(SERVICE_NAME)
               .setSchemaDescriptor(new ServiceUsageServiceFileDescriptorSupplier())
               .addMethod(getListServicesMethod())
+              .addMethod(getGetServiceMethod())
               .addMethod(getEnableServiceMethod())
               .addMethod(getDisableServiceMethod())
               .build();

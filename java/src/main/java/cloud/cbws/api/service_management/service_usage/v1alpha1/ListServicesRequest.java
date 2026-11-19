@@ -47,6 +47,7 @@ private static final long serialVersionUID = 0L;
             cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest.class, cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest.Builder.class);
   }
 
+  private int bitField0_;
   public static final int PARENT_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object parent_ = "";
@@ -96,6 +97,50 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int READ_MASK_FIELD_NUMBER = 2;
+  private com.google.protobuf.FieldMask readMask_;
+  /**
+   * <pre>
+   * Optional. The fields that take extra time to read and are wanted in the
+   * response: `services.config.metrics` and `services.config.quota`. Other
+   * fields are always returned. Without a mask, both are read.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the readMask field is set.
+   */
+  @java.lang.Override
+  public boolean hasReadMask() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * Optional. The fields that take extra time to read and are wanted in the
+   * response: `services.config.metrics` and `services.config.quota`. Other
+   * fields are always returned. Without a mask, both are read.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The readMask.
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMask getReadMask() {
+    return readMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
+  }
+  /**
+   * <pre>
+   * Optional. The fields that take extra time to read and are wanted in the
+   * response: `services.config.metrics` and `services.config.quota`. Other
+   * fields are always returned. Without a mask, both are read.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder() {
+    return readMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -113,6 +158,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(parent_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 1, parent_);
     }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(2, getReadMask());
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -124,6 +172,10 @@ private static final long serialVersionUID = 0L;
     size = 0;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(parent_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(1, parent_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(2, getReadMask());
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -142,6 +194,11 @@ private static final long serialVersionUID = 0L;
 
     if (!getParent()
         .equals(other.getParent())) return false;
+    if (hasReadMask() != other.hasReadMask()) return false;
+    if (hasReadMask()) {
+      if (!getReadMask()
+          .equals(other.getReadMask())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -155,6 +212,10 @@ private static final long serialVersionUID = 0L;
     hash = (19 * hash) + getDescriptor().hashCode();
     hash = (37 * hash) + PARENT_FIELD_NUMBER;
     hash = (53 * hash) + getParent().hashCode();
+    if (hasReadMask()) {
+      hash = (37 * hash) + READ_MASK_FIELD_NUMBER;
+      hash = (53 * hash) + getReadMask().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -278,19 +339,30 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetReadMaskFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
       parent_ = "";
+      readMask_ = null;
+      if (readMaskBuilder_ != null) {
+        readMaskBuilder_.dispose();
+        readMaskBuilder_ = null;
+      }
       return this;
     }
 
@@ -327,6 +399,14 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000001) != 0)) {
         result.parent_ = parent_;
       }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.readMask_ = readMaskBuilder_ == null
+            ? readMask_
+            : readMaskBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -345,6 +425,9 @@ private static final long serialVersionUID = 0L;
         parent_ = other.parent_;
         bitField0_ |= 0x00000001;
         onChanged();
+      }
+      if (other.hasReadMask()) {
+        mergeReadMask(other.getReadMask());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -377,6 +460,13 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000001;
               break;
             } // case 10
+            case 18: {
+              input.readMessage(
+                  internalGetReadMaskFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 18
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -489,6 +579,181 @@ private static final long serialVersionUID = 0L;
       bitField0_ |= 0x00000001;
       onChanged();
       return this;
+    }
+
+    private com.google.protobuf.FieldMask readMask_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> readMaskBuilder_;
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the readMask field is set.
+     */
+    public boolean hasReadMask() {
+      return ((bitField0_ & 0x00000002) != 0);
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return The readMask.
+     */
+    public com.google.protobuf.FieldMask getReadMask() {
+      if (readMaskBuilder_ == null) {
+        return readMask_ == null ? com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
+      } else {
+        return readMaskBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setReadMask(com.google.protobuf.FieldMask value) {
+      if (readMaskBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        readMask_ = value;
+      } else {
+        readMaskBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder setReadMask(
+        com.google.protobuf.FieldMask.Builder builderForValue) {
+      if (readMaskBuilder_ == null) {
+        readMask_ = builderForValue.build();
+      } else {
+        readMaskBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder mergeReadMask(com.google.protobuf.FieldMask value) {
+      if (readMaskBuilder_ == null) {
+        if (((bitField0_ & 0x00000002) != 0) &&
+          readMask_ != null &&
+          readMask_ != com.google.protobuf.FieldMask.getDefaultInstance()) {
+          getReadMaskBuilder().mergeFrom(value);
+        } else {
+          readMask_ = value;
+        }
+      } else {
+        readMaskBuilder_.mergeFrom(value);
+      }
+      if (readMask_ != null) {
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public Builder clearReadMask() {
+      bitField0_ = (bitField0_ & ~0x00000002);
+      readMask_ = null;
+      if (readMaskBuilder_ != null) {
+        readMaskBuilder_.dispose();
+        readMaskBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.protobuf.FieldMask.Builder getReadMaskBuilder() {
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return internalGetReadMaskFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    public com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder() {
+      if (readMaskBuilder_ != null) {
+        return readMaskBuilder_.getMessageOrBuilder();
+      } else {
+        return readMask_ == null ?
+            com.google.protobuf.FieldMask.getDefaultInstance() : readMask_;
+      }
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder> 
+        internalGetReadMaskFieldBuilder() {
+      if (readMaskBuilder_ == null) {
+        readMaskBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.FieldMask, com.google.protobuf.FieldMask.Builder, com.google.protobuf.FieldMaskOrBuilder>(
+                getReadMask(),
+                getParentForChildren(),
+                isClean());
+        readMask_ = null;
+      }
+      return readMaskBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:cbws.service_management.service_usage.v1alpha1.ListServicesRequest)

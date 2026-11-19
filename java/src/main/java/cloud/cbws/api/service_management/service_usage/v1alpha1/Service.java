@@ -152,7 +152,7 @@ private static final long serialVersionUID = 0L;
   private cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig config_;
   /**
    * <pre>
-   * The name and title of the service.
+   * The name and title of the service, and what it meters.
    * </pre>
    *
    * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -164,7 +164,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The name and title of the service.
+   * The name and title of the service, and what it meters.
    * </pre>
    *
    * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -176,7 +176,7 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The name and title of the service.
+   * The name and title of the service, and what it meters.
    * </pre>
    *
    * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -800,7 +800,7 @@ private static final long serialVersionUID = 0L;
         cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig, cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigOrBuilder> configBuilder_;
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -811,7 +811,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -826,7 +826,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -846,7 +846,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -864,7 +864,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -889,7 +889,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -906,7 +906,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -918,7 +918,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -933,7 +933,7 @@ private static final long serialVersionUID = 0L;
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>

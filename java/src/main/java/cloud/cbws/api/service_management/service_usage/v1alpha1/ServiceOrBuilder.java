@@ -55,7 +55,7 @@ public interface ServiceOrBuilder extends
 
   /**
    * <pre>
-   * The name and title of the service.
+   * The name and title of the service, and what it meters.
    * </pre>
    *
    * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -64,7 +64,7 @@ public interface ServiceOrBuilder extends
   boolean hasConfig();
   /**
    * <pre>
-   * The name and title of the service.
+   * The name and title of the service, and what it meters.
    * </pre>
    *
    * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -73,7 +73,7 @@ public interface ServiceOrBuilder extends
   cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig getConfig();
   /**
    * <pre>
-   * The name and title of the service.
+   * The name and title of the service, and what it meters.
    * </pre>
    *
    * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>

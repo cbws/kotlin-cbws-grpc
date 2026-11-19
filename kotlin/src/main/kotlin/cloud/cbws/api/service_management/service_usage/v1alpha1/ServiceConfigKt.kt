@@ -11,7 +11,9 @@ public inline fun serviceConfig(block: cloud.cbws.api.service_management.service
   cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigKt.Dsl._create(cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.newBuilder()).apply { block() }._build()
 /**
  * ```
- * The name, title and launch stage of a service.
+ * The name, title and launch stage of a service, and the metrics and quota
+ * that apply to its use. The metrics and quota are those of the service's
+ * current configuration, the same for every project.
  * ```
  *
  * Protobuf type `cbws.service_management.service_usage.v1alpha1.ServiceConfig`
@@ -118,9 +120,208 @@ public object ServiceConfigKt {
     public fun clearLaunchStage() {
       _builder.clearLaunchStage()
     }
+
+    /**
+     * ```
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     * ```
+     *
+     * `string description = 6 [json_name = "description"];`
+     */
+    public var description: kotlin.String
+      @kotlin.jvm.JvmName("getDescription")
+        get() = _builder.description
+      @kotlin.jvm.JvmName("setDescription")
+        set(value) {
+        _builder.description = value
+      }
+    /**
+     * <pre>
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearDescription() {
+      _builder.clearDescription()
+    }
+
+    /**
+     * An uninstantiable, behaviorless type to represent the field in
+     * generics.
+     */
+    @kotlin.OptIn(com.google.protobuf.kotlin.OnlyForUseByGeneratedProtoCode::class)
+    public class MetricsProxy private constructor() : com.google.protobuf.kotlin.DslProxy()
+    /**
+     * ```
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * ```
+     *
+     * `repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];`
+     */
+     public val metrics: com.google.protobuf.kotlin.DslList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, MetricsProxy>
+      @kotlin.jvm.JvmSynthetic
+  get() = com.google.protobuf.kotlin.DslList(
+        _builder.metricsList
+      )
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @param value The metrics to add.
+     * @return This builder for chaining.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addMetrics")
+    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, MetricsProxy>.add(value: cloud.cbws.api.service_management.service_usage.v1alpha1.Metric) {
+      _builder.addMetrics(value)
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @param value The metrics to add.
+     * @return This builder for chaining.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignMetrics")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, MetricsProxy>.plusAssign(value: cloud.cbws.api.service_management.service_usage.v1alpha1.Metric) {
+      add(value)
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @param values The metrics to add.
+     * @return This builder for chaining.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("addAllMetrics")
+    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, MetricsProxy>.addAll(values: kotlin.collections.Iterable<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric>) {
+      _builder.addAllMetrics(values)
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @param values The metrics to add.
+     * @return This builder for chaining.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("plusAssignAllMetrics")
+    @Suppress("NOTHING_TO_INLINE")
+    public inline operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, MetricsProxy>.plusAssign(values: kotlin.collections.Iterable<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric>) {
+      addAll(values)
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @param index The index to set the value at.
+     * @param value The metrics to set.
+     * @return This builder for chaining.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("setMetrics")
+    public operator fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, MetricsProxy>.set(index: kotlin.Int, value: cloud.cbws.api.service_management.service_usage.v1alpha1.Metric) {
+      _builder.setMetrics(index, value)
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     * @return This builder for chaining.
+     */
+    @kotlin.jvm.JvmSynthetic
+@kotlin.jvm.JvmName("clearMetrics")
+    public fun com.google.protobuf.kotlin.DslList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, MetricsProxy>.clear() {
+      _builder.clearMetrics()
+    }
+
+    /**
+     * ```
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * ```
+     *
+     * `.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];`
+     */
+    public var quota: cloud.cbws.api.service_management.service_usage.v1alpha1.Quota
+      @kotlin.jvm.JvmName("getQuota")
+        get() = _builder.quota
+      @kotlin.jvm.JvmName("setQuota")
+        set(value) {
+        _builder.quota = value
+      }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearQuota() {
+      _builder.clearQuota()
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     * @return Whether the quota field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasQuota(): kotlin.Boolean {
+      return _builder.hasQuota()
+    }
+
+    public val ServiceConfigKt.Dsl.quotaOrNull: cloud.cbws.api.service_management.service_usage.v1alpha1.Quota?
+      get() = _builder.quotaOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.copy(block: `cloud.cbws.api.service_management.service_usage.v1alpha1`.ServiceConfigKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig =
   `cloud.cbws.api.service_management.service_usage.v1alpha1`.ServiceConfigKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfigOrBuilder.quotaOrNull: cloud.cbws.api.service_management.service_usage.v1alpha1.Quota?
+  get() = if (hasQuota()) getQuota() else null
 

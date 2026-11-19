@@ -7,7 +7,9 @@ package cloud.cbws.api.service_management.service_usage.v1alpha1;
 
 /**
  * <pre>
- * The name, title and launch stage of a service.
+ * The name, title and launch stage of a service, and the metrics and quota
+ * that apply to its use. The metrics and quota are those of the service's
+ * current configuration, the same for every project.
  * </pre>
  *
  * Protobuf type {@code cbws.service_management.service_usage.v1alpha1.ServiceConfig}
@@ -34,6 +36,8 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     title_ = "";
     launchStage_ = 0;
+    description_ = "";
+    metrics_ = java.util.Collections.emptyList();
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -49,6 +53,7 @@ private static final long serialVersionUID = 0L;
             cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.class, cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.Builder.class);
   }
 
+  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
@@ -171,6 +176,172 @@ private static final long serialVersionUID = 0L;
     return result == null ? cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.UNRECOGNIZED : result;
   }
 
+  public static final int DESCRIPTION_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object description_ = "";
+  /**
+   * <pre>
+   * What the service does, in one or two sentences, such as "Provision and
+   * manage scalable, high-performance machines for your workloads." At most
+   * 128 characters. Empty if the service has no description.
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The description.
+   */
+  @java.lang.Override
+  public java.lang.String getDescription() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      description_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * What the service does, in one or two sentences, such as "Provision and
+   * manage scalable, high-performance machines for your workloads." At most
+   * 128 characters. Empty if the service has no description.
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The bytes for description.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getDescriptionBytes() {
+    java.lang.Object ref = description_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      description_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int METRICS_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private java.util.List<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric> metrics_;
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric> getMetricsList() {
+    return metrics_;
+  }
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  @java.lang.Override
+  public java.util.List<? extends cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder> 
+      getMetricsOrBuilderList() {
+    return metrics_;
+  }
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  @java.lang.Override
+  public int getMetricsCount() {
+    return metrics_.size();
+  }
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  @java.lang.Override
+  public cloud.cbws.api.service_management.service_usage.v1alpha1.Metric getMetrics(int index) {
+    return metrics_.get(index);
+  }
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  @java.lang.Override
+  public cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder getMetricsOrBuilder(
+      int index) {
+    return metrics_.get(index);
+  }
+
+  public static final int QUOTA_FIELD_NUMBER = 5;
+  private cloud.cbws.api.service_management.service_usage.v1alpha1.Quota quota_;
+  /**
+   * <pre>
+   * What each method of the service costs against the metrics, and how much
+   * of each metric a project may use. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+   * @return Whether the quota field is set.
+   */
+  @java.lang.Override
+  public boolean hasQuota() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * What each method of the service costs against the metrics, and how much
+   * of each metric a project may use. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+   * @return The quota.
+   */
+  @java.lang.Override
+  public cloud.cbws.api.service_management.service_usage.v1alpha1.Quota getQuota() {
+    return quota_ == null ? cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.getDefaultInstance() : quota_;
+  }
+  /**
+   * <pre>
+   * What each method of the service costs against the metrics, and how much
+   * of each metric a project may use. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+   */
+  @java.lang.Override
+  public cloud.cbws.api.service_management.service_usage.v1alpha1.QuotaOrBuilder getQuotaOrBuilder() {
+    return quota_ == null ? cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.getDefaultInstance() : quota_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -194,6 +365,15 @@ private static final long serialVersionUID = 0L;
     if (launchStage_ != cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.LAUNCH_STAGE_UNSPECIFIED.getNumber()) {
       output.writeEnum(3, launchStage_);
     }
+    for (int i = 0; i < metrics_.size(); i++) {
+      output.writeMessage(4, metrics_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(5, getQuota());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, description_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -212,6 +392,17 @@ private static final long serialVersionUID = 0L;
     if (launchStage_ != cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage.LAUNCH_STAGE_UNSPECIFIED.getNumber()) {
       size += com.google.protobuf.CodedOutputStream
         .computeEnumSize(3, launchStage_);
+    }
+    for (int i = 0; i < metrics_.size(); i++) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(4, metrics_.get(i));
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getQuota());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(description_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, description_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -233,6 +424,15 @@ private static final long serialVersionUID = 0L;
     if (!getTitle()
         .equals(other.getTitle())) return false;
     if (launchStage_ != other.launchStage_) return false;
+    if (!getDescription()
+        .equals(other.getDescription())) return false;
+    if (!getMetricsList()
+        .equals(other.getMetricsList())) return false;
+    if (hasQuota() != other.hasQuota()) return false;
+    if (hasQuota()) {
+      if (!getQuota()
+          .equals(other.getQuota())) return false;
+    }
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -250,6 +450,16 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getTitle().hashCode();
     hash = (37 * hash) + LAUNCH_STAGE_FIELD_NUMBER;
     hash = (53 * hash) + launchStage_;
+    hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+    hash = (53 * hash) + getDescription().hashCode();
+    if (getMetricsCount() > 0) {
+      hash = (37 * hash) + METRICS_FIELD_NUMBER;
+      hash = (53 * hash) + getMetricsList().hashCode();
+    }
+    if (hasQuota()) {
+      hash = (37 * hash) + QUOTA_FIELD_NUMBER;
+      hash = (53 * hash) + getQuota().hashCode();
+    }
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -349,7 +559,9 @@ private static final long serialVersionUID = 0L;
   }
   /**
    * <pre>
-   * The name, title and launch stage of a service.
+   * The name, title and launch stage of a service, and the metrics and quota
+   * that apply to its use. The metrics and quota are those of the service's
+   * current configuration, the same for every project.
    * </pre>
    *
    * Protobuf type {@code cbws.service_management.service_usage.v1alpha1.ServiceConfig}
@@ -373,13 +585,20 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetMetricsFieldBuilder();
+        internalGetQuotaFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -388,6 +607,19 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       title_ = "";
       launchStage_ = 0;
+      description_ = "";
+      if (metricsBuilder_ == null) {
+        metrics_ = java.util.Collections.emptyList();
+      } else {
+        metrics_ = null;
+        metricsBuilder_.clear();
+      }
+      bitField0_ = (bitField0_ & ~0x00000010);
+      quota_ = null;
+      if (quotaBuilder_ != null) {
+        quotaBuilder_.dispose();
+        quotaBuilder_ = null;
+      }
       return this;
     }
 
@@ -414,9 +646,22 @@ private static final long serialVersionUID = 0L;
     @java.lang.Override
     public cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig buildPartial() {
       cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig result = new cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig(this);
+      buildPartialRepeatedFields(result);
       if (bitField0_ != 0) { buildPartial0(result); }
       onBuilt();
       return result;
+    }
+
+    private void buildPartialRepeatedFields(cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig result) {
+      if (metricsBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0)) {
+          metrics_ = java.util.Collections.unmodifiableList(metrics_);
+          bitField0_ = (bitField0_ & ~0x00000010);
+        }
+        result.metrics_ = metrics_;
+      } else {
+        result.metrics_ = metricsBuilder_.build();
+      }
     }
 
     private void buildPartial0(cloud.cbws.api.service_management.service_usage.v1alpha1.ServiceConfig result) {
@@ -430,6 +675,17 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.launchStage_ = launchStage_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.description_ = description_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.quota_ = quotaBuilder_ == null
+            ? quota_
+            : quotaBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -456,6 +712,40 @@ private static final long serialVersionUID = 0L;
       }
       if (other.launchStage_ != 0) {
         setLaunchStageValue(other.getLaunchStageValue());
+      }
+      if (!other.getDescription().isEmpty()) {
+        description_ = other.description_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
+      if (metricsBuilder_ == null) {
+        if (!other.metrics_.isEmpty()) {
+          if (metrics_.isEmpty()) {
+            metrics_ = other.metrics_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+          } else {
+            ensureMetricsIsMutable();
+            metrics_.addAll(other.metrics_);
+          }
+          onChanged();
+        }
+      } else {
+        if (!other.metrics_.isEmpty()) {
+          if (metricsBuilder_.isEmpty()) {
+            metricsBuilder_.dispose();
+            metricsBuilder_ = null;
+            metrics_ = other.metrics_;
+            bitField0_ = (bitField0_ & ~0x00000010);
+            metricsBuilder_ = 
+              com.google.protobuf.GeneratedMessage.alwaysUseFieldBuilders ?
+                 internalGetMetricsFieldBuilder() : null;
+          } else {
+            metricsBuilder_.addAllMessages(other.metrics_);
+          }
+        }
+      }
+      if (other.hasQuota()) {
+        mergeQuota(other.getQuota());
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -498,6 +788,31 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 24
+            case 34: {
+              cloud.cbws.api.service_management.service_usage.v1alpha1.Metric m =
+                  input.readMessage(
+                      cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.parser(),
+                      extensionRegistry);
+              if (metricsBuilder_ == null) {
+                ensureMetricsIsMutable();
+                metrics_.add(m);
+              } else {
+                metricsBuilder_.addMessage(m);
+              }
+              break;
+            } // case 34
+            case 42: {
+              input.readMessage(
+                  internalGetQuotaFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 42
+            case 50: {
+              description_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -775,6 +1090,631 @@ private static final long serialVersionUID = 0L;
       launchStage_ = 0;
       onChanged();
       return this;
+    }
+
+    private java.lang.Object description_ = "";
+    /**
+     * <pre>
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The description.
+     */
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return The bytes for description.
+     */
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @param value The description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescription(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      description_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearDescription() {
+      description_ = getDefaultInstance().getDescription();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * What the service does, in one or two sentences, such as "Provision and
+     * manage scalable, high-performance machines for your workloads." At most
+     * 128 characters. Empty if the service has no description.
+     * </pre>
+     *
+     * <code>string description = 6 [json_name = "description"];</code>
+     * @param value The bytes for description to set.
+     * @return This builder for chaining.
+     */
+    public Builder setDescriptionBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      description_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
+    private java.util.List<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric> metrics_ =
+      java.util.Collections.emptyList();
+    private void ensureMetricsIsMutable() {
+      if (!((bitField0_ & 0x00000010) != 0)) {
+        metrics_ = new java.util.ArrayList<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric>(metrics_);
+        bitField0_ |= 0x00000010;
+       }
+    }
+
+    private com.google.protobuf.RepeatedFieldBuilder<
+        cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder> metricsBuilder_;
+
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public java.util.List<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric> getMetricsList() {
+      if (metricsBuilder_ == null) {
+        return java.util.Collections.unmodifiableList(metrics_);
+      } else {
+        return metricsBuilder_.getMessageList();
+      }
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public int getMetricsCount() {
+      if (metricsBuilder_ == null) {
+        return metrics_.size();
+      } else {
+        return metricsBuilder_.getCount();
+      }
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Metric getMetrics(int index) {
+      if (metricsBuilder_ == null) {
+        return metrics_.get(index);
+      } else {
+        return metricsBuilder_.getMessage(index);
+      }
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder setMetrics(
+        int index, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric value) {
+      if (metricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMetricsIsMutable();
+        metrics_.set(index, value);
+        onChanged();
+      } else {
+        metricsBuilder_.setMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder setMetrics(
+        int index, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder builderForValue) {
+      if (metricsBuilder_ == null) {
+        ensureMetricsIsMutable();
+        metrics_.set(index, builderForValue.build());
+        onChanged();
+      } else {
+        metricsBuilder_.setMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder addMetrics(cloud.cbws.api.service_management.service_usage.v1alpha1.Metric value) {
+      if (metricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMetricsIsMutable();
+        metrics_.add(value);
+        onChanged();
+      } else {
+        metricsBuilder_.addMessage(value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder addMetrics(
+        int index, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric value) {
+      if (metricsBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        ensureMetricsIsMutable();
+        metrics_.add(index, value);
+        onChanged();
+      } else {
+        metricsBuilder_.addMessage(index, value);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder addMetrics(
+        cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder builderForValue) {
+      if (metricsBuilder_ == null) {
+        ensureMetricsIsMutable();
+        metrics_.add(builderForValue.build());
+        onChanged();
+      } else {
+        metricsBuilder_.addMessage(builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder addMetrics(
+        int index, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder builderForValue) {
+      if (metricsBuilder_ == null) {
+        ensureMetricsIsMutable();
+        metrics_.add(index, builderForValue.build());
+        onChanged();
+      } else {
+        metricsBuilder_.addMessage(index, builderForValue.build());
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder addAllMetrics(
+        java.lang.Iterable<? extends cloud.cbws.api.service_management.service_usage.v1alpha1.Metric> values) {
+      if (metricsBuilder_ == null) {
+        ensureMetricsIsMutable();
+        com.google.protobuf.AbstractMessageLite.Builder.addAll(
+            values, metrics_);
+        onChanged();
+      } else {
+        metricsBuilder_.addAllMessages(values);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder clearMetrics() {
+      if (metricsBuilder_ == null) {
+        metrics_ = java.util.Collections.emptyList();
+        bitField0_ = (bitField0_ & ~0x00000010);
+        onChanged();
+      } else {
+        metricsBuilder_.clear();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public Builder removeMetrics(int index) {
+      if (metricsBuilder_ == null) {
+        ensureMetricsIsMutable();
+        metrics_.remove(index);
+        onChanged();
+      } else {
+        metricsBuilder_.remove(index);
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder getMetricsBuilder(
+        int index) {
+      return internalGetMetricsFieldBuilder().getBuilder(index);
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder getMetricsOrBuilder(
+        int index) {
+      if (metricsBuilder_ == null) {
+        return metrics_.get(index);  } else {
+        return metricsBuilder_.getMessageOrBuilder(index);
+      }
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public java.util.List<? extends cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder> 
+         getMetricsOrBuilderList() {
+      if (metricsBuilder_ != null) {
+        return metricsBuilder_.getMessageOrBuilderList();
+      } else {
+        return java.util.Collections.unmodifiableList(metrics_);
+      }
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder addMetricsBuilder() {
+      return internalGetMetricsFieldBuilder().addBuilder(
+          cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder addMetricsBuilder(
+        int index) {
+      return internalGetMetricsFieldBuilder().addBuilder(
+          index, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.getDefaultInstance());
+    }
+    /**
+     * <pre>
+     * The quantities the service measures for a project that uses it, such as
+     * API requests or machine hours. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+     */
+    public java.util.List<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder> 
+         getMetricsBuilderList() {
+      return internalGetMetricsFieldBuilder().getBuilderList();
+    }
+    private com.google.protobuf.RepeatedFieldBuilder<
+        cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder> 
+        internalGetMetricsFieldBuilder() {
+      if (metricsBuilder_ == null) {
+        metricsBuilder_ = new com.google.protobuf.RepeatedFieldBuilder<
+            cloud.cbws.api.service_management.service_usage.v1alpha1.Metric, cloud.cbws.api.service_management.service_usage.v1alpha1.Metric.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder>(
+                metrics_,
+                ((bitField0_ & 0x00000010) != 0),
+                getParentForChildren(),
+                isClean());
+        metrics_ = null;
+      }
+      return metricsBuilder_;
+    }
+
+    private cloud.cbws.api.service_management.service_usage.v1alpha1.Quota quota_;
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.service_management.service_usage.v1alpha1.Quota, cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.QuotaOrBuilder> quotaBuilder_;
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     * @return Whether the quota field is set.
+     */
+    public boolean hasQuota() {
+      return ((bitField0_ & 0x00000020) != 0);
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     * @return The quota.
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Quota getQuota() {
+      if (quotaBuilder_ == null) {
+        return quota_ == null ? cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.getDefaultInstance() : quota_;
+      } else {
+        return quotaBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    public Builder setQuota(cloud.cbws.api.service_management.service_usage.v1alpha1.Quota value) {
+      if (quotaBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        quota_ = value;
+      } else {
+        quotaBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    public Builder setQuota(
+        cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.Builder builderForValue) {
+      if (quotaBuilder_ == null) {
+        quota_ = builderForValue.build();
+      } else {
+        quotaBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    public Builder mergeQuota(cloud.cbws.api.service_management.service_usage.v1alpha1.Quota value) {
+      if (quotaBuilder_ == null) {
+        if (((bitField0_ & 0x00000020) != 0) &&
+          quota_ != null &&
+          quota_ != cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.getDefaultInstance()) {
+          getQuotaBuilder().mergeFrom(value);
+        } else {
+          quota_ = value;
+        }
+      } else {
+        quotaBuilder_.mergeFrom(value);
+      }
+      if (quota_ != null) {
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    public Builder clearQuota() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      quota_ = null;
+      if (quotaBuilder_ != null) {
+        quotaBuilder_.dispose();
+        quotaBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.Builder getQuotaBuilder() {
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return internalGetQuotaFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    public cloud.cbws.api.service_management.service_usage.v1alpha1.QuotaOrBuilder getQuotaOrBuilder() {
+      if (quotaBuilder_ != null) {
+        return quotaBuilder_.getMessageOrBuilder();
+      } else {
+        return quota_ == null ?
+            cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.getDefaultInstance() : quota_;
+      }
+    }
+    /**
+     * <pre>
+     * What each method of the service costs against the metrics, and how much
+     * of each metric a project may use. Returned only when the request's read
+     * mask asks for it, or has no read mask.
+     * </pre>
+     *
+     * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        cloud.cbws.api.service_management.service_usage.v1alpha1.Quota, cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.QuotaOrBuilder> 
+        internalGetQuotaFieldBuilder() {
+      if (quotaBuilder_ == null) {
+        quotaBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            cloud.cbws.api.service_management.service_usage.v1alpha1.Quota, cloud.cbws.api.service_management.service_usage.v1alpha1.Quota.Builder, cloud.cbws.api.service_management.service_usage.v1alpha1.QuotaOrBuilder>(
+                getQuota(),
+                getParentForChildren(),
+                isClean());
+        quota_ = null;
+      }
+      return quotaBuilder_;
     }
 
     // @@protoc_insertion_point(builder_scope:cbws.service_management.service_usage.v1alpha1.ServiceConfig)

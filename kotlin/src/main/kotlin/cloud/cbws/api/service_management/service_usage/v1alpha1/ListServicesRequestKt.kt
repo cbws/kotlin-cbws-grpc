@@ -59,9 +59,59 @@ public object ListServicesRequestKt {
     public fun clearParent() {
       _builder.clearParent()
     }
+
+    /**
+     * ```
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * ```
+     *
+     * `.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];`
+     */
+    public var readMask: com.google.protobuf.FieldMask
+      @kotlin.jvm.JvmName("getReadMask")
+        get() = _builder.readMask
+      @kotlin.jvm.JvmName("setReadMask")
+        set(value) {
+        _builder.readMask = value
+      }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearReadMask() {
+      _builder.clearReadMask()
+    }
+    /**
+     * <pre>
+     * Optional. The fields that take extra time to read and are wanted in the
+     * response: `services.config.metrics` and `services.config.quota`. Other
+     * fields are always returned. Without a mask, both are read.
+     * </pre>
+     *
+     * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+     * @return Whether the readMask field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasReadMask(): kotlin.Boolean {
+      return _builder.hasReadMask()
+    }
+
+    public val ListServicesRequestKt.Dsl.readMaskOrNull: com.google.protobuf.FieldMask?
+      get() = _builder.readMaskOrNull
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest.copy(block: `cloud.cbws.api.service_management.service_usage.v1alpha1`.ListServicesRequestKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequest =
   `cloud.cbws.api.service_management.service_usage.v1alpha1`.ListServicesRequestKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val cloud.cbws.api.service_management.service_usage.v1alpha1.ListServicesRequestOrBuilder.readMaskOrNull: com.google.protobuf.FieldMask?
+  get() = if (hasReadMask()) getReadMask() else null
 

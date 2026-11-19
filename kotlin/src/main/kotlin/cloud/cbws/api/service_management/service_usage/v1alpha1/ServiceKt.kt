@@ -90,7 +90,7 @@ public object ServiceKt {
 
     /**
      * ```
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * ```
      *
      * `.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];`
@@ -104,7 +104,7 @@ public object ServiceKt {
       }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
@@ -115,7 +115,7 @@ public object ServiceKt {
     }
     /**
      * <pre>
-     * The name and title of the service.
+     * The name and title of the service, and what it meters.
      * </pre>
      *
      * <code>.cbws.service_management.service_usage.v1alpha1.ServiceConfig config = 3 [json_name = "config", (.google.api.field_behavior) = OUTPUT_ONLY];</code>

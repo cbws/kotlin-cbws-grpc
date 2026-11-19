@@ -69,4 +69,115 @@ public interface ServiceConfigOrBuilder extends
    * @return The launchStage.
    */
   cloud.cbws.api.service_management.service_usage.v1alpha1.LaunchStage getLaunchStage();
+
+  /**
+   * <pre>
+   * What the service does, in one or two sentences, such as "Provision and
+   * manage scalable, high-performance machines for your workloads." At most
+   * 128 characters. Empty if the service has no description.
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The description.
+   */
+  java.lang.String getDescription();
+  /**
+   * <pre>
+   * What the service does, in one or two sentences, such as "Provision and
+   * manage scalable, high-performance machines for your workloads." At most
+   * 128 characters. Empty if the service has no description.
+   * </pre>
+   *
+   * <code>string description = 6 [json_name = "description"];</code>
+   * @return The bytes for description.
+   */
+  com.google.protobuf.ByteString
+      getDescriptionBytes();
+
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  java.util.List<cloud.cbws.api.service_management.service_usage.v1alpha1.Metric> 
+      getMetricsList();
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  cloud.cbws.api.service_management.service_usage.v1alpha1.Metric getMetrics(int index);
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  int getMetricsCount();
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  java.util.List<? extends cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder> 
+      getMetricsOrBuilderList();
+  /**
+   * <pre>
+   * The quantities the service measures for a project that uses it, such as
+   * API requests or machine hours. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>repeated .cbws.service_management.service_usage.v1alpha1.Metric metrics = 4 [json_name = "metrics"];</code>
+   */
+  cloud.cbws.api.service_management.service_usage.v1alpha1.MetricOrBuilder getMetricsOrBuilder(
+      int index);
+
+  /**
+   * <pre>
+   * What each method of the service costs against the metrics, and how much
+   * of each metric a project may use. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+   * @return Whether the quota field is set.
+   */
+  boolean hasQuota();
+  /**
+   * <pre>
+   * What each method of the service costs against the metrics, and how much
+   * of each metric a project may use. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+   * @return The quota.
+   */
+  cloud.cbws.api.service_management.service_usage.v1alpha1.Quota getQuota();
+  /**
+   * <pre>
+   * What each method of the service costs against the metrics, and how much
+   * of each metric a project may use. Returned only when the request's read
+   * mask asks for it, or has no read mask.
+   * </pre>
+   *
+   * <code>.cbws.service_management.service_usage.v1alpha1.Quota quota = 5 [json_name = "quota"];</code>
+   */
+  cloud.cbws.api.service_management.service_usage.v1alpha1.QuotaOrBuilder getQuotaOrBuilder();
 }

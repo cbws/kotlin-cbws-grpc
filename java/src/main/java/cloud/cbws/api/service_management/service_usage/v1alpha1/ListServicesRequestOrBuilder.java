@@ -30,4 +30,37 @@ public interface ListServicesRequestOrBuilder extends
    */
   com.google.protobuf.ByteString
       getParentBytes();
+
+  /**
+   * <pre>
+   * Optional. The fields that take extra time to read and are wanted in the
+   * response: `services.config.metrics` and `services.config.quota`. Other
+   * fields are always returned. Without a mask, both are read.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return Whether the readMask field is set.
+   */
+  boolean hasReadMask();
+  /**
+   * <pre>
+   * Optional. The fields that take extra time to read and are wanted in the
+   * response: `services.config.metrics` and `services.config.quota`. Other
+   * fields are always returned. Without a mask, both are read.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+   * @return The readMask.
+   */
+  com.google.protobuf.FieldMask getReadMask();
+  /**
+   * <pre>
+   * Optional. The fields that take extra time to read and are wanted in the
+   * response: `services.config.metrics` and `services.config.quota`. Other
+   * fields are always returned. Without a mask, both are read.
+   * </pre>
+   *
+   * <code>.google.protobuf.FieldMask read_mask = 2 [json_name = "readMask", (.google.api.field_behavior) = OPTIONAL];</code>
+   */
+  com.google.protobuf.FieldMaskOrBuilder getReadMaskOrBuilder();
 }

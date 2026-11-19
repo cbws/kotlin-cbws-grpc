@@ -35,6 +35,31 @@ public final class ServiceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_service_management_service_usage_v1alpha1_ServiceConfig_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_service_management_service_usage_v1alpha1_Metric_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_service_management_service_usage_v1alpha1_Metric_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_service_management_service_usage_v1alpha1_Quota_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_service_management_service_usage_v1alpha1_Quota_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_MetricCostsEntry_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_MetricCostsEntry_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_service_management_service_usage_v1alpha1_QuotaLimit_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_service_management_service_usage_v1alpha1_QuotaLimit_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -48,39 +73,62 @@ public final class ServiceProto {
       "v1alpha1/service.proto\022.cbws.service_man" +
       "agement.service_usage.v1alpha1\032\037google/a" +
       "pi/field_behavior.proto\032\031google/api/reso" +
-      "urce.proto\"\303\002\n\007Service\022\030\n\004name\030\001 \001(\tB\004\342A" +
-      "\001\003R\004name\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006parent\022[" +
-      "\n\006config\030\003 \001(\0132=.cbws.service_management" +
-      ".service_usage.v1alpha1.ServiceConfigB\004\342" +
-      "A\001\003R\006config\022X\n\005state\030\004 \001(\0162<.cbws.servic" +
-      "e_management.service_usage.v1alpha1.Serv" +
-      "iceStateB\004\342A\001\003R\005state:I\352AF\n\035serviceusage" +
-      ".cbws.xyz/Service\022%projects/{project}/se" +
-      "rvices/{service}\"\231\001\n\rServiceConfig\022\022\n\004na" +
-      "me\030\001 \001(\tR\004name\022\024\n\005title\030\002 \001(\tR\005title\022^\n\014" +
-      "launch_stage\030\003 \001(\0162;.cbws.service_manage" +
-      "ment.service_usage.v1alpha1.LaunchStageR" +
-      "\013launchStage*|\n\013LaunchStage\022\034\n\030LAUNCH_ST" +
-      "AGE_UNSPECIFIED\020\000\022 \n\034LAUNCH_STAGE_PRIVAT" +
-      "E_PREVIEW\020\002\022\030\n\024LAUNCH_STAGE_PREVIEW\020\003\022\023\n" +
-      "\017LAUNCH_STAGE_GA\020\004*d\n\014ServiceState\022\035\n\031SE" +
-      "RVICE_STATE_UNSPECIFIED\020\000\022\032\n\026SERVICE_STA" +
-      "TE_DISABLED\020\001\022\031\n\025SERVICE_STATE_ENABLED\020\002" +
-      "B\325\002\n8cloud.cbws.api.service_management.s" +
-      "ervice_usage.v1alpha1B\014ServiceProtoP\001Z8g" +
-      "ithub.com/cbws/go-cbws-grpc/cbws/service" +
-      "-usage/v1alpha1\242\002\003CSS\252\002,Cbws.ServiceMana" +
-      "gement.ServiceUsage.V1alpha1\312\002,Cbws\\Serv" +
-      "iceManagement\\ServiceUsage\\V1alpha1\342\0028Cb" +
-      "ws\\ServiceManagement\\ServiceUsage\\V1alph" +
-      "a1\\GPBMetadata\352\002/Cbws::ServiceManagement" +
-      "::ServiceUsage::V1alpha1b\006proto3"
+      "urce.proto\032\036google/protobuf/duration.pro" +
+      "to\"\303\002\n\007Service\022\030\n\004name\030\001 \001(\tB\004\342A\001\003R\004name" +
+      "\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006parent\022[\n\006config" +
+      "\030\003 \001(\0132=.cbws.service_management.service" +
+      "_usage.v1alpha1.ServiceConfigB\004\342A\001\003R\006con" +
+      "fig\022X\n\005state\030\004 \001(\0162<.cbws.service_manage" +
+      "ment.service_usage.v1alpha1.ServiceState" +
+      "B\004\342A\001\003R\005state:I\352AF\n\035serviceusage.cbws.xy" +
+      "z/Service\022%projects/{project}/services/{" +
+      "service}\"\332\002\n\rServiceConfig\022\022\n\004name\030\001 \001(\t" +
+      "R\004name\022\024\n\005title\030\002 \001(\tR\005title\022^\n\014launch_s" +
+      "tage\030\003 \001(\0162;.cbws.service_management.ser" +
+      "vice_usage.v1alpha1.LaunchStageR\013launchS" +
+      "tage\022 \n\013description\030\006 \001(\tR\013description\022P" +
+      "\n\007metrics\030\004 \003(\01326.cbws.service_managemen" +
+      "t.service_usage.v1alpha1.MetricR\007metrics" +
+      "\022K\n\005quota\030\005 \001(\01325.cbws.service_managemen" +
+      "t.service_usage.v1alpha1.QuotaR\005quota\"k\n" +
+      "\006Metric\022\022\n\004name\030\001 \001(\tR\004name\022!\n\014display_n" +
+      "ame\030\002 \001(\tR\013displayName\022\022\n\004unit\030\003 \001(\tR\004un" +
+      "it\022\026\n\006billed\030\004 \001(\010R\006billed\"\272\001\n\005Quota\022]\n\014" +
+      "metric_rules\030\001 \003(\0132:.cbws.service_manage" +
+      "ment.service_usage.v1alpha1.MetricRuleR\013" +
+      "metricRules\022R\n\006limits\030\002 \003(\0132:.cbws.servi" +
+      "ce_management.service_usage.v1alpha1.Quo" +
+      "taLimitR\006limits\"\330\001\n\nMetricRule\022\032\n\010select" +
+      "or\030\001 \001(\tR\010selector\022n\n\014metric_costs\030\002 \003(\013" +
+      "2K.cbws.service_management.service_usage" +
+      ".v1alpha1.MetricRule.MetricCostsEntryR\013m" +
+      "etricCosts\032>\n\020MetricCostsEntry\022\020\n\003key\030\001 " +
+      "\001(\tR\003key\022\024\n\005value\030\002 \001(\003R\005value:\0028\001\"\200\001\n\nQ" +
+      "uotaLimit\022\026\n\006metric\030\001 \001(\tR\006metric\022#\n\rdef" +
+      "ault_limit\030\002 \001(\003R\014defaultLimit\0225\n\010durati" +
+      "on\030\003 \001(\0132\031.google.protobuf.DurationR\010dur" +
+      "ation*|\n\013LaunchStage\022\034\n\030LAUNCH_STAGE_UNS" +
+      "PECIFIED\020\000\022 \n\034LAUNCH_STAGE_PRIVATE_PREVI" +
+      "EW\020\002\022\030\n\024LAUNCH_STAGE_PREVIEW\020\003\022\023\n\017LAUNCH" +
+      "_STAGE_GA\020\004*d\n\014ServiceState\022\035\n\031SERVICE_S" +
+      "TATE_UNSPECIFIED\020\000\022\032\n\026SERVICE_STATE_DISA" +
+      "BLED\020\001\022\031\n\025SERVICE_STATE_ENABLED\020\002B\325\002\n8cl" +
+      "oud.cbws.api.service_management.service_" +
+      "usage.v1alpha1B\014ServiceProtoP\001Z8github.c" +
+      "om/cbws/go-cbws-grpc/cbws/service-usage/" +
+      "v1alpha1\242\002\003CSS\252\002,Cbws.ServiceManagement." +
+      "ServiceUsage.V1alpha1\312\002,Cbws\\ServiceMana" +
+      "gement\\ServiceUsage\\V1alpha1\342\0028Cbws\\Serv" +
+      "iceManagement\\ServiceUsage\\V1alpha1\\GPBM" +
+      "etadata\352\002/Cbws::ServiceManagement::Servi" +
+      "ceUsage::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.DurationProto.getDescriptor(),
         });
     internal_static_cbws_service_management_service_usage_v1alpha1_Service_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -93,10 +141,41 @@ public final class ServiceProto {
     internal_static_cbws_service_management_service_usage_v1alpha1_ServiceConfig_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_service_management_service_usage_v1alpha1_ServiceConfig_descriptor,
-        new java.lang.String[] { "Name", "Title", "LaunchStage", });
+        new java.lang.String[] { "Name", "Title", "LaunchStage", "Description", "Metrics", "Quota", });
+    internal_static_cbws_service_management_service_usage_v1alpha1_Metric_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_cbws_service_management_service_usage_v1alpha1_Metric_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_service_management_service_usage_v1alpha1_Metric_descriptor,
+        new java.lang.String[] { "Name", "DisplayName", "Unit", "Billed", });
+    internal_static_cbws_service_management_service_usage_v1alpha1_Quota_descriptor =
+      getDescriptor().getMessageTypes().get(3);
+    internal_static_cbws_service_management_service_usage_v1alpha1_Quota_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_service_management_service_usage_v1alpha1_Quota_descriptor,
+        new java.lang.String[] { "MetricRules", "Limits", });
+    internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_descriptor =
+      getDescriptor().getMessageTypes().get(4);
+    internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_descriptor,
+        new java.lang.String[] { "Selector", "MetricCosts", });
+    internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_MetricCostsEntry_descriptor =
+      internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_descriptor.getNestedTypes().get(0);
+    internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_MetricCostsEntry_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_service_management_service_usage_v1alpha1_MetricRule_MetricCostsEntry_descriptor,
+        new java.lang.String[] { "Key", "Value", });
+    internal_static_cbws_service_management_service_usage_v1alpha1_QuotaLimit_descriptor =
+      getDescriptor().getMessageTypes().get(5);
+    internal_static_cbws_service_management_service_usage_v1alpha1_QuotaLimit_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_service_management_service_usage_v1alpha1_QuotaLimit_descriptor,
+        new java.lang.String[] { "Metric", "DefaultLimit", "Duration", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.DurationProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
