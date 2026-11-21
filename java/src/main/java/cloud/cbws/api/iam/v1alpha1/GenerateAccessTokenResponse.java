@@ -32,6 +32,7 @@ private static final long serialVersionUID = 0L;
   }
   private GenerateAccessTokenResponse() {
     accessToken_ = "";
+    tokenId_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -133,6 +134,55 @@ private static final long serialVersionUID = 0L;
     return expireTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : expireTime_;
   }
 
+  public static final int TOKEN_ID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object tokenId_ = "";
+  /**
+   * <pre>
+   * The unique identifier (`jti`) of the generated access token, for audit
+   * correlation.
+   * </pre>
+   *
+   * <code>string token_id = 4 [json_name = "tokenId"];</code>
+   * @return The tokenId.
+   */
+  @java.lang.Override
+  public java.lang.String getTokenId() {
+    java.lang.Object ref = tokenId_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      tokenId_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The unique identifier (`jti`) of the generated access token, for audit
+   * correlation.
+   * </pre>
+   *
+   * <code>string token_id = 4 [json_name = "tokenId"];</code>
+   * @return The bytes for tokenId.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTokenIdBytes() {
+    java.lang.Object ref = tokenId_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      tokenId_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -153,6 +203,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       output.writeMessage(3, getExpireTime());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tokenId_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, tokenId_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -168,6 +221,9 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000001) != 0)) {
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(3, getExpireTime());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(tokenId_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, tokenId_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -191,6 +247,8 @@ private static final long serialVersionUID = 0L;
       if (!getExpireTime()
           .equals(other.getExpireTime())) return false;
     }
+    if (!getTokenId()
+        .equals(other.getTokenId())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -208,6 +266,8 @@ private static final long serialVersionUID = 0L;
       hash = (37 * hash) + EXPIRE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getExpireTime().hashCode();
     }
+    hash = (37 * hash) + TOKEN_ID_FIELD_NUMBER;
+    hash = (53 * hash) + getTokenId().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -355,6 +415,7 @@ private static final long serialVersionUID = 0L;
         expireTimeBuilder_.dispose();
         expireTimeBuilder_ = null;
       }
+      tokenId_ = "";
       return this;
     }
 
@@ -398,6 +459,9 @@ private static final long serialVersionUID = 0L;
             : expireTimeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.tokenId_ = tokenId_;
+      }
       result.bitField0_ |= to_bitField0_;
     }
 
@@ -420,6 +484,11 @@ private static final long serialVersionUID = 0L;
       }
       if (other.hasExpireTime()) {
         mergeExpireTime(other.getExpireTime());
+      }
+      if (!other.getTokenId().isEmpty()) {
+        tokenId_ = other.tokenId_;
+        bitField0_ |= 0x00000004;
+        onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
@@ -459,6 +528,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000002;
               break;
             } // case 26
+            case 34: {
+              tokenId_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 34
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -723,6 +797,103 @@ private static final long serialVersionUID = 0L;
         expireTime_ = null;
       }
       return expireTimeBuilder_;
+    }
+
+    private java.lang.Object tokenId_ = "";
+    /**
+     * <pre>
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     * </pre>
+     *
+     * <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @return The tokenId.
+     */
+    public java.lang.String getTokenId() {
+      java.lang.Object ref = tokenId_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        tokenId_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     * </pre>
+     *
+     * <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @return The bytes for tokenId.
+     */
+    public com.google.protobuf.ByteString
+        getTokenIdBytes() {
+      java.lang.Object ref = tokenId_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        tokenId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     * </pre>
+     *
+     * <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @param value The tokenId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTokenId(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      tokenId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     * </pre>
+     *
+     * <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearTokenId() {
+      tokenId_ = getDefaultInstance().getTokenId();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     * </pre>
+     *
+     * <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @param value The bytes for tokenId to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTokenIdBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      tokenId_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
     }
 
     // @@protoc_insertion_point(builder_scope:cbws.iam.v1alpha1.GenerateAccessTokenResponse)

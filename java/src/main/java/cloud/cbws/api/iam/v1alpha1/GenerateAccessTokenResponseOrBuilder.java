@@ -55,4 +55,26 @@ public interface GenerateAccessTokenResponseOrBuilder extends
    * <code>.google.protobuf.Timestamp expire_time = 3 [json_name = "expireTime"];</code>
    */
   com.google.protobuf.TimestampOrBuilder getExpireTimeOrBuilder();
+
+  /**
+   * <pre>
+   * The unique identifier (`jti`) of the generated access token, for audit
+   * correlation.
+   * </pre>
+   *
+   * <code>string token_id = 4 [json_name = "tokenId"];</code>
+   * @return The tokenId.
+   */
+  java.lang.String getTokenId();
+  /**
+   * <pre>
+   * The unique identifier (`jti`) of the generated access token, for audit
+   * correlation.
+   * </pre>
+   *
+   * <code>string token_id = 4 [json_name = "tokenId"];</code>
+   * @return The bytes for tokenId.
+   */
+  com.google.protobuf.ByteString
+      getTokenIdBytes();
 }

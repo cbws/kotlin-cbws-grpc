@@ -98,6 +98,34 @@ public object GenerateAccessTokenResponseKt {
 
     public val GenerateAccessTokenResponseKt.Dsl.expireTimeOrNull: com.google.protobuf.Timestamp?
       get() = _builder.expireTimeOrNull
+
+    /**
+     * ```
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     * ```
+     *
+     * `string token_id = 4 [json_name = "tokenId"];`
+     */
+    public var tokenId: kotlin.String
+      @kotlin.jvm.JvmName("getTokenId")
+        get() = _builder.tokenId
+      @kotlin.jvm.JvmName("setTokenId")
+        set(value) {
+        _builder.tokenId = value
+      }
+    /**
+     * <pre>
+     * The unique identifier (`jti`) of the generated access token, for audit
+     * correlation.
+     * </pre>
+     *
+     * <code>string token_id = 4 [json_name = "tokenId"];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearTokenId() {
+      _builder.clearTokenId()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
