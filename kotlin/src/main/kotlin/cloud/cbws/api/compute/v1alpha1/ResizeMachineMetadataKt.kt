@@ -34,6 +34,120 @@ public object ResizeMachineMetadataKt {
 
     /**
      * ```
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * ```
+     *
+     * `string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }`
+     */
+    public var machine: kotlin.String
+      @kotlin.jvm.JvmName("getMachine")
+        get() = _builder.machine
+      @kotlin.jvm.JvmName("setMachine")
+        set(value) {
+        _builder.machine = value
+      }
+    /**
+     * <pre>
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public fun clearMachine() {
+      _builder.clearMachine()
+    }
+
+    /**
+     * ```
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * ```
+     *
+     * `string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var machineUid: kotlin.String
+      @kotlin.jvm.JvmName("getMachineUid")
+        get() = _builder.machineUid
+      @kotlin.jvm.JvmName("setMachineUid")
+        set(value) {
+        _builder.machineUid = value
+      }
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearMachineUid() {
+      _builder.clearMachineUid()
+    }
+
+    /**
+     * ```
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     * ```
+     *
+     * `string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var previousType: kotlin.String
+      @kotlin.jvm.JvmName("getPreviousType")
+        get() = _builder.previousType
+      @kotlin.jvm.JvmName("setPreviousType")
+        set(value) {
+        _builder.previousType = value
+      }
+    /**
+     * <pre>
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     * </pre>
+     *
+     * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearPreviousType() {
+      _builder.clearPreviousType()
+    }
+
+    /**
+     * ```
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     * ```
+     *
+     * `string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var type: kotlin.String
+      @kotlin.jvm.JvmName("getType")
+        get() = _builder.type
+      @kotlin.jvm.JvmName("setType")
+        set(value) {
+        _builder.type = value
+      }
+    /**
+     * <pre>
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     * </pre>
+     *
+     * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearType() {
+      _builder.clearType()
+    }
+
+    /**
+     * ```
      * When the operation was created. Unset where the time is not known.
      * ```
      *

@@ -11,6 +11,96 @@ public interface ResizeMachineMetadataOrBuilder extends
 
   /**
    * <pre>
+   * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The machine.
+   */
+  java.lang.String getMachine();
+  /**
+   * <pre>
+   * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for machine.
+   */
+  com.google.protobuf.ByteString
+      getMachineBytes();
+
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The machineUid.
+   */
+  java.lang.String getMachineUid();
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for machineUid.
+   */
+  com.google.protobuf.ByteString
+      getMachineUidBytes();
+
+  /**
+   * <pre>
+   * The machine type the machine had before the resize, such as
+   * `zones/nl-ein-1/types/g4.1`.
+   * </pre>
+   *
+   * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The previousType.
+   */
+  java.lang.String getPreviousType();
+  /**
+   * <pre>
+   * The machine type the machine had before the resize, such as
+   * `zones/nl-ein-1/types/g4.1`.
+   * </pre>
+   *
+   * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for previousType.
+   */
+  com.google.protobuf.ByteString
+      getPreviousTypeBytes();
+
+  /**
+   * <pre>
+   * The machine type the machine is resized to, such as
+   * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+   * gave `machineTypes/g4.2`.
+   * </pre>
+   *
+   * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
+   */
+  java.lang.String getType();
+  /**
+   * <pre>
+   * The machine type the machine is resized to, such as
+   * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+   * gave `machineTypes/g4.2`.
+   * </pre>
+   *
+   * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for type.
+   */
+  com.google.protobuf.ByteString
+      getTypeBytes();
+
+  /**
+   * <pre>
    * When the operation was created. Unset where the time is not known.
    * </pre>
    *

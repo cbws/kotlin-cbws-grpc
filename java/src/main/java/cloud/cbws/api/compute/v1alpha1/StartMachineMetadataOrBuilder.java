@@ -11,6 +11,50 @@ public interface StartMachineMetadataOrBuilder extends
 
   /**
    * <pre>
+   * The machine being started, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The machine.
+   */
+  java.lang.String getMachine();
+  /**
+   * <pre>
+   * The machine being started, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for machine.
+   */
+  com.google.protobuf.ByteString
+      getMachineBytes();
+
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The machineUid.
+   */
+  java.lang.String getMachineUid();
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for machineUid.
+   */
+  com.google.protobuf.ByteString
+      getMachineUidBytes();
+
+  /**
+   * <pre>
    * When the operation was created. Unset where the time is not known.
    * </pre>
    *

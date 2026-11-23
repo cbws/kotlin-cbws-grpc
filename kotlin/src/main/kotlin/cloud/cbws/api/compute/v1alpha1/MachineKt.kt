@@ -64,6 +64,34 @@ public object MachineKt {
 
     /**
      * ```
+     * A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+     * the same name has a different uid, which is what tells the two and their operations apart.
+     * ```
+     *
+     * `string uid = 20 [json_name = "uid", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var uid: kotlin.String
+      @kotlin.jvm.JvmName("getUid")
+        get() = _builder.uid
+      @kotlin.jvm.JvmName("setUid")
+        set(value) {
+        _builder.uid = value
+      }
+    /**
+     * <pre>
+     * A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+     * the same name has a different uid, which is what tells the two and their operations apart.
+     * </pre>
+     *
+     * <code>string uid = 20 [json_name = "uid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearUid() {
+      _builder.clearUid()
+    }
+
+    /**
+     * ```
      * The project that holds the machine, such as `projects/my-project-123`.
      * ```
      *

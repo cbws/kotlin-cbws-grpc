@@ -31,6 +31,10 @@ private static final long serialVersionUID = 0L;
     super(builder);
   }
   private ResizeMachineMetadata() {
+    machine_ = "";
+    machineUid_ = "";
+    previousType_ = "";
+    type_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -47,6 +51,204 @@ private static final long serialVersionUID = 0L;
   }
 
   private int bitField0_;
+  public static final int MACHINE_FIELD_NUMBER = 3;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object machine_ = "";
+  /**
+   * <pre>
+   * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The machine.
+   */
+  @java.lang.Override
+  public java.lang.String getMachine() {
+    java.lang.Object ref = machine_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      machine_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for machine.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMachineBytes() {
+    java.lang.Object ref = machine_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      machine_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int MACHINE_UID_FIELD_NUMBER = 4;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object machineUid_ = "";
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The machineUid.
+   */
+  @java.lang.Override
+  public java.lang.String getMachineUid() {
+    java.lang.Object ref = machineUid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      machineUid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for machineUid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getMachineUidBytes() {
+    java.lang.Object ref = machineUid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      machineUid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int PREVIOUS_TYPE_FIELD_NUMBER = 5;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object previousType_ = "";
+  /**
+   * <pre>
+   * The machine type the machine had before the resize, such as
+   * `zones/nl-ein-1/types/g4.1`.
+   * </pre>
+   *
+   * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The previousType.
+   */
+  @java.lang.Override
+  public java.lang.String getPreviousType() {
+    java.lang.Object ref = previousType_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      previousType_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The machine type the machine had before the resize, such as
+   * `zones/nl-ein-1/types/g4.1`.
+   * </pre>
+   *
+   * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for previousType.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getPreviousTypeBytes() {
+    java.lang.Object ref = previousType_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      previousType_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int TYPE_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object type_ = "";
+  /**
+   * <pre>
+   * The machine type the machine is resized to, such as
+   * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+   * gave `machineTypes/g4.2`.
+   * </pre>
+   *
+   * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The type.
+   */
+  @java.lang.Override
+  public java.lang.String getType() {
+    java.lang.Object ref = type_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      type_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The machine type the machine is resized to, such as
+   * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+   * gave `machineTypes/g4.2`.
+   * </pre>
+   *
+   * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for type.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getTypeBytes() {
+    java.lang.Object ref = type_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      type_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   public static final int CREATE_TIME_FIELD_NUMBER = 1;
   private com.google.protobuf.Timestamp createTime_;
   /**
@@ -143,6 +345,18 @@ private static final long serialVersionUID = 0L;
     if (((bitField0_ & 0x00000002) != 0)) {
       output.writeMessage(2, getEndTime());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(machine_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 3, machine_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(machineUid_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 4, machineUid_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(previousType_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 5, previousType_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(type_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, type_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -160,6 +374,18 @@ private static final long serialVersionUID = 0L;
       size += com.google.protobuf.CodedOutputStream
         .computeMessageSize(2, getEndTime());
     }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(machine_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(3, machine_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(machineUid_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(4, machineUid_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(previousType_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(5, previousType_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(type_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, type_);
+    }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
     return size;
@@ -175,6 +401,14 @@ private static final long serialVersionUID = 0L;
     }
     cloud.cbws.api.compute.v1alpha1.ResizeMachineMetadata other = (cloud.cbws.api.compute.v1alpha1.ResizeMachineMetadata) obj;
 
+    if (!getMachine()
+        .equals(other.getMachine())) return false;
+    if (!getMachineUid()
+        .equals(other.getMachineUid())) return false;
+    if (!getPreviousType()
+        .equals(other.getPreviousType())) return false;
+    if (!getType()
+        .equals(other.getType())) return false;
     if (hasCreateTime() != other.hasCreateTime()) return false;
     if (hasCreateTime()) {
       if (!getCreateTime()
@@ -196,6 +430,14 @@ private static final long serialVersionUID = 0L;
     }
     int hash = 41;
     hash = (19 * hash) + getDescriptor().hashCode();
+    hash = (37 * hash) + MACHINE_FIELD_NUMBER;
+    hash = (53 * hash) + getMachine().hashCode();
+    hash = (37 * hash) + MACHINE_UID_FIELD_NUMBER;
+    hash = (53 * hash) + getMachineUid().hashCode();
+    hash = (37 * hash) + PREVIOUS_TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getPreviousType().hashCode();
+    hash = (37 * hash) + TYPE_FIELD_NUMBER;
+    hash = (53 * hash) + getType().hashCode();
     if (hasCreateTime()) {
       hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
       hash = (53 * hash) + getCreateTime().hashCode();
@@ -346,6 +588,10 @@ private static final long serialVersionUID = 0L;
     public Builder clear() {
       super.clear();
       bitField0_ = 0;
+      machine_ = "";
+      machineUid_ = "";
+      previousType_ = "";
+      type_ = "";
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -389,14 +635,26 @@ private static final long serialVersionUID = 0L;
 
     private void buildPartial0(cloud.cbws.api.compute.v1alpha1.ResizeMachineMetadata result) {
       int from_bitField0_ = bitField0_;
-      int to_bitField0_ = 0;
       if (((from_bitField0_ & 0x00000001) != 0)) {
+        result.machine_ = machine_;
+      }
+      if (((from_bitField0_ & 0x00000002) != 0)) {
+        result.machineUid_ = machineUid_;
+      }
+      if (((from_bitField0_ & 0x00000004) != 0)) {
+        result.previousType_ = previousType_;
+      }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.type_ = type_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
         result.createTime_ = createTimeBuilder_ == null
             ? createTime_
             : createTimeBuilder_.build();
         to_bitField0_ |= 0x00000001;
       }
-      if (((from_bitField0_ & 0x00000002) != 0)) {
+      if (((from_bitField0_ & 0x00000020) != 0)) {
         result.endTime_ = endTimeBuilder_ == null
             ? endTime_
             : endTimeBuilder_.build();
@@ -417,6 +675,26 @@ private static final long serialVersionUID = 0L;
 
     public Builder mergeFrom(cloud.cbws.api.compute.v1alpha1.ResizeMachineMetadata other) {
       if (other == cloud.cbws.api.compute.v1alpha1.ResizeMachineMetadata.getDefaultInstance()) return this;
+      if (!other.getMachine().isEmpty()) {
+        machine_ = other.machine_;
+        bitField0_ |= 0x00000001;
+        onChanged();
+      }
+      if (!other.getMachineUid().isEmpty()) {
+        machineUid_ = other.machineUid_;
+        bitField0_ |= 0x00000002;
+        onChanged();
+      }
+      if (!other.getPreviousType().isEmpty()) {
+        previousType_ = other.previousType_;
+        bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (!other.getType().isEmpty()) {
+        type_ = other.type_;
+        bitField0_ |= 0x00000008;
+        onChanged();
+      }
       if (other.hasCreateTime()) {
         mergeCreateTime(other.getCreateTime());
       }
@@ -453,16 +731,36 @@ private static final long serialVersionUID = 0L;
               input.readMessage(
                   internalGetCreateTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000001;
+              bitField0_ |= 0x00000010;
               break;
             } // case 10
             case 18: {
               input.readMessage(
                   internalGetEndTimeFieldBuilder().getBuilder(),
                   extensionRegistry);
-              bitField0_ |= 0x00000002;
+              bitField0_ |= 0x00000020;
               break;
             } // case 18
+            case 26: {
+              machine_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000001;
+              break;
+            } // case 26
+            case 34: {
+              machineUid_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000002;
+              break;
+            } // case 34
+            case 42: {
+              previousType_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000004;
+              break;
+            } // case 42
+            case 50: {
+              type_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 50
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -480,6 +778,399 @@ private static final long serialVersionUID = 0L;
     }
     private int bitField0_;
 
+    private java.lang.Object machine_ = "";
+    /**
+     * <pre>
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The machine.
+     */
+    public java.lang.String getMachine() {
+      java.lang.Object ref = machine_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        machine_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for machine.
+     */
+    public com.google.protobuf.ByteString
+        getMachineBytes() {
+      java.lang.Object ref = machine_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        machine_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The machine to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMachine(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      machine_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMachine() {
+      machine_ = getDefaultInstance().getMachine();
+      bitField0_ = (bitField0_ & ~0x00000001);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine being resized, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for machine to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMachineBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      machine_ = value;
+      bitField0_ |= 0x00000001;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object machineUid_ = "";
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The machineUid.
+     */
+    public java.lang.String getMachineUid() {
+      java.lang.Object ref = machineUid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        machineUid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for machineUid.
+     */
+    public com.google.protobuf.ByteString
+        getMachineUidBytes() {
+      java.lang.Object ref = machineUid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        machineUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The machineUid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMachineUid(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      machineUid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearMachineUid() {
+      machineUid_ = getDefaultInstance().getMachineUid();
+      bitField0_ = (bitField0_ & ~0x00000002);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes for machineUid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setMachineUidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      machineUid_ = value;
+      bitField0_ |= 0x00000002;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object previousType_ = "";
+    /**
+     * <pre>
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     * </pre>
+     *
+     * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The previousType.
+     */
+    public java.lang.String getPreviousType() {
+      java.lang.Object ref = previousType_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        previousType_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     * </pre>
+     *
+     * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for previousType.
+     */
+    public com.google.protobuf.ByteString
+        getPreviousTypeBytes() {
+      java.lang.Object ref = previousType_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        previousType_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     * </pre>
+     *
+     * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The previousType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPreviousType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      previousType_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     * </pre>
+     *
+     * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearPreviousType() {
+      previousType_ = getDefaultInstance().getPreviousType();
+      bitField0_ = (bitField0_ & ~0x00000004);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine type the machine had before the resize, such as
+     * `zones/nl-ein-1/types/g4.1`.
+     * </pre>
+     *
+     * <code>string previous_type = 5 [json_name = "previousType", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes for previousType to set.
+     * @return This builder for chaining.
+     */
+    public Builder setPreviousTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      previousType_ = value;
+      bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object type_ = "";
+    /**
+     * <pre>
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     * </pre>
+     *
+     * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The type.
+     */
+    public java.lang.String getType() {
+      java.lang.Object ref = type_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        type_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     * </pre>
+     *
+     * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for type.
+     */
+    public com.google.protobuf.ByteString
+        getTypeBytes() {
+      java.lang.Object ref = type_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        type_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     * </pre>
+     *
+     * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setType(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      type_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     * </pre>
+     *
+     * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearType() {
+      type_ = getDefaultInstance().getType();
+      bitField0_ = (bitField0_ & ~0x00000008);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine type the machine is resized to, such as
+     * `zones/nl-ein-1/types/g4.2`. Always names a zone, also when the request
+     * gave `machineTypes/g4.2`.
+     * </pre>
+     *
+     * <code>string type = 6 [json_name = "type", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes for type to set.
+     * @return This builder for chaining.
+     */
+    public Builder setTypeBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      type_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+
     private com.google.protobuf.Timestamp createTime_;
     private com.google.protobuf.SingleFieldBuilder<
         com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
@@ -492,7 +1183,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the createTime field is set.
      */
     public boolean hasCreateTime() {
-      return ((bitField0_ & 0x00000001) != 0);
+      return ((bitField0_ & 0x00000010) != 0);
     }
     /**
      * <pre>
@@ -525,7 +1216,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -543,7 +1234,7 @@ private static final long serialVersionUID = 0L;
       } else {
         createTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000010;
       onChanged();
       return this;
     }
@@ -556,7 +1247,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
       if (createTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0) &&
+        if (((bitField0_ & 0x00000010) != 0) &&
           createTime_ != null &&
           createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getCreateTimeBuilder().mergeFrom(value);
@@ -567,7 +1258,7 @@ private static final long serialVersionUID = 0L;
         createTimeBuilder_.mergeFrom(value);
       }
       if (createTime_ != null) {
-        bitField0_ |= 0x00000001;
+        bitField0_ |= 0x00000010;
         onChanged();
       }
       return this;
@@ -580,7 +1271,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearCreateTime() {
-      bitField0_ = (bitField0_ & ~0x00000001);
+      bitField0_ = (bitField0_ & ~0x00000010);
       createTime_ = null;
       if (createTimeBuilder_ != null) {
         createTimeBuilder_.dispose();
@@ -597,7 +1288,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp create_time = 1 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
-      bitField0_ |= 0x00000001;
+      bitField0_ |= 0x00000010;
       onChanged();
       return internalGetCreateTimeFieldBuilder().getBuilder();
     }
@@ -649,7 +1340,7 @@ private static final long serialVersionUID = 0L;
      * @return Whether the endTime field is set.
      */
     public boolean hasEndTime() {
-      return ((bitField0_ & 0x00000002) != 0);
+      return ((bitField0_ & 0x00000020) != 0);
     }
     /**
      * <pre>
@@ -682,7 +1373,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(value);
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -700,7 +1391,7 @@ private static final long serialVersionUID = 0L;
       } else {
         endTimeBuilder_.setMessage(builderForValue.build());
       }
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000020;
       onChanged();
       return this;
     }
@@ -713,7 +1404,7 @@ private static final long serialVersionUID = 0L;
      */
     public Builder mergeEndTime(com.google.protobuf.Timestamp value) {
       if (endTimeBuilder_ == null) {
-        if (((bitField0_ & 0x00000002) != 0) &&
+        if (((bitField0_ & 0x00000020) != 0) &&
           endTime_ != null &&
           endTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
           getEndTimeBuilder().mergeFrom(value);
@@ -724,7 +1415,7 @@ private static final long serialVersionUID = 0L;
         endTimeBuilder_.mergeFrom(value);
       }
       if (endTime_ != null) {
-        bitField0_ |= 0x00000002;
+        bitField0_ |= 0x00000020;
         onChanged();
       }
       return this;
@@ -737,7 +1428,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public Builder clearEndTime() {
-      bitField0_ = (bitField0_ & ~0x00000002);
+      bitField0_ = (bitField0_ & ~0x00000020);
       endTime_ = null;
       if (endTimeBuilder_ != null) {
         endTimeBuilder_.dispose();
@@ -754,7 +1445,7 @@ private static final long serialVersionUID = 0L;
      * <code>.google.protobuf.Timestamp end_time = 2 [json_name = "endTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
      */
     public com.google.protobuf.Timestamp.Builder getEndTimeBuilder() {
-      bitField0_ |= 0x00000002;
+      bitField0_ |= 0x00000020;
       onChanged();
       return internalGetEndTimeFieldBuilder().getBuilder();
     }

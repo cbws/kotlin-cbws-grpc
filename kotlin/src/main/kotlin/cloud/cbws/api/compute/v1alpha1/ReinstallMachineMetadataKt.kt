@@ -34,6 +34,94 @@ public object ReinstallMachineMetadataKt {
 
     /**
      * ```
+     * The machine being reinstalled, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * ```
+     *
+     * `string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }`
+     */
+    public var machine: kotlin.String
+      @kotlin.jvm.JvmName("getMachine")
+        get() = _builder.machine
+      @kotlin.jvm.JvmName("setMachine")
+        set(value) {
+        _builder.machine = value
+      }
+    /**
+     * <pre>
+     * The machine being reinstalled, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public fun clearMachine() {
+      _builder.clearMachine()
+    }
+
+    /**
+     * ```
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * ```
+     *
+     * `string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var machineUid: kotlin.String
+      @kotlin.jvm.JvmName("getMachineUid")
+        get() = _builder.machineUid
+      @kotlin.jvm.JvmName("setMachineUid")
+        set(value) {
+        _builder.machineUid = value
+      }
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearMachineUid() {
+      _builder.clearMachineUid()
+    }
+
+    /**
+     * ```
+     * The single image the machine is reinstalled from, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`. When the request
+     * gave an image family, this is the image the family resolved to, so it keeps
+     * naming what was installed after the family moves on.
+     * ```
+     *
+     * `string image = 5 [json_name = "image", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var image: kotlin.String
+      @kotlin.jvm.JvmName("getImage")
+        get() = _builder.image
+      @kotlin.jvm.JvmName("setImage")
+        set(value) {
+        _builder.image = value
+      }
+    /**
+     * <pre>
+     * The single image the machine is reinstalled from, such as
+     * `projects/my-project-123/images/ubuntu-2404-lts-20260901`. When the request
+     * gave an image family, this is the image the family resolved to, so it keeps
+     * naming what was installed after the family moves on.
+     * </pre>
+     *
+     * <code>string image = 5 [json_name = "image", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearImage() {
+      _builder.clearImage()
+    }
+
+    /**
+     * ```
      * When the operation was created. Unset where the time is not known.
      * ```
      *

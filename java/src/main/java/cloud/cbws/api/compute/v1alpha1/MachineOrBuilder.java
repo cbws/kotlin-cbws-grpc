@@ -35,6 +35,28 @@ public interface MachineOrBuilder extends
 
   /**
    * <pre>
+   * A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+   * the same name has a different uid, which is what tells the two and their operations apart.
+   * </pre>
+   *
+   * <code>string uid = 20 [json_name = "uid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The uid.
+   */
+  java.lang.String getUid();
+  /**
+   * <pre>
+   * A unique identifier for the machine, a UUID assigned by CBWS. A machine created later with
+   * the same name has a different uid, which is what tells the two and their operations apart.
+   * </pre>
+   *
+   * <code>string uid = 20 [json_name = "uid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for uid.
+   */
+  com.google.protobuf.ByteString
+      getUidBytes();
+
+  /**
+   * <pre>
    * The project that holds the machine, such as `projects/my-project-123`.
    * </pre>
    *

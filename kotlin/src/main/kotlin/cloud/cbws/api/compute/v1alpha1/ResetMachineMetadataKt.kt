@@ -34,6 +34,62 @@ public object ResetMachineMetadataKt {
 
     /**
      * ```
+     * The machine being reset, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * ```
+     *
+     * `string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }`
+     */
+    public var machine: kotlin.String
+      @kotlin.jvm.JvmName("getMachine")
+        get() = _builder.machine
+      @kotlin.jvm.JvmName("setMachine")
+        set(value) {
+        _builder.machine = value
+      }
+    /**
+     * <pre>
+     * The machine being reset, such as `projects/my-project-123/machines/web-1`.
+     * It stays set after the machine is deleted.
+     * </pre>
+     *
+     * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public fun clearMachine() {
+      _builder.clearMachine()
+    }
+
+    /**
+     * ```
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * ```
+     *
+     * `string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var machineUid: kotlin.String
+      @kotlin.jvm.JvmName("getMachineUid")
+        get() = _builder.machineUid
+      @kotlin.jvm.JvmName("setMachineUid")
+        set(value) {
+        _builder.machineUid = value
+      }
+    /**
+     * <pre>
+     * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+     * apart from a machine created later with the same name.
+     * </pre>
+     *
+     * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearMachineUid() {
+      _builder.clearMachineUid()
+    }
+
+    /**
+     * ```
      * When the operation was created. Unset where the time is not known.
      * ```
      *

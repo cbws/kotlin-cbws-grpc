@@ -11,6 +11,76 @@ public interface ReinstallMachineMetadataOrBuilder extends
 
   /**
    * <pre>
+   * The machine being reinstalled, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The machine.
+   */
+  java.lang.String getMachine();
+  /**
+   * <pre>
+   * The machine being reinstalled, such as `projects/my-project-123/machines/web-1`.
+   * It stays set after the machine is deleted.
+   * </pre>
+   *
+   * <code>string machine = 3 [json_name = "machine", (.google.api.field_behavior) = OUTPUT_ONLY, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for machine.
+   */
+  com.google.protobuf.ByteString
+      getMachineBytes();
+
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The machineUid.
+   */
+  java.lang.String getMachineUid();
+  /**
+   * <pre>
+   * The [uid][cbws.compute.v1alpha1.Machine.uid] of that machine, which tells it
+   * apart from a machine created later with the same name.
+   * </pre>
+   *
+   * <code>string machine_uid = 4 [json_name = "machineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for machineUid.
+   */
+  com.google.protobuf.ByteString
+      getMachineUidBytes();
+
+  /**
+   * <pre>
+   * The single image the machine is reinstalled from, such as
+   * `projects/my-project-123/images/ubuntu-2404-lts-20260901`. When the request
+   * gave an image family, this is the image the family resolved to, so it keeps
+   * naming what was installed after the family moves on.
+   * </pre>
+   *
+   * <code>string image = 5 [json_name = "image", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The image.
+   */
+  java.lang.String getImage();
+  /**
+   * <pre>
+   * The single image the machine is reinstalled from, such as
+   * `projects/my-project-123/images/ubuntu-2404-lts-20260901`. When the request
+   * gave an image family, this is the image the family resolved to, so it keeps
+   * naming what was installed after the family moves on.
+   * </pre>
+   *
+   * <code>string image = 5 [json_name = "image", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for image.
+   */
+  com.google.protobuf.ByteString
+      getImageBytes();
+
+  /**
+   * <pre>
    * When the operation was created. Unset where the time is not known.
    * </pre>
    *
