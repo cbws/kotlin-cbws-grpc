@@ -30,6 +30,16 @@ public final class MachineAgentServiceProto {
   static final 
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
       internal_static_cbws_compute_v1alpha1_GetMachineAgentRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardRequest_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardRequest_fieldAccessorTable;
+  static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardResponse_descriptor;
+  static final 
+    com.google.protobuf.GeneratedMessage.FieldAccessorTable
+      internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -42,20 +52,28 @@ public final class MachineAgentServiceProto {
       "\n1cbws/compute/v1alpha1/machine_agent_se" +
       "rvice.proto\022\025cbws.compute.v1alpha1\032\037goog" +
       "le/api/field_behavior.proto\032\031google/api/" +
-      "resource.proto\"V\n\026GetMachineAgentRequest" +
-      "\022<\n\004name\030\001 \001(\tB(\342A\001\002\372A!\n\037compute.cbws.cl" +
-      "oud/MachineAgentR\004nameB\261\001\n\037cloud.cbws.ap" +
-      "i.compute.v1alpha1B\030MachineAgentServiceP" +
-      "rotoP\001\242\002\003CCX\252\002\025Cbws.Compute.V1alpha1\312\002\025C" +
-      "bws\\Compute\\V1alpha1\342\002!Cbws\\Compute\\V1al" +
-      "pha1\\GPBMetadata\352\002\027Cbws::Compute::V1alph" +
-      "a1b\006proto3"
+      "resource.proto\032\037google/protobuf/timestam" +
+      "p.proto\"V\n\026GetMachineAgentRequest\022<\n\004nam" +
+      "e\030\001 \001(\tB(\342A\001\002\372A!\n\037compute.cbws.cloud/Mac" +
+      "hineAgentR\004name\"{\n!RequestMachineAgentFo" +
+      "rwardRequest\022<\n\004name\030\001 \001(\tB(\342A\001\002\372A!\n\037com" +
+      "pute.cbws.cloud/MachineAgentR\004name\022\030\n\004po" +
+      "rt\030\002 \001(\005B\004\342A\001\002R\004port\"s\n\"RequestMachineAg" +
+      "entForwardResponse\022\020\n\003url\030\001 \001(\tR\003url\022;\n\013" +
+      "expire_time\030\002 \001(\0132\032.google.protobuf.Time" +
+      "stampR\nexpireTimeB\261\001\n\037cloud.cbws.api.com" +
+      "pute.v1alpha1B\030MachineAgentServiceProtoP" +
+      "\001\242\002\003CCX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws\\C" +
+      "ompute\\V1alpha1\342\002!Cbws\\Compute\\V1alpha1\\" +
+      "GPBMetadata\352\002\027Cbws::Compute::V1alpha1b\006p" +
+      "roto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_cbws_compute_v1alpha1_GetMachineAgentRequest_descriptor =
       getDescriptor().getMessageTypes().get(0);
@@ -63,9 +81,22 @@ public final class MachineAgentServiceProto {
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_GetMachineAgentRequest_descriptor,
         new java.lang.String[] { "Name", });
+    internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardRequest_descriptor =
+      getDescriptor().getMessageTypes().get(1);
+    internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardRequest_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardRequest_descriptor,
+        new java.lang.String[] { "Name", "Port", });
+    internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardResponse_descriptor =
+      getDescriptor().getMessageTypes().get(2);
+    internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardResponse_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessage.FieldAccessorTable(
+        internal_static_cbws_compute_v1alpha1_RequestMachineAgentForwardResponse_descriptor,
+        new java.lang.String[] { "Url", "ExpireTime", });
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
