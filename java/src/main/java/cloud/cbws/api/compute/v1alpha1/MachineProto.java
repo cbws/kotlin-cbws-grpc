@@ -42,7 +42,7 @@ public final class MachineProto {
       "\n#cbws/compute/v1alpha1/machine.proto\022\025c" +
       "bws.compute.v1alpha1\032\037google/api/field_b" +
       "ehavior.proto\032\031google/api/resource.proto" +
-      "\032\037google/protobuf/timestamp.proto\"\201\006\n\007Ma" +
+      "\032\037google/protobuf/timestamp.proto\"\373\006\n\007Ma" +
       "chine\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\026\n\003uid\030\024" +
       " \001(\tB\004\342A\001\003R\003uid\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006p" +
       "arent\022\030\n\004type\030\003 \001(\tB\004\342A\001\002R\004type\022\032\n\005image" +
@@ -60,13 +60,16 @@ public final class MachineProto {
       "E_STAGING\020\002\022\021\n\rSTATE_RUNNING\020\003\022\022\n\016STATE_" +
       "STOPPING\020\004\022\024\n\020STATE_SUSPENDING\020\005\022\023\n\017STAT" +
       "E_SUSPENDED\020\006\022\023\n\017STATE_REPAIRING\020\007\022\024\n\020ST" +
-      "ATE_TERMINATED\020\010:C\352A@\n\032compute.cbws.clou" +
-      "d/Machine\022\"projects/{project}/machines/{" +
-      "name}B\245\001\n\037cloud.cbws.api.compute.v1alpha" +
-      "1B\014MachineProtoP\001\242\002\003CCX\252\002\025Cbws.Compute.V" +
-      "1alpha1\312\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws\\C" +
-      "ompute\\V1alpha1\\GPBMetadata\352\002\027Cbws::Comp" +
-      "ute::V1alpha1b\006proto3"
+      "ATE_TERMINATED\020\010\"x\n\021AgentInstallation\022\"\n" +
+      "\036AGENT_INSTALLATION_UNSPECIFIED\020\000\022\036\n\032AGE" +
+      "NT_INSTALLATION_ENABLED\020\001\022\037\n\033AGENT_INSTA" +
+      "LLATION_DISABLED\020\002:C\352A@\n\032compute.cbws.cl" +
+      "oud/Machine\022\"projects/{project}/machines" +
+      "/{name}B\245\001\n\037cloud.cbws.api.compute.v1alp" +
+      "ha1B\014MachineProtoP\001\242\002\003CCX\252\002\025Cbws.Compute" +
+      ".V1alpha1\312\002\025Cbws\\Compute\\V1alpha1\342\002!Cbws" +
+      "\\Compute\\V1alpha1\\GPBMetadata\352\002\027Cbws::Co" +
+      "mpute::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
