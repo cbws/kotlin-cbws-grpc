@@ -34,6 +34,9 @@ private static final long serialVersionUID = 0L;
     name_ = "";
     parent_ = "";
     family_ = "";
+    state_ = 0;
+    sourceMachine_ = "";
+    sourceMachineUid_ = "";
   }
 
   public static final com.google.protobuf.Descriptors.Descriptor
@@ -49,6 +52,183 @@ private static final long serialVersionUID = 0L;
             cloud.cbws.api.compute.v1alpha1.Image.class, cloud.cbws.api.compute.v1alpha1.Image.Builder.class);
   }
 
+  /**
+   * Protobuf enum {@code cbws.compute.v1alpha1.Image.State}
+   */
+  public enum State
+      implements com.google.protobuf.ProtocolMessageEnum {
+    /**
+     * <code>STATE_UNSPECIFIED = 0;</code>
+     */
+    STATE_UNSPECIFIED(0),
+    /**
+     * <pre>
+     * The image is being made from its source machine.
+     * </pre>
+     *
+     * <code>STATE_CREATING = 1;</code>
+     */
+    STATE_CREATING(1),
+    /**
+     * <pre>
+     * The image can build machines.
+     * </pre>
+     *
+     * <code>STATE_READY = 2;</code>
+     */
+    STATE_READY(2),
+    /**
+     * <pre>
+     * Making the image failed. It cannot build machines and can only be deleted.
+     * </pre>
+     *
+     * <code>STATE_FAILED = 3;</code>
+     */
+    STATE_FAILED(3),
+    /**
+     * <pre>
+     * The image is being deleted.
+     * </pre>
+     *
+     * <code>STATE_DELETING = 4;</code>
+     */
+    STATE_DELETING(4),
+    UNRECOGNIZED(-1),
+    ;
+
+    static {
+      com.google.protobuf.RuntimeVersion.validateProtobufGencodeVersion(
+        com.google.protobuf.RuntimeVersion.RuntimeDomain.PUBLIC,
+        /* major= */ 4,
+        /* minor= */ 30,
+        /* patch= */ 2,
+        /* suffix= */ "",
+        State.class.getName());
+    }
+    /**
+     * <code>STATE_UNSPECIFIED = 0;</code>
+     */
+    public static final int STATE_UNSPECIFIED_VALUE = 0;
+    /**
+     * <pre>
+     * The image is being made from its source machine.
+     * </pre>
+     *
+     * <code>STATE_CREATING = 1;</code>
+     */
+    public static final int STATE_CREATING_VALUE = 1;
+    /**
+     * <pre>
+     * The image can build machines.
+     * </pre>
+     *
+     * <code>STATE_READY = 2;</code>
+     */
+    public static final int STATE_READY_VALUE = 2;
+    /**
+     * <pre>
+     * Making the image failed. It cannot build machines and can only be deleted.
+     * </pre>
+     *
+     * <code>STATE_FAILED = 3;</code>
+     */
+    public static final int STATE_FAILED_VALUE = 3;
+    /**
+     * <pre>
+     * The image is being deleted.
+     * </pre>
+     *
+     * <code>STATE_DELETING = 4;</code>
+     */
+    public static final int STATE_DELETING_VALUE = 4;
+
+
+    public final int getNumber() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalArgumentException(
+            "Can't get the number of an unknown enum value.");
+      }
+      return value;
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     * @deprecated Use {@link #forNumber(int)} instead.
+     */
+    @java.lang.Deprecated
+    public static State valueOf(int value) {
+      return forNumber(value);
+    }
+
+    /**
+     * @param value The numeric wire value of the corresponding enum entry.
+     * @return The enum associated with the given numeric wire value.
+     */
+    public static State forNumber(int value) {
+      switch (value) {
+        case 0: return STATE_UNSPECIFIED;
+        case 1: return STATE_CREATING;
+        case 2: return STATE_READY;
+        case 3: return STATE_FAILED;
+        case 4: return STATE_DELETING;
+        default: return null;
+      }
+    }
+
+    public static com.google.protobuf.Internal.EnumLiteMap<State>
+        internalGetValueMap() {
+      return internalValueMap;
+    }
+    private static final com.google.protobuf.Internal.EnumLiteMap<
+        State> internalValueMap =
+          new com.google.protobuf.Internal.EnumLiteMap<State>() {
+            public State findValueByNumber(int number) {
+              return State.forNumber(number);
+            }
+          };
+
+    public final com.google.protobuf.Descriptors.EnumValueDescriptor
+        getValueDescriptor() {
+      if (this == UNRECOGNIZED) {
+        throw new java.lang.IllegalStateException(
+            "Can't get the descriptor of an unrecognized enum value.");
+      }
+      return getDescriptor().getValues().get(ordinal());
+    }
+    public final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptorForType() {
+      return getDescriptor();
+    }
+    public static final com.google.protobuf.Descriptors.EnumDescriptor
+        getDescriptor() {
+      return cloud.cbws.api.compute.v1alpha1.Image.getDescriptor().getEnumTypes().get(0);
+    }
+
+    private static final State[] VALUES = values();
+
+    public static State valueOf(
+        com.google.protobuf.Descriptors.EnumValueDescriptor desc) {
+      if (desc.getType() != getDescriptor()) {
+        throw new java.lang.IllegalArgumentException(
+          "EnumValueDescriptor is not for this type.");
+      }
+      if (desc.getIndex() == -1) {
+        return UNRECOGNIZED;
+      }
+      return VALUES[desc.getIndex()];
+    }
+
+    private final int value;
+
+    private State(int value) {
+      this.value = value;
+    }
+
+    // @@protoc_insertion_point(enum_scope:cbws.compute.v1alpha1.Image.State)
+  }
+
+  private int bitField0_;
   public static final int NAME_FIELD_NUMBER = 1;
   @SuppressWarnings("serial")
   private volatile java.lang.Object name_ = "";
@@ -196,6 +376,178 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int STATE_FIELD_NUMBER = 4;
+  private int state_ = 0;
+  /**
+   * <pre>
+   * Whether the image can build machines. Only a `STATE_READY` image can be
+   * named on a machine or picked from its family.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for state.
+   */
+  @java.lang.Override public int getStateValue() {
+    return state_;
+  }
+  /**
+   * <pre>
+   * Whether the image can build machines. Only a `STATE_READY` image can be
+   * named on a machine or picked from its family.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The state.
+   */
+  @java.lang.Override public cloud.cbws.api.compute.v1alpha1.Image.State getState() {
+    cloud.cbws.api.compute.v1alpha1.Image.State result = cloud.cbws.api.compute.v1alpha1.Image.State.forNumber(state_);
+    return result == null ? cloud.cbws.api.compute.v1alpha1.Image.State.UNRECOGNIZED : result;
+  }
+
+  public static final int CREATE_TIME_FIELD_NUMBER = 5;
+  private com.google.protobuf.Timestamp createTime_;
+  /**
+   * <pre>
+   * When the image was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the createTime field is set.
+   */
+  @java.lang.Override
+  public boolean hasCreateTime() {
+    return ((bitField0_ & 0x00000001) != 0);
+  }
+  /**
+   * <pre>
+   * When the image was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The createTime.
+   */
+  @java.lang.Override
+  public com.google.protobuf.Timestamp getCreateTime() {
+    return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+  }
+  /**
+   * <pre>
+   * When the image was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  @java.lang.Override
+  public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+    return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+  }
+
+  public static final int SOURCE_MACHINE_FIELD_NUMBER = 6;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sourceMachine_ = "";
+  /**
+   * <pre>
+   * The machine the image was made from, such as
+   * `projects/my-project/machines/web-1`. Empty for an image that was not made
+   * from a machine. The name stays after the machine is deleted, and may then
+   * name a different machine created later under the same name;
+   * `source_machine_uid` tells the two apart.
+   * </pre>
+   *
+   * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The sourceMachine.
+   */
+  @java.lang.Override
+  public java.lang.String getSourceMachine() {
+    java.lang.Object ref = sourceMachine_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sourceMachine_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The machine the image was made from, such as
+   * `projects/my-project/machines/web-1`. Empty for an image that was not made
+   * from a machine. The name stays after the machine is deleted, and may then
+   * name a different machine created later under the same name;
+   * `source_machine_uid` tells the two apart.
+   * </pre>
+   *
+   * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for sourceMachine.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSourceMachineBytes() {
+    java.lang.Object ref = sourceMachine_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sourceMachine_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
+  public static final int SOURCE_MACHINE_UID_FIELD_NUMBER = 7;
+  @SuppressWarnings("serial")
+  private volatile java.lang.Object sourceMachineUid_ = "";
+  /**
+   * <pre>
+   * The uid of the machine the image was made from. It matches the
+   * machine's `uid` only while `source_machine` still names that same machine.
+   * Empty for an image that was not made from a machine.
+   * </pre>
+   *
+   * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sourceMachineUid.
+   */
+  @java.lang.Override
+  public java.lang.String getSourceMachineUid() {
+    java.lang.Object ref = sourceMachineUid_;
+    if (ref instanceof java.lang.String) {
+      return (java.lang.String) ref;
+    } else {
+      com.google.protobuf.ByteString bs = 
+          (com.google.protobuf.ByteString) ref;
+      java.lang.String s = bs.toStringUtf8();
+      sourceMachineUid_ = s;
+      return s;
+    }
+  }
+  /**
+   * <pre>
+   * The uid of the machine the image was made from. It matches the
+   * machine's `uid` only while `source_machine` still names that same machine.
+   * Empty for an image that was not made from a machine.
+   * </pre>
+   *
+   * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for sourceMachineUid.
+   */
+  @java.lang.Override
+  public com.google.protobuf.ByteString
+      getSourceMachineUidBytes() {
+    java.lang.Object ref = sourceMachineUid_;
+    if (ref instanceof java.lang.String) {
+      com.google.protobuf.ByteString b = 
+          com.google.protobuf.ByteString.copyFromUtf8(
+              (java.lang.String) ref);
+      sourceMachineUid_ = b;
+      return b;
+    } else {
+      return (com.google.protobuf.ByteString) ref;
+    }
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -219,6 +571,18 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(family_)) {
       com.google.protobuf.GeneratedMessage.writeString(output, 3, family_);
     }
+    if (state_ != cloud.cbws.api.compute.v1alpha1.Image.State.STATE_UNSPECIFIED.getNumber()) {
+      output.writeEnum(4, state_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      output.writeMessage(5, getCreateTime());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sourceMachine_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 6, sourceMachine_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sourceMachineUid_)) {
+      com.google.protobuf.GeneratedMessage.writeString(output, 7, sourceMachineUid_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -236,6 +600,20 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessage.isStringEmpty(family_)) {
       size += com.google.protobuf.GeneratedMessage.computeStringSize(3, family_);
+    }
+    if (state_ != cloud.cbws.api.compute.v1alpha1.Image.State.STATE_UNSPECIFIED.getNumber()) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeEnumSize(4, state_);
+    }
+    if (((bitField0_ & 0x00000001) != 0)) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeMessageSize(5, getCreateTime());
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sourceMachine_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(6, sourceMachine_);
+    }
+    if (!com.google.protobuf.GeneratedMessage.isStringEmpty(sourceMachineUid_)) {
+      size += com.google.protobuf.GeneratedMessage.computeStringSize(7, sourceMachineUid_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -258,6 +636,16 @@ private static final long serialVersionUID = 0L;
         .equals(other.getParent())) return false;
     if (!getFamily()
         .equals(other.getFamily())) return false;
+    if (state_ != other.state_) return false;
+    if (hasCreateTime() != other.hasCreateTime()) return false;
+    if (hasCreateTime()) {
+      if (!getCreateTime()
+          .equals(other.getCreateTime())) return false;
+    }
+    if (!getSourceMachine()
+        .equals(other.getSourceMachine())) return false;
+    if (!getSourceMachineUid()
+        .equals(other.getSourceMachineUid())) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -275,6 +663,16 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getParent().hashCode();
     hash = (37 * hash) + FAMILY_FIELD_NUMBER;
     hash = (53 * hash) + getFamily().hashCode();
+    hash = (37 * hash) + STATE_FIELD_NUMBER;
+    hash = (53 * hash) + state_;
+    if (hasCreateTime()) {
+      hash = (37 * hash) + CREATE_TIME_FIELD_NUMBER;
+      hash = (53 * hash) + getCreateTime().hashCode();
+    }
+    hash = (37 * hash) + SOURCE_MACHINE_FIELD_NUMBER;
+    hash = (53 * hash) + getSourceMachine().hashCode();
+    hash = (37 * hash) + SOURCE_MACHINE_UID_FIELD_NUMBER;
+    hash = (53 * hash) + getSourceMachineUid().hashCode();
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -398,13 +796,19 @@ private static final long serialVersionUID = 0L;
 
     // Construct using cloud.cbws.api.compute.v1alpha1.Image.newBuilder()
     private Builder() {
-
+      maybeForceBuilderInitialization();
     }
 
     private Builder(
         com.google.protobuf.GeneratedMessage.BuilderParent parent) {
       super(parent);
-
+      maybeForceBuilderInitialization();
+    }
+    private void maybeForceBuilderInitialization() {
+      if (com.google.protobuf.GeneratedMessage
+              .alwaysUseFieldBuilders) {
+        internalGetCreateTimeFieldBuilder();
+      }
     }
     @java.lang.Override
     public Builder clear() {
@@ -413,6 +817,14 @@ private static final long serialVersionUID = 0L;
       name_ = "";
       parent_ = "";
       family_ = "";
+      state_ = 0;
+      createTime_ = null;
+      if (createTimeBuilder_ != null) {
+        createTimeBuilder_.dispose();
+        createTimeBuilder_ = null;
+      }
+      sourceMachine_ = "";
+      sourceMachineUid_ = "";
       return this;
     }
 
@@ -455,6 +867,23 @@ private static final long serialVersionUID = 0L;
       if (((from_bitField0_ & 0x00000004) != 0)) {
         result.family_ = family_;
       }
+      if (((from_bitField0_ & 0x00000008) != 0)) {
+        result.state_ = state_;
+      }
+      int to_bitField0_ = 0;
+      if (((from_bitField0_ & 0x00000010) != 0)) {
+        result.createTime_ = createTimeBuilder_ == null
+            ? createTime_
+            : createTimeBuilder_.build();
+        to_bitField0_ |= 0x00000001;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.sourceMachine_ = sourceMachine_;
+      }
+      if (((from_bitField0_ & 0x00000040) != 0)) {
+        result.sourceMachineUid_ = sourceMachineUid_;
+      }
+      result.bitField0_ |= to_bitField0_;
     }
 
     @java.lang.Override
@@ -482,6 +911,22 @@ private static final long serialVersionUID = 0L;
       if (!other.getFamily().isEmpty()) {
         family_ = other.family_;
         bitField0_ |= 0x00000004;
+        onChanged();
+      }
+      if (other.state_ != 0) {
+        setStateValue(other.getStateValue());
+      }
+      if (other.hasCreateTime()) {
+        mergeCreateTime(other.getCreateTime());
+      }
+      if (!other.getSourceMachine().isEmpty()) {
+        sourceMachine_ = other.sourceMachine_;
+        bitField0_ |= 0x00000020;
+        onChanged();
+      }
+      if (!other.getSourceMachineUid().isEmpty()) {
+        sourceMachineUid_ = other.sourceMachineUid_;
+        bitField0_ |= 0x00000040;
         onChanged();
       }
       this.mergeUnknownFields(other.getUnknownFields());
@@ -525,6 +970,28 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000004;
               break;
             } // case 26
+            case 32: {
+              state_ = input.readEnum();
+              bitField0_ |= 0x00000008;
+              break;
+            } // case 32
+            case 42: {
+              input.readMessage(
+                  internalGetCreateTimeFieldBuilder().getBuilder(),
+                  extensionRegistry);
+              bitField0_ |= 0x00000010;
+              break;
+            } // case 42
+            case 50: {
+              sourceMachine_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 50
+            case 58: {
+              sourceMachineUid_ = input.readStringRequireUtf8();
+              bitField0_ |= 0x00000040;
+              break;
+            } // case 58
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -829,6 +1296,455 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       family_ = value;
       bitField0_ |= 0x00000004;
+      onChanged();
+      return this;
+    }
+
+    private int state_ = 0;
+    /**
+     * <pre>
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The enum numeric value on the wire for state.
+     */
+    @java.lang.Override public int getStateValue() {
+      return state_;
+    }
+    /**
+     * <pre>
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The enum numeric value on the wire for state to set.
+     * @return This builder for chaining.
+     */
+    public Builder setStateValue(int value) {
+      state_ = value;
+      bitField0_ |= 0x00000008;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The state.
+     */
+    @java.lang.Override
+    public cloud.cbws.api.compute.v1alpha1.Image.State getState() {
+      cloud.cbws.api.compute.v1alpha1.Image.State result = cloud.cbws.api.compute.v1alpha1.Image.State.forNumber(state_);
+      return result == null ? cloud.cbws.api.compute.v1alpha1.Image.State.UNRECOGNIZED : result;
+    }
+    /**
+     * <pre>
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The state to set.
+     * @return This builder for chaining.
+     */
+    public Builder setState(cloud.cbws.api.compute.v1alpha1.Image.State value) {
+      if (value == null) {
+        throw new NullPointerException();
+      }
+      bitField0_ |= 0x00000008;
+      state_ = value.getNumber();
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearState() {
+      bitField0_ = (bitField0_ & ~0x00000008);
+      state_ = 0;
+      onChanged();
+      return this;
+    }
+
+    private com.google.protobuf.Timestamp createTime_;
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createTimeBuilder_;
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the createTime field is set.
+     */
+    public boolean hasCreateTime() {
+      return ((bitField0_ & 0x00000010) != 0);
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The createTime.
+     */
+    public com.google.protobuf.Timestamp getCreateTime() {
+      if (createTimeBuilder_ == null) {
+        return createTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+      } else {
+        return createTimeBuilder_.getMessage();
+      }
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setCreateTime(com.google.protobuf.Timestamp value) {
+      if (createTimeBuilder_ == null) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        createTime_ = value;
+      } else {
+        createTimeBuilder_.setMessage(value);
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder setCreateTime(
+        com.google.protobuf.Timestamp.Builder builderForValue) {
+      if (createTimeBuilder_ == null) {
+        createTime_ = builderForValue.build();
+      } else {
+        createTimeBuilder_.setMessage(builderForValue.build());
+      }
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder mergeCreateTime(com.google.protobuf.Timestamp value) {
+      if (createTimeBuilder_ == null) {
+        if (((bitField0_ & 0x00000010) != 0) &&
+          createTime_ != null &&
+          createTime_ != com.google.protobuf.Timestamp.getDefaultInstance()) {
+          getCreateTimeBuilder().mergeFrom(value);
+        } else {
+          createTime_ = value;
+        }
+      } else {
+        createTimeBuilder_.mergeFrom(value);
+      }
+      if (createTime_ != null) {
+        bitField0_ |= 0x00000010;
+        onChanged();
+      }
+      return this;
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public Builder clearCreateTime() {
+      bitField0_ = (bitField0_ & ~0x00000010);
+      createTime_ = null;
+      if (createTimeBuilder_ != null) {
+        createTimeBuilder_.dispose();
+        createTimeBuilder_ = null;
+      }
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.protobuf.Timestamp.Builder getCreateTimeBuilder() {
+      bitField0_ |= 0x00000010;
+      onChanged();
+      return internalGetCreateTimeFieldBuilder().getBuilder();
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    public com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder() {
+      if (createTimeBuilder_ != null) {
+        return createTimeBuilder_.getMessageOrBuilder();
+      } else {
+        return createTime_ == null ?
+            com.google.protobuf.Timestamp.getDefaultInstance() : createTime_;
+      }
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     */
+    private com.google.protobuf.SingleFieldBuilder<
+        com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+        internalGetCreateTimeFieldBuilder() {
+      if (createTimeBuilder_ == null) {
+        createTimeBuilder_ = new com.google.protobuf.SingleFieldBuilder<
+            com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                getCreateTime(),
+                getParentForChildren(),
+                isClean());
+        createTime_ = null;
+      }
+      return createTimeBuilder_;
+    }
+
+    private java.lang.Object sourceMachine_ = "";
+    /**
+     * <pre>
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     * </pre>
+     *
+     * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The sourceMachine.
+     */
+    public java.lang.String getSourceMachine() {
+      java.lang.Object ref = sourceMachine_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceMachine_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     * </pre>
+     *
+     * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return The bytes for sourceMachine.
+     */
+    public com.google.protobuf.ByteString
+        getSourceMachineBytes() {
+      java.lang.Object ref = sourceMachine_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceMachine_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     * </pre>
+     *
+     * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The sourceMachine to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourceMachine(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      sourceMachine_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     * </pre>
+     *
+     * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSourceMachine() {
+      sourceMachine_ = getDefaultInstance().getSourceMachine();
+      bitField0_ = (bitField0_ & ~0x00000020);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     * </pre>
+     *
+     * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @param value The bytes for sourceMachine to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourceMachineBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      sourceMachine_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+
+    private java.lang.Object sourceMachineUid_ = "";
+    /**
+     * <pre>
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     * </pre>
+     *
+     * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The sourceMachineUid.
+     */
+    public java.lang.String getSourceMachineUid() {
+      java.lang.Object ref = sourceMachineUid_;
+      if (!(ref instanceof java.lang.String)) {
+        com.google.protobuf.ByteString bs =
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        sourceMachineUid_ = s;
+        return s;
+      } else {
+        return (java.lang.String) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     * </pre>
+     *
+     * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return The bytes for sourceMachineUid.
+     */
+    public com.google.protobuf.ByteString
+        getSourceMachineUidBytes() {
+      java.lang.Object ref = sourceMachineUid_;
+      if (ref instanceof String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        sourceMachineUid_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+    /**
+     * <pre>
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     * </pre>
+     *
+     * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The sourceMachineUid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourceMachineUid(
+        java.lang.String value) {
+      if (value == null) { throw new NullPointerException(); }
+      sourceMachineUid_ = value;
+      bitField0_ |= 0x00000040;
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     * </pre>
+     *
+     * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearSourceMachineUid() {
+      sourceMachineUid_ = getDefaultInstance().getSourceMachineUid();
+      bitField0_ = (bitField0_ & ~0x00000040);
+      onChanged();
+      return this;
+    }
+    /**
+     * <pre>
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     * </pre>
+     *
+     * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @param value The bytes for sourceMachineUid to set.
+     * @return This builder for chaining.
+     */
+    public Builder setSourceMachineUidBytes(
+        com.google.protobuf.ByteString value) {
+      if (value == null) { throw new NullPointerException(); }
+      checkByteStringIsUtf8(value);
+      sourceMachineUid_ = value;
+      bitField0_ |= 0x00000040;
       onChanged();
       return this;
     }

@@ -450,6 +450,68 @@ public final class ComputeServiceGrpc {
     return getGetImageMethod;
   }
 
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.CreateImageRequest,
+      com.google.longrunning.Operation> getCreateImageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "CreateImage",
+      requestType = cloud.cbws.api.compute.v1alpha1.CreateImageRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.CreateImageRequest,
+      com.google.longrunning.Operation> getCreateImageMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.CreateImageRequest, com.google.longrunning.Operation> getCreateImageMethod;
+    if ((getCreateImageMethod = ComputeServiceGrpc.getCreateImageMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getCreateImageMethod = ComputeServiceGrpc.getCreateImageMethod) == null) {
+          ComputeServiceGrpc.getCreateImageMethod = getCreateImageMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.CreateImageRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "CreateImage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.CreateImageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("CreateImage"))
+              .build();
+        }
+      }
+    }
+    return getCreateImageMethod;
+  }
+
+  private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.DeleteImageRequest,
+      com.google.longrunning.Operation> getDeleteImageMethod;
+
+  @io.grpc.stub.annotations.RpcMethod(
+      fullMethodName = SERVICE_NAME + '/' + "DeleteImage",
+      requestType = cloud.cbws.api.compute.v1alpha1.DeleteImageRequest.class,
+      responseType = com.google.longrunning.Operation.class,
+      methodType = io.grpc.MethodDescriptor.MethodType.UNARY)
+  public static io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.DeleteImageRequest,
+      com.google.longrunning.Operation> getDeleteImageMethod() {
+    io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.DeleteImageRequest, com.google.longrunning.Operation> getDeleteImageMethod;
+    if ((getDeleteImageMethod = ComputeServiceGrpc.getDeleteImageMethod) == null) {
+      synchronized (ComputeServiceGrpc.class) {
+        if ((getDeleteImageMethod = ComputeServiceGrpc.getDeleteImageMethod) == null) {
+          ComputeServiceGrpc.getDeleteImageMethod = getDeleteImageMethod =
+              io.grpc.MethodDescriptor.<cloud.cbws.api.compute.v1alpha1.DeleteImageRequest, com.google.longrunning.Operation>newBuilder()
+              .setType(io.grpc.MethodDescriptor.MethodType.UNARY)
+              .setFullMethodName(generateFullMethodName(SERVICE_NAME, "DeleteImage"))
+              .setSampledToLocalTracing(true)
+              .setRequestMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  cloud.cbws.api.compute.v1alpha1.DeleteImageRequest.getDefaultInstance()))
+              .setResponseMarshaller(io.grpc.protobuf.ProtoUtils.marshaller(
+                  com.google.longrunning.Operation.getDefaultInstance()))
+              .setSchemaDescriptor(new ComputeServiceMethodDescriptorSupplier("DeleteImage"))
+              .build();
+        }
+      }
+    }
+    return getDeleteImageMethod;
+  }
+
   private static volatile io.grpc.MethodDescriptor<cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest,
       cloud.cbws.api.compute.v1alpha1.ListImageFamiliesResponse> getListImageFamiliesMethod;
 
@@ -756,6 +818,33 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Makes an image from the disk of a stopped machine. The image appears in
+     * `STATE_CREATING` as soon as the operation starts and becomes
+     * `STATE_READY` when it completes. Copying the disk takes minutes per GB.
+     * Only machines on machine types that support it can be imaged.
+     * Requires `compute.cbws.cloud/Image/create` on the project and
+     * `compute.cbws.cloud/Machine/createImage` on the source machine.
+     * </pre>
+     */
+    default void createImage(cloud.cbws.api.compute.v1alpha1.CreateImageRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getCreateImageMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes an image made from a machine. Machines built from it keep running,
+     * but cannot be reinstalled from it, and its name can be used again at once.
+     * An image still in `STATE_CREATING` cannot be deleted.
+     * </pre>
+     */
+    default void deleteImage(cloud.cbws.api.compute.v1alpha1.DeleteImageRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(getDeleteImageMethod(), responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the image families in a project.
      * </pre>
      */
@@ -981,6 +1070,35 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Makes an image from the disk of a stopped machine. The image appears in
+     * `STATE_CREATING` as soon as the operation starts and becomes
+     * `STATE_READY` when it completes. Copying the disk takes minutes per GB.
+     * Only machines on machine types that support it can be imaged.
+     * Requires `compute.cbws.cloud/Image/create` on the project and
+     * `compute.cbws.cloud/Machine/createImage` on the source machine.
+     * </pre>
+     */
+    public void createImage(cloud.cbws.api.compute.v1alpha1.CreateImageRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getCreateImageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
+     * Deletes an image made from a machine. Machines built from it keep running,
+     * but cannot be reinstalled from it, and its name can be used again at once.
+     * An image still in `STATE_CREATING` cannot be deleted.
+     * </pre>
+     */
+    public void deleteImage(cloud.cbws.api.compute.v1alpha1.DeleteImageRequest request,
+        io.grpc.stub.StreamObserver<com.google.longrunning.Operation> responseObserver) {
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
+          getChannel().newCall(getDeleteImageMethod(), getCallOptions()), request, responseObserver);
+    }
+
+    /**
+     * <pre>
      * Lists the image families in a project.
      * </pre>
      */
@@ -1180,6 +1298,33 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Makes an image from the disk of a stopped machine. The image appears in
+     * `STATE_CREATING` as soon as the operation starts and becomes
+     * `STATE_READY` when it completes. Copying the disk takes minutes per GB.
+     * Only machines on machine types that support it can be imaged.
+     * Requires `compute.cbws.cloud/Image/create` on the project and
+     * `compute.cbws.cloud/Machine/createImage` on the source machine.
+     * </pre>
+     */
+    public com.google.longrunning.Operation createImage(cloud.cbws.api.compute.v1alpha1.CreateImageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getCreateImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes an image made from a machine. Machines built from it keep running,
+     * but cannot be reinstalled from it, and its name can be used again at once.
+     * An image still in `STATE_CREATING` cannot be deleted.
+     * </pre>
+     */
+    public com.google.longrunning.Operation deleteImage(cloud.cbws.api.compute.v1alpha1.DeleteImageRequest request) throws io.grpc.StatusException {
+      return io.grpc.stub.ClientCalls.blockingV2UnaryCall(
+          getChannel(), getDeleteImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
      * Lists the image families in a project.
      * </pre>
      */
@@ -1372,6 +1517,33 @@ public final class ComputeServiceGrpc {
     public cloud.cbws.api.compute.v1alpha1.Image getImage(cloud.cbws.api.compute.v1alpha1.GetImageRequest request) {
       return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getGetImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Makes an image from the disk of a stopped machine. The image appears in
+     * `STATE_CREATING` as soon as the operation starts and becomes
+     * `STATE_READY` when it completes. Copying the disk takes minutes per GB.
+     * Only machines on machine types that support it can be imaged.
+     * Requires `compute.cbws.cloud/Image/create` on the project and
+     * `compute.cbws.cloud/Machine/createImage` on the source machine.
+     * </pre>
+     */
+    public com.google.longrunning.Operation createImage(cloud.cbws.api.compute.v1alpha1.CreateImageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getCreateImageMethod(), getCallOptions(), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes an image made from a machine. Machines built from it keep running,
+     * but cannot be reinstalled from it, and its name can be used again at once.
+     * An image still in `STATE_CREATING` cannot be deleted.
+     * </pre>
+     */
+    public com.google.longrunning.Operation deleteImage(cloud.cbws.api.compute.v1alpha1.DeleteImageRequest request) {
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
+          getChannel(), getDeleteImageMethod(), getCallOptions(), request);
     }
 
     /**
@@ -1586,6 +1758,35 @@ public final class ComputeServiceGrpc {
 
     /**
      * <pre>
+     * Makes an image from the disk of a stopped machine. The image appears in
+     * `STATE_CREATING` as soon as the operation starts and becomes
+     * `STATE_READY` when it completes. Copying the disk takes minutes per GB.
+     * Only machines on machine types that support it can be imaged.
+     * Requires `compute.cbws.cloud/Image/create` on the project and
+     * `compute.cbws.cloud/Machine/createImage` on the source machine.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> createImage(
+        cloud.cbws.api.compute.v1alpha1.CreateImageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getCreateImageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
+     * Deletes an image made from a machine. Machines built from it keep running,
+     * but cannot be reinstalled from it, and its name can be used again at once.
+     * An image still in `STATE_CREATING` cannot be deleted.
+     * </pre>
+     */
+    public com.google.common.util.concurrent.ListenableFuture<com.google.longrunning.Operation> deleteImage(
+        cloud.cbws.api.compute.v1alpha1.DeleteImageRequest request) {
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
+          getChannel().newCall(getDeleteImageMethod(), getCallOptions()), request);
+    }
+
+    /**
+     * <pre>
      * Lists the image families in a project.
      * </pre>
      */
@@ -1633,9 +1834,11 @@ public final class ComputeServiceGrpc {
   private static final int METHODID_GET_MACHINE_TYPE = 11;
   private static final int METHODID_LIST_IMAGES = 12;
   private static final int METHODID_GET_IMAGE = 13;
-  private static final int METHODID_LIST_IMAGE_FAMILIES = 14;
-  private static final int METHODID_GET_IMAGE_FAMILY = 15;
-  private static final int METHODID_GET_IMAGE_FROM_FAMILY = 16;
+  private static final int METHODID_CREATE_IMAGE = 14;
+  private static final int METHODID_DELETE_IMAGE = 15;
+  private static final int METHODID_LIST_IMAGE_FAMILIES = 16;
+  private static final int METHODID_GET_IMAGE_FAMILY = 17;
+  private static final int METHODID_GET_IMAGE_FROM_FAMILY = 18;
 
   private static final class MethodHandlers<Req, Resp> implements
       io.grpc.stub.ServerCalls.UnaryMethod<Req, Resp>,
@@ -1709,6 +1912,14 @@ public final class ComputeServiceGrpc {
         case METHODID_GET_IMAGE:
           serviceImpl.getImage((cloud.cbws.api.compute.v1alpha1.GetImageRequest) request,
               (io.grpc.stub.StreamObserver<cloud.cbws.api.compute.v1alpha1.Image>) responseObserver);
+          break;
+        case METHODID_CREATE_IMAGE:
+          serviceImpl.createImage((cloud.cbws.api.compute.v1alpha1.CreateImageRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
+          break;
+        case METHODID_DELETE_IMAGE:
+          serviceImpl.deleteImage((cloud.cbws.api.compute.v1alpha1.DeleteImageRequest) request,
+              (io.grpc.stub.StreamObserver<com.google.longrunning.Operation>) responseObserver);
           break;
         case METHODID_LIST_IMAGE_FAMILIES:
           serviceImpl.listImageFamilies((cloud.cbws.api.compute.v1alpha1.ListImageFamiliesRequest) request,
@@ -1839,6 +2050,20 @@ public final class ComputeServiceGrpc {
               cloud.cbws.api.compute.v1alpha1.Image>(
                 service, METHODID_GET_IMAGE)))
         .addMethod(
+          getCreateImageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.CreateImageRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_CREATE_IMAGE)))
+        .addMethod(
+          getDeleteImageMethod(),
+          io.grpc.stub.ServerCalls.asyncUnaryCall(
+            new MethodHandlers<
+              cloud.cbws.api.compute.v1alpha1.DeleteImageRequest,
+              com.google.longrunning.Operation>(
+                service, METHODID_DELETE_IMAGE)))
+        .addMethod(
           getListImageFamiliesMethod(),
           io.grpc.stub.ServerCalls.asyncUnaryCall(
             new MethodHandlers<
@@ -1921,6 +2146,8 @@ public final class ComputeServiceGrpc {
               .addMethod(getGetMachineTypeMethod())
               .addMethod(getListImagesMethod())
               .addMethod(getGetImageMethod())
+              .addMethod(getCreateImageMethod())
+              .addMethod(getDeleteImageMethod())
               .addMethod(getListImageFamiliesMethod())
               .addMethod(getGetImageFamilyMethod())
               .addMethod(getGetImageFromFamilyMethod())

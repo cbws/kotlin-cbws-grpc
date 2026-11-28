@@ -46,32 +46,43 @@ public final class ImageProto {
     java.lang.String[] descriptorData = {
       "\n!cbws/compute/v1alpha1/image.proto\022\025cbw" +
       "s.compute.v1alpha1\032\037google/api/field_beh" +
-      "avior.proto\032\031google/api/resource.proto\"\236" +
-      "\001\n\005Image\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006pa" +
-      "rent\030\002 \001(\tB\004\342A\001\003R\006parent\022\034\n\006family\030\003 \001(\t" +
-      "B\004\342A\001\005R\006family:?\352A<\n\030compute.cbws.cloud/" +
-      "Image\022 projects/{project}/images/{name}\"" +
-      "\220\001\n\013ImageFamily\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004nam" +
-      "e\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006parent:I\352AF\n\036co" +
-      "mpute.cbws.cloud/ImageFamily\022$projects/{" +
-      "project}/families/{family}B\243\001\n\037cloud.cbw" +
-      "s.api.compute.v1alpha1B\nImageProtoP\001\242\002\003C" +
-      "CX\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws\\Comput" +
-      "e\\V1alpha1\342\002!Cbws\\Compute\\V1alpha1\\GPBMe" +
-      "tadata\352\002\027Cbws::Compute::V1alpha1b\006proto3"
+      "avior.proto\032\031google/api/resource.proto\032\037" +
+      "google/protobuf/timestamp.proto\"\214\004\n\005Imag" +
+      "e\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name\022\034\n\006parent\030\002 " +
+      "\001(\tB\004\342A\001\003R\006parent\022\034\n\006family\030\003 \001(\tB\004\342A\001\005R" +
+      "\006family\022>\n\005state\030\004 \001(\0162\".cbws.compute.v1" +
+      "alpha1.Image.StateB\004\342A\001\003R\005state\022A\n\013creat" +
+      "e_time\030\005 \001(\0132\032.google.protobuf.Timestamp" +
+      "B\004\342A\001\003R\ncreateTime\022J\n\016source_machine\030\006 \001" +
+      "(\tB#\342A\001\005\372A\034\n\032compute.cbws.cloud/MachineR" +
+      "\rsourceMachine\0222\n\022source_machine_uid\030\007 \001" +
+      "(\tB\004\342A\001\003R\020sourceMachineUid\"i\n\005State\022\025\n\021S" +
+      "TATE_UNSPECIFIED\020\000\022\022\n\016STATE_CREATING\020\001\022\017" +
+      "\n\013STATE_READY\020\002\022\020\n\014STATE_FAILED\020\003\022\022\n\016STA" +
+      "TE_DELETING\020\004:?\352A<\n\030compute.cbws.cloud/I" +
+      "mage\022 projects/{project}/images/{name}\"\220" +
+      "\001\n\013ImageFamily\022\030\n\004name\030\001 \001(\tB\004\342A\001\005R\004name" +
+      "\022\034\n\006parent\030\002 \001(\tB\004\342A\001\003R\006parent:I\352AF\n\036com" +
+      "pute.cbws.cloud/ImageFamily\022$projects/{p" +
+      "roject}/families/{family}B\243\001\n\037cloud.cbws" +
+      ".api.compute.v1alpha1B\nImageProtoP\001\242\002\003CC" +
+      "X\252\002\025Cbws.Compute.V1alpha1\312\002\025Cbws\\Compute" +
+      "\\V1alpha1\342\002!Cbws\\Compute\\V1alpha1\\GPBMet" +
+      "adata\352\002\027Cbws::Compute::V1alpha1b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
         new com.google.protobuf.Descriptors.FileDescriptor[] {
           com.google.api.FieldBehaviorProto.getDescriptor(),
           com.google.api.ResourceProto.getDescriptor(),
+          com.google.protobuf.TimestampProto.getDescriptor(),
         });
     internal_static_cbws_compute_v1alpha1_Image_descriptor =
       getDescriptor().getMessageTypes().get(0);
     internal_static_cbws_compute_v1alpha1_Image_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessage.FieldAccessorTable(
         internal_static_cbws_compute_v1alpha1_Image_descriptor,
-        new java.lang.String[] { "Name", "Parent", "Family", });
+        new java.lang.String[] { "Name", "Parent", "Family", "State", "CreateTime", "SourceMachine", "SourceMachineUid", });
     internal_static_cbws_compute_v1alpha1_ImageFamily_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_cbws_compute_v1alpha1_ImageFamily_fieldAccessorTable = new
@@ -81,10 +92,12 @@ public final class ImageProto {
     descriptor.resolveAllFeaturesImmutable();
     com.google.api.FieldBehaviorProto.getDescriptor();
     com.google.api.ResourceProto.getDescriptor();
+    com.google.protobuf.TimestampProto.getDescriptor();
     com.google.protobuf.ExtensionRegistry registry =
         com.google.protobuf.ExtensionRegistry.newInstance();
     registry.add(com.google.api.FieldBehaviorProto.fieldBehavior);
     registry.add(com.google.api.ResourceProto.resource);
+    registry.add(com.google.api.ResourceProto.resourceReference);
     com.google.protobuf.Descriptors.FileDescriptor
         .internalUpdateFileDescriptor(descriptor, registry);
   }

@@ -115,9 +115,152 @@ public object ImageKt {
     public fun clearFamily() {
       _builder.clearFamily()
     }
+
+    /**
+     * ```
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     * ```
+     *
+     * `.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var state: cloud.cbws.api.compute.v1alpha1.Image.State
+      @kotlin.jvm.JvmName("getState")
+        get() = _builder.state
+      @kotlin.jvm.JvmName("setState")
+        set(value) {
+        _builder.state = value
+      }
+    public var stateValue: kotlin.Int
+      @kotlin.jvm.JvmName("getStateValue")
+        get() = _builder.stateValue
+      @kotlin.jvm.JvmName("setStateValue")
+        set(value) {
+        _builder.stateValue = value
+      }
+    /**
+     * <pre>
+     * Whether the image can build machines. Only a `STATE_READY` image can be
+     * named on a machine or picked from its family.
+     * </pre>
+     *
+     * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearState() {
+      _builder.clearState()
+    }
+
+    /**
+     * ```
+     * When the image was created. Unset where the time is not known.
+     * ```
+     *
+     * `.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var createTime: com.google.protobuf.Timestamp
+      @kotlin.jvm.JvmName("getCreateTime")
+        get() = _builder.createTime
+      @kotlin.jvm.JvmName("setCreateTime")
+        set(value) {
+        _builder.createTime = value
+      }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearCreateTime() {
+      _builder.clearCreateTime()
+    }
+    /**
+     * <pre>
+     * When the image was created. Unset where the time is not known.
+     * </pre>
+     *
+     * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return Whether the createTime field is set.
+     * @return This builder for chaining.
+     */
+    public fun hasCreateTime(): kotlin.Boolean {
+      return _builder.hasCreateTime()
+    }
+
+    public val ImageKt.Dsl.createTimeOrNull: com.google.protobuf.Timestamp?
+      get() = _builder.createTimeOrNull
+
+    /**
+     * ```
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     * ```
+     *
+     * `string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }`
+     */
+    public var sourceMachine: kotlin.String
+      @kotlin.jvm.JvmName("getSourceMachine")
+        get() = _builder.sourceMachine
+      @kotlin.jvm.JvmName("setSourceMachine")
+        set(value) {
+        _builder.sourceMachine = value
+      }
+    /**
+     * <pre>
+     * The machine the image was made from, such as
+     * `projects/my-project/machines/web-1`. Empty for an image that was not made
+     * from a machine. The name stays after the machine is deleted, and may then
+     * name a different machine created later under the same name;
+     * `source_machine_uid` tells the two apart.
+     * </pre>
+     *
+     * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+     * @return This builder for chaining.
+     */
+    public fun clearSourceMachine() {
+      _builder.clearSourceMachine()
+    }
+
+    /**
+     * ```
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     * ```
+     *
+     * `string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];`
+     */
+    public var sourceMachineUid: kotlin.String
+      @kotlin.jvm.JvmName("getSourceMachineUid")
+        get() = _builder.sourceMachineUid
+      @kotlin.jvm.JvmName("setSourceMachineUid")
+        set(value) {
+        _builder.sourceMachineUid = value
+      }
+    /**
+     * <pre>
+     * The uid of the machine the image was made from. It matches the
+     * machine's `uid` only while `source_machine` still names that same machine.
+     * Empty for an image that was not made from a machine.
+     * </pre>
+     *
+     * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+     * @return This builder for chaining.
+     */
+    public fun clearSourceMachineUid() {
+      _builder.clearSourceMachineUid()
+    }
   }
 }
 @kotlin.jvm.JvmSynthetic
 public inline fun cloud.cbws.api.compute.v1alpha1.Image.copy(block: `cloud.cbws.api.compute.v1alpha1`.ImageKt.Dsl.() -> kotlin.Unit): cloud.cbws.api.compute.v1alpha1.Image =
   `cloud.cbws.api.compute.v1alpha1`.ImageKt.Dsl._create(this.toBuilder()).apply { block() }._build()
+
+public val cloud.cbws.api.compute.v1alpha1.ImageOrBuilder.createTimeOrNull: com.google.protobuf.Timestamp?
+  get() = if (hasCreateTime()) getCreateTime() else null
 

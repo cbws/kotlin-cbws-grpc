@@ -74,4 +74,104 @@ public interface ImageOrBuilder extends
    */
   com.google.protobuf.ByteString
       getFamilyBytes();
+
+  /**
+   * <pre>
+   * Whether the image can build machines. Only a `STATE_READY` image can be
+   * named on a machine or picked from its family.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The enum numeric value on the wire for state.
+   */
+  int getStateValue();
+  /**
+   * <pre>
+   * Whether the image can build machines. Only a `STATE_READY` image can be
+   * named on a machine or picked from its family.
+   * </pre>
+   *
+   * <code>.cbws.compute.v1alpha1.Image.State state = 4 [json_name = "state", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The state.
+   */
+  cloud.cbws.api.compute.v1alpha1.Image.State getState();
+
+  /**
+   * <pre>
+   * When the image was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return Whether the createTime field is set.
+   */
+  boolean hasCreateTime();
+  /**
+   * <pre>
+   * When the image was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The createTime.
+   */
+  com.google.protobuf.Timestamp getCreateTime();
+  /**
+   * <pre>
+   * When the image was created. Unset where the time is not known.
+   * </pre>
+   *
+   * <code>.google.protobuf.Timestamp create_time = 5 [json_name = "createTime", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   */
+  com.google.protobuf.TimestampOrBuilder getCreateTimeOrBuilder();
+
+  /**
+   * <pre>
+   * The machine the image was made from, such as
+   * `projects/my-project/machines/web-1`. Empty for an image that was not made
+   * from a machine. The name stays after the machine is deleted, and may then
+   * name a different machine created later under the same name;
+   * `source_machine_uid` tells the two apart.
+   * </pre>
+   *
+   * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The sourceMachine.
+   */
+  java.lang.String getSourceMachine();
+  /**
+   * <pre>
+   * The machine the image was made from, such as
+   * `projects/my-project/machines/web-1`. Empty for an image that was not made
+   * from a machine. The name stays after the machine is deleted, and may then
+   * name a different machine created later under the same name;
+   * `source_machine_uid` tells the two apart.
+   * </pre>
+   *
+   * <code>string source_machine = 6 [json_name = "sourceMachine", (.google.api.field_behavior) = IMMUTABLE, (.google.api.resource_reference) = { ... }</code>
+   * @return The bytes for sourceMachine.
+   */
+  com.google.protobuf.ByteString
+      getSourceMachineBytes();
+
+  /**
+   * <pre>
+   * The uid of the machine the image was made from. It matches the
+   * machine's `uid` only while `source_machine` still names that same machine.
+   * Empty for an image that was not made from a machine.
+   * </pre>
+   *
+   * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The sourceMachineUid.
+   */
+  java.lang.String getSourceMachineUid();
+  /**
+   * <pre>
+   * The uid of the machine the image was made from. It matches the
+   * machine's `uid` only while `source_machine` still names that same machine.
+   * Empty for an image that was not made from a machine.
+   * </pre>
+   *
+   * <code>string source_machine_uid = 7 [json_name = "sourceMachineUid", (.google.api.field_behavior) = OUTPUT_ONLY];</code>
+   * @return The bytes for sourceMachineUid.
+   */
+  com.google.protobuf.ByteString
+      getSourceMachineUidBytes();
 }

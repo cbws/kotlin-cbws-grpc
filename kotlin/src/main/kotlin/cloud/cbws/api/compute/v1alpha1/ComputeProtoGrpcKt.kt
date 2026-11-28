@@ -91,6 +91,14 @@ public object ComputeServiceGrpcKt {
     @JvmStatic
     get() = ComputeServiceGrpc.getGetImageMethod()
 
+  public val createImageMethod: MethodDescriptor<CreateImageRequest, Operation>
+    @JvmStatic
+    get() = ComputeServiceGrpc.getCreateImageMethod()
+
+  public val deleteImageMethod: MethodDescriptor<DeleteImageRequest, Operation>
+    @JvmStatic
+    get() = ComputeServiceGrpc.getDeleteImageMethod()
+
   public val listImageFamiliesMethod:
       MethodDescriptor<ListImageFamiliesRequest, ListImageFamiliesResponse>
     @JvmStatic
@@ -406,6 +414,46 @@ public object ComputeServiceGrpcKt {
      *
      * @return The single response from the server.
      */
+    public suspend fun createImage(request: CreateImageRequest, headers: Metadata = Metadata()): Operation = unaryRpc(
+      channel,
+      ComputeServiceGrpc.getCreateImageMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
+    public suspend fun deleteImage(request: DeleteImageRequest, headers: Metadata = Metadata()): Operation = unaryRpc(
+      channel,
+      ComputeServiceGrpc.getDeleteImageMethod(),
+      request,
+      callOptions,
+      headers
+    )
+
+    /**
+     * Executes this RPC and returns the response message, suspending until the RPC completes
+     * with [`Status.OK`][io.grpc.Status].  If the RPC completes with another status, a corresponding
+     * [StatusException] is thrown.  If this coroutine is cancelled, the RPC is also cancelled
+     * with the corresponding exception as a cause.
+     *
+     * @param request The request message to send to the server.
+     *
+     * @param headers Metadata to attach to the request.  Most users will not need this.
+     *
+     * @return The single response from the server.
+     */
     public suspend fun listImageFamilies(request: ListImageFamiliesRequest, headers: Metadata = Metadata()): ListImageFamiliesResponse = unaryRpc(
       channel,
       ComputeServiceGrpc.getListImageFamiliesMethod(),
@@ -630,6 +678,30 @@ public object ComputeServiceGrpcKt {
     public open suspend fun getImage(request: GetImageRequest): Image = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.GetImage is unimplemented"))
 
     /**
+     * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.CreateImage.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun createImage(request: CreateImageRequest): Operation = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.CreateImage is unimplemented"))
+
+    /**
+     * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.DeleteImage.
+     *
+     * If this method fails with a [StatusException], the RPC will fail with the corresponding
+     * [io.grpc.Status].  If this method fails with a [java.util.concurrent.CancellationException], the RPC will fail
+     * with status `Status.CANCELLED`.  If this method fails for any other reason, the RPC will
+     * fail with `Status.UNKNOWN` with the exception as a cause.
+     *
+     * @param request The request from the client.
+     */
+    public open suspend fun deleteImage(request: DeleteImageRequest): Operation = throw StatusException(UNIMPLEMENTED.withDescription("Method cbws.compute.v1alpha1.ComputeService.DeleteImage is unimplemented"))
+
+    /**
      * Returns the response to an RPC for cbws.compute.v1alpha1.ComputeService.ListImageFamilies.
      *
      * If this method fails with a [StatusException], the RPC will fail with the corresponding
@@ -735,6 +807,16 @@ public object ComputeServiceGrpcKt {
       context = this.context,
       descriptor = ComputeServiceGrpc.getGetImageMethod(),
       implementation = ::getImage
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ComputeServiceGrpc.getCreateImageMethod(),
+      implementation = ::createImage
+    ))
+      .addMethod(unaryServerMethodDefinition(
+      context = this.context,
+      descriptor = ComputeServiceGrpc.getDeleteImageMethod(),
+      implementation = ::deleteImage
     ))
       .addMethod(unaryServerMethodDefinition(
       context = this.context,
